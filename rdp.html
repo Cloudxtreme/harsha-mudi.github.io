@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<head>
+<html>
+<meta charset="utf-8">
+<title>Just Another Blog</title>
+<meta name="viewport" content="width=960,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+
+  <script src="/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/js/bundle.min.js"></script>
+  <link rel="stylesheet" href="/css/styles.less.min.css">
+
+</head>
+<body>
+
+<!--[if lt IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<nav>
+<h1>Harsha / Mr. Foo Bar (‸‶</h1>
+<a href="/">Index</a>
+<a href="/disclaimer.html">DISCLAIMER</a>
+<a href="https://stackoverflow.com/users/1117082/mr-foobar"><img src="/images/so.png" width="33" height="33"/></a>
+<a href="https://github.com/harsha-mudi"><img src="/images/gh.png" width="33" height="33"/></a>
+<a href="https://www.npmjs.org/~harsha-mudi"><img src="https://www.npmjs.org/static/img/npm.png" width="55" height="33"/></a>
+<a href="https://metacpan.org/author/MUCKER"><img src="/images/mp.jpg" width="33" height="33"/></a>
+<a href="https://twitter.com/harsha_mudi"><img src="/images/tw.png" width="33" height="33"/></a>
+<a href="https://soundcloud.com/mr-foobar"><img src="/images/sc.png" width="33" height="33"/></a>
+<a href="https://vimeo.com/mrfoobar"><img src="/images/vm.png" width="33" height="33"/></a>
+<a href="https://mrfoobar.bandcamp.com/"><img src="/images/bc.png" width="33" height="33"/></a>
+<a href="https://flattr.com/submit/auto?user_id=harsha_mudi&url=http%3A%2F%2Flexical.foobar.systems" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
+</nav>
+
+
+
+
+<h2>Reactive Data Flow Processing</h2>
+<div class="lineno"></div>
+
+<article class="post">DRAFT
+
+While exploring the node.js land, I came across remixed-old
+concepts like Streams and new ones like Reactive programming.
+
+Similar to Entity Systems, all of them fall under Data Flow Programming.
+
+For a summary of programming paradigms, see <a href="/why-i-am-excited-about-entity-systems.html">[this]</a>.
+
+There is no single API that can represent all of them, even though they
+all have the notion of primacy of Data.
+
+Also, the notion of State, while present in Entity Systems, is absent
+in others.
+
+What follows is an attempt at an Abstract API, from which one
+can extend all the above.
+
+It should be implementable on top of Imperative Programming Languages.
+
+Reactive Data Flow Processing
+=============================
+
+1. A Symbol has a unique name and value.
+   It can have attributes.
+   Symbols are used for naming all live objects.
+   Symbols can be Namespaced.
+
+   Data is made of properties.
+   A Token isa Data, having a Value.
+   An Event isa Data, having a Name and a Payload.
+   An Error isa Data, having a Status and a Context.
+
+   A Component isa Data having a set of Properties and a Name.
+   An Entity isa Data, having a UniqueID and Components.
+   A Cell is an Entity, which can be observed.
+       by a Discrete System.
+
+2. Flow is a purposeful connection of Systems.
+
+3. State is Centralized as Entities, in a Store.
+   During Data Flow, Entities gain and lose Components.
+
+
+4.  A System has Inlets and Outlets.
+      Outlets and Inlets can be Connected,
+      Across different Systems,
+      via Wires.
+
+   All Systems can access State from the Store.
+
+   All Systems can Trigger Events over a Bus.
+      A Discrete System Reacts to these events.
+
+5. A System can Generate Data.
+      Here it is called a Generator.
+   A System can Sink-In Data.
+      Here it is called a Sink.
+
+   Streams are the simplest Systems with sysin, sysout, syserr.
+
+   A System can Filter Data.
+      Here it is called a Filter.
+
+   A System can deal with State,
+      Here it is called a State Machine.
+
+6. Taking Data from Inlets and transforming them, is called
+   Processing.
+
+7. This is Bread-Board Programming.
+
+8. Electronics/Game/Music Disciplines over Software and Mathematics.
+
+Complete Implementations
+========================
+
+### Motherboard
+
+Data flow programming is the norm for Electronics Engineering.
+
+The concepts of,
+
+* Pipelines
+* Buses
+* Interrupts
+* Processing
+* Primary / Secondary Stores
+
+are fundamental to the working of the Motherboard.
+
+### Max/Msp and Pure Data
+
+The above are hallmarks for Data Flow Programming.
+
+m inlets
+&lt;transformation&gt;
+n outlets
+
+And the result, music.
+
+### MIDI and OSC
+
+The concept of channels, clock syncing, "storable music" is responsible
+for the success of MIDI and OSC.
+
+Partial Implementations
+=======================
+
+### Clojure
+
+Reactive Programming is built into clojure atoms.
+
+### Hoplon and Spreadsheets
+
+Hoplon is a new web development framework for clojurescript 
+based on the idea of spreadsheets.
+
+Spreadsheets are about Cells and Formulae.
+Spreadsheets are the most user friendly interface for data flow programming.
+
+Cell:
+
+0 inlet
+&lt;identity&gt;
+1 outlet
+
+Formula:
+
+n inlets
+&lt;script&gt;
+1 outlet
+
+### IPC/Messaging Bus
+
+These just provide streams but not state management.
+
+Typically,
+
+1 inlet
+1-n outlets
+
+(see core.async)
+
+For pipes, it is
+
+1 inlet
+&lt;transformation&gt;
+2 outlets
+
+It is very flexible for linear command line driven applications.
+
+### Light Table
+
+Light table is a successful IDE which is built on CES + Behaviors.
+It lacks the concept of data flow processing, events.
+
+### Node.js
+
+rx
+bacon.js
+streams API
+gulp
+
+### Om
+
+Om framework uses the concept of centralized state and core.async,
+which comes with concepts of channels and streams?.
+
+### RSS and XML
+
+RSS and XML, can be processed as streams.
+
+API
+###
+
+<a href="https://github.com/harsha-mudi/rdp">RDP for Javascript</a>.</article>
+<div style="height:55px; clear: both">
+&nbsp;
+</div>
+<div style="text-align: center">copyright: CC BY-NC, 2014.</div>
+
+</body>
+</html>

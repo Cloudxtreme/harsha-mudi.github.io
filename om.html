@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+<html>
+<meta charset="utf-8">
+<title>Just Another Blog</title>
+<meta name="viewport" content="width=960,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+
+  <script src="/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/js/bundle.min.js"></script>
+  <link rel="stylesheet" href="/css/styles.less.min.css">
+
+</head>
+<body>
+
+<!--[if lt IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<nav>
+<h1>Harsha / Mr. Foo Bar (‸‶</h1>
+<a href="/">Index</a>
+<a href="/disclaimer.html">DISCLAIMER</a>
+<a href="https://stackoverflow.com/users/1117082/mr-foobar"><img src="/images/so.png" width="33" height="33"/></a>
+<a href="https://github.com/harsha-mudi"><img src="/images/gh.png" width="33" height="33"/></a>
+<a href="https://www.npmjs.org/~harsha-mudi"><img src="https://www.npmjs.org/static/img/npm.png" width="55" height="33"/></a>
+<a href="https://metacpan.org/author/MUCKER"><img src="/images/mp.jpg" width="33" height="33"/></a>
+<a href="https://twitter.com/harsha_mudi"><img src="/images/tw.png" width="33" height="33"/></a>
+<a href="https://soundcloud.com/mr-foobar"><img src="/images/sc.png" width="33" height="33"/></a>
+<a href="https://vimeo.com/mrfoobar"><img src="/images/vm.png" width="33" height="33"/></a>
+<a href="https://mrfoobar.bandcamp.com/"><img src="/images/bc.png" width="33" height="33"/></a>
+<a href="https://flattr.com/submit/auto?user_id=harsha_mudi&url=http%3A%2F%2Flexical.foobar.systems" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
+</nav>
+
+
+
+
+<h2>OM</h2>
+<div class="lineno"></div>
+
+<article class="post"><a href="https://github.com/swannodette/om/wiki/Documentation">Om</a> is built on three ideas to deal with <a href="http://tech.pro/blog/1402/five-patterns-to-help-you-tame-asynchronous-javascript">async</a> shit in clojurescript.
+
+1) Messaging
+2) State Management
+3) Reactive UI
+
+tl;dr UI -> EVENTS -> STATE -> UI
+
+## Reactive UI
+
+This is built on top of ReactJS.
+UI is divided into components.
+
+Each component takes a cursor(more on that later).
+And has some,
+* rendering code
+  rendering code can look like dom/div(default), :div(hiccup) or enlive
+* life cycle hooks where you can place dom event listeners and state change listeners
+
+Initialization of component calls,
+    IInitState
+    IWillMount
+    IDidMount.
+
+Every time a cursor's state changes a component is rendered, as per the life cycle,
+    IWillUpdate
+    IRender or IRenderState
+    IDidUpdate.
+
+Components are organized as a tree for some fancy optimization purposes.
+See,
+    root - builds the first component
+    build
+    component
+    graft.
+
+## State Management
+
+The entire application state and data is an atom blob.
+Om gives you cursors which are pointers(paths) to a subset of the blob.
+
+Om also has component local states, which are not stored in the blob.
+See,
+    set-state!
+    get-state!
+    props.
+
+It is much simpler to depend on cursors for everything, IMHO.
+
+Om also has truly global state sharing with,
+    get-shared which gets the :shared argument passed to root.
+
+Cursors are manipulated safely by om API,
+    update!
+    transact! you can use a :tx-listen while building root to listen to all transactions
+    and get-in, assoc-in from clojurescript.
+
+You can extend the ICursor Protocol to come up with your own idea of cursors.
+
+## Messaging
+
+Messaging is possible because of core.async, which provides channels and goroutines.
+There is no <a href="http://swannodette.github.io/2013/08/02/100000-processes/">limit</a> to the number of channels and goroutines unless you are using old browsers.
+goroutines look alot like threads.
+
+Every component can have channels or channels can be global.
+Global channels and goroutines makes it easier to refactor code into multimethods later, IMHO.
+
+Instead of dealing with callbacks in dom event listeners you put! things into channels as events.
+In a goroutine you &lt;! on a channel to listen to all the events and act upon them.
+
+Events are acted upon and send further events, finally making changes to the state which call,
+    IWillUpdate
+    IRender or IRenderState
+    IDidUpdate.
+
+Good place to start go(routines),
+    IWillMount.
+
+Testing and Mocking are greatly simplified using the messaging paradigm.</article>
+<div style="height:55px; clear: both">
+&nbsp;
+</div>
+<div style="text-align: center">copyright: CC BY-NC, 2014.</div>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<head>
+<html>
+<meta charset="utf-8">
+<title>Just Another Blog</title>
+<meta name="viewport" content="width=960,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+
+  <script src="/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/js/bundle.min.js"></script>
+  <link rel="stylesheet" href="/css/styles.less.min.css">
+
+</head>
+<body>
+
+<!--[if lt IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<nav>
+<h1>Harsha / Mr. Foo Bar (‸‶</h1>
+<a href="/">Index</a>
+<a href="/disclaimer.html">DISCLAIMER</a>
+<a href="https://stackoverflow.com/users/1117082/mr-foobar"><img src="/images/so.png" width="33" height="33"/></a>
+<a href="https://github.com/harsha-mudi"><img src="/images/gh.png" width="33" height="33"/></a>
+<a href="https://www.npmjs.org/~harsha-mudi"><img src="https://www.npmjs.org/static/img/npm.png" width="55" height="33"/></a>
+<a href="https://metacpan.org/author/MUCKER"><img src="/images/mp.jpg" width="33" height="33"/></a>
+<a href="https://twitter.com/harsha_mudi"><img src="/images/tw.png" width="33" height="33"/></a>
+<a href="https://soundcloud.com/mr-foobar"><img src="/images/sc.png" width="33" height="33"/></a>
+<a href="https://vimeo.com/mrfoobar"><img src="/images/vm.png" width="33" height="33"/></a>
+<a href="https://mrfoobar.bandcamp.com/"><img src="/images/bc.png" width="33" height="33"/></a>
+<a href="https://flattr.com/submit/auto?user_id=harsha_mudi&url=http%3A%2F%2Flexical.foobar.systems" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
+</nav>
+
+
+
+
+<h2></h2>
+<div class="lineno"></div>
+
+<article class="post autospace">
+<h1 id="markdown">Markdown</h1>
+<p>Markdown was initially meant for writing simple html webpages<br>It used email/forum conventions in use since 1990&#39;s<br>Now it has grown into a general purpose document markup language  </p>
+<p>The distinction of Markdown is, it is aimed at non-programmers</p>
+<h1 id="parsing-markdown">Parsing Markdown</h1>
+<h3 id="regex">Regex</h3>
+<p>Simple regex substitutions over the whole body will do for the following,</p>
+<ul>
+<li><code>**bold**</code></li>
+<li><p><code>_italic_</code></p>
+</li>
+<li><p><code>#, ##, ###, #### ...</code></p>
+<p>or</p>
+<pre><code>foo
+---
+bar
+===
+
+
+</code></pre><p>headers</p>
+</li>
+<li><p><code>&lt;url&gt;, [name](link &quot;title&quot;)</code></p>
+</li>
+<li><code>![hover text](/path/to/img.jpg &quot;title&quot;)</code></li>
+<li><code>&lt;name@email.com&gt;</code></li>
+<li><code>code spans</code></li>
+<li><code>horizontal rule (----------)</code></li>
+<li><code>\n\n or &quot;  \n&quot; &lt;br&gt;</code></li>
+</ul>
+<h3 id="complex-regex-line-by-line-parser">Complex regex / Line-By-Line Parser</h3>
+<ul>
+<li>lists *</li>
+<li>code blocks \t</li>
+<li>blocks ></li>
+<li>html blocks</li>
+</ul>
+<h1 id="problems">Problems</h1>
+<p>White-space insensitive like html, so multiple spaces need to be escaped  </p>
+<p>Although this is a very simple patch to the Markdown specification, it&#39;s not<br>so simple with html</p>
+<p>No underlines</p>
+<h1 id="special-features-of-markdown">Special Features of Markdown</h1>
+<p>It escapes HTML special characters</p>
+<h1 id="markdown-extensions">Markdown Extensions</h1>
+<h3 id="multi-markdown">Multi Markdown</h3>
+<ul>
+<li>tables</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Row1 Cell1</td>
+<td>Row1 Cell2</td>
+</tr>
+<tr>
+<td>Row2 Cell1</td>
+<td>Row2 Cell2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>[^footnote] [^footnote]:</p>
+</li>
+<li><p>[See p. 42][#cite] [#cite]:</p>
+</li>
+<li><p>critic markup</p>
+<pre><code>{--strike--} #strike
+{++underline++} #underline
+This is a {==test==} #highlight
+
+</code></pre></li>
+<li><p>A^B for superscript</p>
+</li>
+<li>A~x for subscript</li>
+</ul>
+<p><a href="https://rawgithub.com/fletcher/human-markdown-reference/master/index.html">https://rawgithub.com/fletcher/human-markdown-reference/master/index.html</a></p>
+<h3 id="unicode-hacks">Unicode Hacks</h3>
+<ul>
+<li>-- becomes long dash<br>--- becomes longer dash</li>
+</ul>
+<p>See,
+<a href="http://www.cs.tut.fi/~jkorpela/dashes.html#unidash">http://www.cs.tut.fi/~jkorpela/dashes.html#unidash</a></p>
+<ul>
+<li>&quot; &#39; ` can be replaced by <a href="http://en.wikipedia.org/wiki/Quotation_mark_glyphs#Quotation_marks_in_Unicode">http://en.wikipedia.org/wiki/Quotation_mark_glyphs#Quotation_marks_in_Unicode</a></li>
+<li>(tm) (r) (c)</li>
+<li>... becomes ellipsis</li>
+</ul>
+<h3 id="misc">Misc</h3>
+<ul>
+<li>$${e}^{i\pi }+1=0$$ for math</li>
+</ul>
+<p>See,
+<a href="http://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols">http://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols</a><br><a href="http://www.pell.portland.or.us/~orc/Code/markdown/">http://www.pell.portland.or.us/~orc/Code/markdown/</a></p>
+<h3 id="front-matter">Front Matter</h3>
+<p>YAML</p>
+<p>or</p>
+<p>key1 : value1<br>key2 : value2</p>
+<h3 id="github">Github</h3>
+<ul>
+<li>```javascript</li>
+<li>newlines are newlines</li>
+<li>links are links</li>
+</ul>
+<h1 id="markdown-editors">Markdown Editors</h1>
+<p>Most editors are geared towards plain markdown</p>
+<p>We have medium inspired editors,</p>
+<ul>
+<li>medium-editor</li>
+<li>zenpen</li>
+<li>sofish</li>
+</ul>
+<p>We have IDE&#39;ish editors,</p>
+<ul>
+<li>ace</li>
+<li>codemirror</li>
+</ul>
+<p>We have custom editors,</p>
+<ul>
+<li>draftin</li>
+</ul>
+<p>or</p>
+<ul>
+<li>textareas</li>
+</ul>
+<h1 id="problems-with-imeplementing-a-markdown-editor">Problems with Imeplementing a Markdown Editor</h1>
+<h3 id="textarea">textarea</h3>
+<p>Too blande</p>
+<h3 id="html5-div-contenteditable-true-">HTML5 \&lt;div contenteditable=&quot;true&quot;\&gt;</h3>
+<p>IE, FF, Chrome all implement this differently
+HTML5 spec for this, is still in the alpha stage</p>
+<h4 id="problems">Problems</h4>
+<p>Let&#39;s suppose the user types the following text,</p>
+<pre><code>I loved to look upon him, 
+The Hunter near the Way.
+So strong his arm and long his bow
+
+And so bashful of the Day.
+His courage never failed him
+For he held his mace so high
+
+
+</code></pre><p>This is stored in the div as</p>
+<pre><code>I loved to look upon him,
+&lt;p&gt;The Hunter near the Way.&lt;/p&gt;
+&lt;p&gt;So strong his arm and long his bow&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;And so bashful of the Day.&lt;/p&gt;
+&lt;p&gt;His courage never failed him&lt;/p&gt;
+&lt;p&gt;or he held his mace so high&lt;/p&gt;
+
+
+</code></pre><p>The newlines are not preserved.
+Notice the odd first line.</p>
+<p>Let&#39;s suppose the user copy pastes plain text, from a text editor</p>
+<pre><code>I loved to look upon him,
+&lt;p&gt;The Hunter near the Way.&lt;/p&gt;
+&lt;p&gt;So strong his arm and long his bow&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;And so bashful of the Day.&lt;/p&gt;
+&lt;p&gt;His courage never failed him&lt;/p&gt;
+&lt;p&gt;or he held his mace so high&lt;/p&gt;
+&lt;p&gt;And glared at the Bull in the River&lt;/p&gt;
+&lt;p&gt;And ruled the whole breadth of the sky.&lt;/p&gt;
+&lt;p&gt;As a girl, young and silly,&lt;/p&gt;
+&lt;p&gt;I oft dreamed of being the Maid.&lt;/p&gt;
+
+
+</code></pre><p> Let&#39;s suppose the user copy pastes from another html page</p>
+<pre><code>&lt;p&gt;The Hunter near the Way.&lt;/p&gt;
+&lt;p&gt;So strong his arm and long his bow&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;And so bashful of the Day.&lt;/p&gt;
+&lt;p&gt;His courage never failed him&lt;/p&gt;
+&lt;p&gt;or he held his mace so high&lt;/p&gt;
+&lt;span&gt;And glared at the Bull in the River&lt;/span&gt;
+&lt;span&gt;And ruled the whole breadth of the sky.&lt;/span&gt;
+&lt;span&gt;As a girl, young and silly,&lt;/span&gt;
+&lt;span&gt;I oft dreamed of being the Maid.&lt;/span&gt;
+
+
+</code></pre><p>You can even see table instead of span or the whole thing in a pre block.</p>
+<h4 id="solution">Solution</h4>
+<ul>
+<li>regex hacks -- not reliable</li>
+<li>detect enter key and stop \&lt;p\&gt; before it arrives
+-- needs a cursor hack, to move the cursor after the newline.</li>
+<li>detect paste
+This requires interaction with the clipboard API and the cursor API, which moves
+the cursor after the pasted content.</li>
+</ul>
+<h4 id="cursor-api">Cursor API</h4>
+<p>There is no getCursorPosition(div) which means,
+more hacks, from stackoverflow !</p>
+<p>The idea of cursor is absent in HTML specification</p>
+<p>The hacks relate to Range and Selection DOM API</p>
+<p>One problem here, is cursor should always be before a character  </p>
+<p>\n, html elements are not considered as characters, so expect extraneous<br>&quot;\n&nbsp;&quot; to be inserted instead of just the newline</p>
+<h3 id="how-do-others-do-it-">How do others do it ?</h3>
+<p>All medium based editors suffer from this, but they are view only, they don&#39;t
+care about content.</p>
+<p>ace, codemirror, p use textarea proxies to get by.</p>
+<h3 id="how-ace-codemirror-draftin-do-it">How ace, codemirror, draftin do it</h3>
+<ol>
+<li>Have two elements, a textarea and a editor#div</li>
+<li>Use &lt;textarea&gt; as a temporary buffer</li>
+<li>Direct all keyboard events to textarea</li>
+<li>Grab data from textarea and data structure</li>
+<li>render data structure and cursor position to editor#div</li>
+</ol>
+<p>For copy paste,</p>
+<ol>
+<li>Redirect to textarea</li>
+<li>Copy to data structure</li>
+<li>Set cursor</li>
+</ol>
+<p>For mouse events,</p>
+<ol>
+<li>Listen on editor#area</li>
+<li>Get co-ordinates</li>
+<li>Do characterWidth/lineHeight simulation on the text data structure</li>
+<li>Set mouse position</li>
+</ol>
+<p>This means we will have have control over every character being rendered.</p>
+<h3 id="editors-conclusion">Editors Conclusion</h3>
+<p>There is a desperate need to make a contenteditable jquery plugin that
+provides</p>
+<ol>
+<li>setCursorPosition</li>
+<li>getCurrentCursorPositon</li>
+<li>insertLineBreakAtCursorPosition</li>
+<li>insertTextAtCursorPosition</li>
+<li>insertHTMLAtCursorPosition</li>
+<li>pastePlainTextFromClipboardAtCursor</li>
+</ol>
+<p>Use one of the alternatives or write a custom one.</p>
+</article>
+<div style="height:55px; clear: both">
+&nbsp;
+</div>
+<div style="text-align: center">copyright: , 2014.</div>
+
+</body>
+</html>
