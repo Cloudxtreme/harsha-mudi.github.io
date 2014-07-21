@@ -37,186 +37,252 @@
 
 
 
-<h2>Reactive Data Flow Processing</h2>
+<h2>Reactive Data Processing</h2>
 <div class="lineno"></div>
 
 <article class="post">DRAFT
 
-While exploring the node.js land, I came across remixed-old
-concepts like Streams and new ones like Reactive programming.
+1. Introduction
+===============
 
-Similar to Entity Systems, all of them fall under Data Flow Programming.
+Data       <=> Electricity
+Computing  <=> Chip Design
 
-For a summary of programming paradigms, see <a href="/why-i-am-excited-about-entity-systems.html">[this]</a>.
+This perspective allows use to adopt ideas from,
 
-There is no single API that can represent all of them, even though they
-all have the notion of primacy of Data.
+1) Electronics Engineering
+2) Systems Engineering
 
-Also, the notion of State, while present in Entity Systems, is absent
-in others.
+Currently Electronics have better,
 
-What follows is an attempt at an Abstract API, from which one
-can extend all the above.
+1) Testability
+2) Longetivity
+3) Reliability
+4) Maintainability
+5) Quality
 
-It should be implementable on top of Imperative Programming Languages.
+than Software Products, which are perpetually new, improved
+and broken.
 
-Reactive Data Flow Processing
-=============================
+RDP is built on Low Level ideas, in hopes of replicating the
+same.
 
-1. A Symbol has a unique name and value.
-   It can have attributes.
-   Symbols are used for naming all live objects.
-   Symbols can be Namespaced.
+RDP isa Bread-Board Programming.
 
-   Data is made of properties.
-   A Token isa Data, having a Value.
-   An Event isa Data, having a Name and a Payload.
-   An Error isa Data, having a Status and a Context.
+It comes with in-built,
 
-   A Component isa Data having a set of Properties and a Name.
-   An Entity isa Data, having a UniqueID and Components.
-   A Cell is an Entity, which can be observed.
-       by a Discrete System.
+1) Tracer
+2) Step Debugger
+3) Benchmarking
 
-2. Flow is a purposeful connection of Systems.
+for Free, while other High Level Frameworks come with a promise
+of productivity improvement without debugging improvement.
 
-3. State is Centralized as Entities, in a Store.
-   During Data Flow, Entities gain and lose Components.
+2. Prototype
+============
 
+<a href="https://github.com/harsha-mudi/rdp">RDP for Javascript</a>.
 
-4.  A System has Inlets and Outlets.
-      Outlets and Inlets can be Connected,
-      Across different Systems,
-      via Wires.
+Status - Beta
+APU    - Fixed (for 0.2.x series)
 
-   All Systems can access State from the Store.
+After porting to a static language, the Beta status will be removed.
 
-   All Systems can Trigger Events over a Bus.
-      A Discrete System Reacts to these events.
+3. Influences
+=============
 
-5. A System can Generate Data.
-      Here it is called a Generator.
-   A System can Sink-In Data.
-      Here it is called a Sink.
+(from most to lesser)
 
-   Streams are the simplest Systems with sysin, sysout, syserr.
-
-   A System can Filter Data.
-      Here it is called a Filter.
-
-   A System can deal with State,
-      Here it is called a State Machine.
-
-6. Taking Data from Inlets and transforming them, is called
-   Processing.
-
-7. This is Bread-Board Programming.
-
-8. Electronics/Game/Music Disciplines over Software and Mathematics.
-
-Complete Implementations
-========================
-
-### Motherboard
-
-Data flow programming is the norm for Electronics Engineering.
-
-The concepts of,
+1) Motherboard and Pure Data
 
 * Pipelines
 * Buses
 * Interrupts
 * Processing
-* Primary / Secondary Stores
+* Stores
 
-are fundamental to the working of the Motherboard.
+Pure Data is a hallmark for Data Flow Programming.
 
-### Max/Msp and Pure Data
-
-The above are hallmarks for Data Flow Programming.
-
+"Live" Object:
 m inlets
-&lt;transformation&gt;
+&lt;process&gt;
 n outlets
 
 And the result, music.
 
-### MIDI and OSC
+RDP API is modelled primarily on the above two
+and HFSM's.
 
-The concept of channels, clock syncing, "storable music" is responsible
-for the success of MIDI and OSC.
+2) Hoplon
 
-Partial Implementations
-=======================
-
-### Clojure
-
-Reactive Programming is built into clojure atoms.
-
-### Hoplon and Spreadsheets
-
-Hoplon is a new web development framework for clojurescript 
+<a href="https://github.com/tailrecursion/hoplon">Hoplon</a> is a new web development framework for clojurescript 
 based on the idea of spreadsheets.
 
-Spreadsheets are about Cells and Formulae.
-Spreadsheets are the most user friendly interface for data flow programming.
+Spreadsheets are the most user friendly interface for
+Data Flow Programming.
+
+Hoplon models Spreadsheets as Cells and Formulae.
 
 Cell:
-
 0 inlet
 &lt;identity&gt;
 1 outlet
 
 Formula:
-
 n inlets
 &lt;script&gt;
 1 outlet
 
-### IPC/Messaging Bus
+3) Entity Systems
 
-These just provide streams but not state management.
+* Centralized Store
+* Query Systems
 
-Typically,
+4) Gulp / RxJs
 
+* Streams
+* Generators
+
+5) PowerShell / Pipes / XML
+
+* CmdLet
+
+Command:
 1 inlet
-1-n outlets
-
-(see core.async)
-
-For pipes, it is
-
-1 inlet
-&lt;transformation&gt;
+&lt;filter&gt;
 2 outlets
 
-It is very flexible for linear command line driven applications.
+* Validation
+* RSS
+* OSC
 
-### Light Table
+4. Definitions
+==============
 
-Light table is a successful IDE which is built on CES + Behaviors.
-It lacks the concept of data flow processing, events.
+1)   Symbol
 
-### Node.js
+     Symbols are used for naming objects.
+     It can have misc attributes.
 
-rx
-bacon.js
-streams API
-gulp
+1.1) NameSpace
 
-### Om
+     A NameSpace manages all Symbols.
 
-Om framework uses the concept of centralized state and core.async,
-which comes with concepts of channels and streams?.
+2)   Data
 
-### RSS and XML
+      A Data is a set of valid Properties.
 
-RSS and XML, can be processed as streams.
+2.1) Token
 
-API
-###
+      A Token isa Data with a Value Property.
 
-<a href="https://github.com/harsha-mudi/rdp">RDP for Javascript</a>.</article>
+2.2) Singals and Events
+
+     A Signal isa Data with,
+
+       * name
+       * message
+
+     An Event isa Data with,
+
+       * name
+       * payload
+       * ts
+
+2.3) Glitch
+
+     An Glitch isa Data with,
+
+       * status
+       * context
+
+3)   Entity
+
+     An Entity isa Data with,
+
+       * id
+       * tags
+       * components
+
+3.1) Component
+
+     A Component isa Data with,
+
+       * name
+
+     During Flow, Entities gain or lose Components.
+
+3.2) Cell
+
+     A Cell isa Component with,
+
+       * observers
+
+4)   System
+
+     A System has,
+
+       * inlets
+       * outlets
+       * state ( stack )
+       * registers
+
+     A System can,
+
+       * trigger
+       * process
+
+     An event can be "raised" in a system.
+       Thus a system can be an observer.
+
+     A System can also "show".
+       Thus a system can be a GraphiC Object.
+
+     A System can Generate Data.
+       Here it is called a Generator.
+
+     A System can Sink-In Data.
+       Here it is called a Sink.
+
+     Streams are the simplest Systems with,
+
+       * feedback
+       * sysin
+       * sysout
+       * syserr
+
+     A System can Filter Data.
+       Here it is called a Filter.
+
+     A System can deal with State,
+       Here it is called a State Machine.
+
+5)   Flow
+
+     Flow is a purposeful connection of Systems.
+
+     It can,
+
+       * connect inlets and outlets witn Wires and Connections.
+       * add / remove systems in a Bus
+
+     It has a Store.
+
+5.1) Bus
+
+     A Bus is a NameSpace which can trigger events on all its
+     objects.
+
+5.2) Store
+
+     A Store is made of queryable Entities.
+
+5. Example App
+==============
+
+<a href="https://github.com/harsha-mudi/esti">Task Estimator</a>.
+
+TODO</article>
 <div style="height:55px; clear: both">
 &nbsp;
 </div>
