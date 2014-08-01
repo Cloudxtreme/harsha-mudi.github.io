@@ -40,13 +40,16 @@
 <h2>Reactive Data Processing</h2>
 <div class="lineno"></div>
 
-<article class="post">DRAFT
+<article class="post">0. Demo
+=======
+
+<iframe src="//player.vimeo.com/video/102371548" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 1. Introduction
 ===============
 
 Data       <=> Electricity
-Computing  <=> Chip Design
+Software   <=> Chip Design
 
 This perspective allows use to adopt ideas from,
 
@@ -64,36 +67,57 @@ Currently Electronics have better,
 than Software Products, which are perpetually new, improved
 and broken.
 
-RDP is built on Low Level ideas, in hopes of replicating the
-same.
+RDP is built on Low Level Ideas from Electronics, in hopes of
+replicating its merits.
 
 RDP isa Bread-Board Programming.
 
-It comes with in-built,
+1) Tracing
+2) Step Debugging
+3) Profiling
+4) Simulation
+5) Diagram Generation
 
-1) Tracer
-2) Step Debugger
-3) Benchmarking
+come free with RDP.
 
-for Free, while other High Level Frameworks come with a promise
-of productivity improvement without debugging improvement.
+To contrast High Level Frameworks come with a promise, and just
+that, of productivity improvement without any mention of debugging.
+
+Pre-90's software was complex, innovative and done in Low Level Laguages.
+Can Low Level Ideas be adapted to todays Application Complexity ?
+Have we forgotten how the wheel was invented ?
 
 2. Prototype
 ============
 
 <a href="https://github.com/harsha-mudi/rdp">RDP for Javascript</a>.
 
-Status - Beta
 API    - Fixed (for 0.3.x series)
+Status - Beta
 
-After porting to a static language, the Beta status will be removed.
+__variables are for internal uses.
 
-3. Influences
+<a href="https://github.com/harsha-mudi/rdp/issues">Issues / Feedback</a>
+
+Development time ~~ 4 weeks
+
+3. Roadmap for 0.4.x, 0.5.x
+===========================
+
+Get rid of "Not Found"
+
+* C++
+* Avoid memory leaks
+* Avoid Data Racing
+* Serialization
+* Mirror latency
+
+4. Influences
 =============
 
-(from most to lesser)
+In descending order,
 
-1) Motherboard and Pure Data
+1) Motherboard
 
 * Pipelines
 * Buses
@@ -101,17 +125,17 @@ After porting to a static language, the Beta status will be removed.
 * Processing
 * Stores
 
-Pure Data is a hallmark for Data Flow Programming.
+1.1) Pure Data
+
+Pure data is a hallmark for Data Flow Programming.
+It provides a visual wrapper for digital signal processing.
 
 "Live" Object:
 m inlets
 &lt;process&gt;
 n outlets
 
-And the result, music.
-
-RDP API is modelled primarily on the above two
-and HFSM's.
+RDP API is modelled primarily on the above two and FSM's.
 
 2) Hoplon
 
@@ -136,9 +160,9 @@ n inlets
 3) Entity Systems
 
 * Centralized Store
-* Query Systems
+* Batch Processing
 
-4) Gulp / RxJs
+4) Gulp / RxJS
 
 * Streams
 * Generators
@@ -152,69 +176,109 @@ Command:
 &lt;filter&gt;
 2 outlets
 
+* Serialization
 * Validation
-* RSS
-* OSC
+* RSS Feeds
+* OSC Messaging
 
 4. Definitions
 ==============
 
+The following words are used from an Engineering perspective.
+The intent of the words is matched, innocently.
+Gross mistakes will be corrected.
+
 1)   Symbol
 
-     Symbols are used for naming objects.
-     It can have misc attributes.
+     Symbol has,
+
+       * a name
+       * an object
+       * attrs
 
 1.1) NameSpace
 
-     A NameSpace manages all Symbols.
+     A NameSpace can,
+
+       * bind
+       * unbind
+       * query
+
+     Symbols.
 
 2)   Data
 
-      A Data is a set of valid Properties.
+     A Data has,
+
+       * props
+
+     A Property has,
+
+       * a slot
+       * a sacalar
+
+     A Scalar is Boolean|String|Number|Array
+
+     A Data can,
+
+       * serialize
 
 2.1) Token
 
-      A Token isa Data with a Value Property.
+     A Token isa unique Data.
+
+     A Token has,
+
+       * a value
+
+     One can,
+
+       * stamp
+
+     a Token.
+
+     Stamping helps in token re-use and tracing.
+
+     start and stop are convetional tokens.
 
 2.2) Singals and Events
 
      A Signal isa Data with,
 
-       * name
-       * message
+       * a name
+       * a payload
 
-     An Event isa Data with,
+     An Event isa Signal with,
 
-       * name
-       * payload
-       * ts
+       * a ts
 
 2.3) Glitch
 
-     An Glitch isa Data with,
+     A Glitch isa Data with,
 
-       * status
-       * context
+       * a name
+       * a context
 
 3)   Entity
 
      An Entity isa Data with,
 
-       * id
+       * a id
        * tags
-       * components
+       * parts
+       * a ts
 
-3.1) Component
+3.1) Part
 
-     A Component isa Data with,
+     A Part isa Data with,
 
-       * name
+       * a name
 
-     During Flow, Entities gain or lose Components.
+     During Flow, Entities gain or lose Parts.
 
 3.2) Cell
 
-     A Cell isa Component with,
+     A Cell isa Entity with,
 
        * observers
 
@@ -229,20 +293,25 @@ Command:
 
      A System can,
 
-       * trigger
+       * react
        * process
+       * emit
+       * show ( a Graphic Object )
 
-     An event can be "raised" in a system.
-       Thus a system can be an observer.
+     One can,
 
-     A System can also "show".
-       Thus a system can be a GraphiC Object.
+       * push data into
+       * raise a signal
 
-     A System can Generate Data.
-       Here it is called a Generator.
+     in a System.
 
-     A System can Sink-In Data.
-       Here it is called a Sink.
+     Systems can be,
+
+       * Generators
+       * Filters
+       * Streams
+       * StateMachines
+       * Sinks
 
      Streams are the simplest Systems with,
 
@@ -251,38 +320,56 @@ Command:
        * sysout
        * syserr
 
-     A System can Filter Data.
-       Here it is called a Filter.
+    Components just react
 
-     A System can deal with State,
-       Here it is called a State Machine.
+5)   Board
 
-5)   Flow
-
-     Flow is a purposeful connection of Systems.
+     Board is a connection of Systems.
 
      It can,
 
-       * connect inlets and outlets witn Wires and Connections.
-       * add / remove systems in a Bus
+       * connect inlets and outlets with Wires
+       * manage systems
+       * mirror
 
-     It has a Store.
+     It has,
+
+       * a store
+       * a bus
 
 5.1) Bus
 
-     A Bus is a NameSpace which can trigger events on all its
-     objects.
+     A Bus is a NameSpace which can,
+
+       * trigger
 
 5.2) Store
 
-     A Store is made of queryable Entities.
+     A Store can,
+
+       * manage
+       * query
+
+     Entities.
 
 5. Example App
 ==============
 
-<a href="https://github.com/harsha-mudi/esti">Task Estimator</a>.
+<a href="https://github.com/harsha-mudi/esti">Esti</a> is a productivity measurement app.
 
-TODO</article>
+It was initially meant to be a phonegapp app, but I lost my phone
+and it is now a desktop app.
+
+In phonegap, onPause and onResume could be implemented by Store serialization.
+
+<a href="https://github.com/harsha-mudi/esti/issues">Issues / Feedback</a>
+<a href="https://github.com/harsha-mudi/esti/blob/master/sim.xml">Simulated Data</a>
+
+## Flow Diagram
+
+Flow diagram was automaticall generated from source with the help of dagre-d3.
+
+<img src="images/esti.png"/></article>
 <div style="height:55px; clear: both">
 &nbsp;
 </div>
