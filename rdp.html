@@ -47,7 +47,7 @@ Mirror
 
 <iframe src="//player.vimeo.com/video/102371548" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-<b>Stepa</b>
+<b>Steppa</b>
 <iframe src="//player.vimeo.com/video/102379249" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 1. Introduction
@@ -102,19 +102,17 @@ Status - Beta
 
 __variables are for internal uses.
 
-<a href="https://github.com/harsha-mudi/rdp/issues">Issues / Feedback</a>
-
 Development time ~~ 4 weeks
+
+<a href="https://github.com/harsha-mudi/rdp/issues">Issues / Feedback</a>
 
 3. Roadmap for 0.4.x, 0.5.x
 ===========================
 
-Get rid of "Not Found"
-
-* C++
+* C++ port
 * Avoid memory leaks
 * Avoid Data Racing
-* Serialization
+* Complete Serialization and Deserialization
 * Mirror latency
 
 4. Influences
@@ -130,56 +128,61 @@ In descending order,
 * Processing
 * Stores
 
-1.1) Pure Data
+1.1) <a href="https://www.youtube.com/watch?v=7Y_Tzelw91g">Max Msp / Pure Data</a>
 
-Pure data is a hallmark for Data Flow Programming.
-It provides a visual wrapper for digital signal processing.
+They are a hallmark for Data Flow Programming.
+They provide a visual wrapper for digital signal processing.
 
-"Live" Object:
-m inlets
-&lt;process&gt;
-n outlets
+Key Concepts:
 
-RDP API is modelled primarily on the above two and FSM's.
+* "Live" Object
+* m inlets
+  &lt;process&gt;
+  n outlets
+
+RDP API is modelled primarily on the above two and FSMs.
 
 2) Hoplon
 
-<a href="https://github.com/tailrecursion/hoplon">Hoplon</a> is a new web development framework for clojurescript 
+<a href="https://github.com/tailrecursion/hoplon">Hoplon</a> is a new web development framework for clojurescript
 based on the idea of spreadsheets.
 
 Spreadsheets are the most user friendly interface for
 Data Flow Programming.
 
-Hoplon models Spreadsheets as Cells and Formulae.
+Key Concepts:
 
-Cell:
-0 inlet
-&lt;identity&gt;
-1 outlet
-
-Formula:
-n inlets
-&lt;script&gt;
-1 outlet
+* Cell
+  0 inlet
+  &lt;identity&gt;
+  1 outlet
+* Formula
+  n inlets
+  &lt;script&gt;
+  1 outlet
 
 3) Entity Systems
+
+Key Concepts:
 
 * Centralized Store
 * Batch Processing
 
 4) Gulp / RxJS
 
+Key Concepts:
+
 * Streams
 * Generators
 
 5) PowerShell / Pipes / XML
 
-* CmdLet
+Key Concepts:
 
-Command:
-1 inlet
-&lt;filter&gt;
-2 outlets
+* CmdLet
+  1 inlet
+  &lt;filter&gt;
+  2 outlets
 
 * Serialization
 * Validation
@@ -201,15 +204,17 @@ Gross mistakes will be corrected.
        * an object
        * attrs
 
+    This idea is taken from FSMs.
+
 1.1) NameSpace
 
      A NameSpace can,
 
        * bind
        * unbind
-       * query
+       * run queries over its elements
 
-     Symbols.
+    This idea is taken from lisp.
 
 2)   Data
 
@@ -222,11 +227,14 @@ Gross mistakes will be corrected.
        * a slot
        * a sacalar
 
-     A Scalar is Boolean|String|Number|Array
+     A Scalar is Boolean|String|Number|Array|.serialize()
 
      A Data can,
 
+       * init
        * serialize
+
+     This is necessary for a language agnostic design.
 
 2.1) Token
 
@@ -238,24 +246,24 @@ Gross mistakes will be corrected.
 
      One can,
 
-       * stamp
-
-     a Token.
-
-     Stamping helps in token re-use and tracing.
+       * stamp a token
 
      start and stop are conventional tokens.
+     Stamping helps in token re-use and tracing.
+     This is necessary for language agnostic design.
 
 2.2) Singals and Events
 
      A Signal isa Data with,
 
-       * a name
+       * a route
        * a payload
 
      An Event isa Signal with,
 
        * a ts
+
+     This idea is taken from <a href="http://opensoundcontrol.org/spec-1_0">OSC</a>.
 
 2.3) Glitch
 
@@ -305,8 +313,8 @@ Gross mistakes will be corrected.
 
      One can,
 
-       * push data into
-       * raise a signal
+       * push
+       * intrrupt
 
      in a System.
 
@@ -326,15 +334,15 @@ Gross mistakes will be corrected.
        * syserr
        * debug
 
-     Components just react
+     Components are Systems that just react.
 
 5)   Board
 
-     Board is a connection of Systems.
+     Board provides a space for holding Systems.
 
      It can,
 
-       * connect inlets and outlets with Wires
+       * connect inlets and outlets of any two Systems with Wires
        * manage systems
        * mirror
 
@@ -347,7 +355,7 @@ Gross mistakes will be corrected.
 
      A Bus is a NameSpace which can,
 
-       * trigger
+       * trigger a signal/event to Systems.
 
 5.2) Store
 
