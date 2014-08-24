@@ -41,7 +41,7 @@
 <h2>Is Ruby an acceptable Perl6 ?</h2>
 <div class="lineno"></div>
 
-<article class="post">What Ruby has that Perl[56] wants
+<article class="post">What Ruby has
 
 1) Standard Spec
 2) Multiple Implementations
@@ -53,30 +53,41 @@
 8) Embeddable
 9) Mobile
 
-What is unique to Perl6
+All the goodies basically.
 
-1) One vm to rule them all
-2) First Class Grammars to describe them all
-3) Gradual Typing
+<h2>Still the answer is No</h2>
+What is unique about Perl6 ?
 
-All the three are lofty goals
+# Grammars
 
-1) is jvm now
-2) is a bootstrap nightmare
-3) Every one is going to do it
+Grammars provide
 
-Things I wish Ruby Community stole from Perl
+1) Expanding Perl6 from within
+1.1) Syntax Level Compatibility
+2) Provide access to modifiable AST at rumtime
 
+This is comparable to Lisp without s-expressions, which are trivial.
+
+Implementing Grammars will put Perl in the <a href="http://www.paulgraham.com/hundred.html">200 year language domain</a>.
+Maybe it's Yin and Yan again as Grammars are easy to use but not so easy to implement.
+
+# OOP and FP
+
+A Perl-ish take on it.
+You can follow the Perl6 development <a href="https://github.com/perl6">here</a>.
+
+<h2>Things I wish Ruby Community stole from Perl</h2>
 1) Informal writing style **
 2) The Old School attitude of script writing **
 3) Humour
 4) Beautiful API design
 5) Backwards Compatiability
 
-Things I wish Perl Community stole from Ruby
+<h2>Things I wish Perl Community stole from Ruby</h2>
 
 1) Better looking websites
 2) Embeddable (mruby, C Api)
+
 
 ** This is what sucked me into Perl,
 TPJ, HOP, Mastering Algorithms and the Camel Book.
