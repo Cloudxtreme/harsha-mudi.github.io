@@ -21,15 +21,5 @@
   ],
   "dependencies": {
     "jquery": ">=1.4.1"
-  },
-  "_release": "0.7.6",
-  "_resolution": {
-    "type": "version",
-    "tag": "v0.7.6",
-    "commit": "81f483ded4481e627b322fcb843eb9b403f0a9bd"
-  },
-  "_source": "git://github.com/quirkey/sammy.git",
-  "_target": "~0.7.6",
-  "_originalSource": "sammy",
-  "_direct": true
+  }
 }
