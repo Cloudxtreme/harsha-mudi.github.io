@@ -42,46 +42,77 @@
 
 
 
-<div class="autospace">
-   <h2>programming</h2>
-   
-    <h3>1 <a href="/dataflow.html">Data Flow</a><h3>
-  
-    <h3>2 <a href="/is-ruby-perl6.html">Is Ruby an acceptable Perl6 ?</a><h3>
-  
-    <h3>3 <a href="/lt-gist.html">LightTable Arch</a><h3>
-  
-    <h3>4 <a href="/vnc.html">Mac Remote Desktop</a><h3>
-  
-    <h3>5 <a href="/markdown.html">Markdown</a><h3>
-  
-    <h3>6 <a href="/module-pattern.html">Module Pattern</a><h3>
-  
-    <h3>7 <a href="/syntax.html">My Favorite Syntax Bits</a><h3>
-  
-    <h3>8 <a href="/om.html">OM</a><h3>
-  
-    <h3>9 <a href="/oop.html">OOP</a><h3>
-  
-    <h3>10 <a href="/programmers-are-terrible.html">Programmers are terrible</a><h3>
-  
-    <h3>11 <a href="/rdp.html">Reactive Data Processing (The Story)</a><h3>
-  
-    <h3>12 <a href="/soc.html">Safe Free Speech</a><h3>
-  
-    <h3>13 <a href="/shell-programming.html">Shell Programming</a><h3>
-  
-    <h3>14 <a href="/why-i-am-excited-about-entity-systems.html">Why I am excited about Entity Systems</a><h3>
-  
-    <h3>15 <a href="/javascript-is-broken.html">javascript is broken</a><h3>
-  
-    <h3>16 <a href="/this-that-selves.html">this that selves</a><h3>
-  
+<h2>OOP</h2>
+<div class="lineno"></div>
+
+<article class="post">OOP is intrinsically tied to an object's life cycle.
+
+One can distinguish between two life cycles
+
+1. Flat
+
+a creates b
+a uses b
+a closes b
+
+This facilitates layered Architecture.
+
+M V C - Model View Controller
+D A S - Domain Application Service
+
+This however fails for all Workflow Processing as a typical workflow spans
+more than 2 disjointed steps.
+
+2. Nested
+
+An object n-levels down is completely useless.
+You may get into a
+
+* Circular Reference
+* Wrong Update
+* Memory Leak
+
+The major problem is two-way, or even one-way communication with previous levels.
+**Legacy code is sprinkled with using exceptions as one-way communication.**
+
+Religiosity
+===========
+
+Practitioner: How can objects have sex ?
+Priest:       You need a Factory to pray to and then it will deliver.
+Practitioner: I don't have one ...
+Priest:       You need a Factory to pray to and then it will deliver.
+
+$ Practitioner works on his code
+
+Practitioner: I have a Factory. Can objects have sex now ?
+Priest:       Sex is sin. I pray for your AbstractController.
+Practitioner: ...
+
+It is not difficult to spot religiosity.
+Incapacity is obfuscated and made to be shown as pure and miraculous.
+
+How do you do solve the problem ?
+
+* Messaging
+* Actor Model
+* PAC</article>
+<div style="height:22px; clear: both">
+&nbsp;
+</div>
+<h2 class="blue"><a href="https://github.com/harsha-mudi/lexical-tasklists/issues"><b>issues</b></a></h2>
+<h2>see also:</h2>
+<div>
+
+    
+        <h4><a href="/tags/programming.html">programming</a></h4>
+    
+
 </div>
 
 <div style="height:55px; clear: both">
 &nbsp;
 </div>
-<div style="text-align: center"> 2014 Harsha</div>
+<div style="text-align: center">CC BY-NC 2014 Harsha</div>
 </body>
 </html>
