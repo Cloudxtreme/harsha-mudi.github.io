@@ -45,29 +45,77 @@
 <h2>Data Flow</h2>
 <div class="lineno"></div>
 
-<article class="post">Pure Data
+<article class="post"># Two types of Data
 
-* "Live" Object
-* m inlets
-  &lt;process&gt;
-  n outlets
+1. Continuous
+2. Discrete
 
-Spreadsheets
+All systems are discrete unlessmentioned otherwise.
 
-* Cell
-  0 source
-  &lt;identity&gt;
-  1 sink
-* Formula
-  n sources
-  &lt;script&gt;
-  1 sink
+# Types of Connection
 
-Pipes
+## Pure Data (Continuous)
 
-* 1 input
-  &lt;process&gt;
-  2 outputs</article>
+### "Live" Object
+m inlets
+&lt;process&gt;
+n outlets
+
+## Spreadsheets
+
+### Cell
+1 source
+&lt;identity&gt;
+n sinks
+
+### Formula
+n sources
+&lt;script&gt;
+1 sink
+
+## Pipes
+1 input
+&lt;process&gt;
+2 outputs
+
+## Subroutines
+1 tuple
+&lt;routine&gt;
+1 tuple
+
+## Message Passing
+1 publisher
+&lt;notify&gt;
+n subscribers
+
+# Type of Connection
+
+1. Static
+2. Dynamic
+
+# Type of Flow
+
+1. Cyclic (Subroutines)
+2. Linear
+3. Concurrent
+
+Concurrent Data Flow requires a matching algorithm.
+
+# Direction of Flow
+
+1. Push
+2. Pull
+
+Pull based flows require global schedulers, continuations.
+Pull based flow can be implemented by KPN.
+
+# Environment
+
+1. Pure
+2. Hybrid
+
+In Hybrid environments global hooks need to be given for embeddability
+and clock control.</article>
 <div style="height:22px; clear: both">
 &nbsp;
 </div>
