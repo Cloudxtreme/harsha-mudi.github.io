@@ -50,6 +50,7 @@
 1. Continuous
 2. Discrete
 
+Continuous data needs bounded buffers to avoid overflow.
 All systems are discrete unless mentioned otherwise.
 
 # Types of Connection
@@ -88,28 +89,25 @@ n sources
 &lt;notify&gt;
 n subscribers
 
-# Type of Connection
+# Structure of Nodes
 
 1. Static
 2. Dynamic
+3.
 
-# Type of Flow
+In a Dynamic model flows have complex firing rules with
+schedulers, continuations ...
 
-1. Cyclic (Subroutines)
-2. Linear
-3. Concurrent
+These can be called ControlFlows or Workflows.
 
-Concurrent Data Flow requires a matching algorithm.
+Concurrent Data Flow requires a context matching algorithm.
 
-# Direction of Flow
+# Flow Direction
 
-1. Emitting (Push)
-2. Absorbing (Pull)
-
-Absorbing based flows are typically discrete and are
-used for Control flows, Queues ...
-
-Pull based flows require schedulers, continuations ...
+1. Feedback (Subroutines)
+2. Pipeline
+3. Push
+4. Pull
 
 # Environment
 
