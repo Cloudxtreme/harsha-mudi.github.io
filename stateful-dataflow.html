@@ -42,80 +42,79 @@
 
 
 
-<h2>Data Flow</h2>
+<h2>Stateful Dataflow</h2>
 <div class="lineno"></div>
 
-<article class="post"># Two types of Data
+<article class="post">Data Flow is represented by a Graph.
 
-1. Continuous
-2. Discrete
+Graph = Nodes + Connections.
 
-Continuous data needs bounded buffers to avoid overflow.
-All systems are discrete unless mentioned otherwise.
+State in Data Flow
 
-# Types of Connection
+1. Stateless
 
-## Pure Data (Continuous + Discrete)
+2. Node Local
 
-### "Live" Object
-m inlets + j control-inlets
-&lt;process&gt;
-n control outlets + k control-outlets
+Destruction of the state is problematic.
+Node becomes a co-routine.
 
-## Javelin
+2.1 Graph Global
 
-### Cell
-1 controller
-&lt;identity&gt;
-n sinks
+Corruption is easy.
 
-### Formula
-n sources
-&lt;script&gt;
-1 sink
+3. Concurrent
 
-## Pipes
-1 input
-&lt;process&gt;
-2 outputs
+Graph becomes an OS.
+Node becomes a Process.
 
-## Subroutines
-1 tuple
-&lt;routine&gt;
-1 tuple
+4. Distributed
 
-## Message Passing
-1 publisher
-&lt;notify&gt;
-n subscribers
+If nodes can have multiple outlets, such a node can control multiple graphs.
 
-# Structure of Nodes
+5. Parent / Child
 
-1. Static
-2. Dynamic
-3.
+** If every child node waits for a GLOBAL parent, before moving forward,
+you get a pretty good base to build stateful applications **
 
-In a Dynamic model flows have complex firing rules with
-schedulers, continuations ...
+State Machines
+==============
 
-These can be called ControlFlows or Workflows.
+I should be more mathematical, but fuck mathematicians.
+If a mathematician ever asks me to add two numbers I will gladly give him <a href="https://code.jquery.com/jquery-1.11.1.min.js">this</a>.
 
-Concurrent Data Flow requires a context matching algorithm.
+State Machines are like depressed data flows.
+Data Flow graph gets giddy and excited on receiving events whereas
+State Machines think and brood.
 
-# Flow Direction
+They consult the
+    1. Decision table
+    2. Past lives
+    3. The current input dilemma
+    and then commit to an action.
 
-1. Feedback (Subroutines)
-2. Pipeline
-3. Push
-4. Pull
+The depressed state machine can't do two tasks at a time because it's past will lose meaning.
 
-# Environment
+This is just like 2 and 2.1
 
-1. Pure
-2. Hybrid
+To modularise state machines we need to do 3 which gives you Actor Model !
 
-In Hybrid environments global hooks need to be given for embeddability
-and clock control.</article>
+After concurrency, diff between State Machines and Data Flow Process becomes blurred.
+
+The only problem I find is that programming languages
+are geared towards state machines since C. So people can't see the Data Driven way.
+
+If you look at a C function calling another function, isn't like 5 ?
+Like a limited feedback loop ?
+
+In pure assembly, you can do whatever the fuck you want.
+RAM is a Decision Table and Co-routines / Processes are just a Context Switch away !
+
+Sigh.
+
+Lisp originated in assembly too !
+I can't even imagine the CPU thrashing done by a real pre-80's Lisp.
+
+Viva Low Level !</article>
 <div style="height:22px; clear: both">
 &nbsp;
 </div>
