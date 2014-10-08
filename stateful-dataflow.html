@@ -53,28 +53,21 @@ State in Data Flow
 
 1. Stateless
 
-2. Node Local
-
-Destruction of the state is problematic.
-Node becomes a co-routine.
-
-2.1 Graph Global
+2. Global
 
 Corruption is easy.
 
-3. Concurrent
+3. Parent / Child
+
+4. Node Local
+
+Node becomes a co-routine.
+Destruction of the state is problematic.
+
+5. Concurrent
 
 Graph becomes an OS.
 Node becomes a Process.
-
-4. Distributed
-
-If nodes can have multiple outlets, such a node can control multiple graphs.
-
-5. Parent / Child
-
-** If every child node waits for a GLOBAL parent, before moving forward,
-you get a pretty good base to build stateful applications **
 
 State Machines
 ==============
@@ -93,25 +86,28 @@ They consult the
     and then commit to an action which begets fruitful data.
 
 The depressed state machine can't do two tasks at a time because it's past will lose meaning.
+Every task is like a transaction.
 
-This is just like 2 and 2.1
+goto's + global variables is like 2.
+A C function calling another function is like 3.
+A co-routine yielding to another co-routine is 4.
+And 5 is Actor Model aka Processes + IPC !
 
-To modularise state machines we need to do 3 which gives you Actor Model !
-
-After concurrency, diff between State Machines and Data Flow Process becomes blurred.
-
-The only problem I find is that programming languages
-are geared towards state machines since C. So people can't see the Data Driven way.
-
-A C function calling another function is like a limited feedback loop.
-The limitation being that it can't transcend 1 level.
-
-In pure assembly, you can do whatever the fuck you want.
-RAM is a Decision Table and Co-routines / Processes are just a Context Switch away !
+After concurrency, State Machines =~ Data Flow Processes.
 
 Sigh.
 
-Lisp originated in assembly.
+It's sad to see functional programmers stuck at 1 when in fact assembly programmers had 5
+and Data Driven Style of programming.
+
+In pure assembly, you can do whatever the fuck you want.
+RAM is a Decision Table and Co-routines / Processes -- 5 -- are just a Context Switch away !
+
+C / Pascal are a step backwards in programming by going from 5 to 3.
+
+All high level perspectives are flawed.
+Forth / Lisp originated in assembly.
+By far they still represent the most flexible languages.
 I can't even imagine the CPU thrashing done by a real pre-80's Lisp.
 Viva Low Level !</article>
 <div style="height:22px; clear: both">
