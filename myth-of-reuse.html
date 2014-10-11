@@ -50,16 +50,15 @@
 - Easier to use
 - Maintainable
 - Cheap components / plugins / modules
-- Robust
 
 I have a Gameboy ~~ 10 years.
 A bike ~~ 7 years.
 A watch ~~ 12 years.
 
-Each of them has good cheaply available components which can be used for
+Each of them has good cheaply available parts which can be used for
 
 - Decoration
-- Maintainance
+- Maintenance
 - Upgrades
 
 It is on the success of Engineering, Software Engineers make the
@@ -68,7 +67,7 @@ claims of reuse.
 Sadly most claims remain more exaggerated than true.
 
 For example, the Factory Pattern doesn't have the notion of pipelines
-and yet it is supposed to help us somehow into making the car objects.
+and yet it is supposed to help us somehow into making the "car" objects.
 
 Can we be inspired by Engineering to do better ?
 
@@ -127,40 +126,82 @@ Summary
 The maximum reuse happen at Primitives, Data Structures ...
 Important reuse goes into to Architectural/Design Patterns.
 
-The most important is the "Hierarchy of Modules".
+For flexible UI, create common and flexible Interfaces.
+
+The most ignored is the "Hierarchy of Modules".
 With the help of such a hierarchy we get easy Build Steps and Internal reuses.
 
-What is a Module ?
+<b>What is a Module ?</b>
 
-* Functions + Namespaces
-* OOP + Messaging
-* REST APIs
-* DLLs
-* Actors
-* Active Objects
-* Flow Components
+A Module has
+1. input
+2. output
+3. modularity
 
 To decompose into a Hierarchy is a Creative Process.
 It is not meant to be guided by the notion of reuse but by that of Efficiency.
 
 ** It is a skill, not a framework **
 
-The key is, a Module should have well-behaved Input / Output / Communication channels.
+Unfortunately programming pathologically suffers from name-coupling.
+By name coupling what I imply is how a function has to know the name of
+the function or object it would like to call.
+
+Hence there is an extra need to an indirections as seen below.
+
+* Control Functions + Functions (Static)
+* Objects + Mediator / Messaging / Interceptor / Reflection
+* REST APIs
+* DLLs
+* Actors
+* Active Objects
+* Components
+
+Every so-called "Very High Level beyond Functional" language as of 2014
+implements static bindings for names as the default.
+
+In essence every name or symbol used in the program directly binds to a
+immutable memory address.
+
+Contrast to this, Assembly programming languages don't need any complex
+indirections like above because of the notion of indirect jumps or computed gotos.
+
+SPARC:  jmpl %o7
+MIPS:   jal $ra
+X86:    jmp *%eax
+ARM:    mov pc, r2
+IA64:   br.ret.sptk.few rp
+6502:   jmp ($0DEA)
+65C02:  jmp ($0DEA,X)
+65C816: jsr ($0DEA,X)
+
+This is an instruction level Proxy Pattern.
+This naturally gives rise to modularity.
+
+Consider how Programming Language Designers avoid gotos in their "High Level"
+programming language only shows their blind ignorance to the uses of goto.
+<a href="http://eli.thegreenplace.net/2012/07/12/computed-goto-for-efficient-dispatch-tables">
+What is even more absurd is that many C based implementations of Programming languages
+use computed gotos for efficiency reasons.</a>
+
+Summary
+=======
+
+Programming language designers are doomed to reinvent what is useful and forgotten with stupid names.
 
 To reuse, just stick to off-the-shelf
 
 * Primitives
 * Patterns
-* Module Abstractions
-
-and learn Functional Decomposition.
 
 Each should however be implementable by-hand, when absent as a library.
-Infact the library should not be different from a hypothetical implementation by-hand.
+In fact the library should not be different from a hypothetical implementation by-hand.
 Any fluff just muddles the pure Design Concepts.
 
-Most frameworks/langs aren't that explicit, however.
-They promise you silver and give you stacktraces.</article>
+Learn Module Decomposition.
+
+A litmus test for a programmer understanding modularity
+is whether he can implement a plugin system.</article>
 <div style="height:22px; clear: both">
 &nbsp;
 </div>
