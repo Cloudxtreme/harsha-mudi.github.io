@@ -117,7 +117,7 @@ Old components can be
 * Replaced
 * Modified internally
 
--  Hierarchy of Modules
+- Module Set
 
 Summary
 =======
@@ -127,18 +127,17 @@ Important reuse goes into to Architectural/Design Patterns.
 
 For flexible UI, create common and flexible Interfaces.
 
-The most ignored is the "Hierarchy of Modules".
-With the help of such a hierarchy we get easy Build Steps and Internal reuses.
+The most ignored is the "Module Set".
+With the help of such a set we get easy Build Steps and Internal reuses.
 
 <b>What is a Module ?</b>
 
 A Module has
 1. input
 2. output
-3. modularity
+3. reconfigurability
 
-To decompose into a Hierarchy is a Creative Process.
-It is not meant to be guided by the notion of reuse but by that of Efficiency.
+To create a Module Set is a Creative Process.
 
 ** It is a skill, not a framework **
 
@@ -146,10 +145,11 @@ Unfortunately programming pathologically suffers from name-coupling.
 By name coupling what I imply is how a function has to know the name of
 the function or object it would like to call.
 
-Hence there is a need extra for indirections to achive basic modularity
+Hence there is a need extra for indirections to achieve basic modularity
 
 * Function Pointers
-* Mediator / Messaging / Interceptor / Reflection
+* Dynamic Namespaces
+* Mediator / Messaging / Interceptor / Reflection / Dependency Injection / Service Locator / Proxy ...
 * REST APIs
 * DLLs
 * Actors
@@ -158,8 +158,6 @@ Hence there is a need extra for indirections to achive basic modularity
 
 Every so-called "Very High Level beyond Functional" language as of 2014
 implements static bindings for names as the default.
-
-A name or symbol used in the program directly binds to an immutable label.
 
 Contrast to this, Assembly programming languages don't need any complex
 indirections like above because of the notion of indirect jumps or computed gotos.
@@ -176,21 +174,22 @@ IA64:   br.ret.sptk.few rp
 This is an instruction level Proxy Pattern which naturally gives rise to modularity
 and even self-modyfying code.
 
-On Hierarchy
-============
+Module Set
+==========
 
-The hierarchy can be divided into two aspects.
+The Set can be divided into two aspects.
 Data Flow and Control Flow.
 
-Data Flow is made up of transformative functions. Easy to split up.
-Control Flow represents the reactive core and sequencing of the solution.
+Data Flow is made up of Data Paths and Transformations.
 
-Control Flow is a bit difficult to split up since it is made of steps and can
-have synchoronizing issues.
+Control Flow represents
+1. Steps
+2. Sequencing
 
-However the steps themselves can be made modular if not the Control Flow.
-One easy way to achieve that is using Dispatch Tables which is fairly trivial even
-in assembly but obfuscated by "High Level" level languages.
+Steps and Transformations are easy to Modularise.
+
+Sequencing however will be very unique per application as it resembles a
+decision tree.
 
 Summary
 =======
