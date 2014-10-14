@@ -96,8 +96,7 @@ For Software this is,
 - Primitives
 - Data Structures
 - Algorithms
-- Architectural Patterns
-- Design Patterns
+- Patterns
 
 For A and B, the manufacturing pipeline can be common.
 
@@ -118,7 +117,7 @@ Old components can be
 * Replaced
 * Modified internally
 
-- Hierarchy of Modules
+-  Hierarchy of Modules
 
 Summary
 =======
@@ -147,10 +146,10 @@ Unfortunately programming pathologically suffers from name-coupling.
 By name coupling what I imply is how a function has to know the name of
 the function or object it would like to call.
 
-Hence there is an extra for indirections
+Hence there is a need extra for indirections to achive basic modularity
 
-* Control Functions + Functions (Static)
-* Objects + Mediator / Messaging / Interceptor / Reflection
+* Function Pointers
+* Mediator / Messaging / Interceptor / Reflection
 * REST APIs
 * DLLs
 * Actors
@@ -160,8 +159,7 @@ Hence there is an extra for indirections
 Every so-called "Very High Level beyond Functional" language as of 2014
 implements static bindings for names as the default.
 
-In essence every name or symbol used in the program directly binds to a
-immutable memory address.
+A name or symbol used in the program directly binds to an immutable label.
 
 Contrast to this, Assembly programming languages don't need any complex
 indirections like above because of the notion of indirect jumps or computed gotos.
@@ -175,14 +173,24 @@ IA64:   br.ret.sptk.few rp
 65C02:  jmp ($0DEA,X)
 65C816: jsr ($0DEA,X)
 
-This is an instruction level Proxy Pattern.
-This naturally gives rise to modularity.
+This is an instruction level Proxy Pattern which naturally gives rise to modularity
+and even self-modyfying code.
 
-Consider how Programming Language Designers avoid gotos in their "High Level"
-programming language only shows their blind ignorance to the uses of goto.
-<a href="http://eli.thegreenplace.net/2012/07/12/computed-goto-for-efficient-dispatch-tables">
-What is even more absurd is that many C based implementations of Programming languages
-use computed gotos for efficiency reasons.</a>
+On Hierarchy
+============
+
+The hierarchy can be divided into two aspects.
+Data Flow and Control Flow.
+
+Data Flow is made up of transformative functions. Easy to split up.
+Control Flow represents the reactive core and sequencing of the solution.
+
+Control Flow is a bit difficult to split up since it is made of steps and can
+have synchoronizing issues.
+
+However the steps themselves can be made modular if not the Control Flow.
+One easy way to achieve that is using Dispatch Tables which is fairly trivial even
+in assembly but obfuscated by "High Level" level languages.
 
 Summary
 =======
