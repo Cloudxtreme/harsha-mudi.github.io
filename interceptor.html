@@ -2,7 +2,7 @@
 <head>
 <html>
 <meta charset="utf-8">
-<title> Internet Communication </title>
+<title> Interceptor Pattern </title>
 <meta name="viewport" content="width=960,initial-scale=1">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
 <meta http-equiv="Pragma" content="no-cache"/>
@@ -42,61 +42,53 @@
 
 
 
-<h2>Internet Communication</h2>
+<h2>Interceptor Pattern</h2>
 <div class="lineno"></div>
 
-<article class="post">Forms of Communication
+<article class="post">What is Interceptor ?
+=====================
 
-1-1
-===
+Interceptor is an Architectural Pattern which can replace or augment
 
-Post (async)
-Telegraph (async)
-Telephone
-* Yellow Pages
+* Wrapper
+* Decorator
+* Facade
+* Adapter
+* Proxy
+* Observer
 
-m-n
-===
+* Strategy
+* Chain of Command
+* Mediator
+* Filters
 
-Newspaper (async)
-Radio (async)
-TV (async)
+* ServiceLocator
+* Front Controller
+* Delegation
+* Static AOP
 
-^ + Telephone == sync
+That's actually quite a lot !
 
-m-n
-===
+This is mainly because it's an Architectural Pattern which are
+compressive in nature.
 
-Internet is a m-n Communication model, with some twists.
+It looks like this,
 
-* m = 1 for private messaging
-* bad quality content for large m and large n
-* poor dpi, resolution, bitrates
-* content agnostic -- text, images, video, sound
-* cost for consumption increases as m increases
-* cost for creation increases as n increases
+```
+class Interceptor {
+    public intercept(Invocation v);
+}
+```
 
-* when m is small and n is large, it resembles TV with all its faults
-** grosser kistch is the dominant aesthetic
-** unregulated medium
+Essentially it is an indirection at the call level.
 
-* like Pirate Radio, m and n can be small
-** this is the most unique possibility with the internet
+Function <-> Function Pointer
+Interceptor <-> Function Pointer
 
-* archival value for public domain
-* interactive yellow pages
+Problems
+========
 
-For consumers,
-
-* use it like a tv, news
-* find niche communities
-
-For creators,
-* treat it like a tv
-* make news
-* treat it like an archive
-* get listed in yellow pages
-* find niche communities</article>
+Too much metadata.</article>
 <div style="height:22px; clear: both">
 &nbsp;
 </div>
@@ -105,7 +97,15 @@ For creators,
 <div>
 
     
-        <h4><a href="/tags/internet.html">internet</a></h4>
+        <h4><a href="/tags/ai.html">ai</a><br></h4>
+    
+
+    
+        <h4><a href="/tags/philosophy.html">philosophy</a><br></h4>
+    
+
+    
+        <h4><a href="/tags/linguistics.html">linguistics</a></h4>
     
 
 </div>
