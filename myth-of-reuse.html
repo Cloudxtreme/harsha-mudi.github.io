@@ -119,8 +119,8 @@ Old components can be
 
 - Module Set
 
-Summary
-=======
+Module Set
+==========
 
 The maximum reuse happen at Primitives, Data Structures ...
 Important reuse goes into to Architectural/Design Patterns.
@@ -136,46 +136,11 @@ A Module has
 1. input
 2. output
 3. reconfigurability
+4. connectivity
 
 To create a Module Set is a Creative Process.
 
 ** It is a skill, not a framework **
-
-Unfortunately programming pathologically suffers from name-coupling.
-By name coupling what I imply is how a function has to know the name of
-the function or object it would like to call.
-
-Hence there is a need extra for indirections to achieve basic modularity
-
-* Function Pointers
-* Dynamic Namespaces
-* Mediator / Messaging / Interceptor / Reflection / Dependency Injection / Service Locator / Proxy ...
-* REST APIs
-* DLLs
-* Actors
-* Active Objects
-* <a href="http://noflojs.org">Components</a>
-
-Every so-called "Very High Level beyond Functional" language as of 2014
-implements static bindings for names as the default.
-
-Contrast to this, Assembly programming languages don't need any complex
-indirections like above because of the notion of indirect jumps or computed gotos.
-
-SPARC:  jmpl %o7
-MIPS:   jal $ra
-X86:    jmp *%eax
-ARM:    mov pc, r2
-IA64:   br.ret.sptk.few rp
-6502:   jmp ($0DEA)
-65C02:  jmp ($0DEA,X)
-65C816: jsr ($0DEA,X)
-
-This is an instruction level Proxy Pattern which naturally gives rise to modularity
-and even self-modyfying code.
-
-Module Set
-==========
 
 The Set can be divided into two aspects.
 Data Flow and Control Flow.
@@ -187,14 +152,10 @@ Control Flow represents
 2. Sequencing
 
 Steps and Transformations are easy to Modularise.
-
-Sequencing however will be very unique per application as it resembles a
-decision tree.
+Sequencing can be modularized with the help of decision trees.
 
 Summary
 =======
-
-Programming language designers are doomed to reinvent what is useful and forgotten with stupid names.
 
 To reuse, just stick to off-the-shelf
 
@@ -215,10 +176,6 @@ is whether he can implement a plugin system.</article>
 <h2 class="blue"><a href="https://github.com/harsha-mudi/lexical-tasklists/issues"><b>issues</b></a></h2>
 <h2>see also:</h2>
 <div>
-
-    
-        <h4><a href="/tags/philosophy.html">philosophy</a><br></h4>
-    
 
     
         <h4><a href="/tags/programming.html">programming</a></h4>

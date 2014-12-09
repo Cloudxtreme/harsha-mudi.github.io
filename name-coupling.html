@@ -2,7 +2,7 @@
 <head>
 <html>
 <meta charset="utf-8">
-<title> Just Another Blog </title>
+<title> Name Coupling </title>
 <meta name="viewport" content="width=960,initial-scale=1">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
 <meta http-equiv="Pragma" content="no-cache"/>
@@ -42,58 +42,60 @@
 
 
 
-<div class="autospace">
-   <h2>programming</h2>
-   
-    <h3>1 <a href="/automata.html">Automata</a><h3>
-  
-    <h3>2 <a href="/dataflow.html">Data Flow</a><h3>
-  
-    <h3>3 <a href="/interceptor.html">Interceptor Pattern</a><h3>
-  
-    <h3>4 <a href="/is-ruby-perl6.html">Is Ruby an acceptable Perl6 ?</a><h3>
-  
-    <h3>5 <a href="/lt-gist.html">LightTable Arch</a><h3>
-  
-    <h3>6 <a href="/vnc.html">Mac Remote Desktop</a><h3>
-  
-    <h3>7 <a href="/markdown.html">Markdown</a><h3>
-  
-    <h3>8 <a href="/module-pattern.html">Module Pattern</a><h3>
-  
-    <h3>9 <a href="/syntax.html">My Favorite Syntax Bits</a><h3>
-  
-    <h3>10 <a href="/name-coupling.html">Name Coupling</a><h3>
-  
-    <h3>11 <a href="/om.html">OM</a><h3>
-  
-    <h3>12 <a href="/oop.html">OOP</a><h3>
-  
-    <h3>13 <a href="/bad-lisp.html">Pretentious Lisp</a><h3>
-  
-    <h3>14 <a href="/programmers-are-terrible.html">Programmers are terrible</a><h3>
-  
-    <h3>15 <a href="/rdp.html">Reactive Data Processing (The Story)</a><h3>
-  
-    <h3>16 <a href="/soc.html">Safe Free Speech</a><h3>
-  
-    <h3>17 <a href="/shell-programming.html">Shell Programming</a><h3>
-  
-    <h3>18 <a href="/stateful-dataflow.html">Stateful Dataflow</a><h3>
-  
-    <h3>19 <a href="/myth-of-reuse.html">The Myth of Software Reuse</a><h3>
-  
-    <h3>20 <a href="/why-i-am-excited-about-entity-systems.html">Why I am excited about Entity Systems</a><h3>
-  
-    <h3>21 <a href="/javascript-is-broken.html">javascript is broken</a><h3>
-  
-    <h3>22 <a href="/this-that-selves.html">this that selves</a><h3>
-  
+<h2>Name Coupling</h2>
+<div class="lineno"></div>
+
+<article class="post">All programming pathologically suffers from name-coupling.
+
+By name coupling what I imply is how a function has to know the name of
+the function or object it would like to call.
+
+Hence there is a need extra for indirections to achieve basic modularity
+
+* Function Pointers
+* Dynamic Namespaces
+* Mediator / Messaging / Interceptor / Reflection / Dependency Injection / Service Locator / Proxy ...
+* REST APIs
+* DLLs
+* Actors
+* Active Objects
+* <a href="http://noflojs.org">Components</a>
+
+Every so-called "Very High Level beyond Functional" language as of 2014
+implements static bindings for names as the default.
+
+Contrast to this, Assembly programming languages don't need any complex
+indirections like above because of the notion of indirect jumps or computed gotos.
+
+SPARC:  jmpl %o7
+MIPS:   jal $ra
+X86:    jmp *%eax
+ARM:    mov pc, r2
+IA64:   br.ret.sptk.few rp
+6502:   jmp ($0DEA)
+65C02:  jmp ($0DEA,X)
+65C816: jsr ($0DEA,X)
+
+This is an instruction level Proxy Pattern which naturally gives rise to modularity
+and even self-modyfying code.
+
+Programming language designers are doomed to reinvent what is useful and forgotten with stupid names.</article>
+<div style="height:22px; clear: both">
+&nbsp;
+</div>
+<h2 class="blue"><a href="https://github.com/harsha-mudi/lexical-tasklists/issues"><b>issues</b></a></h2>
+<h2>see also:</h2>
+<div>
+
+    
+        <h4><a href="/tags/programming.html">programming</a></h4>
+    
+
 </div>
 
 <div style="height:55px; clear: both">
 &nbsp;
 </div>
-<div style="text-align: center"> 2014 foobar</div>
+<div style="text-align: center">CC BY-NC 2014 foobar</div>
 </body>
 </html>
