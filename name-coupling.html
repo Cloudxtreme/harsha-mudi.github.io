@@ -45,7 +45,9 @@
 <h2>Name Coupling</h2>
 <div class="lineno"></div>
 
-<article class="post">All programming pathologically suffers from name-coupling.
+<article class="post">[DRAFT]
+
+All programming pathologically suffers from name-coupling.
 
 By name coupling what I imply is how a function has to know the name of
 the function or object it would like to call.
@@ -53,13 +55,15 @@ the function or object it would like to call.
 Hence there is a need extra for indirections to achieve basic modularity
 
 * Function Pointers
-* Dynamic Namespaces
+* Dynamic Namespaces (packages in lisp)
 * Mediator / Messaging / Interceptor / Reflection / Dependency Injection / Service Locator / Proxy ...
 * REST APIs
 * DLLs
 * Actors
 * Active Objects
 * <a href="http://noflojs.org">Components</a>
+
+Electronics is the most visible example of nameless coupling.
 
 Every so-called "Very High Level beyond Functional" language as of 2014
 implements static bindings for names as the default.
@@ -77,7 +81,7 @@ IA64:   br.ret.sptk.few rp
 65C816: jsr ($0DEA,X)
 
 This is an instruction level Proxy Pattern which naturally gives rise to modularity
-and even self-modyfying code.
+and even self-modifying code.
 
 Programming language designers are doomed to reinvent what is useful and forgotten with stupid names.</article>
 <div style="height:22px; clear: both">
