@@ -11,6 +11,41 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
         
 			<item>
+				<title>Personality Types</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+There are multiple systems for personality types.
+
+1. Astrology
+2. MBTI
+3. Enengram
+4. Socionics
+5. Choleric
+
+Is it possible to realize these types from the physiology of the brain ?
+
+&lt;img src=&quot;images/mind.svg&quot;/&gt;
+
+Consider the information pathways,
+
+1. Thinker
+2. Sensor
+3. Controller
+4. Feeler
+
+There are 24 combinations thus.
+
+One can assume that the first and second form the dominant personality
+where as the second and third form the shadow personality.
+
+I suppose inversion of control can be achieved by submitting to the dominant, multiplying it and bringing out the shadow.
+</description>
+				<link>http://lexical.foobar.systems/personality-types.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/personality-types.html</guid>
+			</item>
+		
+			<item>
 				<title>Renoise + Plugins</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
@@ -63,41 +98,6 @@ VST windows and Grid Pie don&#39;t work well together.
 </description>
 				<link>http://lexical.foobar.systems/renoise.html</link>
 				<guid isPermaLink="true">http://lexical.foobar.systems/renoise.html</guid>
-			</item>
-		
-			<item>
-				<title>Mirror Ontology</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-There are multiple systems for personality types.
-
-1. Astrology
-2. MBTI
-3. Enengram
-4. Socionics
-5. Choleric
-
-Is it possible to realize these types from the physiology of the brain ?
-
-&lt;img src=&quot;images/mind.svg&quot;/&gt;
-
-Consider the information pathways,
-
-1. Thinker
-2. Sensor
-3. Controller
-4. Feeler
-
-There are 24 combinations thus.
-
-One can assume that the first and second form the dominant personality
-where as the second and third form the shadow personality.
-
-I suppose inversion of control can be achieved by submitting to the dominant, multiplying it and bringing out the shadow.
-</description>
-				<link>http://lexical.foobar.systems/personality-types.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/personality-types.html</guid>
 			</item>
 		
 			<item>
@@ -968,331 +968,95 @@ And best of all, it is battle tested by Game Developers.
 			</item>
 		
 			<item>
-				<title>OM</title>
+				<title>My Favorite Syntax Bits</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
 
-&lt;a href=&quot;https://github.com/swannodette/om/wiki/Documentation&quot;&gt;Om&lt;/a&gt; is built on three ideas to deal with &lt;a href=&quot;http://tech.pro/blog/1402/five-patterns-to-help-you-tame-asynchronous-javascript&quot;&gt;async&lt;/a&gt; shit in clojurescript.
+# C
+++ +=
+if, for, while, struct
+if expr statement
+infix
 
-1) Messaging
-2) State Management
-3) Reactive UI
+# C++ / Java
+cout &lt;&lt; &quot;Hello World&quot;
+auto
+~Foo
+::
+this
 
-tl;dr UI -&gt; EVENTS -&gt; STATE -&gt; UI
+# Sh
+$vars
+&lt;&lt; &#39;Here&#39;
+`cmd args`
 
-## Reactive UI
+# Perl
+%hash and =&gt;
+`my $foo = 5` is an expr
+do, bless
+qw, / /
+&#39;a&#39; .. &#39;z&#39;
+loop lables
+goto $label (also in gcc)
+__DATA__
 
-This is built on top of ReactJS.
-UI is divided into components.
+# Perl6
+?? !!
+say
+my \var
+junctions
+custom operators
+:types
+multimethods
 
-Each component takes a cursor(more on that later).
-And has some,
-* rendering code
-  rendering code can look like dom/div(default), :div(hiccup) or enlive
-* life cycle hooks where you can place dom event listeners and state change listeners
+# Python
+*kwargs
+generators
+in is not and or
+nested functions
+yield
+with
+pass
+decorators
 
-Initialization of component calls,
-    IInitState
-    IWillMount
-    IDidMount.
+# Ruby
+:symbol
+do .. end
+switch
+&quot;foo&quot;.upcase()
+paren free style
+blocks
+meta programming
+&quot;#{interpolation}&quot;
 
-Every time a cursor&#39;s state changes a component is rendered, as per the life cycle,
-    IWillUpdate
-    IRender or IRenderState
-    IDidUpdate.
+# Small Talk
+if:
 
-Components are organized as a tree for some fancy optimization purposes.
-See,
-    root - builds the first component
-    build
-    component
-    graft.
+# CL / CLJ
+names-likes-this
+arbitrbary nesting
+macros
+-&gt;
+-&gt;&gt;
 
-## State Management
+# go
+declaration syntax
+goroutines
 
-The entire application state and data is an atom blob.
-Om gives you cursors which are pointers(paths) to a subset of the blob.
+# Template engines
+asp
 
-Om also has component local states, which are not stored in the blob.
-See,
-    set-state!
-    get-state!
-    props.
+# *ml, prolog
+Nil
 
-It is much simpler to depend on cursors for everything, IMHO.
+# JS
+undefined, null
 
-Om also has truly global state sharing with,
-    get-shared which gets the :shared argument passed to root.
-
-Cursors are manipulated safely by om API,
-    update!
-    transact! you can use a :tx-listen while building root to listen to all transactions
-    and get-in, assoc-in from clojurescript.
-
-You can extend the ICursor Protocol to come up with your own idea of cursors.
-
-## Messaging
-
-Messaging is possible because of core.async, which provides channels and goroutines.
-There is no &lt;a href=&quot;http://swannodette.github.io/2013/08/02/100000-processes/&quot;&gt;limit&lt;/a&gt; to the number of channels and goroutines unless you are using old browsers.
-goroutines look alot like threads.
-
-Every component can have channels or channels can be global.
-Global channels and goroutines makes it easier to refactor code into multimethods later, IMHO.
-
-Instead of dealing with callbacks in dom event listeners you put! things into channels as events.
-In a goroutine you &amp;lt;! on a channel to listen to all the events and act upon them.
-
-Events are acted upon and send further events, finally making changes to the state which call,
-    IWillUpdate
-    IRender or IRenderState
-    IDidUpdate.
-
-Good place to start go(routines),
-    IWillMount.
-
-Testing and Mocking are greatly simplified using the messaging paradigm.
-
+# Scala
+Null, null, Nil, Nothing, None
 </description>
-				<link>http://lexical.foobar.systems/om.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/om.html</guid>
-			</item>
-		
-			<item>
-				<title>OOP</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-“There&#39;s a good part of Computer Science that&#39;s like magic.
-Unfortunately there&#39;s a bad part of Computer Science that&#39;s like religion.”
-― Hal Abelson
-
-OOP / OOAD is intrinsically tied to an object&#39;s life cycle.
-
-One can distinguish between two life cycles
-
-1. Flat
-
-a creates b
-a uses b
-a closes b
-
-This facilitates layered Architecture.
-
-Model View Controller
-Domain Application Service
-
-This is OK till you need Workflow Processing (Checkout).
-A typical Workflow spans more than 2 disjointed or concurrent steps.
-
-Also, building a new layer is a long process.
-
-2. Nested
-
-An object sent n-levels down may gives rise to
-
-* Circular References
-* Memory Leaks
-* Data Corruption
-* Inability to add new operations since it&#39;s already entrenched.
-
-It is a major pain to debug.
-
-Another problem is two-way, or even one-way communication with previous levels.
-**Legacy code is sprinkled with using exceptions as one-way communication.**
-
-Religiosity
-===========
-
-Practitioner: How can objects have sex ?
-Priest:       You need a Factory to pray to and then it will deliver.
-Practitioner: I don&#39;t have one ...
-Priest:       You need a Factory to pray to and then it will deliver.
-
-$$ Practitioner works on his code
-
-Practitioner: I have a Factory. Can objects have sex now ?
-Priest:       Sex is sin. I pray for your AbstractController.
-Practitioner: ...
-
-Design patterns hide the problems.
-
-&lt;b&gt;It is not difficult to spot religiosity&lt;/b&gt;
-
-* Incapacity is explained as Evil and an obfuscated explanation
-  with moral and miraculous connotations is given.
-
-&amp;gt;  Children are a gift from god.
-&amp;gt;  Dependency Injection will give you the answer.
-&amp;gt;  Use an Applicative Functor, State is evil.
-
-* Judgement Day
-
-&amp;gt;  You will suffer because you sin. You will be judged at the end.
-&amp;gt;  You did not use OOAD DDD DI MVC MVP MVVM ABC properly.
-      Your project will be a maintenance nightmare.
-
-* No criticism of the Elite
-
-How many times in history have the priests held the king accountable ?
-They will attack the commoners and collude with the kings.
-This is because the Elite never needed a religion.
-Religion is always a proxy for them.
-
-A company X and a priest Y will announce a Framework Z.
-After 5 years the company will ditch Z and use W.
-
-Imagining what will happen next is upto you.
-
-Engineering
-===========
-
-Raw Material -&gt; A Real Factory
-                -&gt; Assembly Line
-                    -&gt; Construction
-                        -&gt; Split Raw Materials
-                          -&gt; Make Parts Concurrently
-                        -&gt; Assemble
-                    -&gt; Quality Check
-                -&gt; Product
-                -&gt; Package Product
-
-An Engineering Product stands for itself.
-Only Game Programmers come close to this.
-
-The irony is, Assembly Programmers used these techniques.
-
-Assembly Programmers dealt with primitive indestructible values
-and Pointers.
-
-* Storage Management
-* Memory &lt;-&gt; Processes &lt;-&gt; Device
-
-The `Device` part is where (Flat) OOP is a great fit.
-(infact a file interface is all you need)
-
-The `Storage Management` part is where OOP is OK.
-The `Memory &lt;-&gt; Process` part is where OOP fails.
-
-This can be solved by Data Process Patterns
-
-* Micro Kernel
-
-Used in Real Factory Controllers.
-
-* Entity Systems
-
-The Game Programming way.
-
-* Data Flow
-
-Used in domains like Avionics, Electronics Softwares.
-
-* Stream Processing
-
-XML / Unix
-
-* Actor Model
-
-Used in Telecommunications, WhatsAPP.
-golang.
-
-* Workflow Engine
-* Active Object Pattern
-
-Inevitably, in &quot;Enterprises&quot;.
-
-* PAC
-
-Drupal. Yes Drupal.
-
-* MVC + Smalltalk
-
-It is pointless to talk of MVC-smalltalk without smalltalk.
-smalltalk has a very elegant and actor-like object communication model.
-
-* Co-routines
-
-Simula had it. Why on earth this was wasn&#39;t included in C++ baffles me.
-
-* Hierarchical Control Systems / Agent Oriented Programming
-
----
-and many many more !
-see &lt;a href=&quot;http://www.dataorienteddesign.com/dodmain/&quot;&gt;Data-Oriented Design&lt;/a&gt;
----
-
-## What is the bloody point of all this ?
-
-If you want to be a Software Engineer
-
-1. Use OOP, if you have to, for low level layers
-
-2. Don&#39;t fall into SP, OOP, OOAD, DDD, FP or any religion
-
-3. Engineering is about building complete Products with
-   - Systems
-   - Sub Systems
-   - Inout / Output
-
-   There is a huge creativity here, doing this efficiently.
-   Don&#39;t let the framework rob this from you.
-
-4. A Lot of programmers have built complex reliable Systems without
-   without OOAD or FP in tiny teams.
-
-   Consider the screenplay for &lt;a href=&quot;http://johnaugust.com/2004/how-many-lines-per-page&quot;&gt;Schindlers list&lt;/a&gt;. It has ~~ 6k lines, written
-   by one guy probably.
-
-   A 16kb total-scripts-size can be a good upper limit for a single programmer.
-
-5. Pick new Data Process pattern and make it your own.
-
-The point is, you can do Engineering and it&#39;s not that difficult.
-
-$ cat log.txt | grep foo | wc -l
-
-You already use engineered components that work together, everyday.
-
-
-</description>
-				<link>http://lexical.foobar.systems/oop.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/oop.html</guid>
-			</item>
-		
-			<item>
-				<title>Pause</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-My writing can&#39;t be understood by the pedantic.
-
-Have you observed, the pedantic can never write anything original ?
-That&#39;s no coincidence. For the obsessive compulsive pedantic,
-writing is a sin.
-
-I try to follow Grammar for its prosodic flows.
-
-Pauses are crucial for prosody.
-
-Here are a few ways to create a pause, in ascending order of
-duration
-
--
-|space|
-,
-;
-.
---
-*
-|newline|
-
-|quote|
-italic
-bold
-
-</description>
-				<link>http://lexical.foobar.systems/pause.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/pause.html</guid>
+				<link>http://lexical.foobar.systems/syntax.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/syntax.html</guid>
 			</item>
 		
 			<item>
@@ -1321,6 +1085,261 @@ And most sadly,
 </description>
 				<link>http://lexical.foobar.systems/programmers-are-terrible.html</link>
 				<guid isPermaLink="true">http://lexical.foobar.systems/programmers-are-terrible.html</guid>
+			</item>
+		
+			<item>
+				<title>Mac Remote Desktop</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+Steps
+=====
+
+1. Goto System Preferences/users
+2. Add a user with password
+3. Goto System Preferences/sharing
+4. Enable Screen Sharing
+5. Click &#39;+&#39; and add the user you added in step 2
+6. If you are accessing your internet behind your router -- you will have an ipv4
+   address in the range of 10.**** and 192.****
+7. Goto to your router&#39;s homepage and unblock ports 5900, 3283, 22
+8. Goto ddg.gg and search for &#39;ip&#39;
+9. Give this url vnc://&lt;ip-from-step-8&gt; to your friend and also the password from step 2
+
+Your Friend&#39;s Steps
+===================
+1. Open finder
+2. Go &gt; Connect to Server
+3. Add the copy-paste the url there
+4. Click connect
+5. voilà ! your friend can see and control your desktop
+
+Bonus
+=====
+
+* If your friend repeats these steps, you can see your friend&#39;s desktop.
+* You can toggle observe mode in View
+* You can do file transfers from Window
+
+!! Use Activity Monitor to check the bandwidth !!
+
+Welcome to Pair Programming :)
+
+</description>
+				<link>http://lexical.foobar.systems/vnc.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/vnc.html</guid>
+			</item>
+		
+			<item>
+				<title>Uroborosism™</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+&lt;div style=&quot;font-size:42px&quot;&gt;⟲&lt;/div&gt;
+
+Tagline        - I don&#39;t really need You.
+Motto          - A Being unto Thyself.
+Pronounciation - oo-roh-BOH-roh-sism
+Soundtrack     - &lt;a class=&quot;nw&quot; href=&quot;#&quot;&gt;play in a new window&lt;/a&gt;
+&lt;script class=&quot;autospace&quot; type=&quot;text/javascript&quot;&gt;
+     $(&quot;a.nw&quot;).on(&quot;click&quot;, function() {
+         console.log(&quot;here&quot;);
+         window.open(&quot;http://bit.ly/1ikFVLJ&quot;, &#39;_blank&#39;);
+     });&lt;/script&gt;
+Genesis
+=======
+
+* Uroborosism is the Worship of Creativity and Inspiration in its Primal form,
+  along with the Individual and his Work.
+
+* It is an Individualist Religion with Bullet Points.
+
+* This Religion is half-serious than a complete-joke.
+
+* This Religion is a modern continuation of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Ouroboros&quot;&gt;Uroboros cult&lt;/a&gt;.
+
+Beliefs
+=======
+
+* God as an Artistic interpretation and longing can be used for
+  Humour, Pathos, Catharsis or any other tingeing of Emotion.
+
+  For Example,
+  Jesus weeps when you hit a child.
+
+* The Dialectic in the Heart with Faith or Any lack thereof
+  is up to the Individual.
+
+Rankings
+========
+
+* Hero for Courageous deeds.
+** Any soldier by default is a Hero.
+* Angel for Social and Artistic deeds.
+* Genius for Inventors and Creators.
+* Saint for Philosophers par excellence.
+
+(The above are gender neutral terms)
+
+Pantheon
+========
+
+* The Muses -- Clio, Thalia, Erato, Euterpe, Polyhymnia, Calliope,
+               Terpsichore, Urania, Melpomene.
+
+* Numbers and the Night Sky.
+
+Ancestor Worship
+================
+
+* Remembrance of Individuals who struggled and produced great
+  creative things despite NAYSAYERS.
+
+Prayer
+======
+
+* Solitude, with or without *rugs.
+** Sobriety is encouraged.
+
+* In temples one may Pray for the Strength of the Enemy,
+  so that one can have great Pride in defeating.
+
+Church
+======
+
+* Reflection
+
+Ethics
+======
+
+* Anti-Censorship
+* Anti-Killing
+* Anti-Torture
+* Old School Virtues
+* Refer to Buddhism for any doubts.
+
+Work Ethics
+===========
+
+* Challenging over Mechanical.
+
+Aesthetics
+==========
+
+* Fidelity
+* Honesty
+* Mastery
+* Sublime
+
+Sin
+===
+
+* To use Uroborosian in plural forms.
+
+Heaven
+======
+
+* Work well done.
+
+Hell
+====
+
+* Other people.
+
+Superstitions
+=============
+
+* Never put full Faith in collectives.
+** Associate with Individuals not Groups.
+
+Heresies
+========
+
+* Hypocrisy™
+* Indolence
+
+Marriage
+========
+
+* As dictated by the Heart.
+
+Patron God
+==========
+
+* Dionysus
+
+Friendly Religions
+==================
+
+* Buddhism
+* Taoism
+* Discordianism
+
+Monkhood
+========
+
+* As dictated by Buddhism or Saint &lt;a href=&quot;https://en.wikipedia.org/wiki/Henry_David_Thoreau&quot;&gt;Henry David Thoreau&lt;/a&gt;.
+
+Life After Death
+================
+
+* Worms, Dogs, Vultures, Flies feasting on your dead body and
+  ridicule if you are any good.
+
+How do I become an Uroborosian ?
+================================
+
+* Be a good Individual. That&#39;s the point being made
+  here.
+
+* You can state &quot;Uroborosism&quot; on your facebook, website 
+  and refer them to this page or the &lt;a href=&quot;https://en.wikipedia.org/wiki/Ouroboros&quot;&gt;wikipedia page&lt;/a&gt;.
+
+Literature
+==========
+
+* &lt;a href=&quot;http://www.accesstoinsight.org/&quot;&gt;http://www.accesstoinsight.org&lt;/a&gt;
+* &lt;a href=&quot;http://www.taoism.net/&quot;&gt;http://www.taoism.net/&lt;/a&gt;
+* &lt;a href=&quot;http://hermetic.com/texts/plato/timaeus.html&quot;&gt;Timaeus&lt;/a&gt;
+* Autobiographies of &amp;lt;your-favorite-person&amp;gt;
+
+Myths
+=====
+
+I was sitting, writing at my text-book; but the work did not progress;
+my thoughts were elsewhere. I turned my chair to the fire and dozed.
+Again the atoms were gamboling before my eyes. This time the smaller
+groups kept modestly in the background. My mental eye, rendered
+more acute by the repeated visions of the kind, could now distinguish
+larger structures of manifold conformation: long rows, sometimes
+more closely fitted together; all twining and twisting in snake-like
+motion. But look! What was that? One of the snakes had seized hold
+of its own tail, and the form whirled mockingly before my eyes. As
+if by a flash of lightning I awoke; and this time also I spent the
+rest of the night in working out the consequences of the hypothesis.
+
+-- August Kekulé
+   (discovered benzene)
+
+Quotes
+======
+
+I don&#39;t like ass kissers, flag wavers or team players.
+I like people who buck the system. Individualists.
+I often warn people: &quot;Somewhere along the way, someone is going to tell you,
+&#39;There is no &quot;I&quot; in team.&#39; What you should tell them is,
+&#39;Maybe not. But there is an &quot;I&quot; in independence, individuality and integrity.&#39;&quot;
+
+-- George  Carlin
+
+Only Dead People Did Cool Things.
+
+-- Anonymous
+
+&lt;img src=&quot;images/your-life.gif&quot;/&gt;
+</description>
+				<link>http://lexical.foobar.systems/uroborosism.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/uroborosism.html</guid>
 			</item>
 		
 			<item>
@@ -1577,64 +1596,6 @@ and it&#39;s just one of Assembly Programmer&#39;s Hacks.
 			</item>
 		
 			<item>
-				<title>Shell Programming</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-I have difficulty remembering bash/sh/zsh syntax.
-I can perl.
-
-```.zshrc
-command_not_found_handler () {
-    ~/bin/zsh.pl $*
-}
-```
-
-You can see my dotfiles &lt;a href=&quot;https://github.com/harsha-mudi/dotfiles&quot;&gt;here&lt;/a&gt;.
-
-</description>
-				<link>http://lexical.foobar.systems/shell-programming.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/shell-programming.html</guid>
-			</item>
-		
-			<item>
-				<title>Safe Free Speech</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-Open Source Programming is heavily dependent on communication
-channels.
-
-IRC, Mailing Lists, Conferences, Web ...
-
-Because of its global nature, it&#39;s very difficult to obey
-all legal laws.
-
-There are some controversies w.r.t the names and abbreviations
-used in &lt;a href=&quot;https://gist.github.com/omega8cc/fa97ea1d471e1108ab35&quot;&gt;public code.&lt;/a&gt;
-
-Besides, Newspeak is a terrible (programming) language.
-
-Each community is coming up with its own S.O.C&#39;s but they are too
-narrow or too obvious.
-
-To avoid unnecessary flamings, here are some guidelines for
-Safe Free Speech, for the Individual.
-
-0. There are no rules.
-1. If you can use clean language, prefer it.
-   If you have to be dirty, add a bit of context.
-2. If you have to discuss grey-areas, prefer using existing
-   legal protections.
-3. Avoid Discrimination. Exceptions can always be found.
-4. Hug before you hate.
-
-</description>
-				<link>http://lexical.foobar.systems/soc.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/soc.html</guid>
-			</item>
-		
-			<item>
 				<title>Software Development Is Not Engineering</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
@@ -1672,170 +1633,311 @@ Engineering means &lt;a href=&quot;http://heartbleed.com/&quot;&gt;Reliability&l
 			</item>
 		
 			<item>
-				<title>Stateful Dataflow</title>
+				<title>Shell Programming</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
-Data Flow is represented by a Graph.
 
-Graph = Nodes + Connections.
+I have difficulty remembering bash/sh/zsh syntax.
+I can perl.
 
-State in Data Flow
+```.zshrc
+command_not_found_handler () {
+    ~/bin/zsh.pl $*
+}
+```
 
-1. Stateless
-
-2. Global
-
-Corruption is easy.
-
-3. Parent / Child
-
-4. Node Local
-
-Node becomes a co-routine.
-Destruction of the state is problematic.
-
-5. Concurrent
-
-Graph becomes an OS.
-Node becomes a Process.
-
-State Machines
-==============
-
-I should be more mathematical, but fuck mathematicians.
-If a mathematician ever asks me to add two numbers I will gladly give him &lt;a href=&quot;https://code.jquery.com/jquery-1.11.1.min.js&quot;&gt;this&lt;/a&gt;.
-
-State Machines are like depressed data flows.
-Data Flow graph gets giddy and excited on receiving events whereas
-State Machines think and brood.
-
-They consult the
-    1. Decision table
-    2. Past lives
-    3. The current input dilemma
-    and then commit to an action which begets fruitful data.
-
-The depressed state machine can&#39;t do two tasks at a time because it&#39;s past will lose meaning.
-Every task is like a transaction.
-
-goto&#39;s + global variables is like 2.
-A C function calling another function is like 3.
-A co-routine yielding to another co-routine is 4.
-And 5 is Actor Model aka Processes + IPC !
-
-After concurrency, State Machines =~ Data Flow Processes.
-
-Sigh.
-
-It&#39;s sad to see functional programmers stuck at 1 when in fact assembly programmers had 5
-and Data Driven Style of programming.
-
-In pure assembly, you can do whatever the fuck you want.
-RAM is a Decision Table and Co-routines / Processes -- 5 -- are just a Context Switch away !
-
-C / Pascal are a step backwards in programming by going from 5 to 3.
-
-All high level perspectives are flawed.
-Forth / Lisp originated in assembly.
-By far they still represent the most flexible languages.
-I can&#39;t even imagine the CPU thrashing done by a real pre-80&#39;s Lisp.
-Viva Low Level !
+You can see my dotfiles &lt;a href=&quot;https://github.com/harsha-mudi/dotfiles&quot;&gt;here&lt;/a&gt;.
 
 </description>
-				<link>http://lexical.foobar.systems/stateful-dataflow.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/stateful-dataflow.html</guid>
+				<link>http://lexical.foobar.systems/shell-programming.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/shell-programming.html</guid>
 			</item>
 		
 			<item>
-				<title>My Favorite Syntax Bits</title>
+				<title>Pause</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
 
-# C
-++ +=
-if, for, while, struct
-if expr statement
-infix
+My writing can&#39;t be understood by the pedantic.
 
-# C++ / Java
-cout &lt;&lt; &quot;Hello World&quot;
-auto
-~Foo
-::
-this
+Have you observed, the pedantic can never write anything original ?
+That&#39;s no coincidence. For the obsessive compulsive pedantic,
+writing is a sin.
 
-# Sh
-$vars
-&lt;&lt; &#39;Here&#39;
-`cmd args`
+I try to follow Grammar for its prosodic flows.
 
-# Perl
-%hash and =&gt;
-`my $foo = 5` is an expr
-do, bless
-qw, / /
-&#39;a&#39; .. &#39;z&#39;
-loop lables
-goto $label (also in gcc)
-__DATA__
+Pauses are crucial for prosody.
 
-# Perl6
-?? !!
-say
-my \var
-junctions
-custom operators
-:types
-multimethods
+Here are a few ways to create a pause, in ascending order of
+duration
 
-# Python
-*kwargs
-generators
-in is not and or
-nested functions
-yield
-with
-pass
-decorators
+-
+|space|
+,
+;
+.
+--
+*
+|newline|
 
-# Ruby
-:symbol
-do .. end
-switch
-&quot;foo&quot;.upcase()
-paren free style
-blocks
-meta programming
-&quot;#{interpolation}&quot;
+|quote|
+italic
+bold
 
-# Small Talk
-if:
-
-# CL / CLJ
-names-likes-this
-arbitrbary nesting
-macros
--&gt;
--&gt;&gt;
-
-# go
-declaration syntax
-goroutines
-
-# Template engines
-asp
-
-# *ml, prolog
-Nil
-
-# JS
-undefined, null
-
-# Scala
-Null, null, Nil, Nothing, None
 </description>
-				<link>http://lexical.foobar.systems/syntax.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/syntax.html</guid>
+				<link>http://lexical.foobar.systems/pause.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/pause.html</guid>
+			</item>
+		
+			<item>
+				<title>Western Music in India</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+= Western Music in India
+
+Listenership ~ 2 million
+
+= Producers
+
+* Copycats
+* Playlist DJs
+
+That shrill sound ?
+That abrupt break ?
+
+Hint: That shouldn&#39;t be there every single time.
+
+* Pointless fusionists
+
+This is unique to india.
+
+Consider Germany.
+Imagine if every American / British decent sound,
+is spinelessly copied,
+with a german classical / folk addition,
+and sold as &quot;Underground&quot;.
+
+Right, that does not happen.
+
+Indian instruments have very unique sounds.
+Between classical / folk, I would pick folk.
+
+After all, classical musicians are elitist, obfuscating, vowel elongating,
+rote hacks, who singed for the Britishers and the Kings.
+
+You can find more honesty, from the lower classes, 
+singing, &quot;The new King is here, time to guard your clothes&quot;.
+
+In either case, pointless fusion music is the norm, panderered ad-nauseam for more
+listenership.
+
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/w2WURHY3D4A&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+</description>
+				<link>http://lexical.foobar.systems/western-music-in-india.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/western-music-in-india.html</guid>
+			</item>
+		
+			<item>
+				<title>OOP</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+“There&#39;s a good part of Computer Science that&#39;s like magic.
+Unfortunately there&#39;s a bad part of Computer Science that&#39;s like religion.”
+― Hal Abelson
+
+OOP / OOAD is intrinsically tied to an object&#39;s life cycle.
+
+One can distinguish between two life cycles
+
+1. Flat
+
+a creates b
+a uses b
+a closes b
+
+This facilitates layered Architecture.
+
+Model View Controller
+Domain Application Service
+
+This is OK till you need Workflow Processing (Checkout).
+A typical Workflow spans more than 2 disjointed or concurrent steps.
+
+Also, building a new layer is a long process.
+
+2. Nested
+
+An object sent n-levels down may gives rise to
+
+* Circular References
+* Memory Leaks
+* Data Corruption
+* Inability to add new operations since it&#39;s already entrenched.
+
+It is a major pain to debug.
+
+Another problem is two-way, or even one-way communication with previous levels.
+**Legacy code is sprinkled with using exceptions as one-way communication.**
+
+Religiosity
+===========
+
+Practitioner: How can objects have sex ?
+Priest:       You need a Factory to pray to and then it will deliver.
+Practitioner: I don&#39;t have one ...
+Priest:       You need a Factory to pray to and then it will deliver.
+
+$$ Practitioner works on his code
+
+Practitioner: I have a Factory. Can objects have sex now ?
+Priest:       Sex is sin. I pray for your AbstractController.
+Practitioner: ...
+
+Design patterns hide the problems.
+
+&lt;b&gt;It is not difficult to spot religiosity&lt;/b&gt;
+
+* Incapacity is explained as Evil and an obfuscated explanation
+  with moral and miraculous connotations is given.
+
+&amp;gt;  Children are a gift from god.
+&amp;gt;  Dependency Injection will give you the answer.
+&amp;gt;  Use an Applicative Functor, State is evil.
+
+* Judgement Day
+
+&amp;gt;  You will suffer because you sin. You will be judged at the end.
+&amp;gt;  You did not use OOAD DDD DI MVC MVP MVVM ABC properly.
+      Your project will be a maintenance nightmare.
+
+* No criticism of the Elite
+
+How many times in history have the priests held the king accountable ?
+They will attack the commoners and collude with the kings.
+This is because the Elite never needed a religion.
+Religion is always a proxy for them.
+
+A company X and a priest Y will announce a Framework Z.
+After 5 years the company will ditch Z and use W.
+
+Imagining what will happen next is upto you.
+
+Engineering
+===========
+
+Raw Material -&gt; A Real Factory
+                -&gt; Assembly Line
+                    -&gt; Construction
+                        -&gt; Split Raw Materials
+                          -&gt; Make Parts Concurrently
+                        -&gt; Assemble
+                    -&gt; Quality Check
+                -&gt; Product
+                -&gt; Package Product
+
+An Engineering Product stands for itself.
+Only Game Programmers come close to this.
+
+The irony is, Assembly Programmers used these techniques.
+
+Assembly Programmers dealt with primitive indestructible values
+and Pointers.
+
+* Storage Management
+* Memory &lt;-&gt; Processes &lt;-&gt; Device
+
+The `Device` part is where (Flat) OOP is a great fit.
+(infact a file interface is all you need)
+
+The `Storage Management` part is where OOP is OK.
+The `Memory &lt;-&gt; Process` part is where OOP fails.
+
+This can be solved by Data Process Patterns
+
+* Micro Kernel
+
+Used in Real Factory Controllers.
+
+* Entity Systems
+
+The Game Programming way.
+
+* Data Flow
+
+Used in domains like Avionics, Electronics Softwares.
+
+* Stream Processing
+
+XML / Unix
+
+* Actor Model
+
+Used in Telecommunications, WhatsAPP.
+golang.
+
+* Workflow Engine
+* Active Object Pattern
+
+Inevitably, in &quot;Enterprises&quot;.
+
+* PAC
+
+Drupal. Yes Drupal.
+
+* MVC + Smalltalk
+
+It is pointless to talk of MVC-smalltalk without smalltalk.
+smalltalk has a very elegant and actor-like object communication model.
+
+* Co-routines
+
+Simula had it. Why on earth this was wasn&#39;t included in C++ baffles me.
+
+* Hierarchical Control Systems / Agent Oriented Programming
+
+---
+and many many more !
+see &lt;a href=&quot;http://www.dataorienteddesign.com/dodmain/&quot;&gt;Data-Oriented Design&lt;/a&gt;
+---
+
+## What is the bloody point of all this ?
+
+If you want to be a Software Engineer
+
+1. Use OOP, if you have to, for low level layers
+
+2. Don&#39;t fall into SP, OOP, OOAD, DDD, FP or any religion
+
+3. Engineering is about building complete Products with
+   - Systems
+   - Sub Systems
+   - Inout / Output
+
+   There is a huge creativity here, doing this efficiently.
+   Don&#39;t let the framework rob this from you.
+
+4. A Lot of programmers have built complex reliable Systems without
+   without OOAD or FP in tiny teams.
+
+   Consider the screenplay for &lt;a href=&quot;http://johnaugust.com/2004/how-many-lines-per-page&quot;&gt;Schindlers list&lt;/a&gt;. It has ~~ 6k lines, written
+   by one guy probably.
+
+   A 16kb total-scripts-size can be a good upper limit for a single programmer.
+
+5. Pick new Data Process pattern and make it your own.
+
+The point is, you can do Engineering and it&#39;s not that difficult.
+
+$ cat log.txt | grep foo | wc -l
+
+You already use engineered components that work together, everyday.
+
+
+</description>
+				<link>http://lexical.foobar.systems/oop.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/oop.html</guid>
 			</item>
 		
 			<item>
@@ -1954,449 +2056,544 @@ yx provides coffeescript&#39;s internal methods like __extends for use in js.
 			</item>
 		
 			<item>
-				<title>Uroborosism™</title>
+				<title>Safe Free Speech</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
 
-&lt;div style=&quot;font-size:42px&quot;&gt;⟲&lt;/div&gt;
+Open Source Programming is heavily dependent on communication
+channels.
 
-Tagline        - I don&#39;t really need You.
-Motto          - A Being unto Thyself.
-Pronounciation - oo-roh-BOH-roh-sism
-Soundtrack     - &lt;a class=&quot;nw&quot; href=&quot;#&quot;&gt;play in a new window&lt;/a&gt;
-&lt;script class=&quot;autospace&quot; type=&quot;text/javascript&quot;&gt;
-     $(&quot;a.nw&quot;).on(&quot;click&quot;, function() {
-         console.log(&quot;here&quot;);
-         window.open(&quot;http://bit.ly/1ikFVLJ&quot;, &#39;_blank&#39;);
-     });&lt;/script&gt;
-Genesis
-=======
+IRC, Mailing Lists, Conferences, Web ...
 
-* Uroborosism is the Worship of Creativity and Inspiration in its Primal form,
-  along with the Individual and his Work.
+Because of its global nature, it&#39;s very difficult to obey
+all legal laws.
 
-* It is an Individualist Religion with Bullet Points.
+There are some controversies w.r.t the names and abbreviations
+used in &lt;a href=&quot;https://gist.github.com/omega8cc/fa97ea1d471e1108ab35&quot;&gt;public code.&lt;/a&gt;
 
-* This Religion is half-serious than a complete-joke.
+Besides, Newspeak is a terrible (programming) language.
 
-* This Religion is a modern continuation of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Ouroboros&quot;&gt;Uroboros cult&lt;/a&gt;.
+Each community is coming up with its own S.O.C&#39;s but they are too
+narrow or too obvious.
 
-Beliefs
-=======
+To avoid unnecessary flamings, here are some guidelines for
+Safe Free Speech, for the Individual.
 
-* God as an Artistic interpretation and longing can be used for
-  Humour, Pathos, Catharsis or any other tingeing of Emotion.
+0. There are no rules.
+1. If you can use clean language, prefer it.
+   If you have to be dirty, add a bit of context.
+2. If you have to discuss grey-areas, prefer using existing
+   legal protections.
+3. Avoid Discrimination. Exceptions can always be found.
+4. Hug before you hate.
 
-  For Example,
-  Jesus weeps when you hit a child.
+</description>
+				<link>http://lexical.foobar.systems/soc.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/soc.html</guid>
+			</item>
+		
+			<item>
+				<title>Stateful Dataflow</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+Data Flow is represented by a Graph.
 
-* The Dialectic in the Heart with Faith or Any lack thereof
-  is up to the Individual.
+Graph = Nodes + Connections.
 
-Rankings
-========
+State in Data Flow
 
-* Hero for Courageous deeds.
-** Any soldier by default is a Hero.
-* Angel for Social and Artistic deeds.
-* Genius for Inventors and Creators.
-* Saint for Philosophers par excellence.
+1. Stateless
 
-(The above are gender neutral terms)
+2. Global
 
-Pantheon
-========
+Corruption is easy.
 
-* The Muses -- Clio, Thalia, Erato, Euterpe, Polyhymnia, Calliope,
-               Terpsichore, Urania, Melpomene.
+3. Parent / Child
 
-* Numbers and the Night Sky.
+4. Node Local
 
-Ancestor Worship
-================
+Node becomes a co-routine.
+Destruction of the state is problematic.
 
-* Remembrance of Individuals who struggled and produced great
-  creative things despite NAYSAYERS.
+5. Concurrent
 
-Prayer
-======
+Graph becomes an OS.
+Node becomes a Process.
 
-* Solitude, with or without *rugs.
-** Sobriety is encouraged.
+State Machines
+==============
 
-* In temples one may Pray for the Strength of the Enemy,
-  so that one can have great Pride in defeating.
+I should be more mathematical, but fuck mathematicians.
+If a mathematician ever asks me to add two numbers I will gladly give him &lt;a href=&quot;https://code.jquery.com/jquery-1.11.1.min.js&quot;&gt;this&lt;/a&gt;.
 
-Church
-======
+State Machines are like depressed data flows.
+Data Flow graph gets giddy and excited on receiving events whereas
+State Machines think and brood.
 
-* Reflection
+They consult the
+    1. Decision table
+    2. Past lives
+    3. The current input dilemma
+    and then commit to an action which begets fruitful data.
 
-Ethics
-======
+The depressed state machine can&#39;t do two tasks at a time because it&#39;s past will lose meaning.
+Every task is like a transaction.
 
-* Anti-Censorship
-* Anti-Killing
-* Anti-Torture
-* Old School Virtues
-* Refer to Buddhism for any doubts.
+goto&#39;s + global variables is like 2.
+A C function calling another function is like 3.
+A co-routine yielding to another co-routine is 4.
+And 5 is Actor Model aka Processes + IPC !
 
-Work Ethics
-===========
+After concurrency, State Machines =~ Data Flow Processes.
 
-* Challenging over Mechanical.
+Sigh.
 
-Aesthetics
-==========
+It&#39;s sad to see functional programmers stuck at 1 when in fact assembly programmers had 5
+and Data Driven Style of programming.
 
-* Fidelity
-* Honesty
-* Mastery
-* Sublime
+In pure assembly, you can do whatever the fuck you want.
+RAM is a Decision Table and Co-routines / Processes -- 5 -- are just a Context Switch away !
 
-Sin
+C / Pascal are a step backwards in programming by going from 5 to 3.
+
+All high level perspectives are flawed.
+Forth / Lisp originated in assembly.
+By far they still represent the most flexible languages.
+I can&#39;t even imagine the CPU thrashing done by a real pre-80&#39;s Lisp.
+Viva Low Level !
+
+</description>
+				<link>http://lexical.foobar.systems/stateful-dataflow.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/stateful-dataflow.html</guid>
+			</item>
+		
+			<item>
+				<title>OM</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+&lt;a href=&quot;https://github.com/swannodette/om/wiki/Documentation&quot;&gt;Om&lt;/a&gt; is built on three ideas to deal with &lt;a href=&quot;http://tech.pro/blog/1402/five-patterns-to-help-you-tame-asynchronous-javascript&quot;&gt;async&lt;/a&gt; shit in clojurescript.
+
+1) Messaging
+2) State Management
+3) Reactive UI
+
+tl;dr UI -&gt; EVENTS -&gt; STATE -&gt; UI
+
+## Reactive UI
+
+This is built on top of ReactJS.
+UI is divided into components.
+
+Each component takes a cursor(more on that later).
+And has some,
+* rendering code
+  rendering code can look like dom/div(default), :div(hiccup) or enlive
+* life cycle hooks where you can place dom event listeners and state change listeners
+
+Initialization of component calls,
+    IInitState
+    IWillMount
+    IDidMount.
+
+Every time a cursor&#39;s state changes a component is rendered, as per the life cycle,
+    IWillUpdate
+    IRender or IRenderState
+    IDidUpdate.
+
+Components are organized as a tree for some fancy optimization purposes.
+See,
+    root - builds the first component
+    build
+    component
+    graft.
+
+## State Management
+
+The entire application state and data is an atom blob.
+Om gives you cursors which are pointers(paths) to a subset of the blob.
+
+Om also has component local states, which are not stored in the blob.
+See,
+    set-state!
+    get-state!
+    props.
+
+It is much simpler to depend on cursors for everything, IMHO.
+
+Om also has truly global state sharing with,
+    get-shared which gets the :shared argument passed to root.
+
+Cursors are manipulated safely by om API,
+    update!
+    transact! you can use a :tx-listen while building root to listen to all transactions
+    and get-in, assoc-in from clojurescript.
+
+You can extend the ICursor Protocol to come up with your own idea of cursors.
+
+## Messaging
+
+Messaging is possible because of core.async, which provides channels and goroutines.
+There is no &lt;a href=&quot;http://swannodette.github.io/2013/08/02/100000-processes/&quot;&gt;limit&lt;/a&gt; to the number of channels and goroutines unless you are using old browsers.
+goroutines look alot like threads.
+
+Every component can have channels or channels can be global.
+Global channels and goroutines makes it easier to refactor code into multimethods later, IMHO.
+
+Instead of dealing with callbacks in dom event listeners you put! things into channels as events.
+In a goroutine you &amp;lt;! on a channel to listen to all the events and act upon them.
+
+Events are acted upon and send further events, finally making changes to the state which call,
+    IWillUpdate
+    IRender or IRenderState
+    IDidUpdate.
+
+Good place to start go(routines),
+    IWillMount.
+
+Testing and Mocking are greatly simplified using the messaging paradigm.
+
+</description>
+				<link>http://lexical.foobar.systems/om.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/om.html</guid>
+			</item>
+		
+			<item>
+				<title>LightTable Arch</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+LightTable follows Behavior Object model(BOT), which itself is inspired from
+&lt;a href=&quot;http://entity-systems.wikidot.com/&quot;&gt;Entity Systems model&lt;/a&gt;(ES).
+
+In a typical OOP + GUI program we abuse the Observer Pattern and harcode most of the design
+and Event types.
+
+With BOT/ES the design is stored as an in-memory data structure,
+the event-listeners(behaviors) are stored as metadata and
+the events themselves are generated on the fly.
+
+Every datum is identified by a unique ID and is typically struct-ish.
+
+This means, the entire program can be extended runtime.
+
+In LT,
+
+* object/create makes a new datum. Each datum stores behavior names.
+* object/raise triggers events with payload.
+* behavior macro stores &quot;event(s) &lt;-&gt; reaction&quot; mapping. Reaction receives the payload.
+* object/update, object/merge manages the in-memory data structure.
+
+LightTable is built on node.js so, most of the *actual work* is done by the node.js library wrappers in reactions.
+The ordering of the events, is mostly on a first-come basis. Think list iterations.
+
+An alternate way of looking at this model is imagining a Relational Database + Stored Procedures.
+
+&lt;b&gt;Can this model be applied for client side applications, as an alternate to Backbone.js ?&lt;/b&gt;
+
+Consider a TODO list,
+
+Name -- Data Structure :: [Behaviors]
+=====================================
+
+item -- Hash :: [view, add, remove, update, list]
+
+Event -- Behaviors :: Notes
+===========================
+
+* $() -- list
+* todos.show - list
+* add-button-click + data payload -- add :: add, after object/create triggers todos.show
+* remove-button-click + id palyload -- remove :: remove, after object/remove triggers &quot;
+* save-button-click + add payload --  update
+* todo-clicked -- view
+
+&lt;b&gt;What about GUI ?&lt;/b&gt;
+By dividing the behaviors carefully, GUI can be separated from the NON-GUI.
+LT uses hiccup to generate HTML, making GUI another runtime convinience.
+
+</description>
+				<link>http://lexical.foobar.systems/lt-gist.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/lt-gist.html</guid>
+			</item>
+		
+			<item>
+				<title>Internet Communication</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+Forms of Communication
+
+1-1
 ===
 
-* To use Uroborosian in plural forms.
+Post (async)
+Telegraph (async)
+Telephone
+* Yellow Pages
 
-Heaven
-======
+m-n
+===
 
-* Work well done.
+Newspaper (async)
+Radio (async)
+TV (async)
 
-Hell
-====
+^ + Telephone == sync
 
-* Other people.
+m-n
+===
 
-Superstitions
-=============
+Internet is a m-n Communication model, with some twists.
 
-* Never put full Faith in collectives.
-** Associate with Individuals not Groups.
+* m = 1 for private messaging
+* bad quality content for large m and large n
+* poor dpi, resolution, bitrates
+* content agnostic -- text, images, video, sound
+* cost for consumption increases as m increases
+* cost for creation increases as n increases
 
-Heresies
+* when m is small and n is large, it resembles TV with all its faults
+** grosser kistch is the dominant aesthetic
+** unregulated medium
+
+* like Pirate Radio, m and n can be small
+** this is the most unique possibility with the internet
+
+* archival value for public domain
+* interactive yellow pages
+
+For consumers,
+
+* use it like a tv, news
+* find niche communities
+
+For creators,
+* treat it like a tv
+* make news
+* treat it like an archive
+* get listed in yellow pages
+* find niche communities
+
+</description>
+				<link>http://lexical.foobar.systems/internet-communication.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/internet-communication.html</guid>
+			</item>
+		
+			<item>
+				<title>Markdown</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+Markdown
 ========
 
-* Hypocrisy™
-* Indolence
+Markdown is the PHP of markup languages.
+Asciidoc is a more comprehensive alternative.
 
-Marriage
-========
+Markdown was initially meant for writing simple html webpages
+as intended by its author.
 
-* As dictated by the Heart.
+It is now about to be standardized as an IETF standard.
+That author is nowhere to be seen in the process, probably
+because he is embarrassed by Markdown.
 
-Patron God
-==========
+Worse is better precisely because the current Software Industry
+thrives on non-engineering. It&#39;s a market problem, where the
+market is satisfied with the shiny.
 
-* Dionysus
-
-Friendly Religions
-==================
-
-* Buddhism
-* Taoism
-* Discordianism
-
-Monkhood
-========
-
-* As dictated by Buddhism or Saint &lt;a href=&quot;https://en.wikipedia.org/wiki/Henry_David_Thoreau&quot;&gt;Henry David Thoreau&lt;/a&gt;.
-
-Life After Death
+Parsing Markdown
 ================
 
-* Worms, Dogs, Vultures, Flies feasting on your dead body and
-  ridicule if you are any good.
+### Regex
 
-How do I become an Uroborosian ?
-================================
+Old Markdown
 
-* Be a good Individual. That&#39;s the point being made
-  here.
+### Peg
 
-* You can state &quot;Uroborosism&quot; on your facebook, website 
-  and refer them to this page or the &lt;a href=&quot;https://en.wikipedia.org/wiki/Ouroboros&quot;&gt;wikipedia page&lt;/a&gt;.
+&lt;a href=&quot;https://rawgithub.com/fletcher/human-markdown-reference/master/index.html&quot;&gt;MultiMarkdown&lt;/a&gt;
+If you have to deal with markdown, use this.
 
-Literature
-==========
-
-* &lt;a href=&quot;http://www.accesstoinsight.org/&quot;&gt;http://www.accesstoinsight.org&lt;/a&gt;
-* &lt;a href=&quot;http://www.taoism.net/&quot;&gt;http://www.taoism.net/&lt;/a&gt;
-* &lt;a href=&quot;http://hermetic.com/texts/plato/timaeus.html&quot;&gt;Timaeus&lt;/a&gt;
-* Autobiographies of &amp;lt;your-favorite-person&amp;gt;
-
-Myths
-=====
-
-I was sitting, writing at my text-book; but the work did not progress;
-my thoughts were elsewhere. I turned my chair to the fire and dozed.
-Again the atoms were gamboling before my eyes. This time the smaller
-groups kept modestly in the background. My mental eye, rendered
-more acute by the repeated visions of the kind, could now distinguish
-larger structures of manifold conformation: long rows, sometimes
-more closely fitted together; all twining and twisting in snake-like
-motion. But look! What was that? One of the snakes had seized hold
-of its own tail, and the form whirled mockingly before my eyes. As
-if by a flash of lightning I awoke; and this time also I spent the
-rest of the night in working out the consequences of the hypothesis.
-
--- August Kekulé
-   (discovered benzene)
-
-Quotes
-======
-
-I don&#39;t like ass kissers, flag wavers or team players.
-I like people who buck the system. Individualists.
-I often warn people: &quot;Somewhere along the way, someone is going to tell you,
-&#39;There is no &quot;I&quot; in team.&#39; What you should tell them is,
-&#39;Maybe not. But there is an &quot;I&quot; in independence, individuality and integrity.&#39;&quot;
-
--- George  Carlin
-
-Only Dead People Did Cool Things.
-
--- Anonymous
-
-&lt;img src=&quot;images/your-life.gif&quot;/&gt;
-</description>
-				<link>http://lexical.foobar.systems/uroborosism.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/uroborosism.html</guid>
-			</item>
-		
-			<item>
-				<title>Mac Remote Desktop</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-Steps
-=====
-
-1. Goto System Preferences/users
-2. Add a user with password
-3. Goto System Preferences/sharing
-4. Enable Screen Sharing
-5. Click &#39;+&#39; and add the user you added in step 2
-6. If you are accessing your internet behind your router -- you will have an ipv4
-   address in the range of 10.**** and 192.****
-7. Goto to your router&#39;s homepage and unblock ports 5900, 3283, 22
-8. Goto ddg.gg and search for &#39;ip&#39;
-9. Give this url vnc://&lt;ip-from-step-8&gt; to your friend and also the password from step 2
-
-Your Friend&#39;s Steps
+Markdown Extensions
 ===================
-1. Open finder
-2. Go &gt; Connect to Server
-3. Add the copy-paste the url there
-4. Click connect
-5. voilà ! your friend can see and control your desktop
 
-Bonus
-=====
+* typically pre/post processors
 
-* If your friend repeats these steps, you can see your friend&#39;s desktop.
-* You can toggle observe mode in View
-* You can do file transfers from Window
+Markdown Conversion
+===================
 
-!! Use Activity Monitor to check the bandwidth !!
+Good
 
-Welcome to Pair Programming :)
+* html
+* epub
 
-</description>
-				<link>http://lexical.foobar.systems/vnc.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/vnc.html</guid>
-			</item>
-		
-			<item>
-				<title>Western Music in India</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
+Painful
 
-= Western Music in India
+* latex
+* pdf
 
-Listenership ~ 2 million
+Problems
+========
 
-= Producers
+* nesting
 
-* Copycats
-* Playlist DJs
+  This alone is enough to ignore Markdown.
 
-That shrill sound ?
-That abrupt break ?
+* whitespace
+* citations
+* typography
+* math
+* tables
+* code
 
-Hint: That shouldn&#39;t be there every single time.
+Markdown Editors
+================
 
-* Pointless fusionists
+One of myths used to keep Markdown alive is saying it&#39;s
+easy to build an editor for it.
 
-This is unique to india.
+IMHO that&#39;s false.
 
-Consider Germany.
-Imagine if every American / British decent sound,
-is spinelessly copied,
-with a german classical / folk addition,
-and sold as &quot;Underground&quot;.
+Most editors are geared towards plain markdown, which is
+useless.
 
-Right, that does not happen.
+Medium inspired editors
 
-Indian instruments have very unique sounds.
-Between classical / folk, I would pick folk.
+* medium-editor
+* zenpen
+* sofish
 
-After all, classical musicians are elitist, obfuscating, vowel elongating,
-rote hacks, who singed for the Britishers and the Kings.
+IDE-ish editors
 
-You can find more honesty, from the lower classes, 
-singing, &quot;The new King is here, time to guard your clothes&quot;.
+* ace
+* codemirror
 
-In either case, pointless fusion music is the norm, panderered ad-nauseam for more
-listenership.
+Problems with Imeplementing a Markdown Editor
+=============================================
 
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/w2WURHY3D4A&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+### textarea
 
-</description>
-				<link>http://lexical.foobar.systems/western-music-in-india.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/western-music-in-india.html</guid>
-			</item>
-		
-			<item>
-				<title>Emoticons</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
+Too bland
 
-&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_emoticons&quot;&gt;Emoticons&lt;/a&gt; fascinate me.
+### HTML5 \&amp;lt;div contenteditable=&quot;true&quot;\&amp;gt;
 
-They are the resurgence of pictographs, a bit like &lt;a href=&quot;https://en.wikipedia.org/wiki/Egyptian_hieroglyphs&quot;&gt;Egyptian Hieroglyphs&lt;/a&gt;,
-or the Chinese symbols.
+IE, FF, Chrome all implement this differently
+HTML5 spec for this is still alpha stage
 
-For example, ⼮ is the Chinese symbol for river.
+#### Problems
 
-Here are some new interesting emoticons, that I found in the wild wild web,
+Let&#39;s suppose the user types the following text,
 
-ಠ_ಠ      -- disapproval (that&#39;s the Kannada &lt;a href=&quot;http://unicode-table.com/en/0CA0/&quot;&gt;http://unicode-table.com/en/0CA0&lt;/a&gt;)
-ᕕ(ᐛ)ᕗ   -- happy
-ᕙ(‸‶)ᕗ    -- lack of muscles
-&lt;&lt;°°&gt;&gt;     -- crab
-:{C       -- a sad English gentleman
-:C        -- hipster sad face
-∎-∎       -- cooling glasses
-(-_-)凸   -- showing the finger
+    I loved to look upon him, 
+    The Hunter near the Way.
+    So strong his arm and long his bow
 
-Exploring multi-language, &lt;a href=&quot;https://en.wikipedia.org/wiki/Unicode&quot;&gt;unicode&lt;/a&gt;, alphabets and coming up with your own,
-is silly, stupid and you should totally try doodling some.
+    And so bashful of the Day.
+    His courage never failed him
+    For he held his mace so high
 
-Here are some that I discovered,
+This is stored in the div as
 
-ఠ_ఠ      -- worried about your sanity
-౪       -- stethoscope
-(‸‶       -- amazed that you can actually do that
-(‸‶)౨   -- why do you always
---ల     -- punch (looks like a boxing glove)
+    I loved to look upon him,
+    &amp;lt;p&amp;gt;The Hunter near the Way.&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;So strong his arm and long his bow&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;And so bashful of the Day.&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;His courage never failed him&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;or he held his mace so high&amp;lt;/p&amp;gt;
 
-The above use some alphabets of Telugu,
-&lt;a href=&quot;http://unicode-table.com/en/search/?q=telugu&quot;&gt;http://unicode-table.com/en/search/?q=telugu&lt;/a&gt;.
+The newlines are not preserved.
+Notice the odd first line.
 
-(The above is best viewed in browsers with good alphabet coverage,
- like chrome, otherwise you will see empty boxes)
-</description>
-				<link>http://lexical.foobar.systems/emoticons.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/emoticons.html</guid>
-			</item>
-		
-			<item>
-				<title>Entropy</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
+Let&#39;s suppose the user copy pastes plain text, from a text editor
 
-I worship Entropy.
+    I loved to look upon him,
+    &amp;lt;p&amp;gt;The Hunter near the Way.&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;So strong his arm and long his bow&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;And so bashful of the Day.&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;His courage never failed him&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;or he held his mace so high&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;And glared at the Bull in the River&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;And ruled the whole breadth of the sky.&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;As a girl, young and silly,&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;I oft dreamed of being the Maid.&amp;lt;/p&amp;gt;
 
-Entropy is destruction, death, loss, oldness and the dance of dionysus.
+ Let&#39;s suppose the user copy pastes from another html page
 
-Entropy is the typ in the punchline.
-Entropy is the thorn in the shoe.
-Entropy is saying the wrong thing at the right time.
-Entropy is the bad song in the music album.
-Entropy is a director&#39;s drunk cameraman.
-Entropy is latin.
-Entropy is the hail that broke your Yamaha Bike.
-Entropy is 23 stitches.
-Entropy is the Black Plague on an otherwise beautiful day worth a 1000 paintings.
-Entropy is failed projects.
-Entropy is an earthquake.
-Entorpy is a forgetfulness.
-Entropy is the distraction before a deadline.
+    &amp;lt;p&amp;gt;The Hunter near the Way.&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;So strong his arm and long his bow&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;And so bashful of the Day.&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;His courage never failed him&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;or he held his mace so high&amp;lt;/p&amp;gt;
+    &amp;lt;span&amp;gt;And glared at the Bull in the River&amp;lt;/span&amp;gt;
+    &amp;lt;span&amp;gt;And ruled the whole breadth of the sky.&amp;lt;/span&amp;gt;
+    &amp;lt;span&amp;gt;As a girl, young and silly,&amp;lt;/span&amp;gt;
+    &amp;lt;span&amp;gt;I oft dreamed of being the Maid.&amp;lt;/span&amp;gt;
 
-Person X: This is awesome !
-Entropy: I just created a Nebula with a Black Hole in Golden Ratio.
-Person Y: The world is my oyster, Alexander can kiss my arse !
-Entropy: Would you like to know what I did with the Dinosaurs and most of your ancestors ?
+You can even see table instead of span or the whole thing in a pre block.
 
-Black, White, Blue, Yellow or Red, Entropy will fuck with you.
+#### Solution -- Cursor API
 
-But ultimately Entropy, only wishes to challenge you.
-And it is here, that I love, respect and fear Entropy.
+There is no getCursorPosition(div) which means,
+more hacks, from stackoverflow !
 
-Despite all the ghastly nonsense above, Entropy is a simple beast.
+The hacks relate to Range and Selection DOM API
 
-&quot;If you create disorder, I will gladly help you.
- If you create order, I will give you a hall pass.
- Be creative, Amuse me or I will perish you&quot;
-    -- Entropy
+The idea of cursor is absent in HTML5 specification.
+Windows 3.0 had an API for that probably.
 
-For practical purposes I shall define a new word, Antropy
-Antropy is the opposite of Entropy, i.e, creation of order.
+### How do others do it ?
 
-Things you can do to create more Antropy to bargain with Entropy,
+All medium based editors suffer from this, but they are view-only
+they don&#39;t care about content.
 
-1. Act Act Act
+### How ace, codemirror do it
 
-   You will remember your actions 10 years down the lane,
-   than your thoughts and vague ideas.
+( Guesswork )
 
-2. Slow Down
+0. Have two elements, a textarea and a editor#div
+1. Use &amp;lt;textarea&amp;gt; as a temporary buffer
+2. Direct all keyboard events to textarea
+3. Grab data from textarea and data structure
+4. render data structure and cursor position to editor#div
 
-   You have close to 50_000 thoughts a day ~ 86_400 seconds.
-   A continous monologue that goes nowhere.
-   Entropy mocks your callous thinking !
+For copy paste,
 
-3. Do one thing well before doing another thing
+1. Redirect to textarea
+2. Copy to data structure
+3. Set cursor
 
-   Success cascades.
+For mouse events,
 
-4. Re-Interpreting Old Ideas is better than New Ideas
+1. Listen on editor#area
+2. Get co-ordinates
+3. Do characterWidth/lineHeight simulation on the text data structure
+4. Set mouse position
 
-   Let&#39;s face it, there is nothing new under the Sun.
-   Only the dead people did cool things.
+This means we will have have control over every character being rendered.
 
-5. Written word is better than spoken word
+1. setCursorPosition
+2. getCurrentCursorPositon
+3. insertLineBreakAtCursorPosition
+4. insertTextAtCursorPosition
+5. insertHTMLAtCursorPosition
+6. pastePlainTextFromClipboardAtCursor
 
-   Do you remember what you said ?
-   You can grep through what you wrote.
+How do I Publish ?
+==================
 
-   A minor exception, mantras decrease Entropy.
+Just stick to Asciidoc / Latex.
 
-6. Principles are better than Fashion
+What editor to use ?
+====================
 
-   Do you know what was popular in 1927 ?
-   Entropy: *yawn*
-
-7. Second attempt is always better than first attempt.
-
-   So practice.
-
-8. Bullshit can buy you some time.
-
-   Use wisely, otherwise the shit will be on you.
-
-9. You can never beat Entropy.
-
-   Losing all hope is freedom.
-
-Entropy: Your belief in numerology stuns me ! Have you not understood a thing,
-         written here ?
+Desktop editors.
 
 </description>
-				<link>http://lexical.foobar.systems/entropy.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/entropy.html</guid>
+				<link>http://lexical.foobar.systems/markdown.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/markdown.html</guid>
 			</item>
 		
 			<item>
@@ -2700,657 +2897,6 @@ Too much metadata.
 			</item>
 		
 			<item>
-				<title>Internet Communication</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-Forms of Communication
-
-1-1
-===
-
-Post (async)
-Telegraph (async)
-Telephone
-* Yellow Pages
-
-m-n
-===
-
-Newspaper (async)
-Radio (async)
-TV (async)
-
-^ + Telephone == sync
-
-m-n
-===
-
-Internet is a m-n Communication model, with some twists.
-
-* m = 1 for private messaging
-* bad quality content for large m and large n
-* poor dpi, resolution, bitrates
-* content agnostic -- text, images, video, sound
-* cost for consumption increases as m increases
-* cost for creation increases as n increases
-
-* when m is small and n is large, it resembles TV with all its faults
-** grosser kistch is the dominant aesthetic
-** unregulated medium
-
-* like Pirate Radio, m and n can be small
-** this is the most unique possibility with the internet
-
-* archival value for public domain
-* interactive yellow pages
-
-For consumers,
-
-* use it like a tv, news
-* find niche communities
-
-For creators,
-* treat it like a tv
-* make news
-* treat it like an archive
-* get listed in yellow pages
-* find niche communities
-
-</description>
-				<link>http://lexical.foobar.systems/internet-communication.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/internet-communication.html</guid>
-			</item>
-		
-			<item>
-				<title>Internet Disruption</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-Crime
-=====
-Spying
-Identity Fraud
-Information selling
-Exploiting computation
-
-Content
-=======
-Politics
---&gt; Free Speech
---&gt; Alternate Medium
-Publishing
---&gt; Self Publishing
---&gt; Academic Publishing
---&gt; Magazine Publishing
---&gt; Encyclopedia Publishing
---&gt; Books, Guides
-Governance
---&gt; Status Updates
-News
---&gt; Journalism
---&gt; Headlines
---&gt; Gossip
---&gt; Reviews
-Art
---&gt; Gallery
-Music
---&gt; Radio
---&gt; Records
-Video
---&gt; TV
---&gt; Cinema / Adult
-Education
---&gt; Help Guides
-
-Profit
-======
-Crowd funding
-Direct Commerce
-Travel Management
-Event Management
-Marketing
-Yellow Pages
-Bank
-
-Communication
-=============
-Post
-Telephones
-
-Positive Employment
-===================
-Designers
-Programmers
-Hosting Companies
-Producers
-Media
-Remote Workers
-Crooks
-
-Negative Employment (large)
-===========================
-Middle Men
-Manual Labor
-Old People
-
-Problems
-========
-Quantity != Quality
-Free != Profit || Cheap
-New != Better || Virtuous
-
-</description>
-				<link>http://lexical.foobar.systems/internet-disruption.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/internet-disruption.html</guid>
-			</item>
-		
-			<item>
-				<title>Is Ruby an acceptable Perl6 ?</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-What Ruby has
-
-1) Standard Spec
-2) Multiple Implementations
-3) Gems
-4) Threads (jvm)
-5) Async
-6) OOP with overloading
-7) Good unicode coverage
-8) Embeddable
-9) Mobile
-
-All the goodies basically.
-
-&lt;h2&gt;Still the answer is No&lt;/h2&gt;
-What is unique about Perl6 ?
-
-# Grammars
-
-Grammars provide
-
-1) Expanding Perl6 from within
-1.1) Syntax Level Compatibility
-2) Access to modifiable AST at runtime
-
-This is comparable to Lisp without s-expressions, which are trivial.
-
-Implementing Grammars will put Perl in the &lt;a href=&quot;http://www.paulgraham.com/hundred.html&quot;&gt;200 year language domain&lt;/a&gt;.
-Maybe it&#39;s Yin / Yan again as Grammars are easy to use but not so easy to implement.
-
-# OOP and FP
-
-A Perl-ish take on it.
-You can follow the Perl6 development &lt;a href=&quot;https://github.com/perl6&quot;&gt;here&lt;/a&gt;.
-
-&lt;h2&gt;Things I wish Ruby Community stole from Perl&lt;/h2&gt;
-1) Informal writing style **
-2) The Old School attitude of script writing **
-3) Humour
-4) Beautiful API design
-5) Backwards Compatibility
-
-&lt;h2&gt;Things I wish Perl Community stole from Ruby&lt;/h2&gt;
-
-1) Better looking websites
-2) Embeddable (mruby, C Api)
-
-
-** This is what sucked me into Perl,
-TPJ, HOP, Mastering Algorithms and the Camel Book.
-
-** Even Perl5 lost this because for some reason scripts are
-less enterprisy than modules.
-</description>
-				<link>http://lexical.foobar.systems/is-ruby-perl6.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/is-ruby-perl6.html</guid>
-			</item>
-		
-			<item>
-				<title>javascript is broken</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-# this
-
-broken
-
-# typeof and instanceof
-
-broken
-
-a duck language that doesn&#39;t typeid ?
-duck that
-
-# prototype
-
-no one in the world wants it.
-class should be separate from the state.
-
-# cps (callback passing)
-
-cps is done by compilers.
-how the fuck is that high level ?
-
-# promises
-
-promises can&#39;t solve producer consumer problem.
-you need good old mutexes for that.
-
-# constant library api breakage
-
-thank god npm is not selling candy.
-
-alice : why isn&#39;t this candy sweet ?
-npm   : you know, salt is the new sweet.
-alice : you are lame.
-
-you can look at grunt and express for examples of this.
-
-&lt;h2&gt;what the fuck is wrong with programming language communities ?&lt;/h2&gt;
-
-every language seems to have a &quot;war&quot; with
-
--------------------------------------------
-goto                 | everyone
-if                   | oops
-pointers             | everyone
-=                    | dysfunctional langs
-while loops          | dysfunctional langs
-return               | async
-types                | ducked up langs
-statements           | dysfunctional langs
-sequential execution | dysfunctional langs
-global variables     | everyone
--------------------------------------------
-
-what else is there to program with ? butterflies ?
-
-&lt;h2&gt;c++ has has all of them&lt;/h2&gt;
-
-every time I try these &quot;war&quot; languages, my appreciation for
-c++ goes up.
-
-every application that I ever liked using is in c++.
-
-c++ offers abstractions to the programmer.
-everyone else, forces.
-
----
-hype. never. again.
-
-</description>
-				<link>http://lexical.foobar.systems/javascript-is-broken.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/javascript-is-broken.html</guid>
-			</item>
-		
-			<item>
-				<title>On Learning</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-I try to put things I understand into words, my *own* words.
-I have come to realise, understanding is not learning.
-
-After application, I have a much better understanding.
-But I can&#39;t put it into words.
-
-Then there is a question of creativity, which challenges my understanding
-and forces me to unlearn.
-
-And so I give up,
-There is no *learning*.
-Knowledge can never be complete.
-I will never be contend.
-I can only build on my past,
-Focus on the problem now.
-
-Create or Perish.
-</description>
-				<link>http://lexical.foobar.systems/learning.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/learning.html</guid>
-			</item>
-		
-			<item>
-				<title>LightTable Arch</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-LightTable follows Behavior Object model(BOT), which itself is inspired from
-&lt;a href=&quot;http://entity-systems.wikidot.com/&quot;&gt;Entity Systems model&lt;/a&gt;(ES).
-
-In a typical OOP + GUI program we abuse the Observer Pattern and harcode most of the design
-and Event types.
-
-With BOT/ES the design is stored as an in-memory data structure,
-the event-listeners(behaviors) are stored as metadata and
-the events themselves are generated on the fly.
-
-Every datum is identified by a unique ID and is typically struct-ish.
-
-This means, the entire program can be extended runtime.
-
-In LT,
-
-* object/create makes a new datum. Each datum stores behavior names.
-* object/raise triggers events with payload.
-* behavior macro stores &quot;event(s) &lt;-&gt; reaction&quot; mapping. Reaction receives the payload.
-* object/update, object/merge manages the in-memory data structure.
-
-LightTable is built on node.js so, most of the *actual work* is done by the node.js library wrappers in reactions.
-The ordering of the events, is mostly on a first-come basis. Think list iterations.
-
-An alternate way of looking at this model is imagining a Relational Database + Stored Procedures.
-
-&lt;b&gt;Can this model be applied for client side applications, as an alternate to Backbone.js ?&lt;/b&gt;
-
-Consider a TODO list,
-
-Name -- Data Structure :: [Behaviors]
-=====================================
-
-item -- Hash :: [view, add, remove, update, list]
-
-Event -- Behaviors :: Notes
-===========================
-
-* $() -- list
-* todos.show - list
-* add-button-click + data payload -- add :: add, after object/create triggers todos.show
-* remove-button-click + id palyload -- remove :: remove, after object/remove triggers &quot;
-* save-button-click + add payload --  update
-* todo-clicked -- view
-
-&lt;b&gt;What about GUI ?&lt;/b&gt;
-By dividing the behaviors carefully, GUI can be separated from the NON-GUI.
-LT uses hiccup to generate HTML, making GUI another runtime convinience.
-
-</description>
-				<link>http://lexical.foobar.systems/lt-gist.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/lt-gist.html</guid>
-			</item>
-		
-			<item>
-				<title>Markdown</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-Markdown
-========
-
-Markdown is the PHP of markup languages.
-Asciidoc is a more comprehensive alternative.
-
-Markdown was initially meant for writing simple html webpages
-as intended by its author.
-
-It is now about to be standardized as an IETF standard.
-That author is nowhere to be seen in the process, probably
-because he is embarrassed by Markdown.
-
-Worse is better precisely because the current Software Industry
-thrives on non-engineering. It&#39;s a market problem, where the
-market is satisfied with the shiny.
-
-Parsing Markdown
-================
-
-### Regex
-
-Old Markdown
-
-### Peg
-
-&lt;a href=&quot;https://rawgithub.com/fletcher/human-markdown-reference/master/index.html&quot;&gt;MultiMarkdown&lt;/a&gt;
-If you have to deal with markdown, use this.
-
-Markdown Extensions
-===================
-
-* typically pre/post processors
-
-Markdown Conversion
-===================
-
-Good
-
-* html
-* epub
-
-Painful
-
-* latex
-* pdf
-
-Problems
-========
-
-* nesting
-
-  This alone is enough to ignore Markdown.
-
-* whitespace
-* citations
-* typography
-* math
-* tables
-* code
-
-Markdown Editors
-================
-
-One of myths used to keep Markdown alive is saying it&#39;s
-easy to build an editor for it.
-
-IMHO that&#39;s false.
-
-Most editors are geared towards plain markdown, which is
-useless.
-
-Medium inspired editors
-
-* medium-editor
-* zenpen
-* sofish
-
-IDE-ish editors
-
-* ace
-* codemirror
-
-Problems with Imeplementing a Markdown Editor
-=============================================
-
-### textarea
-
-Too bland
-
-### HTML5 \&amp;lt;div contenteditable=&quot;true&quot;\&amp;gt;
-
-IE, FF, Chrome all implement this differently
-HTML5 spec for this is still alpha stage
-
-#### Problems
-
-Let&#39;s suppose the user types the following text,
-
-    I loved to look upon him, 
-    The Hunter near the Way.
-    So strong his arm and long his bow
-
-    And so bashful of the Day.
-    His courage never failed him
-    For he held his mace so high
-
-This is stored in the div as
-
-    I loved to look upon him,
-    &amp;lt;p&amp;gt;The Hunter near the Way.&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;So strong his arm and long his bow&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;And so bashful of the Day.&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;His courage never failed him&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;or he held his mace so high&amp;lt;/p&amp;gt;
-
-The newlines are not preserved.
-Notice the odd first line.
-
-Let&#39;s suppose the user copy pastes plain text, from a text editor
-
-    I loved to look upon him,
-    &amp;lt;p&amp;gt;The Hunter near the Way.&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;So strong his arm and long his bow&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;And so bashful of the Day.&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;His courage never failed him&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;or he held his mace so high&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;And glared at the Bull in the River&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;And ruled the whole breadth of the sky.&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;As a girl, young and silly,&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;I oft dreamed of being the Maid.&amp;lt;/p&amp;gt;
-
- Let&#39;s suppose the user copy pastes from another html page
-
-    &amp;lt;p&amp;gt;The Hunter near the Way.&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;So strong his arm and long his bow&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;And so bashful of the Day.&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;His courage never failed him&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;or he held his mace so high&amp;lt;/p&amp;gt;
-    &amp;lt;span&amp;gt;And glared at the Bull in the River&amp;lt;/span&amp;gt;
-    &amp;lt;span&amp;gt;And ruled the whole breadth of the sky.&amp;lt;/span&amp;gt;
-    &amp;lt;span&amp;gt;As a girl, young and silly,&amp;lt;/span&amp;gt;
-    &amp;lt;span&amp;gt;I oft dreamed of being the Maid.&amp;lt;/span&amp;gt;
-
-You can even see table instead of span or the whole thing in a pre block.
-
-#### Solution -- Cursor API
-
-There is no getCursorPosition(div) which means,
-more hacks, from stackoverflow !
-
-The hacks relate to Range and Selection DOM API
-
-The idea of cursor is absent in HTML5 specification.
-Windows 3.0 had an API for that probably.
-
-### How do others do it ?
-
-All medium based editors suffer from this, but they are view-only
-they don&#39;t care about content.
-
-### How ace, codemirror do it
-
-( Guesswork )
-
-0. Have two elements, a textarea and a editor#div
-1. Use &amp;lt;textarea&amp;gt; as a temporary buffer
-2. Direct all keyboard events to textarea
-3. Grab data from textarea and data structure
-4. render data structure and cursor position to editor#div
-
-For copy paste,
-
-1. Redirect to textarea
-2. Copy to data structure
-3. Set cursor
-
-For mouse events,
-
-1. Listen on editor#area
-2. Get co-ordinates
-3. Do characterWidth/lineHeight simulation on the text data structure
-4. Set mouse position
-
-This means we will have have control over every character being rendered.
-
-1. setCursorPosition
-2. getCurrentCursorPositon
-3. insertLineBreakAtCursorPosition
-4. insertTextAtCursorPosition
-5. insertHTMLAtCursorPosition
-6. pastePlainTextFromClipboardAtCursor
-
-How do I Publish ?
-==================
-
-Just stick to Asciidoc / Latex.
-
-What editor to use ?
-====================
-
-Desktop editors.
-
-</description>
-				<link>http://lexical.foobar.systems/markdown.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/markdown.html</guid>
-			</item>
-		
-			<item>
-				<title>masculine code</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-1. unsafe
-
-not for children, who can start by toying with objects.
-
-2. hard
-
-no security issues.
-
-3. tight
-
-no extra words.
-
-4. thrashing
-
-no sleep for the cpu.
-
-5. pushy
-
-the bootloader is re-written if the operating system is slow.
-
-6. has a manual
-
-you wouldn&#39;t understand it otherwise.
-
-7. not false
-
-true.
-
-8. hierarchical
-
-like engineering.
-
-9. impossible
-
-if it is possible, it is automated.
-
-10. purposeful
-
-it gets the job done.
-
-11. cold
-
-no expenditure of energy.
-
-12. not art
-
-it is an ordered graph with unambiguous cycles.
-
-13. hums
-
-it brings peace to those who use it.
-
-</description>
-				<link>http://lexical.foobar.systems/masculine-code.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/masculine-code.html</guid>
-			</item>
-		
-			<item>
 				<title>Matrix</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
@@ -3475,6 +3021,129 @@ Neo chooses 2.
 </description>
 				<link>http://lexical.foobar.systems/matrix.html</link>
 				<guid isPermaLink="true">http://lexical.foobar.systems/matrix.html</guid>
+			</item>
+		
+			<item>
+				<title>Nature</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+Nature is Extreme.
+
+Extreme Sex.
+
+Extreme Engineering.
+Extreme War.
+
+Extreme Love.
+Extreme Hate.
+
+Extreme Good.
+Extreme Evil.
+
+Extreme Beauty.
+Extreme Gross.
+
+</description>
+				<link>http://lexical.foobar.systems/nature.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/nature.html</guid>
+			</item>
+		
+			<item>
+				<title>Entropy</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+I worship Entropy.
+
+Entropy is destruction, death, loss, oldness and the dance of dionysus.
+
+Entropy is the typ in the punchline.
+Entropy is the thorn in the shoe.
+Entropy is saying the wrong thing at the right time.
+Entropy is the bad song in the music album.
+Entropy is a director&#39;s drunk cameraman.
+Entropy is latin.
+Entropy is the hail that broke your Yamaha Bike.
+Entropy is 23 stitches.
+Entropy is the Black Plague on an otherwise beautiful day worth a 1000 paintings.
+Entropy is failed projects.
+Entropy is an earthquake.
+Entorpy is a forgetfulness.
+Entropy is the distraction before a deadline.
+
+Person X: This is awesome !
+Entropy: I just created a Nebula with a Black Hole in Golden Ratio.
+Person Y: The world is my oyster, Alexander can kiss my arse !
+Entropy: Would you like to know what I did with the Dinosaurs and most of your ancestors ?
+
+Black, White, Blue, Yellow or Red, Entropy will fuck with you.
+
+But ultimately Entropy, only wishes to challenge you.
+And it is here, that I love, respect and fear Entropy.
+
+Despite all the ghastly nonsense above, Entropy is a simple beast.
+
+&quot;If you create disorder, I will gladly help you.
+ If you create order, I will give you a hall pass.
+ Be creative, Amuse me or I will perish you&quot;
+    -- Entropy
+
+For practical purposes I shall define a new word, Antropy
+Antropy is the opposite of Entropy, i.e, creation of order.
+
+Things you can do to create more Antropy to bargain with Entropy,
+
+1. Act Act Act
+
+   You will remember your actions 10 years down the lane,
+   than your thoughts and vague ideas.
+
+2. Slow Down
+
+   You have close to 50_000 thoughts a day ~ 86_400 seconds.
+   A continous monologue that goes nowhere.
+   Entropy mocks your callous thinking !
+
+3. Do one thing well before doing another thing
+
+   Success cascades.
+
+4. Re-Interpreting Old Ideas is better than New Ideas
+
+   Let&#39;s face it, there is nothing new under the Sun.
+   Only the dead people did cool things.
+
+5. Written word is better than spoken word
+
+   Do you remember what you said ?
+   You can grep through what you wrote.
+
+   A minor exception, mantras decrease Entropy.
+
+6. Principles are better than Fashion
+
+   Do you know what was popular in 1927 ?
+   Entropy: *yawn*
+
+7. Second attempt is always better than first attempt.
+
+   So practice.
+
+8. Bullshit can buy you some time.
+
+   Use wisely, otherwise the shit will be on you.
+
+9. You can never beat Entropy.
+
+   Losing all hope is freedom.
+
+Entropy: Your belief in numerology stuns me ! Have you not understood a thing,
+         written here ?
+
+</description>
+				<link>http://lexical.foobar.systems/entropy.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/entropy.html</guid>
 			</item>
 		
 			<item>
@@ -3641,6 +3310,280 @@ The Legendary Moog sound,
 			</item>
 		
 			<item>
+				<title>Emoticons</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_emoticons&quot;&gt;Emoticons&lt;/a&gt; fascinate me.
+
+They are the resurgence of pictographs, a bit like &lt;a href=&quot;https://en.wikipedia.org/wiki/Egyptian_hieroglyphs&quot;&gt;Egyptian Hieroglyphs&lt;/a&gt;,
+or the Chinese symbols.
+
+For example, ⼮ is the Chinese symbol for river.
+
+Here are some new interesting emoticons, that I found in the wild wild web,
+
+ಠ_ಠ      -- disapproval (that&#39;s the Kannada &lt;a href=&quot;http://unicode-table.com/en/0CA0/&quot;&gt;http://unicode-table.com/en/0CA0&lt;/a&gt;)
+ᕕ(ᐛ)ᕗ   -- happy
+ᕙ(‸‶)ᕗ    -- lack of muscles
+&lt;&lt;°°&gt;&gt;     -- crab
+:{C       -- a sad English gentleman
+:C        -- hipster sad face
+∎-∎       -- cooling glasses
+(-_-)凸   -- showing the finger
+
+Exploring multi-language, &lt;a href=&quot;https://en.wikipedia.org/wiki/Unicode&quot;&gt;unicode&lt;/a&gt;, alphabets and coming up with your own,
+is silly, stupid and you should totally try doodling some.
+
+Here are some that I discovered,
+
+ఠ_ఠ      -- worried about your sanity
+౪       -- stethoscope
+(‸‶       -- amazed that you can actually do that
+(‸‶)౨   -- why do you always
+--ల     -- punch (looks like a boxing glove)
+
+The above use some alphabets of Telugu,
+&lt;a href=&quot;http://unicode-table.com/en/search/?q=telugu&quot;&gt;http://unicode-table.com/en/search/?q=telugu&lt;/a&gt;.
+
+(The above is best viewed in browsers with good alphabet coverage,
+ like chrome, otherwise you will see empty boxes)
+</description>
+				<link>http://lexical.foobar.systems/emoticons.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/emoticons.html</guid>
+			</item>
+		
+			<item>
+				<title>masculine code</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+1. unsafe
+
+not for children, who can start by toying with objects.
+
+2. hard
+
+no security issues.
+
+3. tight
+
+no extra words.
+
+4. thrashing
+
+no sleep for the cpu.
+
+5. pushy
+
+the bootloader is re-written if the operating system is slow.
+
+6. has a manual
+
+you wouldn&#39;t understand it otherwise.
+
+7. not false
+
+true.
+
+8. hierarchical
+
+like engineering.
+
+9. impossible
+
+if it is possible, it is automated.
+
+10. purposeful
+
+it gets the job done.
+
+11. cold
+
+no expenditure of energy.
+
+12. not art
+
+it is an ordered graph with unambiguous cycles.
+
+13. hums
+
+it brings peace to those who use it.
+
+</description>
+				<link>http://lexical.foobar.systems/masculine-code.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/masculine-code.html</guid>
+			</item>
+		
+			<item>
+				<title>On Learning</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+I try to put things I understand into words, my *own* words.
+I have come to realise, understanding is not learning.
+
+After application, I have a much better understanding.
+But I can&#39;t put it into words.
+
+Then there is a question of creativity, which challenges my understanding
+and forces me to unlearn.
+
+And so I give up,
+There is no *learning*.
+Knowledge can never be complete.
+I will never be contend.
+I can only build on my past,
+Focus on the problem now.
+
+Create or Perish.
+</description>
+				<link>http://lexical.foobar.systems/learning.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/learning.html</guid>
+			</item>
+		
+			<item>
+				<title>javascript is broken</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+# this
+
+broken
+
+# typeof and instanceof
+
+broken
+
+a duck language that doesn&#39;t typeid ?
+duck that
+
+# prototype
+
+no one in the world wants it.
+class should be separate from the state.
+
+# cps (callback passing)
+
+cps is done by compilers.
+how the fuck is that high level ?
+
+# promises
+
+promises can&#39;t solve producer consumer problem.
+you need good old mutexes for that.
+
+# constant library api breakage
+
+thank god npm is not selling candy.
+
+alice : why isn&#39;t this candy sweet ?
+npm   : you know, salt is the new sweet.
+alice : you are lame.
+
+you can look at grunt and express for examples of this.
+
+&lt;h2&gt;what the fuck is wrong with programming language communities ?&lt;/h2&gt;
+
+every language seems to have a &quot;war&quot; with
+
+-------------------------------------------
+goto                 | everyone
+if                   | oops
+pointers             | everyone
+=                    | dysfunctional langs
+while loops          | dysfunctional langs
+return               | async
+types                | ducked up langs
+statements           | dysfunctional langs
+sequential execution | dysfunctional langs
+global variables     | everyone
+-------------------------------------------
+
+what else is there to program with ? butterflies ?
+
+&lt;h2&gt;c++ has has all of them&lt;/h2&gt;
+
+every time I try these &quot;war&quot; languages, my appreciation for
+c++ goes up.
+
+every application that I ever liked using is in c++.
+
+c++ offers abstractions to the programmer.
+everyone else, forces.
+
+---
+hype. never. again.
+
+</description>
+				<link>http://lexical.foobar.systems/javascript-is-broken.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/javascript-is-broken.html</guid>
+			</item>
+		
+			<item>
+				<title>Is Ruby an acceptable Perl6 ?</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+What Ruby has
+
+1) Standard Spec
+2) Multiple Implementations
+3) Gems
+4) Threads (jvm)
+5) Async
+6) OOP with overloading
+7) Good unicode coverage
+8) Embeddable
+9) Mobile
+
+All the goodies basically.
+
+&lt;h2&gt;Still the answer is No&lt;/h2&gt;
+What is unique about Perl6 ?
+
+# Grammars
+
+Grammars provide
+
+1) Expanding Perl6 from within
+1.1) Syntax Level Compatibility
+2) Access to modifiable AST at runtime
+
+This is comparable to Lisp without s-expressions, which are trivial.
+
+Implementing Grammars will put Perl in the &lt;a href=&quot;http://www.paulgraham.com/hundred.html&quot;&gt;200 year language domain&lt;/a&gt;.
+Maybe it&#39;s Yin / Yan again as Grammars are easy to use but not so easy to implement.
+
+# OOP and FP
+
+A Perl-ish take on it.
+You can follow the Perl6 development &lt;a href=&quot;https://github.com/perl6&quot;&gt;here&lt;/a&gt;.
+
+&lt;h2&gt;Things I wish Ruby Community stole from Perl&lt;/h2&gt;
+1) Informal writing style **
+2) The Old School attitude of script writing **
+3) Humour
+4) Beautiful API design
+5) Backwards Compatibility
+
+&lt;h2&gt;Things I wish Perl Community stole from Ruby&lt;/h2&gt;
+
+1) Better looking websites
+2) Embeddable (mruby, C Api)
+
+
+** This is what sucked me into Perl,
+TPJ, HOP, Mastering Algorithms and the Camel Book.
+
+** Even Perl5 lost this because for some reason scripts are
+less enterprisy than modules.
+</description>
+				<link>http://lexical.foobar.systems/is-ruby-perl6.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/is-ruby-perl6.html</guid>
+			</item>
+		
+			<item>
 				<title>Module Pattern</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
@@ -3665,45 +3608,425 @@ For browsers,
 			</item>
 		
 			<item>
-				<title>Nature</title>
+				<title>Internet Disruption</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
 
-Nature is Extreme.
+Crime
+=====
+Spying
+Identity Fraud
+Information selling
+Exploiting computation
 
-Extreme Sex.
+Content
+=======
+Politics
+--&gt; Free Speech
+--&gt; Alternate Medium
+Publishing
+--&gt; Self Publishing
+--&gt; Academic Publishing
+--&gt; Magazine Publishing
+--&gt; Encyclopedia Publishing
+--&gt; Books, Guides
+Governance
+--&gt; Status Updates
+News
+--&gt; Journalism
+--&gt; Headlines
+--&gt; Gossip
+--&gt; Reviews
+Art
+--&gt; Gallery
+Music
+--&gt; Radio
+--&gt; Records
+Video
+--&gt; TV
+--&gt; Cinema / Adult
+Education
+--&gt; Help Guides
 
-Extreme Engineering.
-Extreme War.
+Profit
+======
+Crowd funding
+Direct Commerce
+Travel Management
+Event Management
+Marketing
+Yellow Pages
+Bank
 
-Extreme Love.
-Extreme Hate.
+Communication
+=============
+Post
+Telephones
 
-Extreme Good.
-Extreme Evil.
+Positive Employment
+===================
+Designers
+Programmers
+Hosting Companies
+Producers
+Media
+Remote Workers
+Crooks
 
-Extreme Beauty.
-Extreme Gross.
+Negative Employment (large)
+===========================
+Middle Men
+Manual Labor
+Old People
+
+Problems
+========
+Quantity != Quality
+Free != Profit || Cheap
+New != Better || Virtuous
 
 </description>
-				<link>http://lexical.foobar.systems/nature.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/nature.html</guid>
+				<link>http://lexical.foobar.systems/internet-disruption.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/internet-disruption.html</guid>
 			</item>
 		
 			<item>
-				<title>AI test</title>
+				<title>Automata</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
-When an AI System can,
 
-1) detect sarcasm
-2) wit you
-3) a bit too much
-4) say sorry
+Machines
+========
+
+Accumulator Machine
+Stack Machine
+Register Machines
+Flow Machine
+
+Theory
+======
+
+Petri Net
+Logic
+Ladder Logic
+Control / Dispatch / Decission / Data Tables
+Decission Trees
+
+Reality
+=======
+
+PLC
+Electronics Instruments
+
+And not so obvious,
+Chemistry
+Cooking
 
 </description>
-				<link>http://lexical.foobar.systems/ai-test.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/ai-test.html</guid>
+				<link>http://lexical.foobar.systems/automata.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/automata.html</guid>
+			</item>
+		
+			<item>
+				<title>Why Desktops / Laptops and Application Softwares are here to stay ...</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+Summary: Mobile Devices / Web are for Entertainment.
+
+Professional Work
+=================
+
+- Office
+- Emails aka Long Communication
+- Programming
+- Arts with Digital Workflows
+- Complex Games
+- Research
+- Trading
+- Multimedia Computer
+- AutoCAD
+
+Mobile Devices / Web
+====================
+
+- Notifications / Read Only
+- Short Communication
+- Toy apps
+- Games
+- Reading / Learning
+- Buying simple items
+- LoginMedia Computer
+- Tetris
+
+Features of Application Software
+================================
+
+exit button
+minimize (multitasking)
+files
+threads / processes / aio (performance / parallism)
+larger ram
+custom stores
+bigger screens / multiple screens
+adaptable to touch (windows 8)
+adaptable to cloud (chromebook)
+portable to coffee shops
+
+*gasp* A Laptop can be connected to TV with a HDMI port.
+
+work / life balance
+</description>
+				<link>http://lexical.foobar.systems/desktops.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/desktops.html</guid>
+			</item>
+		
+			<item>
+				<title>Electronic Music Technology</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+Producer Tech
+=============
+
+Tapes / Phonograph
+--&gt; DJing, Experimental
+Electronics
+--&gt; Experimental
+Recording Studio
+--&gt; Remixes
+Studio Effects
+--&gt; Dub Remixes, Experimental
+Synthesizers
+--&gt; Ambient, Experimental
+--&gt; Pop
+Loopers
+--&gt; Beatboxing
+Soundchips
+--&gt; Chiptunes
+Turntables
+--&gt; Hip Hop
+Drum Machines, MIDI
+--&gt; Techno, Breakbeat and their derivatives
+Sampling, Vocoder
+--&gt; Everyone
+
+Consumer Tech
+=============
+
+FM
+Vinyl/Dub Plates
+Cassette
+CD
+MP3
+Internet
+
+Softwares by way of emulation and generalization brought digital alternatives
+to each of the above
+--&gt; Traktor, Max, Ableton, Fruity Loops, Renoise, Cubase, Acid Loops
+
+Countries involved
+--&gt; Japan(Hardware), Germany, UK, America
+
+</description>
+				<link>http://lexical.foobar.systems/electronic-music.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/electronic-music.html</guid>
+			</item>
+		
+			<item>
+				<title>CamelCase</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+In English, capitalization applies to,
+
+1) First word
+2) Proper noun
+
+Some new rules,
+
+When a Proper Noun has more than one word, use capitalization
+for both the words, just like CamelCase
+
+When a verb has more than one word, captalize the second word.
+
+When describing attribtutes, use hyphenation.
+
+When a Verb is used as a noun, capitalize it.
+
+When you feel like, emphasizing a word, capitalize it.
+
+When the word really needs to stand out, CAPITALIZE EVERYTHING.
+
+
+</description>
+				<link>http://lexical.foobar.systems/camel-case.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/camel-case.html</guid>
+			</item>
+		
+			<item>
+				<title>The Eight Fallacies of Distributed Computing</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+Taken from &lt;a href=&quot;http://www.rgoarchitects.com/Files/fallacies.pdf&quot;&gt;here&lt;/a&gt;.
+
+Essentially everyone, when they first build a distributed application,
+makes the following eight assumptions.
+
+All prove to be false in the long run and 
+all cause big trouble and painful learning experiences.
+
+The network is reliable
+Latency is zero
+Bandwidth is infinite
+The network is secure
+Topology doesn’t change
+There is one administrator
+Transport cost is zero
+The network is homogeneous
+        — Peter Deutsch
+
+</description>
+				<link>http://lexical.foobar.systems/distributed-fallacy.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/distributed-fallacy.html</guid>
+			</item>
+		
+			<item>
+				<title>Compressing Fonts</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+&lt;a href=&quot;http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/design/index-en.html&quot;&gt;MPlus&lt;/a&gt; is my favorite font.
+It&#39;s thin and has fixed width.
+
+I could not get &lt;a href=&quot;http://www.fontsquirrel.com/tools/webfont-generator&quot;&gt;Font Squirrel&#39;s&lt;/a&gt; web font generator to work(size?).
+So I wrote a &lt;a href=&quot;http://fontforge.org&quot;&gt;fontforge&lt;/a&gt; script to compress the font by extracting &lt;a href=&quot;https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block)&quot;&gt;Basic Latin&lt;/a&gt;.
+
+&lt;div class=&quot;autospace&quot;&gt;
+&lt;script src=&quot;https://gist.github.com/harsha-mudi/10980853.js&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+The web font is available &lt;a href=&quot;/css/mplus-1m-regular.ttf&quot;&gt;here&lt;/a&gt;
+</description>
+				<link>http://lexical.foobar.systems/compressing-fonts.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/compressing-fonts.html</guid>
+			</item>
+		
+			<item>
+				<title>Pretentious Lisp</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+1. Parens
+
+John McCarthy and Marvin Minsky don&#39;t think of parens as a superior notation.
+It&#39;s surprising how every Lisp implementer seems to neglect that.
+
+Optional infix, postfix notation can easily be slapped on top of Lisp without losing
+it&#39;s list like nature.
+
+Alternative brackets were suggested by both of them.
+
+How is (progn ... ) different from { } ?
+
+Parens are, if any, an inferior notation.
+f(g(h)) is the only place where it is acceptable.
+
+2. Parenthetical Indentation
+
+&lt;pre&gt;
+ // In C
+ for (i = 0; i &lt; 10; i++) {
+     if (i % 2 == 0) {
+         doSomething (i); }
+     else {
+         doSomethingElse (i); } }
+&lt;/pre&gt;
+
+Can you identify the problems with the above C code ?
+
+Hint: You can&#39;t add new statements without fucking up &quot;{&quot; and &quot;}&quot;
+
+It&#39;s absolutely retarded.
+How this became the mainstream Lisp style is beyond me.
+
+Of course I am supposed to use autoident/paredit in emacs no less.
+Firstly coupling a programming language with an editor is stupid.
+Secondly there is no guarantee that autoindent and paredit work everytime.
+
+Which begs the point, why is this shit enforced if it is useless ?
+Allman style works in XML.
+
+3. Lisp Code is pure poetry
+
+Except it&#39;s not.
+
+Hint: If you read a code snippet and you can&#39;t understand it.
+      Assume that the author is sloppy.
+
+Clarity is the sign of intelligence.
+Terseness is a sign of obfuscation.
+
+Now carefully look at `doSomething (i); }`.
+
+Can you comment at the end without fucking &quot;}&quot; up ?
+
+There you have it. Lisp code is poetry because adding a comment
+means re-indenting the code.
+
+4. Recursion is so high level you can&#39;t breathe
+
+The dirty secret is, Lisp doesn&#39;t have control flow operators like
+
+* break
+* continue
+* goto
+* and even return in clojure
+
+Yes return !
+
+How do you disguise weakness ?
+Obfuscate it as a Philosophy obviously !
+Then call everyone who doesn&#39;t practice it a BLUB.
+
+Now you have the Moral highground without doing anything.
+This is precisely what Haskell/ML/Scheme/Lisp camp does.
+
+Recursion is merely one of the many varieties of Iteration.
+You can write a quick-sort without recursion.
+Just use a Stack to keep track.
+
+Can the same be said of Recursion ?
+
+5. Continuations
+
+Assembly programmers called it co-routines.
+They had the stack and context registers to mess with.
+
+Continuations are merely the side-effect of hiding the machine from the programmer.
+
+6. Macros
+
+Possibly the most glorified language feature ever.
+
+Is it also so high level you can&#39;t breathe ?
+
+Assembly programmers called it &quot;self-modifying-code&quot;.
+
+10110000 01100001
+
+^ That&#39;s machine code.
+
+It&#39;s both an instruction and a number (&quot;Homoiconicity&quot;).
+With bit operators you can modify it, just like any other number.
+Except by modifying it you can create a new instruction.
+
+Was that so difficult to explain ?
+
+</description>
+				<link>http://lexical.foobar.systems/bad-lisp.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/bad-lisp.html</guid>
 			</item>
 		
 			<item>
@@ -3934,187 +4257,42 @@ Was there an Artist that felt it ?
 			</item>
 		
 			<item>
-				<title>Automata</title>
+				<title>Constituents of Language</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
 
-Machines
-========
+Miming
+Political - Grunts
+Military - Shouts
+Engineering / Maths - Shapes
+Medicine - Pains
+Trade - Pleasures
+Introspective - Needs
+Art - Story telling
 
-Accumulator Machine
-Stack Machine
-Register Machines
-Flow Machine
+Most everyday speech is Politically driven.
 
-Theory
-======
+Letters I believe, with complete prejudice, were given to us by musician-poets.
 
-Petri Net
-Logic
-Ladder Logic
-Control / Dispatch / Decission / Data Tables
-Decission Trees
+Alphabet agglutination in music notations is mapped to phrases and scenarios.
+Meaningless letters act as placeholders, memorized and used in compression for story telling.
+The popularity of the stories make their way into common tongue and into the brain makeup.
 
-Reality
-=======
+A meaningless letter is the ultimate parasite.
 
-PLC
-Electronics Instruments
-
-And not so obvious,
-Chemistry
-Cooking
-
-</description>
-				<link>http://lexical.foobar.systems/automata.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/automata.html</guid>
-			</item>
-		
-			<item>
-				<title>Pretentious Lisp</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-1. Parens
-
-John McCarthy and Marvin Minsky don&#39;t think of parens as a superior notation.
-It&#39;s surprising how every Lisp implementer seems to neglect that.
-
-Optional infix, postfix notation can easily be slapped on top of Lisp without losing
-it&#39;s list like nature.
-
-Alternative brackets were suggested by both of them.
-
-How is (progn ... ) different from { } ?
-
-Parens are, if any, an inferior notation.
-f(g(h)) is the only place where it is acceptable.
-
-2. Parenthetical Indentation
-
-&lt;pre&gt;
- // In C
- for (i = 0; i &lt; 10; i++) {
-     if (i % 2 == 0) {
-         doSomething (i); }
-     else {
-         doSomethingElse (i); } }
-&lt;/pre&gt;
-
-Can you identify the problems with the above C code ?
-
-Hint: You can&#39;t add new statements without fucking up &quot;{&quot; and &quot;}&quot;
-
-It&#39;s absolutely retarded.
-How this became the mainstream Lisp style is beyond me.
-
-Of course I am supposed to use autoident/paredit in emacs no less.
-Firstly coupling a programming language with an editor is stupid.
-Secondly there is no guarantee that autoindent and paredit work everytime.
-
-Which begs the point, why is this shit enforced if it is useless ?
-Allman style works in XML.
-
-3. Lisp Code is pure poetry
-
-Except it&#39;s not.
-
-Hint: If you read a code snippet and you can&#39;t understand it.
-      Assume that the author is sloppy.
-
-Clarity is the sign of intelligence.
-Terseness is a sign of obfuscation.
-
-Now carefully look at `doSomething (i); }`.
-
-Can you comment at the end without fucking &quot;}&quot; up ?
-
-There you have it. Lisp code is poetry because adding a comment
-means re-indenting the code.
-
-4. Recursion is so high level you can&#39;t breathe
-
-The dirty secret is, Lisp doesn&#39;t have control flow operators like
-
-* break
-* continue
-* goto
-* and even return in clojure
-
-Yes return !
-
-How do you disguise weakness ?
-Obfuscate it as a Philosophy obviously !
-Then call everyone who doesn&#39;t practice it a BLUB.
-
-Now you have the Moral highground without doing anything.
-This is precisely what Haskell/ML/Scheme/Lisp camp does.
-
-Recursion is merely one of the many varieties of Iteration.
-You can write a quick-sort without recursion.
-Just use a Stack to keep track.
-
-Can the same be said of Recursion ?
-
-5. Continuations
-
-Assembly programmers called it co-routines.
-They had the stack and context registers to mess with.
-
-Continuations are merely the side-effect of hiding the machine from the programmer.
-
-6. Macros
-
-Possibly the most glorified language feature ever.
-
-Is it also so high level you can&#39;t breathe ?
-
-Assembly programmers called it &quot;self-modifying-code&quot;.
-
-10110000 01100001
-
-^ That&#39;s machine code.
-
-It&#39;s both an instruction and a number (&quot;Homoiconicity&quot;).
-With bit operators you can modify it, just like any other number.
-Except by modifying it you can create a new instruction.
-
-Was that so difficult to explain ?
+        We surround ourselves with stories, sounds, and gestures
+        of endless variety.
+        Create our own
+        amusing ourselves to death.
+        And yet forget.
+        The endless stories of the dead
+        who like us
+        were addicted
+        to the prosody of letters.
 
 </description>
-				<link>http://lexical.foobar.systems/bad-lisp.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/bad-lisp.html</guid>
-			</item>
-		
-			<item>
-				<title>CamelCase</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-In English, capitalization applies to,
-
-1) First word
-2) Proper noun
-
-Some new rules,
-
-When a Proper Noun has more than one word, use capitalization
-for both the words, just like CamelCase
-
-When a verb has more than one word, captalize the second word.
-
-When describing attribtutes, use hyphenation.
-
-When a Verb is used as a noun, capitalize it.
-
-When you feel like, emphasizing a word, capitalize it.
-
-When the word really needs to stand out, CAPITALIZE EVERYTHING.
-
-
-</description>
-				<link>http://lexical.foobar.systems/camel-case.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/camel-case.html</guid>
+				<link>http://lexical.foobar.systems/constituents-of-speech.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/constituents-of-speech.html</guid>
 			</item>
 		
 			<item>
@@ -4185,66 +4363,6 @@ Thanks @theju, @tuxcanfly, @ckvinaykiran for the feedback.
 </description>
 				<link>http://lexical.foobar.systems/combinatorial-explosion.html</link>
 				<guid isPermaLink="true">http://lexical.foobar.systems/combinatorial-explosion.html</guid>
-			</item>
-		
-			<item>
-				<title>Compressing Fonts</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-&lt;a href=&quot;http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/design/index-en.html&quot;&gt;MPlus&lt;/a&gt; is my favorite font.
-It&#39;s thin and has fixed width.
-
-I could not get &lt;a href=&quot;http://www.fontsquirrel.com/tools/webfont-generator&quot;&gt;Font Squirrel&#39;s&lt;/a&gt; web font generator to work(size?).
-So I wrote a &lt;a href=&quot;http://fontforge.org&quot;&gt;fontforge&lt;/a&gt; script to compress the font by extracting &lt;a href=&quot;https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block)&quot;&gt;Basic Latin&lt;/a&gt;.
-
-&lt;div class=&quot;autospace&quot;&gt;
-&lt;script src=&quot;https://gist.github.com/harsha-mudi/10980853.js&quot;&gt;&lt;/script&gt;
-&lt;/div&gt;
-
-The web font is available &lt;a href=&quot;/css/mplus-1m-regular.ttf&quot;&gt;here&lt;/a&gt;
-</description>
-				<link>http://lexical.foobar.systems/compressing-fonts.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/compressing-fonts.html</guid>
-			</item>
-		
-			<item>
-				<title>Constituents of Language</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-Miming
-Political - Grunts
-Military - Shouts
-Engineering / Maths - Shapes
-Medicine - Pains
-Trade - Pleasures
-Introspective - Needs
-Art - Story telling
-
-Most everyday speech is Politically driven.
-
-Letters I believe, with complete prejudice, were given to us by musician-poets.
-
-Alphabet agglutination in music notations is mapped to phrases and scenarios.
-Meaningless letters act as placeholders, memorized and used in compression for story telling.
-The popularity of the stories make their way into common tongue and into the brain makeup.
-
-A meaningless letter is the ultimate parasite.
-
-        We surround ourselves with stories, sounds, and gestures
-        of endless variety.
-        Create our own
-        amusing ourselves to death.
-        And yet forget.
-        The endless stories of the dead
-        who like us
-        were addicted
-        to the prosody of letters.
-
-</description>
-				<link>http://lexical.foobar.systems/constituents-of-speech.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/constituents-of-speech.html</guid>
 			</item>
 		
 			<item>
@@ -4326,137 +4444,19 @@ Concurrent Data Flows require a context matching algorithm.
 			</item>
 		
 			<item>
-				<title>Why Desktops / Laptops and Application Softwares are here to stay ...</title>
+				<title>AI test</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
+When an AI System can,
 
-Summary: Mobile Devices / Web are for Entertainment.
-
-Professional Work
-=================
-
-- Office
-- Emails aka Long Communication
-- Programming
-- Arts with Digital Workflows
-- Complex Games
-- Research
-- Trading
-- Multimedia Computer
-- AutoCAD
-
-Mobile Devices / Web
-====================
-
-- Notifications / Read Only
-- Short Communication
-- Toy apps
-- Games
-- Reading / Learning
-- Buying simple items
-- LoginMedia Computer
-- Tetris
-
-Features of Application Software
-================================
-
-exit button
-minimize (multitasking)
-files
-threads / processes / aio (performance / parallism)
-larger ram
-custom stores
-bigger screens / multiple screens
-adaptable to touch (windows 8)
-adaptable to cloud (chromebook)
-portable to coffee shops
-
-*gasp* A Laptop can be connected to TV with a HDMI port.
-
-work / life balance
-</description>
-				<link>http://lexical.foobar.systems/desktops.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/desktops.html</guid>
-			</item>
-		
-			<item>
-				<title>The Eight Fallacies of Distributed Computing</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-Taken from &lt;a href=&quot;http://www.rgoarchitects.com/Files/fallacies.pdf&quot;&gt;here&lt;/a&gt;.
-
-Essentially everyone, when they first build a distributed application,
-makes the following eight assumptions.
-
-All prove to be false in the long run and 
-all cause big trouble and painful learning experiences.
-
-The network is reliable
-Latency is zero
-Bandwidth is infinite
-The network is secure
-Topology doesn’t change
-There is one administrator
-Transport cost is zero
-The network is homogeneous
-        — Peter Deutsch
+1) detect sarcasm
+2) wit you
+3) a bit too much
+4) say sorry
 
 </description>
-				<link>http://lexical.foobar.systems/distributed-fallacy.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/distributed-fallacy.html</guid>
-			</item>
-		
-			<item>
-				<title>Electronic Music Technology</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-Producer Tech
-=============
-
-Tapes / Phonograph
---&gt; DJing, Experimental
-Electronics
---&gt; Experimental
-Recording Studio
---&gt; Remixes
-Studio Effects
---&gt; Dub Remixes, Experimental
-Synthesizers
---&gt; Ambient, Experimental
---&gt; Pop
-Loopers
---&gt; Beatboxing
-Soundchips
---&gt; Chiptunes
-Turntables
---&gt; Hip Hop
-Drum Machines, MIDI
---&gt; Techno, Breakbeat and their derivatives
-Sampling, Vocoder
---&gt; Everyone
-
-Consumer Tech
-=============
-
-FM
-Vinyl/Dub Plates
-Cassette
-CD
-MP3
-Internet
-
-Softwares by way of emulation and generalization brought digital alternatives
-to each of the above
---&gt; Traktor, Max, Ableton, Fruity Loops, Renoise, Cubase, Acid Loops
-
-Countries involved
---&gt; Japan(Hardware), Germany, UK, America
-
-</description>
-				<link>http://lexical.foobar.systems/electronic-music.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/electronic-music.html</guid>
+				<link>http://lexical.foobar.systems/ai-test.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/ai-test.html</guid>
 			</item>
 		
 	</channel>
