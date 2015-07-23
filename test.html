@@ -26,9 +26,16 @@ html, body {
     top: 60%;
 }
 
+.gap2 {
+    height: 16px;
+    position: absolute;
+    top: 20%;
+}
+
 .repl-area {
     position: absolute;
     top: 100%;
+    font-size: 3em;
 }
 
 .half-width {
@@ -65,6 +72,10 @@ html, body {
     border: 4px solid blue;
 }
 
+#layout {
+    font-size: 1em;
+}
+
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 </head>
@@ -80,7 +91,7 @@ html, body {
         </textarea>
         <div id="layout" class="half-width pre">
         </div>
-        <button id="eval">Eval</button>
+        <button class="gap2" id="eval">Eval</button>
     </div>
 <!--
 // LINK: http://www.cartographersguild.com/showthread.php?t=9294
@@ -189,7 +200,7 @@ html, body {
                             });
                             $(layout.container).append(layout.active_element);
                             $("#layout").html(JSON.stringify(layout.elements[name]));
-                             }  , 1000) //wait ten seconds before continuing
+                             }  , 200) //wait ten seconds before continuing
                 });
                 // Key Right.
                 break;
