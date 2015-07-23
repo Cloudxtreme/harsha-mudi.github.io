@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+html, body {
+    font-size: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.centered-div {
+    width: 40rem;
+    height: 60rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -20rem;
+    margin-top: -30rem;
+    background-image: url("8.png");
+}
+
+.gap {
+    height: 16px;
+    position: absolute;
+    top: 60%;
+}
+
+.repl-area {
+    position: absolute;
+    top: 100%;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.basic-height {
+    height: 480px;
+}
+
+.pre {
+    white-space: pre;
+}
+
+.measure {
+    position: absolute;    // doesn't affect layout
+    visibility: hidden;    // not visible, but normal size
+    left: -1000px;         // won't affect scrollbars
+    top: -1000px;          // won't affect scrollbars
+}
+
+
+.container {
+    position: relative;
+}
+
+.red {
+    color: red;
+    font-size: 4rem;
+    border: 4px solid blue;
+}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+</head>
+<body>
+    <div class="centered-div">
+        <div class="container">
+        </div>
+    </div>
+    <div class="gap">
+    </div>
+    <div class="repl-area full-width basic-height">
+        <textarea id="repl" class="half-width">
+        </textarea>
+        <div id="layout" class="half-width pre">
+        </div>
+        <button id="eval">Eval</button>
+    </div>
+<!--
+// LINK: http://www.cartographersguild.com/showthread.php?t=9294
+// LINK: https://stackoverflow.com/questions/982054/how-to-center-html-element-in-browser-window
+-->
+</body>
+
+<script>
+    function Layout(base, container) {
+        this.base = base || 8;
+        this.container = container;
+        this.container_width = $(this.container).outerWidth() / this.base;
+        this.container_height = $(this.container).outerWidth() / this.base;
+        this.elements = {
+        }
+        this.active_element = null;
+    }
+
+    Layout.prototype.add_element = function (name, html_text, classes) {
+        var invisible_element = $(html_text);
+        $(invisible_element).addClass("measure");
+        $("body").append(invisible_element);
+
+        var element_width = $(invisible_element).outerWidth();
+        var element_height = $(invisible_element).outerHeight();
+
+        $(invisible_element).remove();
+
+        this.elements[name] = {
+            name: name,
+            classes: classes,
+            html: html_text,
+            width: element_width / this.base,
+            height: element_height / this.base,
+        }
+
+    }
+
+    Layout.prototype.remove_element = function (name) {
+        delete this.elements[name];
+    }
+
+    Layout.prototype.actually_display_element = function(name, top, left) {
+        this.elements[name]["top"] = top;
+        this.elements[name]["left"] = left;
+        this.active_element_name = name;
+        this.active_element = $(this.elements[name]["html"]);
+        this.active_element.css({position: "absolute", top: top + "rem", left: left + "rem"});
+        var self = this;
+        this.elements[name]["classes"].map(function (cls) {
+                self.active_element.addClass(cls);
+        });
+        $(this.container).append(this.active_element);
+    }
+
+    Layout.prototype.edit_active_element = function(hook) {
+        hook(this, this.active_element);
+    }
+
+    Layout.prototype.save_layout = function(name, hook) {
+        return JSON.stringify(this.elements);
+    }
+
+    Layout.prototype.restore_layout = function(json) {
+        var layout = JSON.load(json);
+        $(this.container).empty();
+        this.elements = layout;
+
+        for (var key in layout) {
+            if (layout.hasOwnProperty(key)) {
+                var element_data = this.elements[key];
+                this.actually_display_element(key, element_data["top"], element_data["left"]);
+            }
+        }
+
+    }
+
+     document.onkeydown = function(event) {
+        if (!event)
+            event = window.event;
+        var code = event.keyCode;
+        if (event.charCode && code == 0)
+            code = event.charCode;
+        switch(code) {
+            case 39:
+                main_layout.edit_active_element(function (layout, element) {
+                        var name = layout.active_element_name;
+                        var increment = 1;
+                        setInterval(function () {
+                           
+
+                            if (layout.elements[name]["left"] <= 40)  {
+                                increment *= 1;
+                            }
+                            if ((layout.elements[name]["left"] == 0) || (layout.elements[name]["left"] >= 40))  {
+                                increment *= -1;
+                            }
+                            layout.elements[name]["left"] = layout.elements[name]["left"] + increment;
+                            layout.active_element.remove(),
+                            layout.active_element = $(layout.elements[name]["html"]);
+                            layout.active_element.css({position: "absolute",
+                                top: layout.elements[name]["top"] + "rem",
+                                left: layout.elements[name]["left"] + "rem"});
+                            layout.elements[name]["classes"].map(function (cls) {
+                                layout.active_element.addClass(cls);
+                            });
+                            $(layout.container).append(layout.active_element);
+                            $("#layout").html(JSON.stringify(layout.elements[name]));
+                             }  , 1000) //wait ten seconds before continuing
+                });
+                // Key Right.
+                break;
+        }
+     event.preventDefault();
+    }
+
+    var main_layout = new Layout(8, ".container");
+    var text = "main_layout.add_element('foo', '<p>blah</p>', ['red']);\n main_layout.actually_display_element('foo', 1, 2);";
+
+    $("#eval").click(function () {
+            $("#repl").val(text);
+            eval(text);
+    });
+
+</script>
+
+</html>
+
+
