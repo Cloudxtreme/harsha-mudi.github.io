@@ -60,35 +60,38 @@ Interceptor is an Architectural Pattern which can replace or augment
 * Facade
 * Adapter
 * Proxy
-* Observer
-
-* Strategy
-* Chain of Command
 * Mediator
+
+* Observer
+* Singal / Slot
+* Strategy
+* Delegation
+
+* Chain of Command
 * Filters
 
 * ServiceLocator
 * Front Controller
-* Delegation
-* Static AOP
 
 That's actually quite a lot !
 
-This is mainly because it's an Architectural Pattern which are
-compressive in nature.
+This is mainly because it's an Architectural Pattern.
 
 It looks like this,
 
 ```
-class Interceptor {
-    public intercept(Invocation v);
+class Invocation<T> {
+    public <T> object;
+    public String method;
+    public Array[Object] args;
 }
+
+class Interceptor {
+    public Interceptor next;
+    public intercept(Invocation<T> v);
+}
+
 ```
-
-Essentially it is an indirection at the call level.
-
-Function <-> Function Pointer
-Interceptor <-> Function Pointer
 
 Problems
 ========
