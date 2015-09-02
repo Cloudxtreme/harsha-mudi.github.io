@@ -50,53 +50,51 @@
 <h2>Interceptor Pattern</h2>
 <div class="lineno"></div>
 
-<article class="post">What is Interceptor ?
-=====================
+<article class="post">It looks like this,
 
-Interceptor is an Architectural Pattern which can replace or augment
+```
+class Invocation {
+    public String method;
+    public Array&lt;Object&gt; args;
+}
+
+Event = Invocation
+
+class Interceptor {
+    public Interceptor next;
+    public intercept(Invocation v);
+    private dispatch(Invocation v);
+    private delegate(Invocation v);
+    intercept = trigger = execute
+}
+
+Interceptor = System = Command
+```
+
+When dealing with legacy code it becomes,
 
 * Wrapper
-* Decorator
 * Facade
 * Adapter
 * Proxy
 * Mediator
+* Command
 
-* Observer
-* Singal / Slot
-* Strategy
+By composing multiple interceptors we get,
+
+* Decorator
 * Delegation
-
 * Chain of Command
 * Filters
 
+When combined with metadata meta-object-programming,
+
+* Strategy
 * ServiceLocator
 * Front Controller
 
-That's actually quite a lot !
-
-This is mainly because it's an Architectural Pattern.
-
-It looks like this,
-
-```
-class Invocation<T> {
-    public <T> object;
-    public String method;
-    public Array[Object] args;
-}
-
-class Interceptor {
-    public Interceptor next;
-    public intercept(Invocation<T> v);
-}
-
-```
-
-Problems
-========
-
-Too much metadata.</article>
+It can be combined with a Message Bus easily as well.
+It can used as the System in Entity-Component-System pattern.</article>
 <div style="height:22px; clear: both">
 &nbsp;
 </div>
