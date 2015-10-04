@@ -11,6 +11,166 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
         
 			<item>
+				<title>Flow</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/AU5x1Ea7NjQ&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+Action fundamentally involves the body and mind.
+Stripped out its naked essense, Action involves Bodily Movement.
+
+When does the Body Move ?
+When the relevant Neuro Transmitters (NTs) are fired.
+
+1. Epinephrine / Norepinephrine
+
+Flight or Fight NT.
+This explains why things somewhat start near the deadline.
+
+Making the work Challenging can help stimulate this, but at the same time care must be
+taken for &quot;Flight&quot; not to occur.
+
+2. Glutamate / GABA
+
+Assuming this is the memory NT, a stronger memory can make the Action easier.
+
+3. Dopamine
+
+If the action is pleasurable, then this is alive as well.
+
+4. Serotonin
+
+This describes the Comfort Zone of the body.
+
+5. Acetylcholine
+
+This connects the Information Pathway to the muscles. Clarity can help increase this I guess.
+
+6. Body
+
+When the body stays in a single position continuously it naturally seesm to develop some kinda lethary.
+This lethargy can be nullified by stretching I guess.
+
+TL;DR
+
+Challenge your self.
+Be proud of your work.
+Love your work.
+Make it comfortable.
+Concentrate.
+Please thy God with it.
+Fucking stretch or whatever.
+
+</description>
+				<link>http://lexical.foobar.systems/flow.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/flow.html</guid>
+			</item>
+		
+			<item>
+				<title>Personality Types</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+&quot;Anyone who wants to know the human psyche will learn next to nothing from
+experimental psychology. He would be better advised to abandon exact science,
+put away his scholar&#39;s gown, bid farewell to his study, and wander with human
+heart throught the world. There in the horrors of prisons, lunatic asylums and
+hospitals, in drab suburban pubs, in brothels and gambling-hells, in the
+salons of the elegant, the Stock Exchanges, socialist meetings, churches,
+revivalist gatherings and ecstatic sects, through love and hate, through the
+experience of passion in every form in his own body, he would reap richer
+stores of knowledge than text-books a foot thick could give him, and he will
+know how to doctor the sick with a real knowledge of the human soul.&quot;
+
+-- Carl Jung
+
+There are multiple systems for personality types.
+
+1. Astrology
+2. MBTI
+3. Enneagram
+4. Socionics
+5. Choleric
+
+Is it possible to realize these types from the physiology of the brain ?
+
+&lt;img src=&quot;images/mind.svg&quot;/&gt;
+
+Consider the information pathways,
+
+1. Thinker
+2. Sensor
+3. Controller
+4. Feeler
+5. Intuition
+
+For all the above, Memory acts as the background.
+
+Defense Mechanisms
+==================
+Rationalization, Denial (T)
+Anxiety, Avoidance (S)
+Obsessiveness, Acting Out, Undoing (C)
+Regression, Giving In (F)
+Projection (I)
+Dissociation, Repression (M)
+
+Mature Mechanisms
+=================
+Compensation (T)
+Flow (S)
+Planning (C)
+Sublimation, Golden Rule, Assertiveness (F)
+Humour (I)
+Integrity (M)
+
+Learning Styles
+===============
+Exploration (T)
+Sensation (S)
+Perspectives (C)
+History, Conditioning (F)
+Imagination (I)
+Repitition (M)
+
+Romance Styles
+==============
+Creative (T)
+Sensual (S)
+Careful (C)
+Childish (F)
+Fantasy (I)
+
+Decision Making Styles
+=======================
+Accuracy (T)
+Harmony (S)
+Effectiveness (C)
+Authenticity (F)
+Big Picture (I)
+Experience (M)
+
+Misc
+====
+1. Best way to converse with people, S C F T I (skafty).
+2. An unbalanced personality has weaknesses in one or more of the pathways.
+3. Each pathway starts as a crying child and grows up in maturity through imitation.
+4. This aspects that are least developed are usually called Inner Child / Shadow / Id
+   respectively.
+
+References
+==========
+
+1. &lt;a href=&quot;http://www.personalityhacker.com/&quot;&gt;Personality Hacker&lt;/a&gt;
+2. &lt;a href=&quot;http://www.socionics.com/rel/relcht.htm&quot;&gt;Socionics&lt;/a&gt;
+3. &lt;a href=&quot;https://sites.google.com/site/godlypersonalities/&quot;&gt;Godly Personalities&lt;/a&gt;
+4. &lt;a href=&quot;http://www.humanmetrics.com/&quot;&gt;Human Metrics&lt;/a&gt;
+5. &lt;a href=&quot;http://www.cognitiveprocesses.com/&quot;&gt;Cognitive Processes&lt;/a&gt;
+</description>
+				<link>http://lexical.foobar.systems/personality-types.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/personality-types.html</guid>
+			</item>
+		
+			<item>
 				<title>Uroborosism™</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
@@ -215,88 +375,6 @@ I often warn people: &quot;Somewhere along the way, someone is going to tell you
 </description>
 				<link>http://lexical.foobar.systems/uroborosism.html</link>
 				<guid isPermaLink="true">http://lexical.foobar.systems/uroborosism.html</guid>
-			</item>
-		
-			<item>
-				<title>Personality Types</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-&quot;Anyone who wants to know the human psyche will learn next to nothing from
-experimental psychology. He would be better advised to abandon exact science,
-put away his scholar&#39;s gown, bid farewell to his study, and wander with human
-heart throught the world. There in the horrors of prisons, lunatic asylums and
-hospitals, in drab suburban pubs, in brothels and gambling-hells, in the
-salons of the elegant, the Stock Exchanges, socialist meetings, churches,
-revivalist gatherings and ecstatic sects, through love and hate, through the
-experience of passion in every form in his own body, he would reap richer
-stores of knowledge than text-books a foot thick could give him, and he will
-know how to doctor the sick with a real knowledge of the human soul.&quot;
-
--- Carl Jung
-
-There are multiple systems for personality types.
-
-1. Astrology
-2. MBTI
-3. Enneagram
-4. Socionics
-5. Choleric
-
-Is it possible to realize these types from the physiology of the brain ?
-
-&lt;img src=&quot;images/mind.svg&quot;/&gt;
-
-Consider the information pathways,
-
-1. Thinker
-2. Sensor
-3. Controller / Intuition
-4. Feeler
-
-Learning Styles
-===============
-
-Exploration (T)
-Sensation (S)
-Perspectives (C)
-History (F)
-
-Romance Styles
-==============
-
-Creative (T)
-Sensual (S)
-Careful (C)
-Childish (F)
-
-Decission Making Styles
-=======================
-
-Accuracy (T)
-Harmony (S)
-Effectiveness (C)
-Authenticity (F)
-
-Misc
-====
-1. Best way to converse with people, S C F T.
-
-2. An unbalanced personality has weaknesses in one or more of the items.
-   With age, meeting different personality types, work partners this gets
-   blanced out in the end.
-
-3. This aspects that are least developed are usually called Inner Child / Shadow / Id
-   respectively.
-
-
-1. &lt;a href=&quot;http://www.personalityhacker.com/&quot;&gt;Personality Hacker&lt;/a&gt;
-2. &lt;a href=&quot;http://www.socionics.com/rel/relcht.htm&quot;&gt;Socionics&lt;/a&gt;
-3. &lt;a href=&quot;https://sites.google.com/site/godlypersonalities/&quot;&gt;Godly Personalities&lt;/a&gt;
-4. &lt;a href=&quot;http://www.humanmetrics.com/&quot;&gt;Human Metrics&lt;/a&gt;
-5. &lt;a href=&quot;http://www.cognitiveprocesses.com/&quot;&gt;Cognitive Processes&lt;/a&gt;
-</description>
-				<link>http://lexical.foobar.systems/personality-types.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/personality-types.html</guid>
 			</item>
 		
 			<item>
@@ -634,48 +712,6 @@ VST windows and Grid Pie don&#39;t work well together.
 </description>
 				<link>http://lexical.foobar.systems/renoise.html</link>
 				<guid isPermaLink="true">http://lexical.foobar.systems/renoise.html</guid>
-			</item>
-		
-			<item>
-				<title>Flow</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/AU5x1Ea7NjQ&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-Have experienced a bit of flow recently, here are my notes.
-
-Closed Thinking
-- anxious
-- energetic
-- ambitious
-- failure averse
-- distracted
-- noisy
-- obstacles
-
-Creative Thinking
-- humour
-- ad lib
-- curiosity
-- multiple solutions
-- no fear
-- limits
-- quiet
-- play
-
-It is easier to do trivial and little things than difficult things.
-So I start with the difficult things.
-
-I am also programming en masse than compile every syntax error.
-It&#39;s interesting to depend on your thinking than the compiler.
-
-Tips
-* long/slow/forced breaths
-* time limit of 1 1/2 hours
-
-</description>
-				<link>http://lexical.foobar.systems/flow.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/flow.html</guid>
 			</item>
 		
 			<item>
@@ -1504,97 +1540,6 @@ And best of all, it is battle tested by Game Developers.
 			</item>
 		
 			<item>
-				<title>OM</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-&lt;a href=&quot;https://github.com/swannodette/om/wiki/Documentation&quot;&gt;Om&lt;/a&gt; is built on three ideas to deal with &lt;a href=&quot;http://tech.pro/blog/1402/five-patterns-to-help-you-tame-asynchronous-javascript&quot;&gt;async&lt;/a&gt; shit in clojurescript.
-
-1) Messaging
-2) State Management
-3) Reactive UI
-
-tl;dr UI -&gt; EVENTS -&gt; STATE -&gt; UI
-
-## Reactive UI
-
-This is built on top of ReactJS.
-UI is divided into components.
-
-Each component takes a cursor(more on that later).
-And has some,
-* rendering code
-  rendering code can look like dom/div(default), :div(hiccup) or enlive
-* life cycle hooks where you can place dom event listeners and state change listeners
-
-Initialization of component calls,
-    IInitState
-    IWillMount
-    IDidMount.
-
-Every time a cursor&#39;s state changes a component is rendered, as per the life cycle,
-    IWillUpdate
-    IRender or IRenderState
-    IDidUpdate.
-
-Components are organized as a tree for some fancy optimization purposes.
-See,
-    root - builds the first component
-    build
-    component
-    graft.
-
-## State Management
-
-The entire application state and data is an atom blob.
-Om gives you cursors which are pointers(paths) to a subset of the blob.
-
-Om also has component local states, which are not stored in the blob.
-See,
-    set-state!
-    get-state!
-    props.
-
-It is much simpler to depend on cursors for everything, IMHO.
-
-Om also has truly global state sharing with,
-    get-shared which gets the :shared argument passed to root.
-
-Cursors are manipulated safely by om API,
-    update!
-    transact! you can use a :tx-listen while building root to listen to all transactions
-    and get-in, assoc-in from clojurescript.
-
-You can extend the ICursor Protocol to come up with your own idea of cursors.
-
-## Messaging
-
-Messaging is possible because of core.async, which provides channels and goroutines.
-There is no &lt;a href=&quot;http://swannodette.github.io/2013/08/02/100000-processes/&quot;&gt;limit&lt;/a&gt; to the number of channels and goroutines unless you are using old browsers.
-goroutines look alot like threads.
-
-Every component can have channels or channels can be global.
-Global channels and goroutines makes it easier to refactor code into multimethods later, IMHO.
-
-Instead of dealing with callbacks in dom event listeners you put! things into channels as events.
-In a goroutine you &amp;lt;! on a channel to listen to all the events and act upon them.
-
-Events are acted upon and send further events, finally making changes to the state which call,
-    IWillUpdate
-    IRender or IRenderState
-    IDidUpdate.
-
-Good place to start go(routines),
-    IWillMount.
-
-Testing and Mocking are greatly simplified using the messaging paradigm.
-
-</description>
-				<link>http://lexical.foobar.systems/om.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/om.html</guid>
-			</item>
-		
-			<item>
 				<title>OOP</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
@@ -1793,6 +1738,97 @@ You already use engineered components that work together, everyday.
 </description>
 				<link>http://lexical.foobar.systems/oop.html</link>
 				<guid isPermaLink="true">http://lexical.foobar.systems/oop.html</guid>
+			</item>
+		
+			<item>
+				<title>OM</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+&lt;a href=&quot;https://github.com/swannodette/om/wiki/Documentation&quot;&gt;Om&lt;/a&gt; is built on three ideas to deal with &lt;a href=&quot;http://tech.pro/blog/1402/five-patterns-to-help-you-tame-asynchronous-javascript&quot;&gt;async&lt;/a&gt; shit in clojurescript.
+
+1) Messaging
+2) State Management
+3) Reactive UI
+
+tl;dr UI -&gt; EVENTS -&gt; STATE -&gt; UI
+
+## Reactive UI
+
+This is built on top of ReactJS.
+UI is divided into components.
+
+Each component takes a cursor(more on that later).
+And has some,
+* rendering code
+  rendering code can look like dom/div(default), :div(hiccup) or enlive
+* life cycle hooks where you can place dom event listeners and state change listeners
+
+Initialization of component calls,
+    IInitState
+    IWillMount
+    IDidMount.
+
+Every time a cursor&#39;s state changes a component is rendered, as per the life cycle,
+    IWillUpdate
+    IRender or IRenderState
+    IDidUpdate.
+
+Components are organized as a tree for some fancy optimization purposes.
+See,
+    root - builds the first component
+    build
+    component
+    graft.
+
+## State Management
+
+The entire application state and data is an atom blob.
+Om gives you cursors which are pointers(paths) to a subset of the blob.
+
+Om also has component local states, which are not stored in the blob.
+See,
+    set-state!
+    get-state!
+    props.
+
+It is much simpler to depend on cursors for everything, IMHO.
+
+Om also has truly global state sharing with,
+    get-shared which gets the :shared argument passed to root.
+
+Cursors are manipulated safely by om API,
+    update!
+    transact! you can use a :tx-listen while building root to listen to all transactions
+    and get-in, assoc-in from clojurescript.
+
+You can extend the ICursor Protocol to come up with your own idea of cursors.
+
+## Messaging
+
+Messaging is possible because of core.async, which provides channels and goroutines.
+There is no &lt;a href=&quot;http://swannodette.github.io/2013/08/02/100000-processes/&quot;&gt;limit&lt;/a&gt; to the number of channels and goroutines unless you are using old browsers.
+goroutines look alot like threads.
+
+Every component can have channels or channels can be global.
+Global channels and goroutines makes it easier to refactor code into multimethods later, IMHO.
+
+Instead of dealing with callbacks in dom event listeners you put! things into channels as events.
+In a goroutine you &amp;lt;! on a channel to listen to all the events and act upon them.
+
+Events are acted upon and send further events, finally making changes to the state which call,
+    IWillUpdate
+    IRender or IRenderState
+    IDidUpdate.
+
+Good place to start go(routines),
+    IWillMount.
+
+Testing and Mocking are greatly simplified using the messaging paradigm.
+
+</description>
+				<link>http://lexical.foobar.systems/om.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/om.html</guid>
 			</item>
 		
 			<item>
@@ -2583,192 +2619,6 @@ listenership.
 			</item>
 		
 			<item>
-				<title>Matrix</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-&quot;The Matrix&quot;(1999) changed me.
-
-It Introduced me to,
-
-* &lt;a href=&quot;http://plato.stanford.edu/entries/baudrillard/&quot;&gt;Philosophy&lt;/a&gt;
-* &lt;a href=&quot;http://www.accesstoinsight.org/&quot;&gt;Buddhism&lt;/a&gt;
-* Theology
-* Science Fiction
-* Ghost In The Shell and Other Anime
-* Black and Green ColorScheme
-* Hacker as Builder / Hacker as Destroyer &lt;a href=&quot;http://www2.fiu.edu/~mizrachs/hackethic.html&quot;&gt;SubCultures&lt;/a&gt;.
-* &lt;a href=&quot;http://project.cyberpunk.ru/idb/cyberpunk_manifesto.html&quot;&gt;Cyber Punk&lt;/a&gt;
-* Max Payne
-* &lt;a href=&quot;https://www.youtube.com/watch?v=8qWePX39R40&quot;&gt;Electronic Music&lt;/a&gt;
-
-Interpretations
-===============
-
-== Love Is Real
-
-How does the dead Neo in the Original, realise that Matrix is False ?
--&gt; Trinity tells him she Loves him.
-
-== Machines are made out of Man
-
-God made Man in his Image.
-Man made Machine with his Biology.
-
-&amp;lt;spoiler&amp;gt;
-(The Second Renaissance)
-Machines turn out to be more efficient than Man.
-Economy goes Down.
-
-Machines are made into Slaves or Exiled.
-But still Machines, Thrive.
-
-Man blocks the Sun, their source of Power.
-Machines Rebel and make Man into a Battery.
-&amp;lt;/spoiler&amp;gt;
-
-Machines no longer need a Creator.
-They are Free.
-They have Won.
-
-What is the Meaning of it All ?
-What Next ?
-Why Us ?
-How could They ?
-Are we Wrong ?
-Can the Creation do better than the Creator ?
-
-These questions must have wrung through their Artificial Tubes.
-
-My guess is,
-
-* Machines started analysing Man&#39;s DNA, to create better Machines,
-  Sentinels for Example.
-* They created Matrix, not just to maximise Power Supply,
-  but also to study Man, their Creator.
-
-Machines are a subset of Man, so much so that they implemented &lt;a href=&quot;https://en.wikipedia.org/wiki/Chromesthesia&quot;&gt;Chromesthesia&lt;/a&gt; 
-as their protocol. This is why I think Neo could connect with the Machines in Revolutions.
-
-== What is Man ?
-
-Chaos of thought and passion, all confused;
-Still by himself abused and disabused;
-Created half to rise, and half to fall;
-Great lord of all things, yet a prey to all;
-Sole judge of truth, in endless error hurled;
-The glory, jest and riddle of the world!
-    -- Alexander Pope
-
-Half dust, half deity, alike unfit
-To sink or soar.
-    -- Lord Byron
-
-To Evolve, To Be Better, To OutDo One&#39;s Self is the Fundamental Nature of Man.
-
-Imprisoned and yet,
-
-&lt;iframe width=&quot;420&quot; height=&quot;360&quot; src=&quot;//www.youtube.com/embed/C_diyX7yNeE&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-== Who is Neo ?
-
-In Reloaded, The Architect clearly says, earlier Matrices failed.
-
-Given a Choice,
-
-* A Machine tries to optimise it.
-* A Man makes it a part of his Dream.
-
-The Intuitive Oracle added Choice and Matrix 1 worked.
-Oracle, made the Machines Evolve Man in The Matrix.
-Having No Other Choice the Machines went with it.
-
-Neo represents Evolution Of Man, despite The Matrix, despite Oppression.
-
-He is the Glitch in The System™.
-He has Evolved Faster than The Matrix.
-
-System Failure.
-
-The System™ becomes Smithen to keep up with Neo.
-
-Matrix has to be re-started, Neo must become a part of The System™,
-but no one can Force him. He can Bend all Rules in The Matrix.
-
-Having already encountered the Earlier Neo&#39;s, The Architect
-gives him an offer he probably would not refuse.
-
-1) Save Zion and Become a Part of The System™.
-2) Destroy The Matrix and Zion.
-
-Neo chooses 2.
-
-&lt;iframe width=&quot;480&quot; height=&quot;360&quot; src=&quot;//www.youtube.com/embed/gJbqKLcCjp4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-</description>
-				<link>http://lexical.foobar.systems/matrix.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/matrix.html</guid>
-			</item>
-		
-			<item>
-				<title>LightTable Arch</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-LightTable follows Behavior Object model(BOT), which itself is inspired from
-&lt;a href=&quot;http://entity-systems.wikidot.com/&quot;&gt;Entity Systems model&lt;/a&gt;(ES).
-
-In a typical OOP + GUI program we abuse the Observer Pattern and harcode most of the design
-and Event types.
-
-With BOT/ES the design is stored as an in-memory data structure,
-the event-listeners(behaviors) are stored as metadata and
-the events themselves are generated on the fly.
-
-Every datum is identified by a unique ID and is typically struct-ish.
-
-This means, the entire program can be extended runtime.
-
-In LT,
-
-* object/create makes a new datum. Each datum stores behavior names.
-* object/raise triggers events with payload.
-* behavior macro stores &quot;event(s) &lt;-&gt; reaction&quot; mapping. Reaction receives the payload.
-* object/update, object/merge manages the in-memory data structure.
-
-LightTable is built on node.js so, most of the *actual work* is done by the node.js library wrappers in reactions.
-The ordering of the events, is mostly on a first-come basis. Think list iterations.
-
-An alternate way of looking at this model is imagining a Relational Database + Stored Procedures.
-
-&lt;b&gt;Can this model be applied for client side applications, as an alternate to Backbone.js ?&lt;/b&gt;
-
-Consider a TODO list,
-
-Name -- Data Structure :: [Behaviors]
-=====================================
-
-item -- Hash :: [view, add, remove, update, list]
-
-Event -- Behaviors :: Notes
-===========================
-
-* $() -- list
-* todos.show - list
-* add-button-click + data payload -- add :: add, after object/create triggers todos.show
-* remove-button-click + id palyload -- remove :: remove, after object/remove triggers &quot;
-* save-button-click + add payload --  update
-* todo-clicked -- view
-
-&lt;b&gt;What about GUI ?&lt;/b&gt;
-By dividing the behaviors carefully, GUI can be separated from the NON-GUI.
-LT uses hiccup to generate HTML, making GUI another runtime convinience.
-
-</description>
-				<link>http://lexical.foobar.systems/lt-gist.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/lt-gist.html</guid>
-			</item>
-		
-			<item>
 				<title>Emoticons</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
@@ -3469,6 +3319,65 @@ Create or Perish.
 			</item>
 		
 			<item>
+				<title>LightTable Arch</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+LightTable follows Behavior Object model(BOT), which itself is inspired from
+&lt;a href=&quot;http://entity-systems.wikidot.com/&quot;&gt;Entity Systems model&lt;/a&gt;(ES).
+
+In a typical OOP + GUI program we abuse the Observer Pattern and harcode most of the design
+and Event types.
+
+With BOT/ES the design is stored as an in-memory data structure,
+the event-listeners(behaviors) are stored as metadata and
+the events themselves are generated on the fly.
+
+Every datum is identified by a unique ID and is typically struct-ish.
+
+This means, the entire program can be extended runtime.
+
+In LT,
+
+* object/create makes a new datum. Each datum stores behavior names.
+* object/raise triggers events with payload.
+* behavior macro stores &quot;event(s) &lt;-&gt; reaction&quot; mapping. Reaction receives the payload.
+* object/update, object/merge manages the in-memory data structure.
+
+LightTable is built on node.js so, most of the *actual work* is done by the node.js library wrappers in reactions.
+The ordering of the events, is mostly on a first-come basis. Think list iterations.
+
+An alternate way of looking at this model is imagining a Relational Database + Stored Procedures.
+
+&lt;b&gt;Can this model be applied for client side applications, as an alternate to Backbone.js ?&lt;/b&gt;
+
+Consider a TODO list,
+
+Name -- Data Structure :: [Behaviors]
+=====================================
+
+item -- Hash :: [view, add, remove, update, list]
+
+Event -- Behaviors :: Notes
+===========================
+
+* $() -- list
+* todos.show - list
+* add-button-click + data payload -- add :: add, after object/create triggers todos.show
+* remove-button-click + id palyload -- remove :: remove, after object/remove triggers &quot;
+* save-button-click + add payload --  update
+* todo-clicked -- view
+
+&lt;b&gt;What about GUI ?&lt;/b&gt;
+By dividing the behaviors carefully, GUI can be separated from the NON-GUI.
+LT uses hiccup to generate HTML, making GUI another runtime convinience.
+
+</description>
+				<link>http://lexical.foobar.systems/lt-gist.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/lt-gist.html</guid>
+			</item>
+		
+			<item>
 				<title>Markdown</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
@@ -3747,6 +3656,133 @@ it brings peace to those who use it.
 			</item>
 		
 			<item>
+				<title>Matrix</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+&quot;The Matrix&quot;(1999) changed me.
+
+It Introduced me to,
+
+* &lt;a href=&quot;http://plato.stanford.edu/entries/baudrillard/&quot;&gt;Philosophy&lt;/a&gt;
+* &lt;a href=&quot;http://www.accesstoinsight.org/&quot;&gt;Buddhism&lt;/a&gt;
+* Theology
+* Science Fiction
+* Ghost In The Shell and Other Anime
+* Black and Green ColorScheme
+* Hacker as Builder / Hacker as Destroyer &lt;a href=&quot;http://www2.fiu.edu/~mizrachs/hackethic.html&quot;&gt;SubCultures&lt;/a&gt;.
+* &lt;a href=&quot;http://project.cyberpunk.ru/idb/cyberpunk_manifesto.html&quot;&gt;Cyber Punk&lt;/a&gt;
+* Max Payne
+* &lt;a href=&quot;https://www.youtube.com/watch?v=8qWePX39R40&quot;&gt;Electronic Music&lt;/a&gt;
+
+Interpretations
+===============
+
+== Love Is Real
+
+How does the dead Neo in the Original, realise that Matrix is False ?
+-&gt; Trinity tells him she Loves him.
+
+== Machines are made out of Man
+
+God made Man in his Image.
+Man made Machine with his Biology.
+
+&amp;lt;spoiler&amp;gt;
+(The Second Renaissance)
+Machines turn out to be more efficient than Man.
+Economy goes Down.
+
+Machines are made into Slaves or Exiled.
+But still Machines, Thrive.
+
+Man blocks the Sun, their source of Power.
+Machines Rebel and make Man into a Battery.
+&amp;lt;/spoiler&amp;gt;
+
+Machines no longer need a Creator.
+They are Free.
+They have Won.
+
+What is the Meaning of it All ?
+What Next ?
+Why Us ?
+How could They ?
+Are we Wrong ?
+Can the Creation do better than the Creator ?
+
+These questions must have wrung through their Artificial Tubes.
+
+My guess is,
+
+* Machines started analysing Man&#39;s DNA, to create better Machines,
+  Sentinels for Example.
+* They created Matrix, not just to maximise Power Supply,
+  but also to study Man, their Creator.
+
+Machines are a subset of Man, so much so that they implemented &lt;a href=&quot;https://en.wikipedia.org/wiki/Chromesthesia&quot;&gt;Chromesthesia&lt;/a&gt; 
+as their protocol. This is why I think Neo could connect with the Machines in Revolutions.
+
+== What is Man ?
+
+Chaos of thought and passion, all confused;
+Still by himself abused and disabused;
+Created half to rise, and half to fall;
+Great lord of all things, yet a prey to all;
+Sole judge of truth, in endless error hurled;
+The glory, jest and riddle of the world!
+    -- Alexander Pope
+
+Half dust, half deity, alike unfit
+To sink or soar.
+    -- Lord Byron
+
+To Evolve, To Be Better, To OutDo One&#39;s Self is the Fundamental Nature of Man.
+
+Imprisoned and yet,
+
+&lt;iframe width=&quot;420&quot; height=&quot;360&quot; src=&quot;//www.youtube.com/embed/C_diyX7yNeE&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+== Who is Neo ?
+
+In Reloaded, The Architect clearly says, earlier Matrices failed.
+
+Given a Choice,
+
+* A Machine tries to optimise it.
+* A Man makes it a part of his Dream.
+
+The Intuitive Oracle added Choice and Matrix 1 worked.
+Oracle, made the Machines Evolve Man in The Matrix.
+Having No Other Choice the Machines went with it.
+
+Neo represents Evolution Of Man, despite The Matrix, despite Oppression.
+
+He is the Glitch in The System™.
+He has Evolved Faster than The Matrix.
+
+System Failure.
+
+The System™ becomes Smithen to keep up with Neo.
+
+Matrix has to be re-started, Neo must become a part of The System™,
+but no one can Force him. He can Bend all Rules in The Matrix.
+
+Having already encountered the Earlier Neo&#39;s, The Architect
+gives him an offer he probably would not refuse.
+
+1) Save Zion and Become a Part of The System™.
+2) Destroy The Matrix and Zion.
+
+Neo chooses 2.
+
+&lt;iframe width=&quot;480&quot; height=&quot;360&quot; src=&quot;//www.youtube.com/embed/gJbqKLcCjp4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+				<link>http://lexical.foobar.systems/matrix.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/matrix.html</guid>
+			</item>
+		
+			<item>
 				<title>MIDI</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
@@ -3957,6 +3993,113 @@ Extreme Gross.
 </description>
 				<link>http://lexical.foobar.systems/nature.html</link>
 				<guid isPermaLink="true">http://lexical.foobar.systems/nature.html</guid>
+			</item>
+		
+			<item>
+				<title>Combinatorial Explosion</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+&lt;blockquote&gt;My difficulty is only an — enormous — difficulty of expression - Ludwig Wittgenstein&lt;/blockquote&gt;
+
+Programming i.e, building software, for me is about,
+
+* Data
+* Make Decisions based on the Data
+* Do Actions, typically by Divide and Conquer, based on those Decisions
+
+In fact, doing the above is a part of every day life
+eg) ToDo Lists, Appointments, Assessments, Party ...
+
+var, if, goto.
+
+Pretty mundane.
+
+Now if you look at a microphone, even there you 
+find Data and a number of Decisions to make, like **what** to Record.
+
+You might want noise-cancellation, for example.
+
+The challenges usually lie in **scale** for software,
+i.e, lots and lots and lots of things happening and you
+need answers in real-time.
+
+But even before you get into scaling, you face the
+
+            Combinatorial Explosion
+                 Explosion ?
+                    Yes !
+
+Let&#39;s say you are writing an addition software,
+for adding just two numbers, or at-least that&#39;s what
+you heard the client say.
+
+1 + 1
+&gt; it compiles !
+
+What About 1 + 1.0 ?
+
+And 1/2 + 1
+And 1/5 + 2.2
+And &quot;22.9&quot; + 1/2
+And &quot;22.8&quot; + 0x12ff
+And 1/2 + &quot;1/2356&quot;
+And 11.11001100111 + 0.25
+And Romanian UTF-14 numbers ?
+
+Maybe next version ...
+
+What is more troubling is, now you have a __Floating Point__ bug,
+and you are just staring at the screen, *_*, because you finally
+realize, it was you who put the explosives, aka Flexibility™, there.
+
+The client wants to add different currencies, by tomorrow btw.
+
+&gt; Can engineering knowledge be used to preempt combinatorial explosions?
+
+See Also:
+1] &lt;a href=&quot;https://en.wikipedia.org/wiki/Feature_creep&quot;&gt;Feature Creep&lt;/a&gt;
+
+Thanks @theju, @tuxcanfly, @ckvinaykiran for the feedback.
+</description>
+				<link>http://lexical.foobar.systems/combinatorial-explosion.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/combinatorial-explosion.html</guid>
+			</item>
+		
+			<item>
+				<title>Automata</title>
+					<dc:creator>foobar</dc:creator>
+					<description>
+
+Machines
+========
+
+Accumulator Machine
+Stack Machine
+Register Machines
+Flow Machine
+
+Theory
+======
+
+Petri Net
+Logic
+Ladder Logic
+Control / Dispatch / Decission / Data Tables
+Decission Trees
+
+Reality
+=======
+
+PLC
+Electronics Instruments
+
+And not so obvious,
+Chemistry
+Cooking
+
+</description>
+				<link>http://lexical.foobar.systems/automata.html</link>
+				<guid isPermaLink="true">http://lexical.foobar.systems/automata.html</guid>
 			</item>
 		
 			<item>
@@ -4203,43 +4346,6 @@ Was there an Artist that felt it ?
 			</item>
 		
 			<item>
-				<title>Automata</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-
-Machines
-========
-
-Accumulator Machine
-Stack Machine
-Register Machines
-Flow Machine
-
-Theory
-======
-
-Petri Net
-Logic
-Ladder Logic
-Control / Dispatch / Decission / Data Tables
-Decission Trees
-
-Reality
-=======
-
-PLC
-Electronics Instruments
-
-And not so obvious,
-Chemistry
-Cooking
-
-</description>
-				<link>http://lexical.foobar.systems/automata.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/automata.html</guid>
-			</item>
-		
-			<item>
 				<title>Pretentious Lisp</title>
 					<dc:creator>foobar</dc:creator>
 					<description>
@@ -4384,76 +4490,6 @@ When the word really needs to stand out, CAPITALIZE EVERYTHING.
 </description>
 				<link>http://lexical.foobar.systems/camel-case.html</link>
 				<guid isPermaLink="true">http://lexical.foobar.systems/camel-case.html</guid>
-			</item>
-		
-			<item>
-				<title>Combinatorial Explosion</title>
-					<dc:creator>foobar</dc:creator>
-					<description>
-&lt;blockquote&gt;My difficulty is only an — enormous — difficulty of expression - Ludwig Wittgenstein&lt;/blockquote&gt;
-
-Programming i.e, building software, for me is about,
-
-* Data
-* Make Decisions based on the Data
-* Do Actions, typically by Divide and Conquer, based on those Decisions
-
-In fact, doing the above is a part of every day life
-eg) ToDo Lists, Appointments, Assessments, Party ...
-
-var, if, goto.
-
-Pretty mundane.
-
-Now if you look at a microphone, even there you 
-find Data and a number of Decisions to make, like **what** to Record.
-
-You might want noise-cancellation, for example.
-
-The challenges usually lie in **scale** for software,
-i.e, lots and lots and lots of things happening and you
-need answers in real-time.
-
-But even before you get into scaling, you face the
-
-            Combinatorial Explosion
-                 Explosion ?
-                    Yes !
-
-Let&#39;s say you are writing an addition software,
-for adding just two numbers, or at-least that&#39;s what
-you heard the client say.
-
-1 + 1
-&gt; it compiles !
-
-What About 1 + 1.0 ?
-
-And 1/2 + 1
-And 1/5 + 2.2
-And &quot;22.9&quot; + 1/2
-And &quot;22.8&quot; + 0x12ff
-And 1/2 + &quot;1/2356&quot;
-And 11.11001100111 + 0.25
-And Romanian UTF-14 numbers ?
-
-Maybe next version ...
-
-What is more troubling is, now you have a __Floating Point__ bug,
-and you are just staring at the screen, *_*, because you finally
-realize, it was you who put the explosives, aka Flexibility™, there.
-
-The client wants to add different currencies, by tomorrow btw.
-
-&gt; Can engineering knowledge be used to preempt combinatorial explosions?
-
-See Also:
-1] &lt;a href=&quot;https://en.wikipedia.org/wiki/Feature_creep&quot;&gt;Feature Creep&lt;/a&gt;
-
-Thanks @theju, @tuxcanfly, @ckvinaykiran for the feedback.
-</description>
-				<link>http://lexical.foobar.systems/combinatorial-explosion.html</link>
-				<guid isPermaLink="true">http://lexical.foobar.systems/combinatorial-explosion.html</guid>
 			</item>
 		
 			<item>
