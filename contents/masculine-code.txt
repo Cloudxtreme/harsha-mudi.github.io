@@ -1,0 +1,59 @@
+---
+title: "masculine code"
+author: foobar
+tags: [fun]
+copyright: CC BY-NC
+---
+
+1. unsafe
+
+not for children, who can start by toying with objects.
+
+2. hard
+
+no security issues.
+
+3. tight
+
+no extra words.
+
+4. thrashing
+
+no sleep for the cpu.
+
+5. pushy
+
+the bootloader is re-written if the operating system is slow.
+
+6. has a manual
+
+you wouldn't understand it otherwise.
+
+7. not false
+
+true.
+
+8. hierarchical
+
+like engineering.
+
+9. impossible
+
+if it is possible, it is automated.
+
+10. purposeful
+
+it gets the job done.
+
+11. cold
+
+no expenditure of energy.
+
+12. not art
+
+it is an ordered graph with unambiguous cycles.
+
+13. hums
+
+it brings peace to those who use it.
+

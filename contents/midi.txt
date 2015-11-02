@@ -1,0 +1,160 @@
+---
+title: "MIDI"
+author: foobar
+tags: [music]
+copyright: CC BY-NC
+---
+
+<a href="https://en.wikipedia.org/wiki/MIDI">MIDI</a> changed music.
+
+Consider what a Classically trained Musician needs to do, to make his 
+music heard.
+
+He needs to,
+
+1. Write it
+2. Get a bunch of musicians
+3. Practice
+4. Play
+5. goto 1
+6. Record the Final Cut in a Studio
+
+With MIDI,
+
+1. Write it. Save it, with a Software
+2. Get the electronic instruments to play it for him
+   -or-
+   Get a computer Software to play it for him
+3. Tweak
+4. Record the Final Cut in Software or a Studio
+
+MIDI is -- Musical Instrument Digital Interface.
+
+It abstracts <a href="https://en.wikipedia.org/wiki/Musical_notation">Music Notation</a> into bytes.
+Since its just bytes, you can replay it with Software.
+
+MIDI made production,
+
+* Dirt Cheap
+* Made Producers more efficient
+
+How about Audio Quality ?
+
+* A Classical Ensemble still has its place. Panning is very unique there.
+* But MIDI + Electronic Instrument increased the Range.
+  It helped form whole new genres in Music like EDM, IDM, SynthPunk ...
+
+Limitations ?
+
+* MIDI is limited to 16 instruments.
+* Integers.
+* 16 is a big number.
+* <a href="https://en.wikipedia.org/wiki/Open_Sound_Control">OSC</a> overcomes these.
+
+Usage
+=====
+
+To use MIDI you need two things,
+
+1. A Sequencer
+
+   This generates MIDI messages like,
+
+   Command param1 param2 param3
+   Command param1 param2
+   Command param1 param2 param3
+   Command param1 param2
+   ...
+
+   Important messages are,
+
+   1. Note On => Channel [1-16]**, Pitch[0-127], Volume[0-127]
+   2. Note Off                 "
+   3. Controller => No [0-127], Value[0-127]
+
+   ** Channel 10 is reserved for Drums.
+
+   Note On and Note Off are typically sent by keys, buttons.
+   Controller Messages are typically sent by knobs and pedals.
+
+2. A Synthesizer
+
+   This accepts MIDI data.
+   It Maps channels to DSP.
+   It Maps knobs** to effects like distortion and reverb.
+
+   ** The positions of the knob are called patches.
+
+3. A Sampler.
+
+   This accepts MIDI data.
+   It Maps channels to sound recordings.
+   It Maps knobs to effects like distortion and reverb.
+
+If you buy Music Hardware you have both 1 and 2.
+
+But usually the sequencing capabilities are limited in a synth.
+So you can't Edit MIDI data in the instrument.
+
+Some notes,
+
+0. You can buy hardware and get a Synthesizer + a limited Sequencer.
+
+1. You can buy A Sequencer and use a Computer as a Synthesizer
+
+or
+
+2. Use a Software Sequencer to Program your Synthesizer
+
+or
+
+3. Forget Hardware and go complete nuts with Software
+
+Recommended Software
+====================
+Ableton
+FL Studio
+Cubase
+Garage Band
+Renoise -- I have this, recommended for <a href="https://en.wikipedia.org/wiki/Demoscene">Demoscene</a> lovers.
+
+* You can shop for VST, AU which are DSP made in software.
+* The above Softwares come with sane defaults and don't require a Hardware Synth,
+  to make sounds.
+
+* A popular sequencer notation developed by Softwares is called <a href="http://www.image-line.com/support/FLHelp/html/pianoroll.htm">Piano Roll</a>
+* FL Studio comes a Step Sequencer, which is very useful for beat making.
+
+SooperLooper - A very unique software which can help you in loop driven music.
+
+Recording Software
+==================
+Audio Hi-Jack
+Audacity
+
+Recommended Sequencers
+======================
+Akai MPK49
+
+Recommended Samplers
+====================
+Akai MPC*
+Korg Microsampler
+
+Recommended Synths
+==================
+Novation Mininova
+Korg microKorg
+Electribe -- I have this.
+
+Misc
+====
+Midi Pipe
+Overtone
+
+The Legendary Moog sound,
+
+<iframe width="480" height="360" src="//www.youtube.com/embed/VouHPeO4Gls" frameborder="0" allowfullscreen></iframe>
+
+<p><a href="http://vimeo.com/93923609">Also, Robots love it.</a><p>
+

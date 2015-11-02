@@ -1,0 +1,60 @@
+---
+title: "Internet Communication"
+author: foobar
+tags: [internet]
+copyright: CC BY-NC
+---
+
+Forms of Communication
+
+1-1
+===
+
+Post (async)
+Telegraph (async)
+Telephone
+* Yellow Pages
+
+m-n
+===
+
+Newspaper (async)
+Radio (async)
+TV (async)
+
+^ + Telephone == sync
+
+m-n
+===
+
+Internet is a m-n Communication model, with some twists.
+
+* m = 1 for private messaging
+* bad quality content for large m and large n
+* poor dpi, resolution, bitrates
+* content agnostic -- text, images, video, sound
+* cost for consumption increases as m increases
+* cost for creation increases as n increases
+
+* when m is small and n is large, it resembles TV with all its faults
+** grosser kistch is the dominant aesthetic
+** unregulated medium
+
+* like Pirate Radio, m and n can be small
+** this is the most unique possibility with the internet
+
+* archival value for public domain
+* interactive yellow pages
+
+For consumers,
+
+* use it like a tv, news
+* find niche communities
+
+For creators,
+* treat it like a tv
+* make news
+* treat it like an archive
+* get listed in yellow pages
+* find niche communities
+

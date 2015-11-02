@@ -1,0 +1,30 @@
+{
+  "version": "0.5.1",
+  "license": "MIT",
+  "name": "restyle",
+  "description": "a JS to CSS transformer",
+  "homepage": "https://github.com/WebReflection/restyle",
+  "keywords": [
+    "CSS",
+    "JS",
+    "CustomElement",
+    "transformer"
+  ],
+  "author": {
+    "name": "Andrea Giammarchi",
+    "web": "http://webreflection.blogspot.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/WebReflection/restyle.git"
+  },
+  "main": "./build/restyle.node.js",
+  "scripts": {
+    "test": "node test/.test.js",
+    "web": "IP=0.0.0.0 node node_modules/polpetta"
+  },
+  "devDependencies": {
+    "wru": ">= 0.0.0",
+    "polpetta": ">= 0.0.0"
+  }
+}

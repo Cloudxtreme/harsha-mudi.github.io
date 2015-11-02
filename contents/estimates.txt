@@ -1,0 +1,71 @@
+---
+title: Estimates
+author: foobar
+tags: [software, philosophy]
+copyright: CC BY-NC
+---
+
+Does not work
+=============
+
+* Will get over soon
+* Today
+* This week
+* This weekend
+* Tomorrow
+* This month
+* Next month
+
+Lazy Answers
+============
+
+* I'll get back to you
+* It'll take long
+* Maybe he can do it
+
+May Work
+========
+
+* Buffer time
+* Best/Average/Worst Case estimates
+
+Modelling
+=========
+
+* Define outcomes or function points as bullet points
+** Divide each point into tasks
+*** Tasks can be parallel / linear.
+    If linear, identity inputs
+
+Numbers
+=======
+
+Modification and Deletion of lines should be considered 
+a part of LOC.
+
+* 1 week == 40 hours
+* task: 2-16 hours
+** 20 - 3 tasks per week
+   5 - 0.5 tasks per day
+** If function point ~~ 3 tasks,
+   6 - 1 function points per week
+   1 - 0.3 function points per day
+
+* 10 - 350 LOC / Day
+* 12 bugs per 1000 LOC.
+** 80 is a good number
+** function point ~~ 50 LOC
+
+* use `gem install git_stats`
+
+Personal Numbers
+================
+
+* 30 - 150 LOC / Week
+** 3 function points per week
+** 0.5 function points per day
+** 9 tasks per week
+** 2 tasks per day
+
+* <a href="http://automagical.rationalmind.net/2010/08/17/some-lesser-known-truths-about-programming">[more numbers]</a>
+

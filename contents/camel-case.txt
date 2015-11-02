@@ -1,0 +1,28 @@
+---
+title: "CamelCase"
+author: foobar
+tags: [linguistics]
+copyright: CC BY-NC
+---
+
+In English, capitalization applies to,
+
+1) First word
+2) Proper noun
+
+Some new rules,
+
+When a Proper Noun has more than one word, use capitalization
+for both the words, just like CamelCase
+
+When a verb has more than one word, captalize the second word.
+
+When describing attribtutes, use hyphenation.
+
+When a Verb is used as a noun, capitalize it.
+
+When you feel like, emphasizing a word, capitalize it.
+
+When the word really needs to stand out, CAPITALIZE EVERYTHING.
+
+

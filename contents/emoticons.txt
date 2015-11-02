@@ -1,0 +1,41 @@
+---
+title: "Emoticons"
+author: foobar
+tags: [linguistics]
+copyright: CC BY
+---
+
+<a href="https://en.wikipedia.org/wiki/List_of_emoticons">Emoticons</a> fascinate me.
+
+They are the resurgence of pictographs, a bit like <a href="https://en.wikipedia.org/wiki/Egyptian_hieroglyphs">Egyptian Hieroglyphs</a>,
+or the Chinese symbols.
+
+For example, ⼮ is the Chinese symbol for river.
+
+Here are some new interesting emoticons, that I found in the wild wild web,
+
+ಠ_ಠ      -- disapproval (that's the Kannada <a href="http://unicode-table.com/en/0CA0/">http://unicode-table.com/en/0CA0</a>)
+ᕕ(ᐛ)ᕗ   -- happy
+ᕙ(‸‶)ᕗ    -- lack of muscles
+<<°°>>     -- crab
+:{C       -- a sad English gentleman
+:C        -- hipster sad face
+∎-∎       -- cooling glasses
+(-_-)凸   -- showing the finger
+
+Exploring multi-language, <a href="https://en.wikipedia.org/wiki/Unicode">unicode</a>, alphabets and coming up with your own,
+is silly, stupid and you should totally try doodling some.
+
+Here are some that I discovered,
+
+ఠ_ఠ      -- worried about your sanity
+౪       -- stethoscope
+(‸‶       -- amazed that you can actually do that
+(‸‶)౨   -- why do you always
+--ల     -- punch (looks like a boxing glove)
+
+The above use some alphabets of Telugu,
+<a href="http://unicode-table.com/en/search/?q=telugu">http://unicode-table.com/en/search/?q=telugu</a>.
+
+(The above is best viewed in browsers with good alphabet coverage,
+ like chrome, otherwise you will see empty boxes)

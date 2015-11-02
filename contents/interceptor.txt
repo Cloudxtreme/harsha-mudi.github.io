@@ -1,0 +1,54 @@
+---
+title: "Interceptor Pattern"
+author: foobar
+tags: [programming]
+copyright: CC BY-NC
+---
+
+It looks like this,
+
+```
+class Invocation {
+    public String method;
+    public Array&lt;Object&gt; args;
+}
+
+Event = Invocation
+
+class Interceptor {
+    public Interceptor next;
+    public intercept(Invocation v);
+    private dispatch(Invocation v);
+    private delegate(Invocation v);
+    intercept = trigger = execute
+}
+
+Interceptor = System = Command
+```
+
+When dealing with legacy code it becomes,
+
+* Wrapper
+* Facade
+* Adapter
+* Proxy
+* Mediator
+* Command
+
+By composing multiple interceptors we get,
+
+* Decorator
+* Delegation
+* Chain of Command
+* Filters
+
+When combined with metadata meta-object-programming,
+
+* Strategy
+* ServiceLocator
+* Front Controller
+
+It can be combined with a Message Bus easily as well.
+It can used as the System in Entity-Component-System pattern.
+
+

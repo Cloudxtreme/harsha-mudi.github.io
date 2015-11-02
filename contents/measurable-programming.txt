@@ -1,0 +1,67 @@
+---
+title: "Measurable Programming"
+author: foobar
+tags: [programming, philosophy]
+copyright: CC BY-NC
+---
+<b>"If it can’t be measured, it does not exist"</b>
+
+In music it is common to set the tempo, a number before starting to make
+a composition. In painting this would be the canvas size. For films it is the
+duration. These numbers are fundamentally, limits for convenience or style or for creative purposes.
+
+It is very tragic that programmers have a tendency to wait till the deadlines,
+till the limitations become obvious. Because of the limitations the actions also become
+obvious. This leads to a false conclusion that deadlines are productive. It is the
+limitations that propel productivity.
+
+By having limitations of space, the grammar of action becomes obvious.
+
+Here are a few numbers which can act as limitations for programming,
+
+1. Page Load time
+
+< 600ms
+
+2. Memory Consumption
+
+If a page consumes 1MB and the RAM of the machine is 1000MB then
+that means the site can have a maximum of 1000 views per second.
+
+Reducing memory is a very creative act !
+
+3. LOC / Day
+
+Assuming a programmer reads or writes 5 lines per minute,
+the upper limit of LOC / Day would be --
+
+60 * 5 * 8
+ => 2400
+
+For 1 line per minute,
+
+60 * 1 * 8
+ => 480
+
+4. Function Point
+
+This is a standard Software Engineering term.
+
+Function Point = Avg(LOC / Function)
+
+The word Function means a unit of Business requirements.
+It can mean issue, fix, task, new widget ...
+
+The is highly project specific and programmer specific.
+
+If the Function point is 300, then that means wrt the LOC calculations above,
+a programmer can code 1.5 - 8 features per day.
+
+This is compounded by expectation cost i.e, the feature needs more oomph
+and in teams, communication cost.
+
+Reducing LOC for a function is also a very creative act !
+
+---
+My numbers can be seen <a href="/estimates.html">here</a>
+

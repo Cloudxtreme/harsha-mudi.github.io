@@ -1,0 +1,213 @@
+---
+title: "Markdown"
+author: foobar
+tags: [programming]
+copyright: CC BY-NC
+---
+
+Markdown
+========
+
+Markdown is the PHP of markup languages.
+Asciidoc is a more comprehensive alternative.
+
+Markdown was initially meant for writing simple html webpages
+as intended by its author.
+
+It is now about to be standardized as an IETF standard.
+That author is nowhere to be seen in the process, probably
+because he is embarrassed by Markdown.
+
+Worse is better precisely because the current Software Industry
+thrives on non-engineering. It's a market problem, where the
+market is satisfied with the shiny.
+
+Parsing Markdown
+================
+
+### Regex
+
+Old Markdown
+
+### Peg
+
+<a href="https://rawgithub.com/fletcher/human-markdown-reference/master/index.html">MultiMarkdown</a>
+If you have to deal with markdown, use this.
+
+Markdown Extensions
+===================
+
+* typically pre/post processors
+
+Markdown Conversion
+===================
+
+Good
+
+* html
+* epub
+
+Painful
+
+* latex
+* pdf
+
+Problems
+========
+
+* nesting
+
+  This alone is enough to ignore Markdown.
+
+* whitespace
+* citations
+* typography
+* math
+* tables
+* code
+
+Markdown Editors
+================
+
+One of myths used to keep Markdown alive is saying it's
+easy to build an editor for it.
+
+IMHO that's false.
+
+Most editors are geared towards plain markdown, which is
+useless.
+
+Medium inspired editors
+
+* medium-editor
+* zenpen
+* sofish
+
+IDE-ish editors
+
+* ace
+* codemirror
+
+Problems with Imeplementing a Markdown Editor
+=============================================
+
+### textarea
+
+Too bland
+
+### HTML5 \&lt;div contenteditable="true"\&gt;
+
+IE, FF, Chrome all implement this differently
+HTML5 spec for this is still alpha stage
+
+#### Problems
+
+Let's suppose the user types the following text,
+
+    I loved to look upon him, 
+    The Hunter near the Way.
+    So strong his arm and long his bow
+
+    And so bashful of the Day.
+    His courage never failed him
+    For he held his mace so high
+
+This is stored in the div as
+
+    I loved to look upon him,
+    &lt;p&gt;The Hunter near the Way.&lt;/p&gt;
+    &lt;p&gt;So strong his arm and long his bow&lt;/p&gt;
+    &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+    &lt;p&gt;And so bashful of the Day.&lt;/p&gt;
+    &lt;p&gt;His courage never failed him&lt;/p&gt;
+    &lt;p&gt;or he held his mace so high&lt;/p&gt;
+
+The newlines are not preserved.
+Notice the odd first line.
+
+Let's suppose the user copy pastes plain text, from a text editor
+
+    I loved to look upon him,
+    &lt;p&gt;The Hunter near the Way.&lt;/p&gt;
+    &lt;p&gt;So strong his arm and long his bow&lt;/p&gt;
+    &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+    &lt;p&gt;And so bashful of the Day.&lt;/p&gt;
+    &lt;p&gt;His courage never failed him&lt;/p&gt;
+    &lt;p&gt;or he held his mace so high&lt;/p&gt;
+    &lt;p&gt;And glared at the Bull in the River&lt;/p&gt;
+    &lt;p&gt;And ruled the whole breadth of the sky.&lt;/p&gt;
+    &lt;p&gt;As a girl, young and silly,&lt;/p&gt;
+    &lt;p&gt;I oft dreamed of being the Maid.&lt;/p&gt;
+
+ Let's suppose the user copy pastes from another html page
+
+    &lt;p&gt;The Hunter near the Way.&lt;/p&gt;
+    &lt;p&gt;So strong his arm and long his bow&lt;/p&gt;
+    &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+    &lt;p&gt;And so bashful of the Day.&lt;/p&gt;
+    &lt;p&gt;His courage never failed him&lt;/p&gt;
+    &lt;p&gt;or he held his mace so high&lt;/p&gt;
+    &lt;span&gt;And glared at the Bull in the River&lt;/span&gt;
+    &lt;span&gt;And ruled the whole breadth of the sky.&lt;/span&gt;
+    &lt;span&gt;As a girl, young and silly,&lt;/span&gt;
+    &lt;span&gt;I oft dreamed of being the Maid.&lt;/span&gt;
+
+You can even see table instead of span or the whole thing in a pre block.
+
+#### Solution -- Cursor API
+
+There is no getCursorPosition(div) which means,
+more hacks, from stackoverflow !
+
+The hacks relate to Range and Selection DOM API
+
+The idea of cursor is absent in HTML5 specification.
+Windows 3.0 had an API for that probably.
+
+### How do others do it ?
+
+All medium based editors suffer from this, but they are view-only
+they don't care about content.
+
+### How ace, codemirror do it
+
+( Guesswork )
+
+0. Have two elements, a textarea and a editor#div
+1. Use &lt;textarea&gt; as a temporary buffer
+2. Direct all keyboard events to textarea
+3. Grab data from textarea and data structure
+4. render data structure and cursor position to editor#div
+
+For copy paste,
+
+1. Redirect to textarea
+2. Copy to data structure
+3. Set cursor
+
+For mouse events,
+
+1. Listen on editor#area
+2. Get co-ordinates
+3. Do characterWidth/lineHeight simulation on the text data structure
+4. Set mouse position
+
+This means we will have have control over every character being rendered.
+
+1. setCursorPosition
+2. getCurrentCursorPositon
+3. insertLineBreakAtCursorPosition
+4. insertTextAtCursorPosition
+5. insertHTMLAtCursorPosition
+6. pastePlainTextFromClipboardAtCursor
+
+How do I Publish ?
+==================
+
+Just stick to Asciidoc / Latex.
+
+What editor to use ?
+====================
+
+Desktop editors.
+

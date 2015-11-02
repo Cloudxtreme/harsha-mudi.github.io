@@ -1,0 +1,132 @@
+---
+title: "The Myth of Software Reuse"
+author: foobar
+tags: [programming]
+copyright: CC BY-NC
+---
+The Myth of Software Reuse gives you the following claims
+
+- Easier to use
+- Maintainable
+- Cheap components / plugins / modules
+
+I have a Gameboy ~~ 10 years.
+A bike ~~ 7 years.
+A watch ~~ 12 years.
+
+Each of them has good cheaply available parts which can be used for
+
+- Decoration
+- Maintenance
+- Upgrades
+
+It is on the success of Engineering, Software Engineers make the
+claims of reuse.
+
+Sadly most claims remain more exaggerated than true.
+
+For example, the Factory Pattern doesn't have the notion of pipelines
+and yet it is supposed to help us somehow into making the "car" objects.
+
+Can we be inspired by Engineering to do better ?
+
+Cars
+====
+
+Engineering products typically have series and each series typically has generations.
+
+For a car company, we can imagine a A series and a B series.
+
+A1
+A2
+within A.
+
+B1
+B2
+B3
+B4
+within B.
+
+Firstly A and B can be so different, the only thing common between them is primitives
+and designs ideas.
+
+For Software this is,
+
+- Primitives
+- Data Structures
+- Algorithms
+- Patterns
+
+For A and B, the manufacturing pipeline can be common.
+
+- Build Process
+
+Between A and B
+
+- User Interfaces can be shared, upgraded and themed.
+
+Within
+
+A1
+A2
+
+Old components can be
+
+* Reused
+* Replaced
+* Modified internally
+
+- Module Set
+
+Module Set
+==========
+
+The maximum reuse happen at Primitives, Data Structures ...
+Important reuse goes into to Architectural/Design Patterns.
+
+For flexible UI, create common and flexible Interfaces.
+
+The most ignored is the "Module Set".
+With the help of such a set we get easy Build Steps and Internal reuses.
+
+<b>What is a Module ?</b>
+
+A Module has
+1. input
+2. output
+3. reconfigurability
+4. connectivity
+
+To create a Module Set is a Creative Process.
+
+** It is a skill, not a framework **
+
+The Set can be divided into two aspects.
+Data Flow and Control Flow.
+
+Data Flow is made up of Data Paths and Transformations.
+
+Control Flow represents
+1. Steps
+2. Sequencing
+
+Steps and Transformations are easy to Modularise.
+Sequencing can be modularized with the help of decision trees.
+
+Summary
+=======
+
+To reuse, just stick to off-the-shelf
+
+* Primitives
+* Patterns
+
+Each should however be implementable by-hand, when absent as a library.
+In fact the library should not be different from a hypothetical implementation by-hand.
+Any fluff just muddles the pure Design Concepts.
+
+Learn Module Decomposition.
+
+A litmus test for a programmer understanding modularity
+is whether he can implement a plugin system.
+

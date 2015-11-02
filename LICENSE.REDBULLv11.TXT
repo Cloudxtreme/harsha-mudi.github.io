@@ -1,0 +1,13 @@
+"THE RED-BULL LICENSE" (Revision 11)
+
+Copyright (c) 2014 Foo Bar Systems <http://www.foobar.systems>
+
+Sreeharsha Mudivarti wrote this code for fun.
+
+As long as you retain this notice, you can do whatever you want with this stuff.
+ANY EXPRESS OR IMPLIED WARRANTIES ARE VOID. CONSEQUENTIALLY, I AM NOT LIABLE
+FOR ANY DAMAGES. Heck, even I can't get this to run sometimes.  If we meet IRL,
+and you think this stuff is worth it, you can buy me a Red Bull since you don't
+want me drinking.
+
+

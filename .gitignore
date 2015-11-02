@@ -1,0 +1,7 @@
+*.yaml
+*.log
+node_modules
+config.yaml
+lexical/draft
+
+

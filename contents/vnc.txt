@@ -1,0 +1,40 @@
+---
+title: "Mac Remote Desktop"
+author: foobar
+tags: [programming, mac]
+copyright: CC BY-NC
+---
+
+Steps
+=====
+
+1. Goto System Preferences/users
+2. Add a user with password
+3. Goto System Preferences/sharing
+4. Enable Screen Sharing
+5. Click '+' and add the user you added in step 2
+6. If you are accessing your internet behind your router -- you will have an ipv4
+   address in the range of 10.**** and 192.****
+7. Goto to your router's homepage and unblock ports 5900, 3283, 22
+8. Goto ddg.gg and search for 'ip'
+9. Give this url vnc://<ip-from-step-8> to your friend and also the password from step 2
+
+Your Friend's Steps
+===================
+1. Open finder
+2. Go > Connect to Server
+3. Add the copy-paste the url there
+4. Click connect
+5. voilà ! your friend can see and control your desktop
+
+Bonus
+=====
+
+* If your friend repeats these steps, you can see your friend's desktop.
+* You can toggle observe mode in View
+* You can do file transfers from Window
+
+!! Use Activity Monitor to check the bandwidth !!
+
+Welcome to Pair Programming :)
+

@@ -1,0 +1,166 @@
+---
+title: "Why I am excited about Entity Systems"
+author: foobar
+tags: [programming, future]
+copyright: CC BY-NC
+---
+
+Computing is still primitive and Fragile.
+
+For example, <a href="https://en.wikipedia.org/wiki/Typography">Typography</a> is an ancient profession.
+CSS3 is just cute, compared to what Typographers can do.
+
+It is haughty to think that computers can do everything, with fidelity.
+
+<a href="https://en.wikipedia.org/wiki/Donald_knuth">Donald Knuth</a> spent a disproportionate amount of time on typesetting,
+and rightfully so.
+
+To put Entity Systems in context, here is a list of programming
+paradigms as used in the Software Industry.
+
+Automata Programming
+====================
+
+Automata/ State Machines are at the heart of all Software.
+
+* Parsers
+* Validation Mechanisms
+* Protocols
+* Circuit Design
+* Industrial Robots
+
+Currently state machines can be implemented by the following
+techniques,
+
+1. <a href="https://en.wikipedia.org/wiki/State_pattern">State Pattern</a>
+
+   This is the OO way of doing it.
+
+2. <a href="https://en.wikipedia.org/wiki/Dispatch_table">Dispatch Tables</a>
+
+   This uses function pointers.
+
+3. Goto's
+
+   I find it appalling that gotos are considered a <a href="http://patshaughnessy.net/2012/2/29/the-joke-is-on-us-how-ruby-1-9-supports-the-goto-statement">joke</a>.
+
+   Here is a Knuth's defence of <a href="http://cs.sjsu.edu/~mak/CS185C/KnuthStructuredProgrammingGoTo.pdf">goto</a>. The paper also has a hint of satire,
+   on how programming language designers are complicit in advocating <a href="https://en.wikipedia.org/wiki/Newspeak">Newspeak</a>,
+   for "safety".
+
+   Just for a perspective, see the <a href="http://svnweb.freebsd.org/base/stable/9/sys/netinet/tcp_input.c?view=markup#l631">tcp/ipv4</a> code from FreeBSD.
+
+   This code is used by <a href="http://www.scei.co.jp/ps4-license/">Sony</a> and many embedded systems.
+   The Linux implementation is <a href="https://github.com/torvalds/linux/blob/master/net/ipv4/tcp.c">similiar</a>.
+
+<blockquote>The most critical piece of Internet Infrastructure is designed
+as a state machine using goto's.</blockquote>
+
+   Using goto's is hardly different from Dispatch Tables.
+   RAM is a hardware implementation of a table.
+
+   Why is there, no joke on this <a href="http://lua-users.org/wiki/GotoStatement">page</a> ?
+   Probably because it's used in the Electronics Industry.
+
+   Blaming goto's is like blaming a Scalpel.
+
+
+Structured Programming
+======================
+
+This has the following styles,
+
+1. Procedural Programming
+
+   See <a href="http://sunnyday.mit.edu/16.355/wirth-refinement.html">Program Development by Stepwise Refinement</a>
+   Typically how you write C programs.
+
+2. Objective Programming
+
+   <a href="https://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming)">Encapsulation</a> for me, is the most important idea here.
+
+3. Modular Programming
+
+   <code>
+   &gt;&gt;&gt; import this
+   ...
+   Namespaces are one honking great idea -- let's do more of those!
+   </code>
+
+4. Functional Programming
+
+   Functional programming structures code around transformations,
+   than state changes.
+
+   It's tricky to do <a href="http://prog21.dadgum.com/23.html">Games</a> in Pure Functional Programming.
+   Impure Functional Programming as seen in Common Lisp, Clojure,
+   Perl, Python, Ruby, OCaml is more successful.
+
+Declarative Programming
+=======================
+
+The following are some fine examples,
+
+1. HTML, make
+2. SQL, Logic Programming
+3. DSL's and Scripting Components.
+
+   See <a href="http://martinfowler.com/articles/rake.html">Rake</a>, <a href="http://www.blender.org/documentation/blender_python_api_2_70_release">Blender API</a>
+
+4. Generative Programming
+
+   This includes Lispy Macros, <a href="http://dinosaur.compilertools.net/yacc/">yacc</a>.
+
+Event Driven Programming
+========================
+
+Computers react to events.
+
+1. Messaging
+
+   <a href="http://zeromq.org/">Zero MQ</a>
+
+2. <a href="https://en.wikipedia.org/wiki/Observer_Pattern">Observers</a>
+3. Callback (Hell)
+4. Services
+
+   See <a href="https://en.wikipedia.org/wiki/REST">REST</a>
+
+Data Flow Programming
+=====================
+
+This is my favorite paradigm.
+Impure Functional programming fits nicely here.
+
+1. Unix <a href="http://doc.cat-v.org/unix/pipes/">Pipes</a>
+
+   Nuff said.
+
+2. Max/Pure Data
+
+   <a href="https://www.youtube.com/watch?v=7Y_Tzelw91g">You just have to see it</a>.
+
+3. Spreadsheets
+
+   Most widely used Programming Language if you ask me.
+
+4. Visual Programming
+
+   A bit of a stretch, but anything from Photoshop layers to Circuit Design goes here.
+
+Parallel Programming
+====================
+
+<a href="https://en.wikipedia.org/wiki/Erlang_(programming_language)">Erlang</a> is a great success story.
+
+Entity Systems
+==============
+
+In a way <a href="http://cbpowell.wordpress.com/2012/10/30/entity-component-game-programming-using-jruby-and-libgdx-part-1/">Entity Systems</a>, takes concepts from every one of the above.
+I am not even sure it's a new Paradigm.
+
+But the reason I am excited about Entity Systems is, it puts us right back
+into <a href="https://en.wikipedia.org/wiki/Batch_processing">Batch Computing</a>. Entities are stored centrally and Systems perform batch operations on them.
+
+And best of all, it is battle tested by Game Developers.
+

@@ -1,181 +1,164 @@
 <!DOCTYPE html>
+<html style="background-color: #F2F2F3" >
 <head>
-<html>
 <meta charset="utf-8">
-<title> Just Another Blog </title>
-<link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
-<meta name="viewport" content="width=960,initial-scale=1">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-<meta http-equiv="Pragma" content="no-cache"/>
-<meta http-equiv="Expires" content="0"/>
+<title>Just Another Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/freewall/freewall.js"></script>
+    <script src="/vendor/riot/riot+compiler.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="/vendor/sanitize-css/dist/sanitize.min.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-  <script src="/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="/js/bundle.min.js"></script>
-  <link rel="stylesheet" href="/css/styles.less.min.css">
+    <style type="text/css">
+        html, body {
+            width: 80%;
+            font-family: 'PT Serif', serif;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16px;
+        }
 
-</head>
-<body>
+        .sans {
+            font-family: 'PT Sans', sans-serif;
+        }
 
-<!--[if lt IE 8]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
+        .serif {
+            font-family: 'PT Serif', serif;
+        }
+
+        #header h1 {
+            font-size: 3rem;
+            text-align: center;
+            height: 120px;
+        }
+
+        nav {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline;
+            padding: 20px ;
+        }
+
+        .black {
+            color: #222222;
+        }
+ 
+        a { color: #222222; text-decoration: underline;}
+        a:hover {background-color: #FFEC16; }
+
+        .fa-med {
+            font-size: 2rem;
+        }
+
+        .fa-mid {
+            font-size: 1.5rem;
+            line-height: 2.25rem;
+        }
+
+        .pad {
+            padding: 1rem;
+        }
+
+    </style>
+    </head>
+    <body class="black">
+
+    <!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="header" class="sans">
+        <h1>Lexical Thoughts</h1>
+        <nav>
+            <ul>
+                <li>
+                <a href="https://stackoverflow.com/users/1117082/mr-foobar"><i class="fa fa-stack-overflow fa-med"></i></a>
+                </li>
+                <li>
+                <a href="https://github.com/harsha-mudi"><i class="fa fa-github fa-med"></i></a>
+                </li>
+                <li>
+                <a href="https://twitter.com/harsha_mudi"><i class="fa fa-twitter fa-med"></i></a>
+                </li>
+                <li>
+                <a href="https://soundcloud.com/mr-foobar"><i class="fa fa-soundcloud fa-med"></i></a>
+                </li>
+                <li>
+                <a href="https://vimeo.com/mrfoobar/"><i class="fa fa-vimeo fa-med"></i></a>
+                </li>
+                <li>
+                <a href="https://mrfoobar.bandcamp.com/"><b class="fa-med sans">bc</b></a>
+                </li>
+                <li>
+                <a href="https://www.npmjs.org/~harsha-mudi"><img src="https://www.npmjs.com/static/images/npm-logo.svg" width="55" height="33"/></a>
+                </li>
+                <li>
+                <a href="https://metacpan.org/author/MUCKER"><img src="/images/mp.jpg" width="33" height="33"/></a>
+                </li>
+                <li>
+                <a href="https://rubygems.org/profiles/mr-foobar"><img src="/images/ruby.png" width="33" height="33"/></a>
+                </li>
+                <li>
+                <a href="http://www.foobar.systems" class="fa-med">work</a>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="/soldiers-of-death" class="fa-med">Soldiers Of Death</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="pad"></div>
+
+    <div id="riot"></div>
+
+    <script src="/articles.tag" type="riot/tag"></script>
+    <script src="/post.tag" type="riot/tag"></script>
+    <script>
+        $(function() {
+            var items = [];
+            $.getJSON( "/content.json", function( data ) {
+
+                riot.route(function (fname) {
+                    if (fname === "") {
+                        riot.mount("#riot", 'articles', { items: data });
+                    } else {
+                        var post;
+                        data.map(function (item) {
+                            if (item.filename == fname) {
+                                post = item;
+                            }
+                        })
+                        tag = riot.mount("#riot", "post", {article: post});
+                    }
+                });
 
 
-<nav>
-<a href="http://www.foobar.systems"><img src="/images/floppy.png" width="33" height="33"/>Foo Bar Systems Private Limited</a>
-<h1>Harsha / Mr. Foo Bar (‸‶</h1>
-<a href="/">Index</a>
-<a href="/disclaimer.html"><b>DISCLAIMER</b></a>
-<br>
-<a href="/soldiers-of-death">Soldiers Of Death (My Book)</a>
-<br>
-<a href="https://flattr.com/submit/auto?user_id=harsha_mudi&url=http%3A%2F%2Flexical.foobar.systems" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
-<br>
-<br>
-<a href="https://stackoverflow.com/users/1117082/mr-foobar"><img src="/images/so.png" width="33" height="33"/></a>
-<a href="https://github.com/harsha-mudi"><img src="/images/gh.png" width="33" height="33"/></a>
-<a href="https://www.npmjs.org/~harsha-mudi"><img src="https://www.npmjs.com/static/images/npm-logo.svg" width="55" height="33"/></a>
-<a href="https://metacpan.org/author/MUCKER"><img src="/images/mp.jpg" width="33" height="33"/></a>
-<a href="https://rubygems.org/profiles/mr-foobar"><img src="/images/ruby.png" width="33" height="33"/></a>
-<a href="https://pay.reddit.com/user/rm-foobar"><img src="/images/r.jpg" width="33" height="33"/></a>
-<a href="https://twitter.com/harsha_mudi"><img src="/images/tw.png" width="33" height="33"/></a>
-<a href="https://soundcloud.com/mr-foobar"><img src="/images/sc.png" width="33" height="33"/></a>
-<a href="https://vimeo.com/mrfoobar">My Videos<img src="/images/vm.png" width="33" height="33"/></a>
-<a href="https://mrfoobar.bandcamp.com/"><img src="/images/bc.png" width="33" height="33"/></a>
-</nav>
+                if (! window.location.hash) {
+                        riot.mount("#riot", 'articles', { items: data });
+                 } else {
+                        riot.route(window.location.hash.substring(1));
+                }
 
+            });
+        });
 
-
-
-<div class="autospace">
-   
-    <h3>1 <a href="/algoart.html">A Critique of AlgoArt</a><h3>
-  
-    <h3>2 <a href="/ai-test.html">AI test</a><h3>
-  
-    <h3>3 <a href="/software-aspects.html">Aspects of Software</a><h3>
-  
-    <h3>4 <a href="/automata.html">Automata</a><h3>
-  
-    <h3>5 <a href="/basic_programming.html">Basics of Programming</a><h3>
-  
-    <h3>6 <a href="/camel-case.html">CamelCase</a><h3>
-  
-    <h3>7 <a href="/combinatorial-explosion.html">Combinatorial Explosion</a><h3>
-  
-    <h3>8 <a href="/compressing-fonts.html">Compressing Fonts</a><h3>
-  
-    <h3>9 <a href="/constituents-of-speech.html">Constituents of Language</a><h3>
-  
-    <h3>10 <a href="/dataflow.html">Data Flow</a><h3>
-  
-    <h3>11 <a href="/electronic-music.html">Electronic Music Technology</a><h3>
-  
-    <h3>12 <a href="/emoticons.html">Emoticons</a><h3>
-  
-    <h3>13 <a href="/entropy.html">Entropy</a><h3>
-  
-    <h3>14 <a href="/estimates.html">Estimates</a><h3>
-  
-    <h3>15 <a href="/fidelity.html">Fidelity</a><h3>
-  
-    <h3>16 <a href="/fixing_the_software_industry.html">Fixing the Software Industry</a><h3>
-  
-    <h3>17 <a href="/flow.html">Flow</a><h3>
-  
-    <h3>18 <a href="/good-code.html">Good Code</a><h3>
-  
-    <h3>19 <a href="/holy-tao.html">Holy Tao</a><h3>
-  
-    <h3>20 <a href="/interceptor.html">Interceptor Pattern</a><h3>
-  
-    <h3>21 <a href="/internet-communication.html">Internet Communication</a><h3>
-  
-    <h3>22 <a href="/internet-disruption.html">Internet Disruption</a><h3>
-  
-    <h3>23 <a href="/is-ruby-perl6.html">Is Ruby an acceptable Perl6 ?</a><h3>
-  
-    <h3>24 <a href="/lt-gist.html">LightTable Arch</a><h3>
-  
-    <h3>25 <a href="/midi.html">MIDI</a><h3>
-  
-    <h3>26 <a href="/vnc.html">Mac Remote Desktop</a><h3>
-  
-    <h3>27 <a href="/markdown.html">Markdown</a><h3>
-  
-    <h3>28 <a href="/matrix.html">Matrix</a><h3>
-  
-    <h3>29 <a href="/measurable-programming.html">Measurable Programming</a><h3>
-  
-    <h3>30 <a href="/element-of-music.html">Metre</a><h3>
-  
-    <h3>31 <a href="/mirror.html">Mirror Ontology</a><h3>
-  
-    <h3>32 <a href="/module-pattern.html">Module Pattern</a><h3>
-  
-    <h3>33 <a href="/syntax.html">My Favorite Syntax Bits</a><h3>
-  
-    <h3>34 <a href="/name-coupling.html">Name Coupling</a><h3>
-  
-    <h3>35 <a href="/nature.html">Nature</a><h3>
-  
-    <h3>36 <a href="/om.html">OM</a><h3>
-  
-    <h3>37 <a href="/oop.html">OOP</a><h3>
-  
-    <h3>38 <a href="/learning.html">On Learning</a><h3>
-  
-    <h3>39 <a href="/pause.html">Pause</a><h3>
-  
-    <h3>40 <a href="/personality-types.html">Personality Types</a><h3>
-  
-    <h3>41 <a href="/bad-lisp.html">Pretentious Lisp</a><h3>
-  
-    <h3>42 <a href="/programmers-are-terrible.html">Programmers are terrible</a><h3>
-  
-    <h3>43 <a href="/rdp.html">Reactive Data Processing (The Story)</a><h3>
-  
-    <h3>44 <a href="/renoise.html">Renoise + Plugins</a><h3>
-  
-    <h3>45 <a href="/soc.html">Safe Free Speech</a><h3>
-  
-    <h3>46 <a href="/shell-programming.html">Shell Programming</a><h3>
-  
-    <h3>47 <a href="/craftsman-style.html">Software Craftsman Style</a><h3>
-  
-    <h3>48 <a href="/software-dev-is-not-engineering.html">Software Development Is Not Engineering</a><h3>
-  
-    <h3>49 <a href="/stateful-dataflow.html">Stateful Dataflow</a><h3>
-  
-    <h3>50 <a href="/steady_state.html">Steady State</a><h3>
-  
-    <h3>51 <a href="/distributed-fallacy.html">The Eight Fallacies of Distributed Computing</a><h3>
-  
-    <h3>52 <a href="/myth-of-reuse.html">The Myth of Software Reuse</a><h3>
-  
-    <h3>53 <a href="/dtj.html">The unity of Dub, Techno and Jungle</a><h3>
-  
-    <h3>54 <a href="/uroborosism.html">Uroborosism™</a><h3>
-  
-    <h3>55 <a href="/water.html">Water</a><h3>
-  
-    <h3>56 <a href="/western-music-in-india.html">Western Music in India</a><h3>
-  
-    <h3>57 <a href="/desktops.html">Why Desktops / Laptops and Application Softwares are here to stay ...</a><h3>
-  
-    <h3>58 <a href="/why-i-am-excited-about-entity-systems.html">Why I am excited about Entity Systems</a><h3>
-  
-    <h3>59 <a href="/javascript-is-broken.html">javascript is broken</a><h3>
-  
-    <h3>60 <a href="/masculine-code.html">masculine code</a><h3>
-  
-    <h3>61 <a href="/this-that-selves.html">this that selves</a><h3>
-  
-</div>
-
-<div style="height:55px; clear: both">
-&nbsp;
-</div>
-<div style="text-align: center"> 2015 foobar</div>
+    </script>
 </body>
 </html>
+
+

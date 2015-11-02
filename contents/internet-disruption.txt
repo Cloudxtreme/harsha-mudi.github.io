@@ -1,0 +1,80 @@
+---
+title: "Internet Disruption"
+author: foobar
+tags: [internet]
+copyright: CC BY-NC
+---
+
+Crime
+=====
+Spying
+Identity Fraud
+Information selling
+Exploiting computation
+
+Content
+=======
+Politics
+--> Free Speech
+--> Alternate Medium
+Publishing
+--> Self Publishing
+--> Academic Publishing
+--> Magazine Publishing
+--> Encyclopedia Publishing
+--> Books, Guides
+Governance
+--> Status Updates
+News
+--> Journalism
+--> Headlines
+--> Gossip
+--> Reviews
+Art
+--> Gallery
+Music
+--> Radio
+--> Records
+Video
+--> TV
+--> Cinema / Adult
+Education
+--> Help Guides
+
+Profit
+======
+Crowd funding
+Direct Commerce
+Travel Management
+Event Management
+Marketing
+Yellow Pages
+Bank
+
+Communication
+=============
+Post
+Telephones
+
+Positive Employment
+===================
+Designers
+Programmers
+Hosting Companies
+Producers
+Media
+Remote Workers
+Crooks
+
+Negative Employment (large)
+===========================
+Middle Men
+Manual Labor
+Old People
+
+Problems
+========
+Quantity != Quality
+Free != Profit || Cheap
+New != Better || Virtuous
+

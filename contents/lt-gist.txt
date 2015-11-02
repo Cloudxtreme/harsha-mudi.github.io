@@ -1,0 +1,56 @@
+---
+title: "LightTable Arch"
+author: foobar
+tags: [programming, clojure, future]
+copyright: CC BY-NC
+---
+
+LightTable follows Behavior Object model(BOT), which itself is inspired from
+<a href="http://entity-systems.wikidot.com/">Entity Systems model</a>(ES).
+
+In a typical OOP + GUI program we abuse the Observer Pattern and harcode most of the design
+and Event types.
+
+With BOT/ES the design is stored as an in-memory data structure,
+the event-listeners(behaviors) are stored as metadata and
+the events themselves are generated on the fly.
+
+Every datum is identified by a unique ID and is typically struct-ish.
+
+This means, the entire program can be extended runtime.
+
+In LT,
+
+* object/create makes a new datum. Each datum stores behavior names.
+* object/raise triggers events with payload.
+* behavior macro stores "event(s) <-> reaction" mapping. Reaction receives the payload.
+* object/update, object/merge manages the in-memory data structure.
+
+LightTable is built on node.js so, most of the *actual work* is done by the node.js library wrappers in reactions.
+The ordering of the events, is mostly on a first-come basis. Think list iterations.
+
+An alternate way of looking at this model is imagining a Relational Database + Stored Procedures.
+
+<b>Can this model be applied for client side applications, as an alternate to Backbone.js ?</b>
+
+Consider a TODO list,
+
+Name -- Data Structure :: [Behaviors]
+=====================================
+
+item -- Hash :: [view, add, remove, update, list]
+
+Event -- Behaviors :: Notes
+===========================
+
+* $() -- list
+* todos.show - list
+* add-button-click + data payload -- add :: add, after object/create triggers todos.show
+* remove-button-click + id palyload -- remove :: remove, after object/remove triggers "
+* save-button-click + add payload --  update
+* todo-clicked -- view
+
+<b>What about GUI ?</b>
+By dividing the behaviors carefully, GUI can be separated from the NON-GUI.
+LT uses hiccup to generate HTML, making GUI another runtime convinience.
+

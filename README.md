@@ -1,1 +1,5 @@
-All rigths reserved (c) 2014 By Sreeharsha Mudivarti
+lexical -- <http://lexical.foobar.systems> -- my site
+```sh
+    $ squareboy lexical.tasklist.coffee --debug
+```
+

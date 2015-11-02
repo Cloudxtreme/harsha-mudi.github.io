@@ -1,0 +1,70 @@
+---
+title: "Basics of Programming"
+author: foobar
+tags: [programming]
+copyright: CC BY-NC
+---
+
+Or what they don't teach you in School.
+
+Data
+- ER / Binary / XML / Object
+- Queries
+- Serialization
+- Storage and Caching
+- Validation
+- Indexing / Searching / Tagging
+- Compression
+
+Systems
+- Roles
+- Stat / Stop
+- Status
+- Assertions / Invariants
+- Logs
+- Exceptions
+- Fail Fast
+- Simulations / Tests
+- Tight cohesion and Loose Coupling
+
+Deployment
+- Build
+- Horizontal and Vertical Scaling
+
+Interfaces
+- Forms
+- Widgets and Layouts
+- DSL
+- Callbacks
+
+Code Documentation which includes Notes, Hacks, Todos, Caveats, Use Cases, Vidoes, Slides.
+
+Naming Conventions
+==================
+
+Data / Events Should follow structural Naming Conventions.
+Systems are AdjectiveNouns
+Callbacks are VerbNouns
+
+Code Structure
+===============
+Sequence
+Selections
+Iterations
+
+System Processes
+================
+Remote Calls
+Authentication
+Authorization
+Transforms
+Extensions
+Commands
+Queries
+Jobs
+Operations
+Routines
+Extractors
+Loaders
+Routers
+Workflow

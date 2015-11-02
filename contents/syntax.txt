@@ -1,0 +1,89 @@
+---
+title: "My Favorite Syntax Bits"
+author: foobar
+tags: [programming]
+copyright: CC BY-NC
+---
+
+# C
+++ +=
+if, for, while, struct
+if expr statement
+infix
+
+# C++ / Java
+cout << "Hello World"
+auto
+~Foo
+::
+this
+
+# Sh
+$vars
+<< 'Here'
+`cmd args`
+
+# Perl
+%hash and =>
+`my $foo = 5` is an expr
+do, bless
+qw, / /
+'a' .. 'z'
+loop lables
+goto $label (also in gcc)
+__DATA__
+
+# Perl6
+?? !!
+say
+my \var
+junctions
+custom operators
+:types
+multimethods
+
+# Python
+*kwargs
+generators
+in is not and or
+nested functions
+yield
+with
+pass
+decorators
+
+# Ruby
+:symbol
+do .. end
+switch
+"foo".upcase()
+paren free style
+blocks
+meta programming
+"#{interpolation}"
+
+# Small Talk
+if:
+
+# CL / CLJ
+names-likes-this
+arbitrbary nesting
+macros
+->
+->>
+
+# go
+declaration syntax
+goroutines
+
+# Template engines
+asp
+
+# *ml, prolog
+Nil
+
+# JS
+undefined, null
+
+# Scala
+Null, null, Nil, Nothing, None

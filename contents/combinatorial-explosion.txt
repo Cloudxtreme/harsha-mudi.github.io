@@ -1,0 +1,67 @@
+---
+title: "Combinatorial Explosion"
+author: foobar
+tags: [philosophy, software]
+copyright: CC BY
+---
+<blockquote>My difficulty is only an — enormous — difficulty of expression - Ludwig Wittgenstein</blockquote>
+
+Programming i.e, building software, for me is about,
+
+* Data
+* Make Decisions based on the Data
+* Do Actions, typically by Divide and Conquer, based on those Decisions
+
+In fact, doing the above is a part of every day life
+eg) ToDo Lists, Appointments, Assessments, Party ...
+
+var, if, goto.
+
+Pretty mundane.
+
+Now if you look at a microphone, even there you 
+find Data and a number of Decisions to make, like **what** to Record.
+
+You might want noise-cancellation, for example.
+
+The challenges usually lie in **scale** for software,
+i.e, lots and lots and lots of things happening and you
+need answers in real-time.
+
+But even before you get into scaling, you face the
+
+            Combinatorial Explosion
+                 Explosion ?
+                    Yes !
+
+Let's say you are writing an addition software,
+for adding just two numbers, or at-least that's what
+you heard the client say.
+
+1 + 1
+> it compiles !
+
+What About 1 + 1.0 ?
+
+And 1/2 + 1
+And 1/5 + 2.2
+And "22.9" + 1/2
+And "22.8" + 0x12ff
+And 1/2 + "1/2356"
+And 11.11001100111 + 0.25
+And Romanian UTF-14 numbers ?
+
+Maybe next version ...
+
+What is more troubling is, now you have a __Floating Point__ bug,
+and you are just staring at the screen, *_*, because you finally
+realize, it was you who put the explosives, aka Flexibility™, there.
+
+The client wants to add different currencies, by tomorrow btw.
+
+> Can engineering knowledge be used to preempt combinatorial explosions?
+
+See Also:
+1] <a href="https://en.wikipedia.org/wiki/Feature_creep">Feature Creep</a>
+
+Thanks @theju, @tuxcanfly, @ckvinaykiran for the feedback.

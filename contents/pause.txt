@@ -1,0 +1,33 @@
+---
+title: "Pause"
+author: foobar
+tags: [linguistics]
+copyright: CC BY-NC
+---
+
+My writing can't be understood by the pedantic.
+
+Have you observed, the pedantic can never write anything original ?
+That's no coincidence. For the obsessive compulsive pedantic,
+writing is a sin.
+
+I try to follow Grammar for its prosodic flows.
+
+Pauses are crucial for prosody.
+
+Here are a few ways to create a pause, in ascending order of
+duration
+
+-
+|space|
+,
+;
+.
+--
+*
+|newline|
+
+|quote|
+italic
+bold
+

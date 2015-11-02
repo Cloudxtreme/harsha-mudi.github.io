@@ -1,0 +1,18 @@
+---
+title: "Shell Programming"
+author: foobar
+tags: [programming , scripting]
+copyright: CC BY
+---
+
+I have difficulty remembering bash/sh/zsh syntax.
+I can perl.
+
+```.zshrc
+command_not_found_handler () {
+    ~/bin/zsh.pl $*
+}
+```
+
+You can see my dotfiles <a href="https://github.com/harsha-mudi/dotfiles">here</a>.
+

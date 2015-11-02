@@ -1,0 +1,20 @@
+---
+title: "Fixing the Software Industry"
+author: foobar
+tags: [programming]
+copyright: CC BY NC
+---
+
+1. Stop bickering about languages.
+2. Stop fucking bickering about frameworks.
+3. Fuck frameworks.
+4. Libraries are the way to go.
+5. Users don't give a fuck about the code, but EASY to use interfaces.
+6. Stable software over copyright wars.
+7. Money helps in fixing other issues, ask Bill Gates.
+8. Hell is other people's code.
+9. Craftsmanship works.
+10. Like solving problems ? Ask around, poeple are always bitching about some software
+    issue or the other.
+11. Open Interfaces < Open Source < Free Software < Stable Software
+

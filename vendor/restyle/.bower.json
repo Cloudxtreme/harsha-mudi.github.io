@@ -1,0 +1,35 @@
+{
+  "name": "restyle",
+  "version": "0.5.1",
+  "homepage": "https://github.com/WebReflection/restyle",
+  "authors": [
+    "Andrea Giammarchi <andrea.giammarchi@gmail.com>"
+  ],
+  "description": "a JS to CSS transformer",
+  "main": "./build/restyle.max.amd.js",
+  "keywords": [
+    "CSS",
+    "JS",
+    "HTML5"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src",
+    "template",
+    "test",
+    "tests"
+  ],
+  "_release": "0.5.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.5.1",
+    "commit": "4ca9772ef5d0da90ef9a9b9cc0a3ddaa1e437abc"
+  },
+  "_source": "git://github.com/WebReflection/restyle.git",
+  "_target": "~0.5.1",
+  "_originalSource": "restyle",
+  "_direct": true
+}

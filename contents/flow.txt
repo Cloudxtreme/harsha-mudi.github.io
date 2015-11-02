@@ -1,0 +1,39 @@
+---
+title: "Flow"
+author: foobar
+tags: [philosophy, psychology]
+copyright: CC BY
+---
+<iframe width="420" height="315" src="//www.youtube.com/embed/AU5x1Ea7NjQ" frameborder="0" allowfullscreen></iframe>
+
+Have experienced a bit of flow recently, here are my notes.
+
+Closed Thinking
+- anxious
+- energetic
+- ambitious
+- failure averse
+- distracted
+- noisy
+- obstacles
+
+Creative Thinking
+- humour
+- ad lib
+- curiosity
+- multiple solutions
+- no fear
+- limits
+- quiet
+- play
+
+It is easier to do trivial and little things than difficult things.
+So I start with the difficult things.
+
+I am also programming en masse than compile every syntax error.
+It's interesting to depend on your thinking than the compiler.
+
+Tips
+* long/slow/forced breaths
+* time limit of 1 1/2 hours
+

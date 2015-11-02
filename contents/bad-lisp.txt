@@ -1,0 +1,113 @@
+---
+title: "Pretentious Lisp"
+author: foobar
+tags: [programming]
+copyright: CC BY-NC
+---
+
+1. Parens
+
+John McCarthy and Marvin Minsky don't think of parens as a superior notation.
+It's surprising how every Lisp implementer seems to neglect that.
+
+Optional infix, postfix notation can easily be slapped on top of Lisp without losing
+it's list like nature.
+
+Alternative brackets were suggested by both of them.
+
+How is (progn ... ) different from { } ?
+
+Parens are, if any, an inferior notation.
+f(g(h)) is the only place where it is acceptable.
+
+2. Parenthetical Indentation
+
+<pre>
+ // In C
+ for (i = 0; i < 10; i++) {
+     if (i % 2 == 0) {
+         doSomething (i); }
+     else {
+         doSomethingElse (i); } }
+</pre>
+
+Can you identify the problems with the above C code ?
+
+Hint: You can't add new statements without fucking up "{" and "}"
+
+It's absolutely retarded.
+How this became the mainstream Lisp style is beyond me.
+
+Of course I am supposed to use autoident/paredit in emacs no less.
+Firstly coupling a programming language with an editor is stupid.
+Secondly there is no guarantee that autoindent and paredit work everytime.
+
+Which begs the point, why is this shit enforced if it is useless ?
+Allman style works in XML.
+
+3. Lisp Code is pure poetry
+
+Except it's not.
+
+Hint: If you read a code snippet and you can't understand it.
+      Assume that the author is sloppy.
+
+Clarity is the sign of intelligence.
+Terseness is a sign of obfuscation.
+
+Now carefully look at `doSomething (i); }`.
+
+Can you comment at the end without fucking "}" up ?
+
+There you have it. Lisp code is poetry because adding a comment
+means re-indenting the code.
+
+4. Recursion is so high level you can't breathe
+
+The dirty secret is, Lisp doesn't have control flow operators like
+
+* break
+* continue
+* goto
+* and even return in clojure
+
+Yes return !
+
+How do you disguise weakness ?
+Obfuscate it as a Philosophy obviously !
+Then call everyone who doesn't practice it a BLUB.
+
+Now you have the Moral highground without doing anything.
+This is precisely what Haskell/ML/Scheme/Lisp camp does.
+
+Recursion is merely one of the many varieties of Iteration.
+You can write a quick-sort without recursion.
+Just use a Stack to keep track.
+
+Can the same be said of Recursion ?
+
+5. Continuations
+
+Assembly programmers called it co-routines.
+They had the stack and context registers to mess with.
+
+Continuations are merely the side-effect of hiding the machine from the programmer.
+
+6. Macros
+
+Possibly the most glorified language feature ever.
+
+Is it also so high level you can't breathe ?
+
+Assembly programmers called it "self-modifying-code".
+
+10110000 01100001
+
+^ That's machine code.
+
+It's both an instruction and a number ("Homoiconicity").
+With bit operators you can modify it, just like any other number.
+Except by modifying it you can create a new instruction.
+
+Was that so difficult to explain ?
+

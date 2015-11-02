@@ -1,0 +1,250 @@
+---
+title: "Reactive Data Processing (The Story)"
+author: foobar
+tags: [programming, future]
+copyright: CC BY-NC
+---
+
+<a href="https://github.com/harsha-mudi/rdp">RDP</a>
+<a href="https://github.com/harsha-mudi/rdp/issues">Issues / Feedback</a>
+
+<h3>Genesis</h3>
+I came across <a href="http://puredata.info/">Pure Data</a> ~ 2 years back.
+
+This year I came across the notions of asset pipelines and streams
+thanks to node.js and gulp.
+
+This struck me as peculiar as pipelines are a part of shell
+programming as well.
+
+I investigated further and I found a multitude of names like
+
+1. Pipes and Filters
+1.1 Streams
+2. Component Oriented Programming
+3. Data Flow Programming
+
+The following seemed related as well
+
+4. Event Oriented Programming
+4.1 State Machines
+5. Workflow Engines
+6. Messaging
+6.1 OOP
+6.2 Parallelism
+7. Spreadsheets
+
+More importantly, in existing Engineering domains
+Data Flow is the norm.
+
+8. Electronics
+8.1 DSP
+9. Avionics
+
+Making Music has taught me a bit of DSP.
+I had to learn hands-on what tweaking a DSP filter <i>felt</i> like.
+I had an understanding of effect chains and mutli-track recording.
+
+I found some free time in my hands so I decided to implement a
+tiny framework for Data Flow.
+
+I read <a href="https://github.com/tailrecursion/javelin">javelin's</a> source code and felt confident enough to attempt
+this. javelin implements a powerful Spreadsheet Engine in very
+few lines. It is a part of <a href="https://github.com/tailrecursion/hoplon">hoplon webframework</a>.
+
+I decided to call it Data Processing rather than Data Flow Processing
+as a homage to the pre-computing Data Processing Machines of IBM.
+
+I disliked Software at this point, having found that most
+Music Softwares pale in comparison to the feel of Hardware Synths.
+I used Breadboard and Electronics analogies instead Software's.
+
+I set out to answer
+
+* Can Low Level ideas Scale ?
+* Are they Readable ?
+
+As of now, I believe <b>Low > High</b> on even more accounts.
+
+<h3>Implementation</h3>
+I scanned Pure Data's implementation and implemented
+inlets/outlets and objects(Systems) in js.
+
+I added abstractions of Namespace and Symbol, taken from Lisp, for addressability.
+
+At this point I felt a dire need for State and Data Storage handling.
+
+Having implemented a <a href="https://github.com/harsha-mudi/botes">prototype of Entity Systems</a> earlier
+I added it to RDP.
+
+State was simply implemented as `this["foo"] = ...` since
+Systems are Live Objects.
+
+I started writing an example app called Esti.
+
+The first challenge was to define Data.
+I settled on the definition of Data as a Map&lt;Slot, Scalar&gt;.
+
+Slot is a string.
+I modelled Scalar after Lisp / Perl.
+
+The second challenge was UI development.
+
+Although I love Pure Data's visual <a href="https://www.youtube.com/watch?v=NuJkKtlD4OE">Live Object Oriented Programming</a>,
+I decided for a more traditional UI with Reactjs. DSP like Data Flow can be done
+in a traditional UI. Music Softwares are example of that.
+
+I added a Message Bus for decoupling UI from Data Flow.
+When Systems were done processing Data they could trigger an Impulse on the Bus.
+The Bus would then interrupt another System.
+
+In Electronics terms, messages are like Discrete Signals.
+Pure Data also has a similar notion.
+
+The Application was pretty straightforward.
+It had a readable list if/else statements in one place, unlike OOP.
+
+During development, I discovered many important properties of Data flow based design
+
+1. Diagram Generation
+
+<a title="click for source" href="https://github.com/harsha-mudi/esti/blob/master/source/js/diagrams.js"><img src="images/esti.png"/></a>,
+It is difficult to explain to a stranger about what is happening here.
+But to someone who is co-developer / manager ?
+
+One can easily point out things like
+
+* What systems are working
+* Where the problems are
+* How does the data flow
+* Where new ones are needed
+
+2. Simulation
+
+<a href="https://github.com/harsha-mudi/esti/blob/master/sim.xml">This.</a>
+
+<a href="https://github.com/harsha-mudi/esti/blob/master/source/js/simulations.js#24">That's 330 task events, each of which has a clock that ran atleast
+randomInt(3600, 7200) ticks to simulate the app in ~ 100 lines of js</a>.
+
+Since Data between Systems is communicated explicitly, it is very easy to fake it.
+This advantage is also gotten with pure Messaging.
+
+3. Step Debugging ?
+
+<iframe src="//player.vimeo.com/video/102414660" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+This is like an Electronics Engineer reading the input and output
+signals of a Component.
+
+I feel
+
+<b>Electronics is like Broadway and Software is more of a Movie.</b>
+
+4. RPC
+
+<iframe src="//player.vimeo.com/video/102371548" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+I call this "mirroring" where Signals are spread across interested Systems.
+In this case, Signals by the User.
+
+<hr>
+I picked a Japanese symbol (~ transfer) for a logo.
+
+<h1>迁</h1>
+<hr>
+<h3>Limbo</h3>
+At this point, I discovered
+
+1. <a href="http://dataflowbook.com/cms/">A book</a>
+2. <a href="https://noflojs.org">NoFlo</a>
+3. <a href="http://www.jpaulmorrison.com/fbp/">fbp</a>
+
+I interacted with the fbp community and discovered
+that RDP comes under the reactive spectrum.  Noflo is
+both reactive and classic.
+
+<h3>Hole in the Flow</h3>
+RDP 0.3 has a major flaw.
+
+As I used `this` to hold State, A System could only be a part of
+one Data Flow at a time.
+
+This seems fine for single user applications but for
+multi user applications (servers, games ..) it causes data corruption.
+
+Making RDP functional felt like yet another puritan way of avoiding the problem.
+
+It was hopeless until I found out about <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.124.1645">Monsoon: an explicit token-store architecture</a>.
+
+<b>TL;DR Systems can have as much State as they want want
+as long as a new Token is issued for each Data Flow.</b>
+
+A Token has a Frame analogous to a
+
+1. A Session Object (more)
+2. A Stackframe (less)
+3. A Continuation (lesser)
+
+This makes RDP unique as it implements Data Flow Programming on top
+of a Data Flow Processor Architecture.
+
+<h3>Nojs</h3>
+C++ style inheritance is needed for RDP.
+js sucks for this.
+
+Coffeescript's model of OOP doesn't translate well
+for other js programmers.
+
+I ported to ruby because of this.
+Thanks to <a href="https://github.com/opal/opal">opal</a> I can target js as well.
+
+I renamed Data to Datron.
+It has a merge method `d1.merge(d2)`, which I hope makes it more like electrons.
+
+<h3>Viva Low Level!</h3>
+The move from Assembly to High Level has resulted in a
+loss of significant number of Abstractions
+
+1. Memory Management
+
+Manual management and Layout leads to efficient Data Structures.
+High Level languages are plagued by overuse of Maps.
+
+Low Level programmers are more keenly aware of Memory Corruption, Leaks
+Estimation and Calculation.
+
+Since a good Data Structure can reduce Algorithmic Complexity,
+Memory Management can affect perceived Speed and Power Consumption.
+
+2. Interrupts
+
+Assembly languages have First Class Event Oriented Programming built-in.
+High Level languages use external APIs.
+
+In this sense, Go's Channels are a step backward.
+
+3. Advanced Data Structures
+
+Built-in support for matrices, queues, stacks, bounded buffers, caches ...
+
+Aren't High Level languages narrow in providing just 
+Array operations ?
+
+4. Awareness of OS and Concurrency
+
+Again, built-in support.
+High Level languages create a rigid shield between the programmer
+from the very system they are trying to code.
+
+5. 1-1 Mapping with the Host
+
+No action at a distance.
+This makes Debugging straightforward.
+<hr>
+
+Co-routines are of the highest order of flexibility
+and it's just one of Assembly Programmer's Hacks.
+
+<a href="http://pdos.csail.mit.edu/~rsc/kahn77parallel.pdf"><b>Have we forgotten how the Wheel was Invented ?</b></a></article>
+
+

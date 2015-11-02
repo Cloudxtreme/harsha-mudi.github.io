@@ -1,0 +1,112 @@
+---
+title: "this that selves"
+author: foobar
+tags: [fun, javascript, coffeescript, programming]
+copyright: CC BY NC
+---
+
+> "How can different things look the same ?
+   I don't know man, I didn't do it."
+
+In OOP, self-reference of the Object is achieved with a
+special keyword, typically `this` or `self`.
+
+C++/Java/Ruby/PHP
+=================
+
+`this` resolves to the current object and the parent object.
+Like, `this.parent or super( this ) or $self->SUPER::`.
+
+Multiple Inheritance Or Which This is That
+==========================================
+
+With multiple parents, `this` can refer to the wrong parent.
+
+Single inheritance is preferred for this reason.
+
+This is also called the diamond problem.
+
+C3 solves this problem by taking into the account the ordering
+of the parents.
+
+Python/Perl
+===========
+
+Perl's object model is inspired from python.
+
+Roughly put, Methods == Functions, with a special first argument.
+
+In perl you `bless $stuff` and in python you have,
+
+```py
+class Foo(object):
+    pass
+```
+
+this's confusing !
+==================
+
+In javascript, every function has a "this".
+
+This means you sometimes do,
+
+```js
+function foo() {
+    var that = this;
+    // or var self = this;
+
+    function bar() {
+        that.doSomething();
+    }
+}
+```
+
+With callback functions, this becomes useful.
+
+It's painful to write an extra declaration, just like in
+perl or python.
+
+So I present to you selves, which makes writing declarations
+obligatory.
+
+```js
+<a href="https://github.com/harsha-mudi/yx/blob/master/index.js">var yx = require('yx');</a>
+
+function foo() {
+    var selfs = new yx.__selves();
+    selfs(this);
+
+    selfs().i.youShoudHaveDoneThat = function () {
+        return "I Told You So!";
+    }
+
+    this.bar = function () {
+        selfs(this);
+        test.equal(selfs().previous.youShoudHaveDoneThat(), "I Told You So!");
+
+        this.doSomething = function () {
+            console.log("But but ... !");
+        }
+    }
+}
+```
+
+You should really be using the => from coffeescript.
+Another approach is,
+
+```js
+function foo() {
+
+    function bar(x,y) {
+        //...
+    }.bind(this);
+}
+```
+
+You can install <a href="https://github.com/harsha-mudi/yx">[yx]</a> with `npm install yx`.
+yx provides coffeescript's internal methods like __extends for use in js.
+
+::Credits
+
+#perl and #node.js from freednode.
+

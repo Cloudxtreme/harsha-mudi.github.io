@@ -1,0 +1,34 @@
+---
+title: "Automata"
+author: foobar
+tags: [programming]
+copyright: CC BY-NC
+---
+
+Machines
+========
+
+Accumulator Machine
+Stack Machine
+Register Machines
+Flow Machine
+
+Theory
+======
+
+Petri Net
+Logic
+Ladder Logic
+Control / Dispatch / Decission / Data Tables
+Decission Trees
+
+Reality
+=======
+
+PLC
+Electronics Instruments
+
+And not so obvious,
+Chemistry
+Cooking
+

@@ -1,0 +1,34 @@
+---
+title: "Safe Free Speech"
+author: foobar
+tags: [programming, philosophy]
+copyright: CC BY NC
+---
+
+Open Source Programming is heavily dependent on communication
+channels.
+
+IRC, Mailing Lists, Conferences, Web ...
+
+Because of its global nature, it's very difficult to obey
+all legal laws.
+
+There are some controversies w.r.t the names and abbreviations
+used in <a href="https://gist.github.com/omega8cc/fa97ea1d471e1108ab35">public code.</a>
+
+Besides, Newspeak is a terrible (programming) language.
+
+Each community is coming up with its own S.O.C's but they are too
+narrow or too obvious.
+
+To avoid unnecessary flamings, here are some guidelines for
+Safe Free Speech, for the Individual.
+
+0. There are no rules.
+1. If you can use clean language, prefer it.
+   If you have to be dirty, add a bit of context.
+2. If you have to discuss grey-areas, prefer using existing
+   legal protections.
+3. Avoid Discrimination. Exceptions can always be found.
+4. Hug before you hate.
+

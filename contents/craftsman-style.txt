@@ -1,0 +1,32 @@
+---
+title: "Software Craftsman Style"
+author: foobar
+tags: [philosophy, programming]
+copyright: CC BY
+---
+
+Work Style
+==========
+1. Lean Team
+2. Regular Feedback
+3. Systems Thinking
+4. Modular Development
+5. Simulation Testing
+6. Fast Support
+
+Communication Style
+===================
+
+1. Demos / Vidoes / Screenshots / Finger On the Screen
+2. Workflows Documents
+3. Dataflows Documents
+4. End-User Stories
+5. Architecture Documents
+6. Tutorials and Examples
+7. Readable Book
+8. API Docs
+
+
+
+
+

@@ -1,0 +1,51 @@
+---
+title: "Why Desktops / Laptops and Application Softwares are here to stay ..."
+author: foobar
+tags: [software]
+copyright: CC BY-NC
+---
+
+Summary: Mobile Devices / Web are for Entertainment.
+
+Professional Work
+=================
+
+- Office
+- Emails aka Long Communication
+- Programming
+- Arts with Digital Workflows
+- Complex Games
+- Research
+- Trading
+- Multimedia Computer
+- AutoCAD
+
+Mobile Devices / Web
+====================
+
+- Notifications / Read Only
+- Short Communication
+- Toy apps
+- Games
+- Reading / Learning
+- Buying simple items
+- LoginMedia Computer
+- Tetris
+
+Features of Application Software
+================================
+
+exit button
+minimize (multitasking)
+files
+threads / processes / aio (performance / parallism)
+larger ram
+custom stores
+bigger screens / multiple screens
+adaptable to touch (windows 8)
+adaptable to cloud (chromebook)
+portable to coffee shops
+
+*gasp* A Laptop can be connected to TV with a HDMI port.
+
+work / life balance

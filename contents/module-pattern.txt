@@ -1,0 +1,21 @@
+---
+title: "Module Pattern"
+author: foobar
+tags: [js, programming]
+copyright: CC BY-NC
+---
+
+For nodejs,
+
+```module.js
+exports.thingy = function (x, y, z) {
+    ...
+};
+```
+
+For browsers,
+
+<div class="autospace">
+<script src="https://gist.github.com/harsha-mudi/20781b805c0967e9be35.js"></script>
+</div>
+

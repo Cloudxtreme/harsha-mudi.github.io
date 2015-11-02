@@ -1,0 +1,242 @@
+---
+title: "Fidelity"
+author: foobar
+tags: [music, software, philosophy]
+copyright: CC BY-NC
+---
+
+Fidelity(n):
+1. the quality or state of being faithful
+2. accuracy in details :  exactness
+
+Fidelity is commonly used in Music, when discussing
+Vinyl vs Digital and so on.
+
+The 1st meaning of fidelity indirectly means trust.
+The 2nd meaning of fidelity is synonymous with finesse.
+
+For example, when you have a Hi-Fi CD it means that,
+
+1. You can trust that it's Hi-Fi
+   (You have an immediate way of knowing)
+2. It's a faithful recording of the original
+   (Like using multiple microphones vs 1, bitrates ...)
+3. The original itself was having high detail.
+   (Instruments are of good made)
+
+Lo-Fi
+-----
+
+Linux/GNU
+===========
+
+Linux/GNU is not UNIX.
+It's a clone of UNIX.
+Ironically, the recursive acronym reflects the actual truth.
+
+Linux/GNU don't follow POSIX but LSB.
+
+The fidelity with respect to UNIX is thus low.
+
+Git
+===
+
+According to Git, they are a replacement for
+SVN and Perforce.
+
+The GUI tooling for Git is lack luster.
+
+Git can't do directory checkouts or externals, features
+which SVN has.
+
+Interestingly SVN is opensource, here.
+
+The fidelity wrt SVN and its tooling is thus low.
+
+Did you just criticize Linux and Git ?
+======================================
+
+Yes.
+
+Perl/Python/Ruby
+================
+
+And yet even after 20 years, neither has replaced [bzck]?sh.
+
+Aren't you losing a bit of fidelity when you say
+they can be used for shell scripting ?
+
+ERB is not PHP either, from the prespective of fidelity.
+
+HTML5
+=====
+
+The fidelity wrt paper, books is low.
+Try getting page numbers right.
+
+Mac OSX
+=======
+
+The fidelity of Mac wrt Mac is low.
+
+What this means is that Backward Compatibility is low
+for Mac Applications.
+
+Apple has even made PowerPC Applications unusable.
+
+When you claim you love Apple, you are assuming
+Older Apples are equal to Newer Apples.
+
+Hi-Fi
+-----
+
+Of All The Things, XML
+======================
+
+PDF, Prince(XML), Docbook(XML), Latex have a far greater fidelity to
+paper.
+
+Microsoft
+=========
+
+Max Payne was released 13 years ago.
+I believe it's still playable on Windows 8.
+
+Microsoft has fidelity to the Windows API's.
+
+Adbobe
+======
+
+Adobe Softwares have a high fidelity to numerous
+industries in which it is used in.
+
+Emulators
+=========
+
+Obvious.
+
+Tracker softwares like renoise, extend beyond emulation
+but remain faithful to the Idea.
+
+VLC
+===
+
+You would know, if VLC had problems rendering.
+
+Proprietary Software
+====================
+
+Usually they have higher fidelity.
+
+This is also true for Programming Languages used in the Industry,
+like C++ or Java.
+
+Take a look at their specs for example.
+
+Not Hackers
+===========
+
+I use the term Hacker as a loose term for a programmer
+involved in the Open Source and Startup communities.
+
+Engineers have a higher fidelity than Hackers.
+Craftsmen have a higher fidelity than Hackers.
+
+Currently Software Industry has a limited notion of word 
+Engineering, when stuff like OpenSSL is the norm.
+
+Is this rubbish important ?
+===========================
+
+Yes.
+
+Every time a book is made into a film, there is a debate of book vs film.
+
+The notion of fidelity helps in analyzing how things are,
+and how things could be better.
+
+If you like travis badges, then I don't really have to explain
+much here, other than give you a new word to ponder on.
+
+Here are things you can do to increase fidelity,
+
+1. Show finesse.
+2. Document missing/changing API's and Interfaces.
+3. Pay attention to testing
+4. Pay attention to backward compatibility
+5. Pay attention to the industry's tradition in question
+6. Stop using childish terms like disrupt when all you
+   are providing is a cheap solution with 1/10th the 
+   quality.
+7. Pay attention to standards compliance
+8. Don't claim fidelity if you can't prove it
+9. Security testing
+10. Respect Original Solutions and learn from them.
+11. Don't plagiarise and market is differently
+12. If you claim superiority prove it
+13. well-tested vs I just hacked this in a day
+14. Documentation improves fidelity of a bad product.
+
+15. Don't treat Professional Users as Normal Users
+
+   If I paid for the software/service, I am willing to read the 
+   documentation. Dumbing down the software and introducing stupid
+   workflows is simply unacceptable.
+
+   Here, fidelity means being loyal to the customers.
+
+16. Inheritance, not copy paste
+17. Give credits where due.
+
+   (I have to mention this because even big open source projects
+    like <a href="https://github.com/ghc/ghc">ghc</a> don't have a CONTRIBUTORS.txt)
+
+18. Fine Grained features along with simple ones.
+19. Respect real workers not artificial workflows
+
+Some important points have their own headings.
+
+Shameless practices
+==================
+
+* Renaming variables
+* Deleting mention of the original author
+
+are rampant in opensource, especially when forced
+to use in industries.
+
+Legal enforcements are few, mostly because no one 
+has the time.
+
+Just don't.
+
+Disrupting
+==========
+
+Every software company tries to copy real world workflows,
+but implements it with bad insecure code and limited features.
+
+For example facebook thinks it has re-defined social
+interactions and Evernote thinks it disrupted pens.
+
+In truth these technologies have changed things, but not
+because of fidelity, but gratification.
+
+It's very difficult to share a doodle with a friend in 5s, with
+the above softwares for example.
+
+The problem is Hackers
+======================
+
+Forget Steve Jobs and his calligraphy lessons,
+I can't even change the System Font in my Mavericks.
+
+Donald Knuth spent a disproportionate amount of time
+on <a href="https://en.wikipedia.org/wiki/Metafont">typesetting</a> and no one seems to think
+its worth imitating.
+
+I want you to think about that and be inspired by that.
+
+When you build a new framework don't insult the word,
+which is what we share with Engineers.
+

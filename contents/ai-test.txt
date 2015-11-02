@@ -1,0 +1,13 @@
+---
+title: "AI test"
+author: foobar
+tags: [ai, philosophy, linguistics]
+copyright: CC BY-NC
+---
+When an AI System can,
+
+1) detect sarcasm
+2) wit you
+3) a bit too much
+4) say sorry
+

@@ -1,0 +1,49 @@
+---
+title: "Electronic Music Technology"
+author: foobar
+tags: [music]
+copyright: CC BY-NC
+---
+
+Producer Tech
+=============
+
+Tapes / Phonograph
+--> DJing, Experimental
+Electronics
+--> Experimental
+Recording Studio
+--> Remixes
+Studio Effects
+--> Dub Remixes, Experimental
+Synthesizers
+--> Ambient, Experimental
+--> Pop
+Loopers
+--> Beatboxing
+Soundchips
+--> Chiptunes
+Turntables
+--> Hip Hop
+Drum Machines, MIDI
+--> Techno, Breakbeat and their derivatives
+Sampling, Vocoder
+--> Everyone
+
+Consumer Tech
+=============
+
+FM
+Vinyl/Dub Plates
+Cassette
+CD
+MP3
+Internet
+
+Softwares by way of emulation and generalization brought digital alternatives
+to each of the above
+--> Traktor, Max, Ableton, Fruity Loops, Renoise, Cubase, Acid Loops
+
+Countries involved
+--> Japan(Hardware), Germany, UK, America
+
