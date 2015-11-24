@@ -1,19 +1,14 @@
----
-title: Personality Types
-author: foobar
-tags: [philosophy]
-copyright: CC BY-NC
----
-"Anyone who wants to know the human psyche will learn next to nothing from
-experimental psychology. He would be better advised to abandon exact science,
-put away his scholar's gown, bid farewell to his study, and wander with human
-heart throught the world. There in the horrors of prisons, lunatic asylums and
-hospitals, in drab suburban pubs, in brothels and gambling-hells, in the
-salons of the elegant, the Stock Exchanges, socialist meetings, churches,
-revivalist gatherings and ecstatic sects, through love and hate, through the
-experience of passion in every form in his own body, he would reap richer
-stores of knowledge than text-books a foot thick could give him, and he will
-know how to doctor the sick with a real knowledge of the human soul."
+--- title: Personality Types author: foobar tags: [philosophy] copyright: CC
+BY-NC --- "Anyone who wants to know the human psyche will learn next to nothing
+from experimental psychology. He would be better advised to abandon exact
+science, put away his scholar's gown, bid farewell to his study, and wander
+with human heart throught the world. There in the horrors of prisons, lunatic
+asylums and hospitals, in drab suburban pubs, in brothels and gambling-hells,
+in the salons of the elegant, the Stock Exchanges, socialist meetings,
+churches, revivalist gatherings and ecstatic sects, through love and hate,
+through the experience of passion in every form in his own body, he would reap
+richer stores of knowledge than text-books a foot thick could give him, and he
+will know how to doctor the sick with a real knowledge of the human soul."
 
 -- Carl Jung
 
@@ -93,6 +88,35 @@ Insignificance, Violated (I)
 
 Fear of Loss, Separation (N)
 
+Marriage with MBTI
+==================
+Introverted Thinking  - T ( Systems )
+Extroverted Thinking - CT ( Facts )
+Introverted Sensing - CS ( Taste )
+Extroverted Sensing - S ( Texture )
+Extroverted Intuition - CN ( Multiverse )
+Introverted Intuition - N ( Imagination )
+Extroverted Feeling - CI ( Values )
+Introverted Feeling - I ( Virtues )
+
+Extroversion, Introversion is mapped to Controller
+Feeling, Judging is mapped to Instinct
+Perceptiveness is mapped to sensing.
+
+Active Controller makes,
+1. Multiplies Sense Feedback
+2. Makes Thinking more Objective (ET)
+3. Filters Senses
+4. Forces the Intuition / Imagination to take reality into account.
+
+Controller is essentially Mind over Mind Over Body.
+
+Controller is made active,
+1. To explore the senses
+2. To deal with the world
+3. To explore the world
+4. When values are challenged
+
 Misc
 ====
 1. Best way to converse with people N, S C, I T followed by the others depending on the setting.
@@ -103,8 +127,16 @@ Misc
 
 3. This aspects that are least developed are usually called Inner Child / Shadow / Id
    respectively.
-   
+
 4. Reprression pushes things into intuition.
+
+5. Best way to work CT, CN, T, CI, C
+   In other words forget virtues, stick to facts, mould all possibilities to the single vision and taste victory.
+
+6.  Best way to evaluate S, I, CS, N
+
+    In other words see the texture, test its virtues, is it refined, does it tirgger the imagination ?
+
 
 1. <a href="http://www.personalityhacker.com/">Personality Hacker</a>
 2. <a href="http://www.socionics.com/rel/relcht.htm">Socionics</a>
@@ -112,3 +144,4 @@ Misc
 4. <a href="http://www.humanmetrics.com/">Human Metrics</a>
 5. <a href="http://www.cognitiveprocesses.com/">Cognitive Processes</a>
 6. <a href="https://en.wikipedia.org/wiki/Keirsey_Temperament_Sorter">Temperment Sorte</a>
+7. <a href="http://subjectobjectmichaelpierce.blogspot.ca/2015/06/the-cheat-sheet.html">Cheatsheet MBTI</a>

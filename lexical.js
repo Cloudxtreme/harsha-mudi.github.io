@@ -41,7 +41,7 @@ bower({
       "restyle",
       "jquery",
       "freewall",
-      "riot",
+      "visionmedia/page.js"
     ]
 });
 

@@ -2,7 +2,7 @@
 
   <div class="freewall">
     <div class="item sans" style="background-color: {set_bg_color()}" each={ items }>
-        <a href="/#{filename}">{ title }</a>
+        <a href="/{filename}.html">{ title }</a>
         <div class="tags">
             <span>{join_array(tags)} </span>
         </div>
