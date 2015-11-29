@@ -16,16 +16,14 @@ Data
 - Indexing / Searching / Tagging
 - Compression
 
-Systems
-- Roles
-- Stat / Stop
+Systems / Roles based Design
+- Start / Stop
 - Status
 - Assertions / Invariants
 - Logs
 - Exceptions
 - Fail Fast
 - Simulations / Tests
-- Tight cohesion and Loose Coupling
 
 Deployment
 - Build
@@ -34,8 +32,16 @@ Deployment
 Interfaces
 - Forms
 - Widgets and Layouts
-- DSL
-- Callbacks
+
+Coupling
+- Function Calls
+- Callbacks / Events / Message Bus
+- Delegation
+- Composition
+- Hierarchical State Machines / PAC
+- Observerables
+- Interceptors
+- Flow
 
 Code Documentation which includes Notes, Hacks, Todos, Caveats, Use Cases, Vidoes, Slides.
 
@@ -51,6 +57,7 @@ Code Structure
 Sequence
 Selections
 Iterations
+Streams
 
 System Processes
 ================
@@ -68,3 +75,4 @@ Extractors
 Loaders
 Routers
 Workflow
+
