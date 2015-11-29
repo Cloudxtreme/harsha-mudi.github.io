@@ -1,9 +1,9 @@
------
+---
 title: "My Favorite Editor Key Bindings"
-author: mucker
-tags: syntax
+author: foobar
+tags: [syntax]
 copyright: CC BY-NC
------
+---
 
 Ease of Use
 windows > vim > emacs
