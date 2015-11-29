@@ -1,5 +1,10 @@
---- title: Personality Types author: foobar tags: [philosophy] copyright: CC
-BY-NC --- "Anyone who wants to know the human psyche will learn next to nothing
+---
+title : Personality Types
+author: foobar
+tags: [philosophy]
+copyright: CC BY-NC
+---
+"Anyone who wants to know the human psyche will learn next to nothing
 from experimental psychology. He would be better advised to abandon exact
 science, put away his scholar's gown, bid farewell to his study, and wander
 with human heart throught the world. There in the horrors of prisons, lunatic

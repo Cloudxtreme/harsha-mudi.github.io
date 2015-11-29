@@ -152,8 +152,7 @@
                 page();
 
                 if (location.pathname != "/") {
-                    var fname = location.pathname.substring(1);
-                    page(fname);
+                    page(location.pathname);
                 }
 
             });

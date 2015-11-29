@@ -9,10 +9,7 @@ copyright: CC BY-NC
 It's thin and has fixed width.
 
 I could not get <a href="http://www.fontsquirrel.com/tools/webfont-generator">Font Squirrel's</a> web font generator to work(size?).
-So I wrote a <a href="http://fontforge.org">fontforge</a> script to compress the font by extracting <a href="https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block)">Basic Latin</a>.
-
-<div class="autospace">
-<script src="https://gist.github.com/harsha-mudi/10980853.js"></script>
-</div>
+So I wrote a <a href="http://fontforge.org">fontforge</a> script to compress the font by extracting <a href="https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block)">Basic Latin</a>,
+<a href="https://gist.github.com/harsha-mudi/10980853.js">here</a>
 
 The web font is available <a href="/css/mplus-1m-regular.ttf">here</a>
