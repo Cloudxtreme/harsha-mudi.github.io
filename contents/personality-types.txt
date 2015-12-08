@@ -39,7 +39,6 @@ Total personalities = 4 + 6 + 4 + 1 = 15.
 
 5. Instinct ( Ether)
 
-
 Animals
 =======
 
@@ -56,6 +55,7 @@ Analytical (T)
 Sequential (S)
 Interpersonal (C)
 Imaginative (I)
+Animal (N)
 
 Learning Styles
 ===============
@@ -73,6 +73,7 @@ Platonic (T)
 Sensual (S)
 Romantic (C)
 Creative (I)
+Animal (N)
 
 Decission Making Styles
 =======================
@@ -91,7 +92,7 @@ Trapped, Harmed (S)
 Imbalance, Corruption (C)
 Insignificance, Violated (I)
 
-Fear of Loss, Separation (N)
+Fear of Loss, Separation, Control (N)
 
 Marriage with MBTI
 ==================
@@ -99,10 +100,10 @@ Introverted Thinking  - T ( Systems )
 Extroverted Thinking - CT ( Facts )
 Introverted Sensing - CS ( Taste )
 Extroverted Sensing - S ( Texture )
-Extroverted Intuition - CN ( Multiverse )
-Introverted Intuition - N ( Imagination )
-Extroverted Feeling - CI ( Values )
-Introverted Feeling - I ( Virtues )
+Extroverted Intuition - CI ( Multiverse )
+Introverted Intuition - I ( Imagination )
+Extroverted Feeling - CN ( Values )
+Introverted Feeling - N ( Virtues )
 
 Extroversion, Introversion is mapped to Controller
 Feeling, Judging is mapped to Instinct
@@ -114,13 +115,12 @@ Active Controller makes,
 3. Filters Senses
 4. Forces the Intuition / Imagination to take reality into account.
 
-Controller is essentially Mind over Mind Over Body.
+Controller is essentially Mind over Body.
 
 Controller is made active,
 1. To explore the senses
 2. To deal with the world
-3. To explore the world
-4. When values are challenged
+3. When values are challenged
 
 Misc
 ====
@@ -139,9 +139,7 @@ Misc
    In other words forget virtues, stick to facts, mould all possibilities to the single vision and taste victory.
 
 6.  Best way to evaluate S, I, CS, N
-
     In other words see the texture, test its virtues, is it refined, does it tirgger the imagination ?
-
 
 1. <a href="http://www.personalityhacker.com/">Personality Hacker</a>
 2. <a href="http://www.socionics.com/rel/relcht.htm">Socionics</a>
