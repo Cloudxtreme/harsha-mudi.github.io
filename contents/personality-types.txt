@@ -31,9 +31,9 @@ Is it possible to realize these types from the physiology of the brain ?
 Consider the information pathways,
 
 1. Thinker (Earth, Melancholic, Rationals)
-2. Sensor (Water, Phlegmatic, Artisans)
-3. Controller (Wind, Choleric, Guardians)
-4. Intuition (Fire, Sanguine, Idealists)
+2. Sensor (Wind, Phlegmatic, Artisans)
+3. Controller (Fire, Choleric, Guardians)
+4. Intuition (Water, Sanguine, Idealists)
 
 Total personalities = 4 + 6 + 4 + 1 = 15.
 
@@ -42,11 +42,11 @@ Total personalities = 4 + 6 + 4 + 1 = 15.
 Animals
 =======
 
-Eagle (T)
-Deer (S)
+Deer (T)
+Eagle (S)
 Lion (C)
-Snake (I)
-Tiger (N)
+Tiger (I)
+Snake (N)
 
 Thinking Styles
 ===============
