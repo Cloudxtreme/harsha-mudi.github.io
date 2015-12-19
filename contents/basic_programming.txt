@@ -33,10 +33,9 @@ Component Types
 ===============
 
 Simple
-- If
 - Loops
 - Recursion
-- System Calls
+- System Calls and Instructions
 - Arithmetic
 - Functions / Co-Routines
 - Jobs
@@ -45,16 +44,12 @@ Simple
 Compound
 - Loaders / Locators for Libraries
 
-Context Management
+Complex
 - State Machines
 - Push Down Automata
 - Schedulers
 - Controllers
 - Routers
-
-Flow-Verification
-- Assertions / Invariants
-- Logs
 - Exceptions
 - Debugging
 
@@ -63,6 +58,8 @@ Security
 - Authorization
 
 Data Flow
+- Validation
+- Logging
 - Transforms
 - Commands
 - Queries
@@ -74,39 +71,44 @@ Flows
 
 Coupling in the form of
 
+Non-Remote
 - Function Calls
+- Callbacks / Promises
 - Table Based Dispatch / Ploymorphism
-- Composition
-- Delegation
-- RPC
+- Composition / Delegation
 - Interceptors
-- Pub / Sub / Subject / Observers / Messaging / Eventing
 - Commands
-- FBP
-- Message Queues
-- Callbacks
+- Pub / Sub / Subject / Observers / Messaging / Eventing
 - Promises
+
+Remote
+- RPC
+- FBP
 - Half Objects
+
+Both
 - Request / Response
 - Tokens
+- Message Queues
 
-Interfaces
-==========
+User Interfaces
+===============
 - Forms
 - Widgets
 - Layouts
 - Scene Graph
-- Interfaces
-- Roles
+- Roles and Actions
 
 Programming
 ===========
 
 0. Gather User Stories
-1. Code the Abstract Interface
-2. Couple Interface to Workflows and Data Flows
-3. Simulate / Demo
-4. Repeat
+1. Code the User Interfaces concretely or abstractly
+2. Design Data
+3. Couple User Interfaces to Components
+4. Couple Components
+5. Simulate / Demo
+6. Repeat
 
 Characteristics of Software
 ===========================
@@ -128,10 +130,9 @@ Operations are AdjectiveNouns
 Callbacks are VerbNouns
 
 Files should be organized by
-- Modules / Classes
-- Models
-- Loaders / Locaters
-- Workflow Components
-- Coupling Components
-- Interfaces
+- Models (Re-Usable)
+- Simple Components (Re-Usable)
+- Complex Components
+- Loaders / Locaters / Flow Code
+- User Interfaces
 
