@@ -4,28 +4,17 @@ author: foobar
 tags: [programming]
 copyright: CC BY-NC
 ---
+Programming is an activity of designing Software Applications and Interactive Media.
 
-Or what they don't teach you in School.
+A Software Application is a Control System with Digital Interfaces suited
+for the particular Domain.
 
-What is a Program ?
-===================
-- Code + Data
+Work flows and User Interfaces around Data are the main Ingredients of Software.
 
-Code
-====
-Operation
-- Selection, Grouping, Loading
-- Sequencing, Coupling, Distributing, Communicating, Controlling
-- Iteration, Scheduling
-- Self Verification
+Work flows constitute backend.
+User Interfaces constitute the frontend.
 
-over a Stream of Data.
-
-Verification happens by
-- Assertions / Invariants
-- Logs
-- Exceptions
-- Debugging
+Both require distinct mindsets.
 
 Data
 ====
@@ -40,69 +29,87 @@ Data
 - Analytics
 - Events
 
+Work
+====
+
+Basic Work
+- If
+- Loops
+- Recursion
+- System Calls
+- Arithmetic
+- Routines / Co-Routines
+- Jobs
+- Processes
+
+Self-Work
+- Loaders / Locators for Libraries
+
+Context Management
+- State Machines
+- Push Down Automata
+- Schedulers
+- Controllers
+- Routers
+
+Self-Verification
+- Assertions / Invariants
+- Logs
+- Exceptions
+- Debugging
+
+Security
+- Authentication
+- Authorization
+
+Data Work
+- Transforms
+- Commands
+- Queries
+- Extractors
+- Loaders
+
+Flows
+=====
+
+Coupling in the form of
+
+- Function Calls
+- Table Based Dispatch / Ploymorphism
+- Composition
+- Delegation
+- RPC
+- Interceptors
+- Pub / Sub / Subject / Observers / Messaging / Eventing
+- Commands
+- FBP
+- Message Queues
+- Callbacks
+- Promises
+- Half Objects
+- Request / Response
+- Tokens
+
 Interfaces
 ==========
 - Forms
 - Widgets
 - Layouts
 - Scene Graph
-- Routers / Controllers
+- Interfaces
+- Roles
 
-Operation
-=========
-- Functions
-- System Calls
-- Component Methods
-
-Selection
-========
-- Table
-- If
-- Loader
-
-- Namespaces and Symbols
-- Module / Class / Library
-- Dependency Injection
-- Locator
-- Polymorphism
-
-Sequencing
-==========
-- Function Calls
-- Composition
-- Delegation
-- RPC
-
-- Pub / Sub / Subject / Observers / Message Bus
-- Interceptors
-- Data Flow
-
-- Message Queues
-- RPC
-
-- Control Bus
-- Callbacks
-- Promises
-- Co-routines
-- Half Objects
-
-Iteration
-=========
-- Startup
-- Recursion
-- Loops
-- Processes / Threads / Contexts
-- Tokens
-
-Code Design
+Programming
 ===========
-1. Code the Interface
-2. Couple Interface to Operations
-3. Couple Operations to Operations
-4. Couple Operations to Interfaces
 
-Operation Characteristics
-=========================
+0. Gather User Stories
+1. Code the Abstract Interface
+2. Couple Interface to Workflows and Data Flows
+3. Simulate / Demo
+4. Repeat
+
+Characteristics of Software
+===========================
 - Size
 - Speed
 - Bandwidth
@@ -120,22 +127,11 @@ Data / Events Should follow structural Naming Conventions.
 Operations are AdjectiveNouns
 Callbacks are VerbNouns
 
-Operation Types
-===============
-Application
-Remote Calls
-Authentication
-Authorization
-Transforms
-Extensions
-Commands
-Queries
-Jobs
-Operations
-Routines
-Extractors
-Loaders
-Routers / Controllers
-Workflow
-Generic
+Files should be organized by
+- Modules / Classes
+- Models
+- Loaders / Locaters
+- Workflow Components
+- Coupling Components
+- Interfaces
 
