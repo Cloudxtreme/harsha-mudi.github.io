@@ -6,12 +6,11 @@ copyright: CC BY-NC
 ---
 Programming is an activity of designing Software Applications and Interactive Media.
 
-A Software Application is a Control System with Digital Interfaces suited
-for the particular Domain.
+A Software Application is a Control System with Digital Interfaces suited for the particular Domain.
 
-Work flows and User Interfaces around Data are the main Ingredients of Software.
+Flows and User Interfaces around Data are the main Ingredients of Software.
 
-Work flows constitute backend.
+Components constitute backend.
 User Interfaces constitute the frontend.
 
 Both require distinct mindsets.
@@ -29,20 +28,21 @@ Data
 - Analytics
 - Events
 
-Work
-====
 
-Basic Work
+Component Types
+===============
+
+Simple
 - If
 - Loops
 - Recursion
 - System Calls
 - Arithmetic
-- Routines / Co-Routines
+- Functions / Co-Routines
 - Jobs
 - Processes
 
-Self-Work
+Compound
 - Loaders / Locators for Libraries
 
 Context Management
@@ -52,7 +52,7 @@ Context Management
 - Controllers
 - Routers
 
-Self-Verification
+Flow-Verification
 - Assertions / Invariants
 - Logs
 - Exceptions
@@ -62,7 +62,7 @@ Security
 - Authentication
 - Authorization
 
-Data Work
+Data Flow
 - Transforms
 - Commands
 - Queries
