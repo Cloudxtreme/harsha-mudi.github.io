@@ -21,75 +21,55 @@ Data
 - Queries
 - Serialization
 - Storage and Caching
-- Validation
 - Indexing / Searching / Tagging
 - Compression
 - Ontology
 - Analytics
-- Events
-
-
-Component Types
-===============
-
-Simple
-- Loops
-- Recursion
-- System Calls and Instructions
-- Arithmetic
-- Functions / Co-Routines
-- Jobs
-- Processes
-
-Compound
-- Loaders / Locators for Libraries
-
-Complex
-- State Machines
-- Push Down Automata
-- Schedulers
-- Controllers
-- Routers
-- Exceptions
-- Debugging
-
-Security
-- Authentication
-- Authorization
-
-Data Flow
+- Objects
+- Triggers
 - Validation
-- Logging
 - Transforms
 - Commands
 - Queries
 - Extractors
 - Loaders
 
-Flows
-=====
+Components
+==========
 
-Coupling in the form of
+A Component has
+1. A life cycle
+2. A way to get inputs and interrupts
+2. An execution body
+3. A way to delegate outputs
+4. State
 
-Non-Remote
-- Function Calls
-- Callbacks / Promises
-- Table Based Dispatch / Ploymorphism
-- Composition / Delegation
-- Interceptors
-- Commands
-- Pub / Sub / Subject / Observers / Messaging / Eventing
-- Promises
+Execution body is made of
+- System Calls and Instructions
+- Decisions and Loops
+- Arithmetic
+- Functions
 
-Remote
-- RPC
-- FBP
-- Half Objects
+Function is a passive Component.
+Co-Routine / CPS / Active Objects / Processes are Active Components.
 
-Both
-- Request / Response
-- Tokens
-- Message Queues
+A set of Related Components is a Module.
+
+Component Types
+===============
+
+Reactive
+Stream
+Simple
+Controller
+Scheduler
+Router
+Main
+
+Filters
+- Authentication
+- Authorization
+- Validation
 
 User Interfaces
 ===============
@@ -98,6 +78,32 @@ User Interfaces
 - Layouts
 - Scene Graph
 - Roles and Actions
+
+Flows
+=====
+
+Data flows across a coupling.
+
+Module Coupling
+- Reflection
+
+Component Coupling
+- Function Calls
+- Function Pointer / Callbacks / Promises / Continuations
+- Interceptors
+
+User Interface Coupling
+- Pub / Sub / Subject / Observers / Messaging / Eventing
+
+Remote
+- RPC
+- FBP
+- Half Objects
+
+Mix
+- Request / Response
+- Tokens
+- Message Queues
 
 Programming
 ===========
@@ -121,7 +127,13 @@ Deployment
 ==========
 - Build
 - Horizontal and Vertical Scaling
-- Simulations / Tests
+
+Testing Software
+=================
+- End User Simulation
+- Stress Testing
+- Edge Case Testing
+- Component Testing
 
 Naming Conventions
 ==================
@@ -130,9 +142,11 @@ Operations are AdjectiveNouns
 Callbacks are VerbNouns
 
 Files should be organized by
-- Models (Re-Usable)
-- Simple Components (Re-Usable)
-- Complex Components
-- Loaders / Locaters / Flow Code
+- Models
+- Components
+- Passive Components
+- Main Component
 - User Interfaces
+- Couplings
+- Simulations
 
