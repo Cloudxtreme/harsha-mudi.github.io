@@ -5,15 +5,8 @@ tags: [programming]
 copyright: CC BY-NC
 ---
 Programming is an activity of designing Software Applications and Interactive Media.
-
 A Software Application is a Control System with Digital Interfaces suited for the particular Domain.
-
-Flows and User Interfaces around Data are the main Ingredients of Software.
-
-Components constitute backend.
-User Interfaces constitute the frontend.
-
-Both require distinct mindsets.
+Data, Components and Flows constitute the Constrol System of the Software .
 
 Data
 ====
@@ -37,7 +30,9 @@ Data
 Components
 ==========
 
-A Component has
+Function is a passive Component.
+Co-Routine / CPS / Active Objects / Processes are Active Components.
+
 1. A life cycle
 2. A way to get inputs and interrupts
 2. An execution body
@@ -48,28 +43,22 @@ Execution body is made of
 - System Calls and Instructions
 - Decisions and Loops
 - Arithmetic
-- Functions
-
-Function is a passive Component.
-Co-Routine / CPS / Active Objects / Processes are Active Components.
+- Passive Components
 
 A set of Related Components is a Module.
 
-Component Types
-===============
+Active Components can be,
+    Reactive
+    Stream
+    Simple
+    Controller
+    Main Controller
+    Scheduler
+    Router
+    Filters
+    Firewall
 
-Reactive
-Stream
-Simple
-Controller
-Scheduler
-Router
-Main
-
-Filters
-- Authentication
-- Authorization
-- Validation
+Active Components are built out of Objects.
 
 User Interfaces
 ===============
@@ -82,18 +71,24 @@ User Interfaces
 Flows
 =====
 
+Couplings are built out of Objects as well.
 Data flows across a coupling.
 
 Module Coupling
 - Reflection
 
-Component Coupling
+Passive Component Coupling
 - Function Calls
-- Function Pointer / Callbacks / Promises / Continuations
 - Interceptors
+- Function Pointers
+- Continuations / Promises
+
+Active Component Coupling
+- Messaging
+- FBP
 
 User Interface Coupling
-- Pub / Sub / Subject / Observers / Messaging / Eventing
+- Observers
 
 Remote
 - RPC
@@ -127,12 +122,14 @@ Deployment
 ==========
 - Build
 - Horizontal and Vertical Scaling
+- Upgrading
 
 Testing Software
 =================
 - End User Simulation
 - Stress Testing
 - Edge Case Testing
+- Security Testing
 - Component Testing
 
 Naming Conventions
@@ -142,7 +139,7 @@ Operations are AdjectiveNouns
 Callbacks are VerbNouns
 
 Files should be organized by
-- Models
+- Data Models
 - Components
 - Passive Components
 - Main Component
