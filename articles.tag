@@ -48,7 +48,7 @@
             tags_str += t;
             tags_str += ", ";
         });
-        tags_str = tags_str.replace(/,$/,"");
+        tags_str = tags_str.replace(/\s+,$/,"");
         return tags_str;
     }
 

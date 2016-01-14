@@ -11,13 +11,42 @@ copyright: Public Domain
 
 Motto            - A Being unto Thyself
 Pronounciation   - oo-roh-BOH-roh-sism
-More Soundtracks - <a class="nw" href="#">play in a new window</a>
+Soundtracks      - <a class="nw" href="#">play in a new window</a>
 <script class="autospace" type="text/javascript">
      $("a.nw").on("click", function() {
          console.log("here");
          window.open("http://bit.ly/1ikFVLJ", '_blank');
     });
 </script>
+
+Behold The Serpent
+==================
+
+Behold him in his glorious joy:
+Obsidian coils glist’ning against
+The darkness of the Void
+Where he frolics.
+His mighty sinewy trunk
+Weaves being
+On the loom
+Of time.
+
+Behold him in his cunning
+When he draws his black body erect,
+His lush velvet shadow
+Languidly caressing your spine.
+His eyes like dark and distant flames
+Scorch what he sees
+With a cold fire.
+ 
+Behold him in his golden splendour
+When he has shed his old skin
+And become wise.
+When he towers over you now
+The fire in his eyes
+Illuminates what is
+With wry, loving
+Amusement.
 
 Genesis
 =======
@@ -30,9 +59,6 @@ Genesis
 * This Religion is half-serious than a complete-joke.
 
 * This Religion is a modern continuation of the <a href="https://en.wikipedia.org/wiki/Ouroboros">Uroboros cult</a>.
-
-Beliefs
-=======
 
 * God as an Artistic interpretation and longing can be used for
   Humour, Pathos, Catharsis or any other tingeing of Emotion.
@@ -53,14 +79,6 @@ Rankings
 * Saint for Philosophers par excellence.
 
 (The above are gender neutral terms)
-
-Pantheon
-========
-
-* The Muses -- Clio, Thalia, Erato, Euterpe, Polyhymnia, Calliope,
-               Terpsichore, Urania, Melpomene.
-
-* Numbers and the Night Sky.
 
 Ancestor Worship
 ================
@@ -87,18 +105,20 @@ Cosmos
 
 * Eternal Return
 
+Politics
+========
+
+* Autoarchy
+
 Ethics
 ======
 
 * Anti-Censorship
 * Anti-Killing
 * Anti-Torture
-* Old School Virtues
-
-Work Ethics
-===========
-
-* Challenging over Mechanical.
+* Self-Defence
+* Work as gift and joy
+* Virtues over Desires
 
 Aesthetics
 ==========
@@ -129,27 +149,34 @@ Heresies
 * Hypocrisy™
 * Indolence
 
-Marriage
+Love
+=====
+
+* As dictated by the Heart and the organs.
+
+Pantheon
 ========
 
-* As dictated by the Heart.
+* The Muses -- Clio, Thalia, Erato, Euterpe, Polyhymnia, Calliope,
+               Terpsichore, Urania, Melpomene.
 
-Patron God
-==========
-
+* Sun, Moon, Sky and Earth
+* Levithan
+* Uroboros
+* Apollonius
+* Nagas
 * Dionysus
 
-Patron Animal
-=============
+Numerology
+==========
 
-* Levithan
+* Thou shall try to be a prime number
+* Decimal over hexadecimal
+* 5, 23, 11, 42, 7, 0, 1, 2, 3, 6, 8 are holy and complete
 
 Friendly Religions
 ==================
 
-* Zen
-* Stoics
-* Cynics
 * Taoism
 * Discordianism
 
@@ -172,8 +199,8 @@ Literature
 * <a href="http://hermetic.com/texts/plato/timaeus.html">Timaeus</a>
 * Autobiographies of &lt;your-favorite-person&gt;
 
-Myths
-=====
+Quotes
+======
 
 I was sitting, writing at my text-book; but the work did not progress;
 my thoughts were elsewhere. I turned my chair to the fire and dozed.
@@ -190,9 +217,6 @@ rest of the night in working out the consequences of the hypothesis.
 -- August Kekulé
    (discovered benzene)
 
-Quotes
-======
-
 I don't like ass kissers, flag wavers or team players.
 I like people who buck the system. Individualists.
 I often warn people: "Somewhere along the way, someone is going to tell you,
@@ -202,3 +226,4 @@ I often warn people: "Somewhere along the way, someone is going to tell you,
 -- George  Carlin
 
 <img src="images/your-life.gif"/>
+

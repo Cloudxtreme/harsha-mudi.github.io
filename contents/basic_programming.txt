@@ -5,6 +5,7 @@ tags: [programming]
 copyright: CC BY-NC
 ---
 Programming is an activity of designing Software Applications and Interactive Media.
+
 A Software Application is a Control System with Digital Interfaces suited for the particular Domain.
 Data, Components and Flows constitute the Constrol System of the Software .
 
@@ -18,10 +19,6 @@ Data
 - Compression
 - Ontology
 - Analytics
-- Objects
-- Triggers
-- Validation
-- Transforms
 - Commands
 - Queries
 - Extractors
@@ -30,8 +27,11 @@ Data
 Components
 ==========
 
-Function is a passive Component.
-Co-Routine / CPS / Active Objects / Processes are Active Components.
+Function is a Passive Component.
+
+Co-Routine / CPS / Active Objects / Processes / State Object / Recursive Function are Active Components.
+
+An Active Component has a
 
 1. A life cycle
 2. A way to get inputs and interrupts
@@ -45,6 +45,8 @@ Execution body is made of
 - Arithmetic
 - Passive Components
 
+A Passive Component is just made of execution body.
+
 A set of Related Components is a Module.
 
 Active Components can be,
@@ -52,21 +54,22 @@ Active Components can be,
     Stream
     Simple
     Controller
-    Main Controller
     Scheduler
     Router
     Filters
-    Firewall
-
-Active Components are built out of Objects.
+    Validators
+    Transformers
+    Authentication
+    Authorization
 
 User Interfaces
 ===============
 - Forms
 - Widgets
 - Layouts
-- Scene Graph
-- Roles and Actions
+- Scene
+- Graph
+- Actions
 
 Flows
 =====
@@ -76,6 +79,7 @@ Data flows across a coupling.
 
 Module Coupling
 - Reflection
+- Dependencies
 
 Passive Component Coupling
 - Function Calls
@@ -111,6 +115,14 @@ Programming
 5. Simulate / Demo
 6. Repeat
 
+An Application has atleast one active component.
+A Scene should have atleast one active component and Observers.
+An Interactive Application has a Message Bus.
+
+An application with more than one component should have a Module.
+
+Components,  Modules, Flows are built out of Objects.
+
 Characteristics of Software
 ===========================
 - Size
@@ -139,11 +151,12 @@ Operations are AdjectiveNouns
 Callbacks are VerbNouns
 
 Files should be organized by
+- Base Classes
 - Data Models
 - Components
 - Passive Components
 - Main Component
 - User Interfaces
-- Couplings
+-- Graph
 - Simulations
 
