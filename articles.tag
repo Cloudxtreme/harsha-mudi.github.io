@@ -48,7 +48,8 @@
             tags_str += t;
             tags_str += ", ";
         });
-        tags_str = tags_str.replace(/\s+,$/,"");
+        tags_str = tags_str.replace(/\s*,\s*$/, "");
+        console.log(tags_str);
         return tags_str;
     }
 
