@@ -23,6 +23,7 @@ Data
 - Queries
 - Extractors
 - Loaders
+- Parsing
 
 Components
 ==========
@@ -37,7 +38,7 @@ An Active Component has a
 2. A way to get inputs and interrupts
 2. An execution body
 3. A way to delegate outputs
-4. State
+4. A way to maintain State across successive calls
 
 Execution body is made of
 - System Calls and Instructions
@@ -74,7 +75,6 @@ User Interfaces
 Flows
 =====
 
-Couplings are built out of Objects as well.
 Data flows across a coupling.
 
 Module Coupling
@@ -88,21 +88,16 @@ Passive Component Coupling
 - Continuations / Promises
 
 Active Component Coupling
-- Messaging
-- FBP
+- Messaging (Bus)
+- FBP (Wire)
 
 User Interface Coupling
 - Observers
 
 Remote
 - RPC
-- FBP
 - Half Objects
-
-Mix
 - Request / Response
-- Tokens
-- Message Queues
 
 Programming
 ===========
