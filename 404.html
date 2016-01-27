@@ -5,63 +5,18 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="/vendor/riot/riot+compiler.min.js"></script>
-    <script src="/vendor/page/page.js"></script>
-
-    <style type="text/css">
-
-@font-face {
-    font-family:mplus-1m-regular, courier;
-    src: url(/fonts/mplus-1m-regular.ttf)
-}
-
-html,
-body {
-    height: 100%;
-    width: 95%;
-    margin: 0 auto;
-    font-family: mplus-1m-regular, courier;
-    font-size: 20px;
-    -webkit-font-smoothing: antialiased;
-}
+  <script src="/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/vendor/riot/riot+compiler.min.js"></script>
+  <script src="/vendor/page/page.js"></script>
 
 
-* {
-    color: #f4f4ec;
-    background: black;
-    font-family: mplus-1m-regular, courier;
-}
-
-article {
-    white-space: pre-wrap;
-}
-
-a:hover, a:active {
-    background-color: #f4f4ec;
-    color: #191919;
-}
-
-h2 a:link, h2 a:visited {
-    color: #f4f4ec;
-}
-a:hover, a:active {
-    color: #3c3c3b;
-}
-
-a:link, a:visited {
-    text-decoration: none;
-    -webkit-transition: background-color .15s linear,color .15s linear;
-    -moz-transition: background-color .15s linear,color .15s linear;
-    -o-transition: background-color .15s linear,color .15s linear;
-    transition: background-color .15s linear,color .15s linear;
-}
-    </style>
-
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
- 
+
     <script src="/articles.tag" type="riot/tag"></script>
     <script src="/post.tag" type="riot/tag"></script>
+    <script src="/review.tag" type="riot/tag"></script>
+
 
     <script>
         $(function() {
@@ -70,7 +25,8 @@ a:link, a:visited {
             var items = [];
             $.getJSON( "/content.json", function( data ) {
 
-                page('/', function () { riot.mount("#riot", 'articles', { items: data }); } );
+                page('/', function () { riot.mount("#riot", 'review'); } );
+                page('/rants', function () { riot.mount("#riot", 'articles', { items: data }); } );
                 page(/^\/(.+?)\.html/, function (ctx) {
                    var fname = ctx.params[0];
                    var post;
@@ -124,8 +80,15 @@ a:link, a:visited {
     <div>
         Writing: [
             <a href="/soldiers-of-death">Soldiers Of Death</a>
+            <a href="/holy-dialectic">Holy Dialectic</a>
+
         ]
      </div>
+
+    <div>
+        <img  style="width:400px; height: 400px" src="/images/self.png"></img>
+    </div>
+
 
     <div id="riot" class="container"></div>
 

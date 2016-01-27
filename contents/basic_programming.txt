@@ -24,13 +24,12 @@ Data
 - Extractors
 - Loaders
 - Parsing
+- Events / Tokens / Symbols
+- Sessions
+- Snapshots
 
 Components
 ==========
-
-Function is a Passive Component.
-
-Co-Routine / CPS / Active Objects / Processes / State Object / Recursive Function are Active Components.
 
 An Active Component has a
 
@@ -39,6 +38,7 @@ An Active Component has a
 2. An execution body
 3. A way to delegate outputs
 4. A way to maintain State across successive calls
+5. A way to trigger events
 
 Execution body is made of
 - System Calls and Instructions
@@ -49,6 +49,7 @@ Execution body is made of
 A Passive Component is just made of execution body.
 
 A set of Related Components is a Module.
+Module manages dependencies as well.
 
 Active Components can be,
     Reactive
@@ -75,21 +76,37 @@ User Interfaces
 Flows
 =====
 
+Flows are Data Driven on Demand Driven.
+Flow occurs between component couplings.
 Data flows across a coupling.
 
-Module Coupling
-- Reflection
-- Dependencies
+How to build components and flows ?
+===================================
+
+Function is a Passive Component.
+
+Activte components can be built with the following,
+1. State Objects
+2. Closures / Command Objects
+3. Objects
+4. Co-Routines
+5. Threads / Processes
+6. Active Objects
+7. Recursive Functions
+
+Modules have an implicit coupling to names.
+Reflection alievates this.
 
 Passive Component Coupling
 - Function Calls
-- Interceptors
 - Function Pointers
-- Continuations / Promises
+- Continuations
+- Promises
 
 Active Component Coupling
 - Messaging (Bus)
 - FBP (Wire)
+- Interceptors (Call)
 
 User Interface Coupling
 - Observers
@@ -116,8 +133,6 @@ An Interactive Application has a Message Bus.
 
 An application with more than one component should have a Module.
 
-Components,  Modules, Flows are built out of Objects.
-
 Characteristics of Software
 ===========================
 - Size
@@ -128,6 +143,7 @@ Characteristics of Software
 Deployment
 ==========
 - Build
+- Version Control
 - Horizontal and Vertical Scaling
 - Upgrading
 
@@ -138,6 +154,9 @@ Testing Software
 - Edge Case Testing
 - Security Testing
 - Component Testing
+- Component Internals Testing
+- Tracing
+- Logging
 
 Naming Conventions
 ==================
@@ -146,12 +165,11 @@ Operations are AdjectiveNouns
 Callbacks are VerbNouns
 
 Files should be organized by
-- Base Classes
+- Base
 - Data Models
 - Components
 - Passive Components
 - Main Component
 - User Interfaces
--- Graph
 - Simulations
 
