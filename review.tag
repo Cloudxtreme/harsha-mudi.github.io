@@ -1,12 +1,12 @@
 <review>
 <blockquote style="text-decoration: overline; font-style: italic;">
-    Women: Tiny Dick. Too quick. Doesn't call. Can't flirt. Dirty. Stupid. Shy. Arrogant. Wierd. Too much.<br>
+    Women: Tiny Dick. Too quick. Too much. Doesn't call. Won't Flirt. Dirty. Stupid. Arrogant. Wierd.<br>
     Me: Make up your minds.<br>
     <br>
     Brother: He doesn't listen to anybody.<br>
     Me: I'm deaf.<br>
     <br>
-    Friends: He's fun and serious. Just don't piss him off.<br>
+    Friends: He's fun. Just don't piss him off.<br>
     Me: When ?<br>
     <br>
     Mother: Someone marry my son. I'll bribe you. He doesn't eat.<br>
