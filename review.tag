@@ -1,5 +1,5 @@
 <review>
-<blockquote style="text-decoration: underline; font-style: italic;">
+<blockquote style="text-decoration: overline; font-style: italic;">
     Women: Tiny Dick. Too quick. Doesn't call. Can't flirt. Dirty. Stupid. Shy. Arrogant. Wierd. Too much.<br>
     Me: Make up your minds.<br>
     <br>
