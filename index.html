@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+    <script src="/review.tag" type="riot/tag"></script>
     <script src="/articles.tag" type="riot/tag"></script>
     <script src="/post.tag" type="riot/tag"></script>
-    <script src="/review.tag" type="riot/tag"></script>
 
 
     <script>
@@ -25,7 +25,7 @@
             var items = [];
             $.getJSON( "/content.json", function( data ) {
 
-                page('/', function () { riot.mount("#riot", 'review'); } );
+                page('/', function () { riot.mount("#riot", 'review', { items: data }); } );
                 page('/rants', function () { riot.mount("#riot", 'articles', { items: data }); } );
                 page(/^\/(.+?)\.html/, function (ctx) {
                    var fname = ctx.params[0];
@@ -81,14 +81,13 @@
         Writing: [
             <a href="/soldiers-of-death">Soldiers Of Death</a>
             <a href="/holy-dialectic">Holy Dialectic</a>
-
         ]
      </div>
+     <br>
 
     <div>
-        <img  style="width:400px; height: 400px" src="/images/self.png"></img>
+        <img  style="width: 320px; height: 320px" src="/images/self.png"></img>
     </div>
-
 
     <div id="riot" class="container"></div>
 
