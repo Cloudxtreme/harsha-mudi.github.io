@@ -7,8 +7,6 @@ html {
     height: 100%;
     width: 100%;
     background: url(/images/cover.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
 }
 
 body {
@@ -22,6 +20,7 @@ body {
 
 * {
     color: #f4f4ec;
+    background: #9D582E;
     font-family: mplus-1m-regular, courier;
 }
 
