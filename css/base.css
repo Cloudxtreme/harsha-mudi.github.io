@@ -3,7 +3,14 @@
     src: url(/fonts/mplus-1m-regular.ttf)
 }
 
-html,
+html {
+    height: 100%;
+    width: 100%;
+    background: url(/images/cover.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
 body {
     height: 100%;
     width: 95%;
@@ -13,10 +20,8 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-
 * {
     color: #f4f4ec;
-    background: #9D582E;
     font-family: mplus-1m-regular, courier;
 }
 

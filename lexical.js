@@ -37,7 +37,7 @@ bower({
     directory: "vendor",
     cwd: base_dir,
     packages: [
-      "sanitize-css",
+      // "sanitize-css",
       "restyle",
       "jquery",
       "freewall",
