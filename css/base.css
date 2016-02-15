@@ -21,6 +21,7 @@ body {
 * {
     color: #f4f4ec;
     font-family: mplus-1m-regular, courier;
+    font-weight: bolder;
 }
 
 article {
