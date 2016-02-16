@@ -1,0 +1,12 @@
+---
+title: "Bottom Up Programming"
+author: foobar
+tags: [software]
+copyright: CC BY-NC
+---
+
+Model User Interface as Verbs.
+Build Components one at a time, independently of all other components and in combination.
+Make Inputs / Outputs as Abstract as Possible.
+Build an Application Shell to interact with your Application components and Application itself.
+

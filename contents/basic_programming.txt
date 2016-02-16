@@ -11,11 +11,11 @@ Data, Components and Flows constitute the Constrol System of the Software .
 
 Data
 ====
-- ER / Binary / XML / Object
+- ER / Binary / XML ... / Object / EAV / File
 - Queries
 - Serialization
 - Storage and Caching
-- Indexing / Searching / Tagging
+- Indexing / Searching / Tagging / Learning
 - Compression
 - Ontology
 - Analytics
@@ -24,7 +24,6 @@ Data
 - Extractors
 - Loaders
 - Parsing
-- Events / Tokens / Symbols
 - Sessions
 - Snapshots
 
@@ -66,8 +65,7 @@ Active Components can be,
 
 User Interfaces
 ===============
-- Forms
-- Widgets
+- Forms / Widgets
 - Layouts
 - Scene
 - Graph
@@ -83,16 +81,16 @@ Data flows across a coupling.
 How to build components and flows ?
 ===================================
 
-Function is a Passive Component.
+Function / Closure is a Passive Component.
 
 Activte components can be built with the following,
-1. State Objects
-2. Closures / Command Objects
-3. Objects
-4. Co-Routines
-5. Threads / Processes
-6. Active Objects
-7. Recursive Functions
+
+1. Recursion
+2. Mutual Recursion
+3. Co-Routines
+4. Automata
+5. Control Tables
+5. Threads / Processes / Active Objects
 
 Modules have an implicit coupling to names.
 Reflection alievates this.
@@ -120,7 +118,7 @@ Programming
 ===========
 
 0. Gather User Stories
-1. Code the User Interfaces concretely or abstractly
+1. Code the User Interfaces Abstractly
 2. Design Data
 3. Couple User Interfaces to Components
 4. Couple Components
