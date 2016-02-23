@@ -4,31 +4,36 @@ author: foobar
 tags: [programming]
 copyright: CC BY-NC
 ---
+Automata is about Memory + Computation.
 
-Machines
-========
+Memory can be stores as a Single Variable.
+This is called the Accumulator machine.
 
-Accumulator Machine
-Stack Machine
-Register Machines
-Flow Machine
+Memory can be stored as Stack.
+This is called the Stack machine.
 
-Theory
-======
+Memory can be stored in RAM or Registers.
+This is called the RAM / Register machine.
 
-Petri Net
-Logic
-Ladder Logic
-Control / Dispatch / Decission / Data Tables
-Decission Trees
+Memory can be stored as Queue.
+This is called the Queue machine.
 
-Reality
-=======
+Memory can be stored as Tape.
+This is called the Turing machine.
 
-PLC
-Electronics Instruments
+Memory can be stored as a Token.
+This is called the Token machine.
 
-And not so obvious,
-Chemistry
-Cooking
+Memory can be stored as a Tree.
+This is called the Tree machine.
+
+State is a Data Structure tht should answer the following queries,
+- What is the current state ?
+- What are the next states ?
+- Is the state at the beginning or is it at the end ?
+
+In fact any Real World object from light to atom that can store this information is fit for use as Memory.
+
+Computation is Reaction to Inputs.
+Distributed Automata are best modelled by Queue Machines and Token Machines.
 

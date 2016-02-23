@@ -1,5 +1,5 @@
 <review>
-<blockquote style="font-style: bold">
+<div style="font-style: bold">
     Women: Tiny Dick. Too quick. Too much. Doesn't call. Won't Flirt. Dirty. Stupid. Arrogant. Wierd.<br>
     Me: Make up your minds.<br>
     <br>
@@ -19,13 +19,10 @@
     Me: Thanks !<br>
     <br>
     Clients: He can handle it.<br>
-    Me: Thanks ! Don't forget to leave me alone.<br>
+    Me: Thanks ! Don't forget to leave me alone and loots of feedback.<br>
     <br>
-    Cigarrete Vendor: Always on time.<br>
-    Me: Wait till I publish my best selling "How to get cancer in 20,000 days".<br><br>
-</blockquote>
+</div>
 
 <articles items={opts.items}></articles>
-
 
 </review>
