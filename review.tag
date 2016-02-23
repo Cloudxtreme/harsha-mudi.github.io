@@ -19,7 +19,7 @@
     Me: Thanks !<br>
     <br>
     Clients: He can handle it.<br>
-    Me: Thanks ! Don't forget to leave me alone and loots of feedback.<br>
+    Me: Thanks ! Don't forget to leave me alone and giving me lots of feedback.<br>
     <br>
     My Label: <a href="http://kitchensmokerecordsc.ipage.com/mr-foo-bar/"><br>
     Me: Thanks !
