@@ -26,6 +26,7 @@ Data
 - Parsing
 - Sessions
 - Snapshots
+- State / Context
 
 Components
 ==========
@@ -36,8 +37,7 @@ An Active Component has a
 2. A way to get inputs and interrupts
 2. An execution body
 3. A way to delegate outputs
-4. A way to maintain State across successive calls
-5. A way to trigger events
+4. A way to trigger events
 
 Execution body is made of
 - System Calls and Instructions
@@ -48,7 +48,7 @@ Execution body is made of
 A Passive Component is just made of execution body.
 
 A set of Related Components is a Module.
-Module manages dependencies as well.
+Module manages dependencies and Component locations as well.
 
 Active Components can be,
     Reactive
@@ -62,6 +62,8 @@ Active Components can be,
     Transformers
     Authentication
     Authorization
+    Source
+    Sink
 
 User Interfaces
 ===============
@@ -81,7 +83,7 @@ Data flows across a coupling.
 How to build components and flows ?
 ===================================
 
-Function / Closure is a Passive Component.
+Function is a Passive Component.
 
 Activte components can be built with the following,
 
@@ -89,17 +91,16 @@ Activte components can be built with the following,
 2. Mutual Recursion
 3. Co-Routines
 4. Automata
-5. Control Tables
-5. Threads / Processes / Active Objects
-
-Modules have an implicit coupling to names.
-Reflection alievates this.
+5. Tables
+6. Threads / Processes / Active Objects
+7. Objects with a single public method
 
 Passive Component Coupling
 - Function Calls
 - Function Pointers
 - Continuations
 - Promises
+- Closures
 
 Active Component Coupling
 - Messaging (Bus)
@@ -114,6 +115,14 @@ Remote
 - Half Objects
 - Request / Response
 
+State
+=====
+
+Never store state inside a Component. State should either be stored in Data or in transient Event objects.
+Object Oriented Programming encourages storing State. Object Oriented Programming is an excellent choice for ADTs.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QM1iUe6IofM" frameborder="0" allowfullscreen></iframe>
+
 Programming
 ===========
 
@@ -126,7 +135,7 @@ Programming
 6. Repeat
 
 An Application has atleast one active component.
-A Scene should have atleast one active component and Observers.
+A Scene should have atleast one controller component and a sink component and Observers.
 An Interactive Application has a Message Bus.
 
 An application with more than one component should have a Module.
