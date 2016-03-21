@@ -119,7 +119,7 @@ State
 =====
 
 Never store state inside a Component. State should either be stored in Data or in transient Event objects.
-Object Oriented Programming encourages storing State. Object Oriented Programming is an excellent choice for ADTs.
+Object Oriented Programming encourages storing State. DO NOT FOLLOW IT. Object Oriented Programming is an excellent choice for ADTs.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QM1iUe6IofM" frameborder="0" allowfullscreen></iframe>
 
