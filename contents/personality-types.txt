@@ -1,0 +1,160 @@
+---
+title : Personality Types
+author: foobar
+tags: [philosophy]
+copyright: CC BY-NC
+---
+"Anyone who wants to know the human psyche will learn next to nothing
+from experimental psychology. He would be better advised to abandon exact
+science, put away his scholar's gown, bid farewell to his study, and wander
+with human heart throught the world. There in the horrors of prisons, lunatic
+asylums and hospitals, in drab suburban pubs, in brothels and gambling-hells,
+in the salons of the elegant, the Stock Exchanges, socialist meetings,
+churches, revivalist gatherings and ecstatic sects, through love and hate,
+through the experience of passion in every form in his own body, he would reap
+richer stores of knowledge than text-books a foot thick could give him, and he
+will know how to doctor the sick with a real knowledge of the human soul."
+
+-- Carl Jung
+
+There are multiple systems for personality types.
+
+1. MBTI / Socionics
+2. Enneagram
+3. Four Temperments
+4. Elemental
+
+Is it possible to realize these types from the physiology of the brain ?
+
+<img src="images/mind.svg"/>
+
+Consider the information pathways,
+
+1. Thinker (Earth, Melancholic, Rationals)
+2. Sensor (Wind, Phlegmatic, Artisans)
+3. Controller (Water, Choleric, Guardians)
+4. Intuition (Fire, Sanguine, Idealists)
+
+Total personalities = 4 + 6 + 4 + 1 = 15.
+
+5. Instinct
+
+Animals
+=======
+
+Deer (T)
+Eagle (S)
+Lion (C)
+Tiger (I)
+Snake (N)
+
+Thinking Styles
+===============
+
+Analytical (T)
+Sequential (S)
+Interpersonal (C)
+Imaginative (I)
+Animal (N)
+
+Learning Styles
+===============
+
+Exploration (T)
+Perspectives (S)
+Experience (C)
+History (I)
+Practice (N)
+
+Romance Styles
+==============
+
+Platonic (T)
+Sensual (S)
+Romantic (C)
+Creative (I)
+Animal (N)
+
+Decission Making Styles
+=======================
+
+Accuracy (T)
+Harmony (S)
+Effectiveness (C)
+Authenticity (I)
+Power (N)
+
+Fears
+=====
+
+Incompetence, Worthlessness  (T)
+Trapped, Harmed (S)
+Imbalance, Corruption (C)
+Insignificance, Violated (I)
+
+Fear of Loss, Separation, Control (N)
+
+Emotions
+========
+
+Sloth (T)
+Envy (S)
+Pride (C)
+Lust (I)
+
+Marriage with MBTI
+==================
+
+Introverted Thinking  - T ( Systems )
+Extroverted Thinking - CST ( Facts )
+
+Introverted Intuition - I ( Imagination )
+Extroverted Intuition - CSI ( Multiverse )
+
+Introverted Sensing - TI ( Taste )
+Extroverted Sensing - CSTI ( Texture )
+
+Introverted Feeling - NSIC ( Virtues )
+Extroverted Feeling - NSTC ( Values )
+
+Controller,
+
+1. Makes Thinking more Objective (ET)
+2. Filters Senses
+3. Forces the Intuition to take reality into account.
+
+Controller is essentially Mind over Body.
+Instinct is Body over Mind.
+
+Misc
+====
+
+1. Best way to converse with people N, S, C, T, I followed by the others depending on the setting.
+   In other words give a feeling of assurance, talk sensually and objectivitly followed by anecodes of experience and logic.
+
+2. An unbalanced personality has weaknesses in one or more of the items.
+   With age, meeting different personality types, work partners this gets
+   blanced out in the end.
+
+3. This aspects that are least developed are usually called Inner Child / Shadow / Id
+   respectively.
+
+4. Reprression pushes things into intuition.
+
+5. Best way to work N, T, I, C, S
+   In other words relax, plan, mould all possibilities to the single vision, stick to values and facts and taste victory.
+
+6. Best way to evaluate S, T, I, C
+    In other words see the texture, is it refined, does it tirgger the imagination, how does it feel and express it ?
+
+7. Best way to experiment I, T, S
+   In other words relax, imagine, plan and collect data.
+
+1. <a href="http://www.personalityhacker.com/">Personality Hacker</a>
+2. <a href="http://www.socionics.com/rel/relcht.htm">Socionics</a>
+3. <a href="https://sites.google.com/site/godlypersonalities/">Godly Personalities</a>
+4. <a href="http://www.humanmetrics.com/">Human Metrics</a>
+5. <a href="http://www.cognitiveprocesses.com/">Cognitive Processes</a>
+6. <a href="https://en.wikipedia.org/wiki/Keirsey_Temperament_Sorter">Temperment Sorter</a>
+7. <a href="http://subjectobjectmichaelpierce.blogspot.ca/2015/06/the-cheat-sheet.html">Cheatsheet MBTI</a>
+8. <a href="http://typelogic.com/">MBTI</a>
