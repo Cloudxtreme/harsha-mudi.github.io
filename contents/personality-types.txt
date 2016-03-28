@@ -60,11 +60,10 @@ Animal (N)
 Learning Styles
 ===============
 
-Exploration (T)
-Perspectives (S)
-Experience (C)
-History (I)
-Practice (N)
+Elimination (T)
+Exploration (S)
+Practice (C)
+Perspectives (I)
 
 Romance Styles
 ==============
@@ -91,7 +90,6 @@ Incompetence, Worthlessness  (T)
 Trapped, Harmed (S)
 Imbalance, Corruption (C)
 Insignificance, Violated (I)
-
 Fear of Loss, Separation, Control (N)
 
 Emotions
@@ -149,6 +147,9 @@ Misc
 
 7. Best way to experiment I, T, S
    In other words relax, imagine, plan and collect data.
+
+8. Best way to deal with the world is N, C, S, T, I.
+   In other words keep your instincts sharp, control what is arround, see everything, think on your feet and follow your gut.
 
 1. <a href="http://www.personalityhacker.com/">Personality Hacker</a>
 2. <a href="http://www.socionics.com/rel/relcht.htm">Socionics</a>

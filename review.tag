@@ -1,7 +1,7 @@
 <review>
 <div style="font-style: bold">
     Women: Tiny Dick. Too quick. Too much. Doesn't call. Won't Flirt. Dirty. Stupid. Arrogant. Wierd.<br>
-    Me: Make up your minds.<br>
+    Me: Thanks !<br>
     <br>
     Brother: He doesn't listen to anybody.<br>
     Me: I'm deaf.<br>
@@ -10,7 +10,7 @@
     Me: When ?<br>
     <br>
     Mother: Someone marry my son. I'll bribe you. He doesn't eat.<br>
-    Me: I wish I had STDs.<br>
+    Me: ...<br>
     <br>
     Dad: Lazy.<br>
     Me: True.<br>
