@@ -4,9 +4,17 @@ author: foobar
 tags: [software]
 copyright: CC BY-NC
 ---
+Bottom up programming is a lost Art form. I'll try to list down the principles of it.
 
-Model User Interface as Verbs.
-Build Components one at a time, independently of all other components and in combination.
-Make Inputs / Outputs as Abstract as Possible.
-Build an Application Shell to interact with your Application components and Application itself.
+1. Build Components one at a time, independently of all other components.
+2. Use the Component using a Component Shell.
+3. Test the Component using Automation.
+3.1 Make Inputs / Outputs / Network / Sources / Sinks abstract.
+3.2 Use a Module Loader to manage Component Location
+4. Model User Interface as Events so that they can be Simulated.
+
+The advantages of a Component Shell are multifold.
+1. In makes Develop / Interact cycle easy.
+2. It makes Application Scripting possible from the Start.\
+3. It makes Testing stupid.
 

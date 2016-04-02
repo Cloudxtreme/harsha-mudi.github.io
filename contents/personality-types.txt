@@ -30,10 +30,10 @@ Is it possible to realize these types from the physiology of the brain ?
 
 Consider the information pathways,
 
-1. Thinker (Earth, Melancholic, Rationals)
-2. Sensor (Wind, Phlegmatic, Artisans)
-3. Controller (Water, Choleric, Guardians)
-4. Intuition (Fire, Sanguine, Idealists)
+1. Thinker (Water, Rationals)
+2. Sensor (Wind, Artisans)
+3. Controller (Earth, Guardians)
+4. Intuition (Fire, Idealists)
 
 Total personalities = 4 + 6 + 4 + 1 = 15.
 
@@ -45,8 +45,8 @@ Animals
 Deer (T)
 Eagle (S)
 Lion (C)
-Tiger (I)
-Snake (N)
+Snake (I)
+Tiger (N)
 
 Thinking Styles
 ===============
@@ -86,11 +86,11 @@ Power (N)
 Fears
 =====
 
-Incompetence, Worthlessness  (T)
+Insignificance (T)
 Trapped, Harmed (S)
-Imbalance, Corruption (C)
-Insignificance, Violated (I)
-Fear of Loss, Separation, Control (N)
+Incompetence, Worthlessness (C)
+Corruption, Violated (I)
+Fear of loss of Control (N)
 
 Emotions
 ========
@@ -137,7 +137,7 @@ Misc
 3. This aspects that are least developed are usually called Inner Child / Shadow / Id
    respectively.
 
-4. Reprression pushes things into intuition.
+4. Repression pushes things into intuition.
 
 5. Best way to work N, T, I, C, S
    In other words relax, plan, mould all possibilities to the single vision, stick to values and facts and taste victory.
@@ -149,7 +149,7 @@ Misc
    In other words relax, imagine, plan and collect data.
 
 8. Best way to deal with the world is N, C, S, T, I.
-   In other words keep your instincts sharp, control what is arround, see everything, think on your feet and follow your gut.
+   In other words keep your instincts sharp, control what is around, see everything, think on your feet and follow your gut.
 
 1. <a href="http://www.personalityhacker.com/">Personality Hacker</a>
 2. <a href="http://www.socionics.com/rel/relcht.htm">Socionics</a>
