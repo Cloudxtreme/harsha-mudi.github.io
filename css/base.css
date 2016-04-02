@@ -19,9 +19,8 @@ body {
 }
 
 * {
-    color: #f4f4ec;
+    color: black;
     font-family: mplus-1m-regular, courier;
-    font-weight: bolder;
 }
 
 article {
