@@ -27,6 +27,8 @@ Data
 - Sessions
 - Snapshots
 - State / Context
+- Protocol / Format
+- Language
 
 Components
 ==========
@@ -71,7 +73,6 @@ User Interfaces
 - Layouts
 - Scene
 - Graph
-- Actions
 
 Flows
 =====
@@ -127,18 +128,12 @@ Programming
 ===========
 
 0. Gather User Stories
-1. Code the User Interfaces Abstractly
+1. Map User Story to an Interface
 2. Design Data
-3. Couple User Interfaces to Components
+3. Couple User Interfaces to Observers and Observers to Components
 4. Couple Components
 5. Simulate / Demo
 6. Repeat
-
-An Application has atleast one active component.
-A Scene should have atleast one controller component and a sink component and Observers.
-An Interactive Application has a Message Bus.
-
-An application with more than one component should have a Module.
 
 Characteristics of Software
 ===========================
