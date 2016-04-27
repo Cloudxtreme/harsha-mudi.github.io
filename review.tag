@@ -1,5 +1,5 @@
 <review>
-<div style="font-style: bold">
+<div style="font-style: bold; white-space: pre">
     Kant calls for the public use of private reason, and the private
     use of public reason.
 

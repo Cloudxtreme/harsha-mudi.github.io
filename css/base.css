@@ -31,10 +31,6 @@ a:hover, a:active {
     color: #191919;
 }
 
-a::before {
-    content: ">";
-}
-
 h2 a:link, h2 a:visited {
     color: #f4f4ec;
 }
@@ -43,7 +39,7 @@ a:hover, a:active {
 }
 
 a:link, a:visited {
-    text-decoration: none;
+    text-decoration: underline;
     -webkit-transition: background-color .15s linear,color .15s linear;
     -moz-transition: background-color .15s linear,color .15s linear;
     -o-transition: background-color .15s linear,color .15s linear;
