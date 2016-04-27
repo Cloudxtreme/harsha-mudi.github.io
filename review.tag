@@ -1,5 +1,5 @@
 <review>
-<div style="font-style: bold; white-space: pre">
+<pre>
     Kant calls for the public use of private reason, and the private
     use of public reason.
 
@@ -10,7 +10,7 @@
     to make one's reasoning purer.
 
     You can read Kant's essay, "What is Enlightenment ?", <a href="http://www.columbia.edu/acis/ets/CCREAD/etscc/kant.html">here</a>.
-</div>
+</pre>
 
 <articles items={opts.items}></articles>
 

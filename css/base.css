@@ -22,7 +22,7 @@ body {
     font-family: mplus-1m-regular, courier;
 }
 
-article {
+article, pre {
     white-space: pre-wrap;
 }
 
