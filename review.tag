@@ -1,28 +1,17 @@
 <review>
 <div style="font-style: bold">
-    Women: Tiny Dick. Too quick. Too much. Doesn't call. Won't Flirt. Dirty. Stupid. Arrogant. Wierd.<br>
-    Me: Thanks !<br>
-    <br>
-    Brother: He doesn't listen to anybody.<br>
-    Me: I'm deaf.<br>
-    <br>
-    Friends: He's fun. Just don't piss him off.<br>
-    Me: When ?<br>
-    <br>
-    Mother: Someone marry my son. I'll bribe you. He doesn't eat.<br>
-    Me: ...<br>
-    <br>
-    Dad: Lazy.<br>
-    Me: True.<br>
-    <br>
-    Siters: You are awesome. All the best !<br>
-    Me: Thanks !<br>
-    <br>
-    Clients: He can handle it.<br>
-    Me: Thanks ! Don't forget to leave me alone and giving me lots of feedback.<br>
-    <br>
+    Kant calls for the public use of private reason, and the private
+    use of public reason.
+
+    It's an excellent defense of free speech, as it guides
+    one to put private speech in public, rawly, for public feedback.
+
+    It encourages one to take public feedback into private thinking,
+    to make one's reasoning purer.
+
+    You can read Kant's essay, "What is Enlightenment ?", <a href="http://www.columbia.edu/acis/ets/CCREAD/etscc/kant.html">here</a>.
 </div>
 
 <articles items={opts.items}></articles>
 
-</review>
+
