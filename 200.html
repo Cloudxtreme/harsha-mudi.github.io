@@ -1,134 +1,20 @@
 <!DOCTYPE html>
-<html style="background-color: #F2F2F3" >
+<html>
 <head>
-<meta charset="utf-8">
-<title>Just Another Blog</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-    <meta http-equiv="Pragma" content="no-cache"/>
-    <meta http-equiv="Expires" content="0"/>
-    <script src="/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="/vendor/freewall/freewall.js"></script>
-    <script src="/vendor/riot/riot+compiler.min.js"></script>
-    <script src="/vendor/page/page.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <link rel="stylesheet" href="/vendor/sanitize-css/dist/sanitize.min.css">
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <title>Just Another Blog</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/vendor/riot/riot+compiler.min.js"></script>
+  <script src="/vendor/page/page.js"></script>
 
-    <style type="text/css">
-        html, body {
-            width: 80%;
-            font-family: 'PT Serif', serif;
-            height: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 16px;
-        }
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-        .sans {
-            font-family: 'PT Sans', sans-serif;
-        }
-
-        .serif {
-            font-family: 'PT Serif', serif;
-        }
-
-        #header h1 {
-            font-size: 3rem;
-            text-align: center;
-            height: 120px;
-        }
-
-        nav {
-            font-weight: bold;
-            text-align: center;
-        }
-
-        nav li {
-            display: inline;
-            padding: 20px ;
-        }
-
-        .black {
-            color: #222222;
-        }
- 
-        a { color: #222222; text-decoration: underline;}
-        a:hover {background-color: #FFEC16; }
-
-        .fa-med {
-            font-size: 2rem;
-        }
-
-        .fa-mid {
-            font-size: 1.5rem;
-            line-height: 2.25rem;
-        }
-
-        .pad {
-            padding: 1rem;
-        }
-
-    </style>
-    </head>
-    <body class="black">
-
-    <!--[if lt IE 8]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <div id="header" class="sans">
-        <h1>Lexical Thoughts</h1>
-        <nav>
-            <ul>
-                <li>
-                <a href="https://stackoverflow.com/users/1117082/mr-foobar"><i class="fa fa-stack-overflow fa-med"></i></a>
-                </li>
-                <li>
-                <a href="https://github.com/harsha-mudi"><i class="fa fa-github fa-med"></i></a>
-                </li>
-                <li>
-                <a href="https://twitter.com/harsha_mudi"><i class="fa fa-twitter fa-med"></i></a>
-                </li>
-                <li>
-                <a href="https://soundcloud.com/mr-foobar"><i class="fa fa-soundcloud fa-med"></i></a>
-                </li>
-                <li>
-                <a href="https://vimeo.com/mrfoobar/"><i class="fa fa-vimeo fa-med"></i></a>
-                </li>
-                <li>
-                <a href="https://mrfoobar.bandcamp.com/"><b class="fa-med sans">bc</b></a>
-                </li>
-                <li>
-                <a href="https://www.npmjs.org/~harsha-mudi"><img src="https://www.npmjs.com/static/images/npm-logo.svg" width="55" height="33"/></a>
-                </li>
-                <li>
-                <a href="https://metacpan.org/author/MUCKER"><img src="/images/mp.jpg" width="33" height="33"/></a>
-                </li>
-                <li>
-                <a href="https://rubygems.org/profiles/mr-foobar"><img src="/images/ruby.png" width="33" height="33"/></a>
-                </li>
-                <li>
-                <a href="http://www.foobar.systems" class="fa-med">work</a>
-                </li>
-            </ul>
-        </nav>
-        <nav>
-            <ul>
-                <li><a href="/soldiers-of-death" class="fa-med">Soldiers Of Death</a></li>
-            </ul>
-        </nav>
-
-    </div>
-
-    <div class="pad"></div>
-
-    <div id="riot"></div>
-
-    <script src="/articles.tag" type="riot/tag"></script>
-    <script src="/post.tag" type="riot/tag"></script>
+  <script src="/review.tag" type="riot/tag"></script>
+  <script src="/articles.tag" type="riot/tag"></script>
+  <script src="/post.tag" type="riot/tag"></script>
 
     <script>
         $(function() {
@@ -137,7 +23,8 @@
             var items = [];
             $.getJSON( "/content.json", function( data ) {
 
-                page('/', function () { riot.mount("#riot", 'articles', { items: data }); } );
+                page('/', function () { riot.mount("#riot", 'review', { items: data }); } );
+                page('/rants', function () { riot.mount("#riot", 'articles', { items: data }); } );
                 page(/^\/(.+?)\.html/, function (ctx) {
                    var fname = ctx.params[0];
                    var post;
@@ -152,15 +39,62 @@
                 page();
 
                 if (location.pathname != "/") {
-                    var fname = location.pathname.substring(1);
-                    page(fname);
+                    page(location.pathname);
                 }
 
             });
         });
 
     </script>
-</body>
-</html>
 
+    </head>
+    <body>
+
+    <!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<div>
+    <a href="/"><b>::Lexical::</b><br><br></a>
+    Code: [
+        <a href="https://www.npmjs.org/~harsha-mudi">NPM</a>
+        <a href="https://metacpan.org/author/MUCKER">CPAN</a>
+        <a href="https://rubygems.org/profiles/mr-foobar">Gems</a>
+        <a href="http://www.foobar.systems">Contact for Work</a>
+     ]
+    </div>
+        Online: [
+        <a href="https://stackoverflow.com/users/1117082/mr-foobar">Stack Overflow</a>
+        <a href="https://github.com/harsha-mudi">Github</a>
+        <a href="https://twitter.com/harsha_mudi">Twitter</a>
+      ]
+    </div>
+    <div>
+        Music: [
+            <a href="https://soundcloud.com/mr-foobar">Soundcloud</a>
+            <a href="https://vimeo.com/mrfoobar/">Vimeo</a>
+            <a href="https://mrfoobar.bandcamp.com/">Bandcamp</a>
+            <a href="http://classic.beatport.com/artist/mr-foo-bar/486384">Beatport</a>
+        ]
+    </div>
+    <div>
+        Writing: [
+            <a href="/soldiers-of-death">Soldiers Of Death</a>
+            <a href="/holy-dialectic">Holy Dialectic</a>
+            <a href="http://dimai.foobar.systems">Dimai Reviews</a>
+        ]
+     </div>
+     <br>
+
+    <div>
+        <img  style="width: 160px; height: 160px" src="/images/self.png"></img>
+    </div>
+
+    <div id="riot" class="container"></div>
+
+    <iframe style="border: 0; width: 320px; height: 480px;" src="http://bandcamp.com/EmbeddedPlayer/album=1273752565/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="http://mrfoobar.bandcamp.com/album/bad-hyder">Bad Hyder by Mr. Foo Bar</a></iframe>
+
+    </body>
+
+</html>
 
