@@ -11,24 +11,21 @@ Data, Components and Flows constitute the Constrol System of the Software .
 
 Data
 ====
-- ER / Binary / XML ... / Object / EAV / File
-- Queries
+- ER / Binary / XML / Object / EAV / File
+- Queries / Commands
 - Serialization
 - Storage and Caching
 - Indexing / Searching / Tagging / Learning
 - Compression
 - Ontology
 - Analytics
-- Commands
-- Queries
-- Extractors
-- Loaders
-- Parsing
-- Sessions
-- Snapshots
-- State / Context
+- Events / Messages
+- Logs
+- ETL
+- Snapshot + Restore
+- State / Context / Session
 - Protocol / Format
-- Language
+- Language + Parsing + Validation
 
 Components
 ==========
@@ -39,7 +36,7 @@ An Active Component has a
 2. A way to get inputs and interrupts
 2. An execution body
 3. A way to delegate outputs
-4. A way to trigger events
+4. A way to trigger events and alerts
 
 Execution body is made of
 - System Calls and Instructions
@@ -54,9 +51,12 @@ Module manages dependencies and Component locations as well.
 
 Active Components can be,
     Reactive
-    Stream
-    Simple
+    Asynchronous
+    Synchronous
     Controller
+    Proxy
+    Feedback
+    Feedforward
     Scheduler
     Router
     Filters
@@ -104,9 +104,10 @@ Passive Component Coupling
 - Closures
 
 Active Component Coupling
-- Messaging (Bus)
-- FBP (Wire)
-- Interceptors (Call)
+- Messaging
+- Memory
+- Wire
+- Interceptors / Delegates
 
 User Interface Coupling
 - Observers
@@ -141,6 +142,7 @@ Characteristics of Software
 - Speed
 - Bandwidth
 - Memory
+- Scale
 
 Deployment
 ==========
@@ -163,8 +165,8 @@ Testing Software
 Naming Conventions
 ==================
 Data / Events Should follow structural Naming Conventions.
-Operations are AdjectiveNouns
-Callbacks are VerbNouns
+Components are AdjectiveVerbs
+Couplings are VerbNouns
 
 Files should be organized by
 - Base
