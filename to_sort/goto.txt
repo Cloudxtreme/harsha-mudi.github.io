@@ -1,0 +1,42 @@
+GOTO the ultimate programming language
+
+Assembly is perfect.
+In assembly code = data. In fact that is the basis of the turing machine.
+It is convenient for Lisp programmers to omit history.
+
+The defect rate in an x86 processor.
+x86 is backwards compatible.
+
+Perl6 x86 package manager.
+
+1. GOTO is executed in fixed time
+
+functions
+tailcall
+
+2. It is easier to write an inline function than a library function
+
+3. Unrestricted GOTOS are useful for booting and exiting and art
+
+4. GOTO directly maps to a state transitions
+
+5. GOTO directly maps to branch/dispatch/control tables
+
+6. GOTO reduces debugging time
+
+7   Recursion always needs an additional state variable.
+7.1 Recursion must push state information into runtime.
+
+8. Parsers make use of tables and state machines
+
+10. Turing machine is made up of GOTOS
+
+11. How to imitate an unrestricted GOTO ?
+
+1. Mutual Recursion
+2. Nested Exceptions
+3. Infinite loops
+4. Fake a von
+5. Sequence closures
+5.1 Command chain
+

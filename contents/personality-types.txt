@@ -86,10 +86,10 @@ Power (N)
 Fears
 =====
 
-Insignificance (T)
+Corruption, Violated (T)
 Trapped, Harmed (S)
 Incompetence, Worthlessness (C)
-Corruption, Violated (I)
+Insignificance (I)
 Fear of loss of Control (N)
 
 Emotions
@@ -143,7 +143,7 @@ Misc
    In other words relax, plan, mould all possibilities to the single vision, stick to values and facts and taste victory.
 
 6. Best way to evaluate S, T, I, C
-    In other words see the texture, is it refined, does it tirgger the imagination, how does it feel and express it ?
+   In other words see the texture, is it refined, does it tirgger the imagination, how does it feel and express it ?
 
 7. Best way to experiment I, T, S
    In other words relax, imagine, plan and collect data.

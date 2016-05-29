@@ -1,0 +1,68 @@
+# Meter Analysis
+
+A poem has **meter** and **rhyme** like **rhythm** and **melody** in music.<br>
+
+> How do we identify **meter** ?
+
+## First Some Definitions [1]
+* syllable : enunciable unit of a word. Often represented in dictionaries with -'s.
+             Example = ex-am-ple, id-e-a, wo-rd
+* accent : style of enunciating. [2]
+* iamb : any two syllables, usually a single word but not always, whose accent is on the second syllable.
+         Example = upon, arise
+* trochee : any two syllables, usually a single word but not always, whose accent is on the first syllable.
+            Example = virtue, further
+* spondee : any two syllables, sometimes a single word but not always, with strong accent on the first and second syllable.
+            Example = In "The long day wanes, the slow moon climbs", the words "day wanes" form a spondee.
+* pyrrhic : any two syllables, often across words, with each syllable unstressed/unaccented.
+* anapest : any three syllables, usually a single word but not always, whose accent is on the third syllable.
+            Example = intervene
+* dactyl : any three syllables, usually a single word but not always, word whose accent is on the first syllable.
+           Example = tenderly
+
+## Definitons For A Line
+* foot : 1 or more words which have [2-3] syllables
+* dimeter, trimeter, tetrameter, pentameter, hexameter : n foot, where is 2 or 3 or 4 or 5 or 6
+* iamb-ic, troch-aic, spond-aic,  pyrrh-aic, anapest-ic, dactyl-ic: when the line is made of iambs or trochee or ...
+
+### If (iambic pentameter)
+
+x = unstress
+/ = stress
+iamb = x /
+
+
+x  /   x   /    x    /    x    /   x /
+If you can keep your head when all a-bout you
+x   /   x    /      x   /    x    /  x  /   
+Are los-in-g theirs and blam-in-g it on you;
+x  /   x   /     x    /    x    /   x   /
+If you can trust your-self when all men doubt you,
+x   /    x  /   x    /   x     /     x    /
+But make al-low-ance for their doubt-in-g too:
+x  /   x   /    x   /   x  /     x  /
+If you can wait and not be tired by wait-in-g,
+x   /  x    /    x /     x     /    x  /
+Or, be-in-g lied a-bout, don't deal in lies,
+x  /  x    /   x  /     x    /   x  /  
+Or be-in-g hat-ed don't give way to hat-in-g,
+x   /   x     /    x   /     x   /    x   /
+And yet don't look too good, nor talk too wise;
+...
+
+-Rudyard Kipling[2]
+
+The hypenation, as seen on
+
+> x   /    x  /   x    /   x     /     x    /
+> But make al-low-ance for their doubt-in-g too:
+
+is useful to identify the meter.
+
+Using a dictionary we can add hypenations that can help the reader analyse a poem.[5]
+
+[1] <http://www4.ncsu.edu/unity/users/m/morillo/public/prosody1.htm>
+[2] <http://en.wikipedia.org/wiki/Accent_(poetry)>
+[3] <http://www.poemhunter.com/poem/if/>
+[4] <http://en.wikipedia.org/wiki/Scansion>
+[5] <https://code.google.com/p/hyphenator/>

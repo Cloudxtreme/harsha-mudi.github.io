@@ -1,0 +1,85 @@
+School
+======
+
+Mathematics
+- Probability and Statics
+- Discrete Mathematics
+- Operations Research
+- Numerical Analysis
+- Control systems
+
+Economics and Management
+Report Writing
+
+Algorithms and Data Structures
+Theory of Computation
+Compilers and Languages
+OS
+Computer Networks
+
+C / C++ / Java / Python
+Assembly Programming
+OOP
+RDBMS
+Parallel Computing
+Storage Networks
+
+Engineering
+===========
+
+Analysis
+- Structural  | ER + DFD + SC
+- Vendors     | Open
+- Sampling    | AB Testing
+- Reliability | Stress Testing
+- Economic
+
+Modelling
+- Architecture    | Monolithic
+- Systems Schema
+- Simulation      ; not testing
+
+Production
+- Systems Development Pipeline | CI
+- Systems Intergration         | Adhoc
+
+Release
+- Documentation | API
+- Packaging     | Build System
+
+Maintanence
+- Metrics       | Dashboard
+
+Patterns
+========
+UX
+UI
+Readability
+
+Anti Patterns
+
+Design
+Enterprise
+Architecture
+Integration
+Service
+Workflow
+
+Project Management
+==================
+Inputs
+Outputs
+Cost
+Communication
+
+Anti Patterns
+=============
+Golden hammer
+Over engineering
+Inter Platform
+Square wheel
+Gold plating
+Magic Button
+Buzz words
+Shotgun
+Big Ball of Mud
