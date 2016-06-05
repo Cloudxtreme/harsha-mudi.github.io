@@ -1,13 +1,19 @@
-# Meter Analysis
+---
+title: "Poetic Metre"
+author: foobar
+tags: [music]
+copyright: CC BY
+---
 
-A poem has **meter** and **rhyme** like **rhythm** and **melody** in music.<br>
+A poem has **meter** and **rhyme** like **rhythm** and **melody** in music.
 
 > How do we identify **meter** ?
 
 ## First Some Definitions [1]
+
 * syllable : enunciable unit of a word. Often represented in dictionaries with -'s.
              Example = ex-am-ple, id-e-a, wo-rd
-* accent : style of enunciating. [2]
+* accent : style of enunciating.
 * iamb : any two syllables, usually a single word but not always, whose accent is on the second syllable.
          Example = upon, arise
 * trochee : any two syllables, usually a single word but not always, whose accent is on the first syllable.
@@ -61,8 +67,6 @@ is useful to identify the meter.
 
 Using a dictionary we can add hypenations that can help the reader analyse a poem.[5]
 
-[1] <http://www4.ncsu.edu/unity/users/m/morillo/public/prosody1.htm>
-[2] <http://en.wikipedia.org/wiki/Accent_(poetry)>
-[3] <http://www.poemhunter.com/poem/if/>
-[4] <http://en.wikipedia.org/wiki/Scansion>
-[5] <https://code.google.com/p/hyphenator/>
+[1] http://www4.ncsu.edu/unity/users/m/morillo/public/prosody1.htm
+[2] http://en.wikipedia.org/wiki/Scansion
+[3] <https://code.google.com/p/hyphenator/>

@@ -16,7 +16,7 @@
   <script src="/articles.tag" type="riot/tag"></script>
   <script src="/post.tag" type="riot/tag"></script>
 
-    <script>
+  <script>
         $(function() {
             page.base('');
 
@@ -24,7 +24,6 @@
             $.getJSON( "/content.json", function( data ) {
 
                 page('/', function () { riot.mount("#riot", 'review', { items: data }); } );
-                page('/rants', function () { riot.mount("#riot", 'articles', { items: data }); } );
                 page(/^\/(.+?)\.html/, function (ctx) {
                    var fname = ctx.params[0];
                    var post;
@@ -73,6 +72,7 @@
         Music: [
             <a href="https://soundcloud.com/mr-foobar">Soundcloud</a>
             <a href="https://vimeo.com/mrfoobar/">Vimeo</a>
+            <a href="https://www.youtube.com/c/SreeharshaMudivarti">Youtube</a>
             <a href="https://mrfoobar.bandcamp.com/">Bandcamp</a>
             <a href="http://classic.beatport.com/artist/mr-foo-bar/486384">Beatport</a>
         ]

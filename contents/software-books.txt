@@ -1,0 +1,64 @@
+---
+title: "Software Books"
+author: foobar
+tags: [software]
+copyright: CC BY-NC
+---
+
+Languages
+=========
+
+1. The C Programming Language
+2. The C++ Programmign Language
+3. Structure and Interpretation of Programmign Languages
+4. Programming Perl
+5. Mastering Algorithms in Perl
+6. Higher Order Perl
+7. Javascript the Good Parts
+8. Why's poignant Guide to Ruby
+9. Learn Python the Hard Way
+10. An introduction to Symbolic Computation using Lisp
+11. Unix Power Tools
+12. Art of Assembly
+13. Programming Pearls
+
+Engineering
+===========
+
+1. Domain Driven Design
+2. Object Roles and Responsibilities
+3. Gang of Four
+4. Patterns of Software Architecture [3 Volumes]
+5. Art of Unix Programming
+6. How to Solve it
+7. Game Programming Gems
+8. Compiler Construction
+9. Exploring Programming Language Architecture in Perl
+10. Architectures of Open Source Applications
+11. Flow Based Programming
+
+Culture
+=======
+
+1. Hackers and Painters
+2. Hackers, heroes of Computer Revolution
+3. Softsware Crafsman
+4. Practice of Programming
+5. Cathedral and the Baazar
+6. Mythical Man Month
+7. Getting Real
+8. The Tao of Programming
+9. Rework
+10. Masters of Doom
+11. Being Geek
+12. The Perl Journal
+13. Coders At Work
+
+Manifestos
+==========
+
+1. Free Software
+2. Reactive Programming
+3. Software Craftsman
+
+
