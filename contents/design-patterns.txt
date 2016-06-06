@@ -1,0 +1,70 @@
+---
+title: "Design Patterns"
+author: foobar
+tags: [programming]
+copyright: CC BY-NC
+---
+Closures
+========
+Iterator
+Visitor
+Template Method
+Statergy
+State
+Command
+Observer
+Chain of Responsibility
+
+<a href="/interceptor.html">Interceptor based</a>
+
+Architecture
+============
+Interceptor, Pipes and Filters
+Blackboard / Tupplespace
+Message Passing
+Flow Based
+ECS
+MVC, PAC
+SOA, EDA, MicroServices
+Signals / Slots
+
+Concurrency
+===========
+Double Checked Locking
+Scheduling
+Lock / Monitor
+CAP
+ACID
+BASE
+Active Object
+Promise
+Balking
+
+Data
+====
+Active Record
+DTO
+DAO
+Lazy Loading
+Stream
+Data Oriented
+Data Binding
+Patter Matching
+Maybe
+
+Environment
+============
+
+1. Asnc
+2. Realtime
+3. Sync
+4. Parallel
+5. Concurrent
+
+Misc
+====
+Service Locator
+Fluent
+DSL
+
+https://en.wikipedia.org/wiki/Anti-pattern

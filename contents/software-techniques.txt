@@ -17,10 +17,11 @@ copyright: CC BY-NC
 10. Designing
 11. Data Modelling
 12. Composing / Decomposing
-13. Desiging
+13. Designing
 14. Testing
 15. Reverse Engineering
 16. Adpating / Bridging
 17. Presenting
 18. Negotiating
+19. Process Modelling
 
