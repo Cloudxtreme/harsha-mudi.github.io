@@ -5,18 +5,18 @@ tags: [software]
 copyright: CC BY-NC
 ---
 
-1. User Stories
-2. Mockups
+1. Story Gathering
+3. Prototyping
 3. Scripting
 4. Writing
 5. Estimating
-6. Delegation
+6. Delegating
 7. Architecting
 8. Debugging
 9. Scaling
 10. Designing
 11. Data Modelling
-12. Functional Decomposition
+12. Composing / Decomposing
 13. Desiging
 14. Testing
 15. Reverse Engineering
