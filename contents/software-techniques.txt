@@ -25,3 +25,6 @@ copyright: CC BY-NC
 18. Negotiating
 19. Process Modelling
 
+Technique is not a substitute for discipline and focus.
+
+
