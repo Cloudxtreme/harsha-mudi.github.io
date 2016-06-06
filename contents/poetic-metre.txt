@@ -63,10 +63,8 @@ The hypenation, as seen on
 > x   /    x  /   x    /   x     /     x    /
 > But make al-low-ance for their doubt-in-g too:
 
-is useful to identify the meter.
-
-Using a dictionary we can add hypenations that can help the reader analyse a poem.[5]
+Using a dictionary we can add hypenations that can help the reader analyse a poem.
 
 [1] http://www4.ncsu.edu/unity/users/m/morillo/public/prosody1.htm
 [2] http://en.wikipedia.org/wiki/Scansion
-[3] <https://code.google.com/p/hyphenator/>
+[3] https://code.google.com/p/hyphenator/

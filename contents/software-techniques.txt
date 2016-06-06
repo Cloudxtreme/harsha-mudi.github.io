@@ -1,0 +1,26 @@
+---
+title: "Software Techniques"
+author: foobar
+tags: [software]
+copyright: CC BY-NC
+---
+
+1. User Stories
+2. Mockups
+3. Scripting
+4. Writing
+5. Estimating
+6. Delegation
+7. Architecting
+8. Debugging
+9. Scaling
+10. Designing
+11. Data Modelling
+12. Functional Decomposition
+13. Desiging
+14. Testing
+15. Reverse Engineering
+16. Adpating / Bridging
+17. Presenting
+18. Negotiating
+
