@@ -1,7 +1,7 @@
 ---
 title: "Compressing Fonts"
 author: foobar
-tags: [typography]
+tags: [design]
 copyright: CC BY-NC
 ---
 

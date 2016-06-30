@@ -1,7 +1,7 @@
 ---
 title: "Design"
 author: foobar
-tags: [programming]
+tags: [design]
 copyright: CC BY-NC
 ---
 Design has been fairly commodotized.

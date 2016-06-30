@@ -1,7 +1,7 @@
 ---
 title: "Measurable Programming"
 author: foobar
-tags: [programming, philosophy]
+tags: [programming]
 copyright: CC BY-NC
 ---
 <b>"If it can’t be measured, it does not exist"</b>

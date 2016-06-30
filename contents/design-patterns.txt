@@ -24,7 +24,7 @@ Blackboard / Tupplespace
 Message Passing
 Flow Based
 ECS
-MVC, PAC
+MVC, PAC, MVP
 SOA, EDA, MicroServices
 Signals / Slots
 
