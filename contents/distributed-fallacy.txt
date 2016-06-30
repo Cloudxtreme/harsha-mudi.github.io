@@ -1,7 +1,7 @@
 ---
 title: "The Eight Fallacies of Distributed Computing"
 author: foobar
-tags: [quote]
+tags: [programming]
 copyright: CC BY-NC
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Shell Programming"
 author: foobar
-tags: [programming , scripting]
+tags: [programming]
 copyright: CC BY
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Software Development Is Not Engineering"
 author: foobar
-tags: [engineering, quote]
+tags: [programming]
 copyright: CC BY-NC
 ---
 
