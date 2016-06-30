@@ -25,6 +25,8 @@ Languages
 13. Programming Pearls
 14. The complete guide to FreeBSD
 15. Unix Network Programming
+16. Perl Cookbook
+17. Practical Common Lisp
 
 Engineering
 ===========
@@ -42,6 +44,7 @@ Engineering
 11. Flow Based Programming
 12. Scaling PHP Applications
 13. An Introduction to Cybernetics
+14. System Design, Modeling, and Simulation using Ptolemy II
 
 Culture
 =======
@@ -59,6 +62,7 @@ Culture
 11. Being Geek
 12. The Perl Journal
 13. Coders At Work
+14. Codeless Code
 
 Manifestos
 ==========

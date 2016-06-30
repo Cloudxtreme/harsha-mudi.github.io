@@ -1,0 +1,69 @@
+---
+title: "Trends"
+author: foobar
+tags: [misc]
+copyright: CC BY
+---
+<iframe width="420" height="315" src="//www.youtube.com/embed/AU5x1Ea7NjQ" frameborder="0" allowfullscreen></iframe>
+
+Technology
+==========
+
+VR
+AR
+IOT
+Open Hardware
+3D Printing
+Robots
+Tangible Interfaces
+Death of Mega-Industries
+
+Software
+========
+
+Flows
+MicroFrameworks
+MicroServices
+Schema
+Natrual Language Interfaces
+Javascript
+Next Generation Web Apps
+Death of Legacy
+
+Art
+===
+
+Interactive Art
+Creative Programming
+Death of Painting
+
+Music
+=====
+
+TOLAP
+Looping Music
+Death of DJs
+
+Culture
+=======
+
+Alternative Culture
+Privacy Awareness
+Psychology Awareness
+Neo-Sprituality
+Techno-Sprituality
+Radical Transperancy
+Death of Gender
+
+Education
+=========
+
+Music and Software becoming a part of the new literacy
+Free Knowledge
+Death of Mathematics
+
+
+Age
+===
+Era of DaVincis
+

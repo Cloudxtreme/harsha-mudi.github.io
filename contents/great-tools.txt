@@ -5,29 +5,18 @@ tags: [software]
 copyright: CC BY-NC
 ---
 
-Editor
-======
 Vim
-
-Operating System
-================
-Mac, *BSD, Debian
-
-Init System
-===========
+Nginx
+djbware
 BSD
-
-Programming Languages
-=====================
-Text Processing: Perl
-System Administration: Perl, Ruby
-Application Scripting: Lua, TCL
-Machine Learning: Python, Java, C++
-Client Web Programming: ES6
-Server Programming: Any
-General Programming: C++
-Safe Programming: OCaml
-Mobile Programming: C++
-Platform Sepcific Programming: Java, C#, Objective-C
-
+C++
+Ruby
+Ag
+gulp
+forever
+ru
+SSH
+git
+gulp
+Expect
 

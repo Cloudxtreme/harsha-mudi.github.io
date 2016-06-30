@@ -1,0 +1,48 @@
+---
+title: "Design"
+author: foobar
+tags: [programming]
+copyright: CC BY-NC
+---
+Design has been fairly commodotized.
+
+Free
+
+1. Material CSS
+2. Metro UI
+3. Bootstrap
+4. Semantic UI
+
+Paid
+
+1. Theme Forest
+
+Icons
+Photographs
+
+Can all be bought or downloaded for free.
+
+Interactive Design is new is a new breed of HTML5 design that focus on
+Game like interactions.
+
+Skills
+
+1. Layout
+2. Colors
+3. Typography
+4. Accessibility
+
+Tools
+
+1. Photoshop
+2. CSS3 / WebGL / Javascript
+3. D3
+
+Books
+
+1. Desig of Everyday things
+2. Don't make me think
+3. Elements of Typographic Style
+4. Designing Interactions
+
+http://www.hcibib.org/

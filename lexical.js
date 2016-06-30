@@ -38,8 +38,8 @@ bower({
     cwd: base_dir,
     packages: [
       // "sanitize-css",
-      "restyle",
-      "jquery",
+      // "restyle",
+     // "jquery",
       "freewall",
       // "visionmedia/page.js"
     ]
