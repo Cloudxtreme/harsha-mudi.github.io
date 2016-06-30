@@ -15,6 +15,10 @@ Open Hardware
 3D Printing
 Robots
 Tangible Interfaces
+BioEngineering
+Clean Technology
+Electric Vehicles
+Geo Engineering
 Death of Mega-Industries
 
 Software
@@ -36,6 +40,7 @@ Art
 
 Interactive Art
 Creative Programming
+Data Visualization
 Death of Painting
 
 Music
