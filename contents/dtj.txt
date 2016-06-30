@@ -1,7 +1,7 @@
 ---
 title: "The unity of Dub, Techno and Jungle"
 author: foobar
-tags: [philosophy, music]
+tags: [music]
 copyright: CC BY
 ---
 Dub, Techno and Jungle** are distinct musical genres.

@@ -1,7 +1,7 @@
 ---
 title: "Software Craftsman Style"
 author: foobar
-tags: [philosophy, programming]
+tags: [programming]
 copyright: CC BY
 ---
 
