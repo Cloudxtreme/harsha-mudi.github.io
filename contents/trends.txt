@@ -41,14 +41,13 @@ Art
 Interactive Art
 Creative Programming
 Data Visualization
-Death of Painting
-
-Music
-=====
-
 TOLAP
 Looping Music
+Interactive Fiction
+Death of Painting
+Death of Books
 Death of DJs
+Death of Movies
 
 Culture
 =======
@@ -67,7 +66,7 @@ Education
 Music and Software becoming a part of the new literacy
 Free Knowledge
 Death of Mathematics
-
+Death of Colleges
 
 Age
 ===
