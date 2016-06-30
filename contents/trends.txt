@@ -25,6 +25,8 @@ MicroFrameworks
 MicroServices
 Schema
 Natrual Language Interfaces
+Reactive Programming
+Learnable Programming
 Javascript
 Next Generation Web Apps
 Death of Legacy
@@ -65,4 +67,5 @@ Death of Mathematics
 Age
 ===
 Era of DaVincis
+Death of the Old World
 
