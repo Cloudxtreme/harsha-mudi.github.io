@@ -1,7 +1,7 @@
 ---
 title: "Why Desktops / Laptops and Application Softwares are here to stay ..."
 author: foobar
-tags: [software]
+tags: [programming]
 copyright: CC BY-NC
 ---
 

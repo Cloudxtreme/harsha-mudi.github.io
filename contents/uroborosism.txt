@@ -1,7 +1,7 @@
 ---
 title: Uroborosism™
 author: An Individual
-tags: [philosophy, religion, theology]
+tags: [philosophy]
 copyright: Public Domain
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Software Techniques"
 author: foobar
-tags: [software]
+tags: [programming]
 copyright: CC BY-NC
 ---
 

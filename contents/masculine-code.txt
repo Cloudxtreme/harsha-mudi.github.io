@@ -1,7 +1,7 @@
 ---
 title: "masculine code"
 author: foobar
-tags: [fun]
+tags: [misc]
 copyright: CC BY-NC
 ---
 

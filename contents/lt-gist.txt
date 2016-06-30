@@ -1,7 +1,7 @@
 ---
 title: "LightTable Arch"
 author: foobar
-tags: [programming, clojure, future]
+tags: [programming]
 copyright: CC BY-NC
 ---
 

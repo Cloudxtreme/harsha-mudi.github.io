@@ -1,7 +1,7 @@
 ---
 title: "this that selves"
 author: foobar
-tags: [fun, javascript, coffeescript, programming]
+tags: [misc]
 copyright: CC BY NC
 ---
 

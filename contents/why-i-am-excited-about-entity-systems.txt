@@ -1,7 +1,7 @@
 ---
 title: "Why I am excited about Entity Systems"
 author: foobar
-tags: [programming, future]
+tags: [programming]
 copyright: CC BY-NC
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Module Pattern"
 author: foobar
-tags: [js, programming]
+tags: [programming]
 copyright: CC BY-NC
 ---
 

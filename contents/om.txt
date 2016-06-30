@@ -1,7 +1,7 @@
 ---
 title: "OM"
 author: foobar
-tags: [programming, clojure, clojurescript, async, goroutines]
+tags: [programming]
 copyright: CC BY-NC
 ---
 
